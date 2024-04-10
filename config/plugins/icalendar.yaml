@@ -1,0 +1,4 @@
+enabled: true
+icsfile: events.ics
+numevents: 3
+dateformat: d.m.Y
