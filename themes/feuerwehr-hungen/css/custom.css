@@ -1,0 +1,9 @@
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.hero {
+ background-position-y: center !important; 
+}

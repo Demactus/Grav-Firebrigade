@@ -8,6 +8,7 @@ plugins/*
 !plugins/.*
 themes/*
 !themes/.*
+!themes/feuerwehr-hungen/
 accounts/*
 !accounts/.*
 
