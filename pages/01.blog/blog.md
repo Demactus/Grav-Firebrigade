@@ -14,6 +14,7 @@ show_pagination: true
 content:
     items:
         - '@self.children'
+        - Einsatzabteilung
     limit: 6
     order:
         by: date
