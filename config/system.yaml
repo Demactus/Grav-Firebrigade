@@ -134,7 +134,7 @@ twig:
   safe_filters: {  }
   umask_fix: false
 assets:
-  css_pipeline: false
+  css_pipeline: true
   css_pipeline_include_externals: true
   css_pipeline_before_excludes: true
   css_minify: true
