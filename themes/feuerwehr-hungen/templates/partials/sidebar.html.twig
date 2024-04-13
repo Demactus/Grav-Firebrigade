@@ -1,6 +1,8 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
+ {% do assets.addCss('theme://css/fw-sidebar.css') %}
+
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">
     {% include 'partials/simplesearch_searchbox.html.twig' %}
@@ -23,8 +25,19 @@
 
 {% if config.plugins.icalendar.enabled %}
 <div class="sidebar-content">
-    <h4>Nächste Termine</h4>
-    {{ eventlist() }} 
+    <div class="card">
+        <div class="card-header" id="eventHeader">
+            <div class="card-title h5" >Anstehende Veranstaltungen</div>
+        </div>
+        <div class="card-body">
+            <div class="container grid-md">
+
+                {{ eventlist() }}
+            </div>
+        </div>
+    </div>
+
+
 </div>
 {% endif %}
 
