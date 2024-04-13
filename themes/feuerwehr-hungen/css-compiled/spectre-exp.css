@@ -27,7 +27,7 @@
 
 .calendar .calendar-date { border: 0; padding: 0.2rem; }
 
-.calendar .calendar-date .date-item { -webkit-appearance: none; -moz-appearance: none; appearance: none; background: transparent; border: 0.05rem solid transparent; border-radius: 50%; color: #667189; cursor: pointer; font-size: 0.7rem; height: 1.4rem; line-height: 1rem; outline: none; padding: 0.1rem; position: relative; text-align: center; text-decoration: none; transition: background .2s, border .2s, box-shadow .2s, color .2s; vertical-align: middle; white-space: nowrap; width: 1.4rem; }
+.calendar .calendar-date .date-item { -webkit-appearance: none; appearance: none; background: transparent; border: 0.05rem solid transparent; border-radius: 50%; color: #667189; cursor: pointer; font-size: 0.7rem; height: 1.4rem; line-height: 1rem; outline: none; padding: 0.1rem; position: relative; text-align: center; text-decoration: none; transition: background .2s, border .2s, box-shadow .2s, color .2s; vertical-align: middle; white-space: nowrap; width: 1.4rem; }
 
 .calendar .calendar-date .date-item.date-today { border-color: #d3e5fb; color: #3085EE; }
 
@@ -129,7 +129,7 @@
 
 .comparison-slider .comparison-resizer { animation: first-run 1.5s 1 ease-in-out; cursor: ew-resize; height: 0.8rem; left: 0; max-width: 100%; min-width: 0.8rem; opacity: 0; outline: none; position: relative; resize: horizontal; top: 50%; transform: translateY(-50%) scaleY(30); width: 0; }
 
-.comparison-slider .comparison-label { background: rgba(69, 77, 93, 0.5); bottom: 0.8rem; color: #fff; padding: 0.2rem 0.4rem; position: absolute; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.comparison-slider .comparison-label { background: rgba(69, 77, 93, 0.5); bottom: 0.8rem; color: #fff; padding: 0.2rem 0.4rem; position: absolute; -webkit-user-select: none; -ms-user-select: none; user-select: none; }
 
 @keyframes first-run { 0% { width: 0; }
   25% { width: 2.4rem; }
@@ -145,7 +145,7 @@
 
 .filter .filter-body { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.meter { -webkit-appearance: none; -moz-appearance: none; appearance: none; background: #f8f9fa; border: 0; border-radius: 0.1rem; display: block; width: 100%; height: 0.8rem; }
+.meter { -webkit-appearance: none; appearance: none; background: #f8f9fa; border: 0; border-radius: 0.1rem; display: block; width: 100%; height: 0.8rem; }
 
 .meter::-webkit-meter-inner-element { display: block; }
 
@@ -225,7 +225,7 @@
 
 .parallax .parallax-bottom-right:focus ~ .parallax-content .parallax-front, .parallax .parallax-bottom-right:hover ~ .parallax-content .parallax-front { transform: translate3d(-4.5px, -4.5px, 50px) scale(0.95); }
 
-.progress { -webkit-appearance: none; -moz-appearance: none; appearance: none; background: #f0f1f4; border: 0; border-radius: 0.1rem; color: #3085EE; height: 0.2rem; position: relative; width: 100%; }
+.progress { -webkit-appearance: none; appearance: none; background: #f0f1f4; border: 0; border-radius: 0.1rem; color: #3085EE; height: 0.2rem; position: relative; width: 100%; }
 
 .progress::-webkit-progress-bar { background: transparent; border-radius: 0.1rem; }
 
@@ -240,17 +240,17 @@
 @keyframes progress-indeterminate { 0% { background-position: 200% 0; }
   100% { background-position: -200% 0; } }
 
-.slider { -webkit-appearance: none; -moz-appearance: none; appearance: none; background: transparent; display: block; width: 100%; height: 1.2rem; }
+.slider { -webkit-appearance: none; appearance: none; background: transparent; display: block; width: 100%; height: 1.2rem; }
 
 .slider:focus { box-shadow: 0 0 0 0.1rem rgba(48, 133, 238, 0.2); outline: none; }
 
 .slider.tooltip:not([data-tooltip])::after { content: attr(value); }
 
-.slider::-webkit-slider-thumb { -webkit-appearance: none; background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; margin-top: -0.25rem; transition: transform .2s; width: 0.6rem; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; margin-top: -0.25rem; -webkit-transition: transform .2s; transition: transform .2s; width: 0.6rem; }
 
-.slider::-moz-range-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; transition: transform .2s; width: 0.6rem; }
+.slider::-moz-range-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; -moz-transition: transform .2s; transition: transform .2s; width: 0.6rem; }
 
-.slider::-ms-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; transition: transform .2s; width: 0.6rem; }
+.slider::-ms-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; -ms-transition: transform .2s; transition: transform .2s; width: 0.6rem; }
 
 .slider:active::-webkit-slider-thumb { transform: scale(1.25); }
 
