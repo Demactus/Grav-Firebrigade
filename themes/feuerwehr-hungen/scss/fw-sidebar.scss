@@ -1,4 +1,8 @@
+//import main css
+@import "fw-main";
+
+
 #eventHeader {
-  background-color: #06347f;
-  color: #ecf4ff;
+  background-color: $fw-red;
+  color: #fdfdfd;
 }
