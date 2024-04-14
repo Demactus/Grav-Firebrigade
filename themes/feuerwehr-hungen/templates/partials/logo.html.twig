@@ -4,23 +4,22 @@
 <a href="{{ home_url }}" class="navbar-brand mr-10">
 {% if logo %}
   {% set logo_file = (logo|first).name %}
-  <div class="container" >
+
+  <div class="container">
     <div class="columns">
       <div class="column col-auto">
         <img id="fw-logo-img" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.title }}" />
-      </div>
-
-      <div id="logo-txt-col" class="col-auto col-gapless">
-        <div  id="fw-logo-txt" class="text-bold">Feuerwehr</div>
+        </div>
+      <div id="fw-logo-txt" class="column col-auto">Feuerwehr
         <div class="columns">
-          <div class="column col-auto text-normal fw-location">
+          <div class="column text-normal fw-location">
             Hungen-Inheiden
           </div>
         </div>
       </div>
-
     </div>
   </div>
+
 
 {% else %}
   {% include('@images/grav-logo.svg') %}

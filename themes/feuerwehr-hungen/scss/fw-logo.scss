@@ -2,22 +2,34 @@
 @import "fw-main";
 
 .fw-location {
-  padding-top: 0;
-  margin-top: 0;
   color: white;
   font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.scrolled .fw-location {
+  font-size: 9px;
+  color: #444c5c;
 }
 
 #fw-logo-txt {
   color: white;
   font-size: 23px;
-  padding-bottom: 0;
+  padding-bottom: 5px;
   margin-bottom: 0;
 }
 
+.scrolled #fw-logo-txt {
+  font-size: 18px;
+  color: #444c5c;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+}
 
 #fw-logo-img {
-  margin-top: 10px !important;
+  padding-top: 10px !important;
 }
 
 .logo-txt-col .columns {
@@ -25,7 +37,21 @@
   padding-top: 0 !important;
 }
 
-.logo-txt-col .fw-location {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+
+/*
+<div class="columns">
+      <div class="column col-auto">
+        <img id="fw-logo-img" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.title }}" />
+      </div>
+
+      <div id="logo-txt-col" class="col-xs-6 col-gapless">
+        <div  id="fw-logo-txt" class="text-bold">Feuerwehr</div>
+        <div class="columns">
+          <div class="column col-auto text-normal fw-location">
+            Hungen-Inheiden
+          </div>
+        </div>
+      </div>
+
+    </div>
+ */
