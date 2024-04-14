@@ -1,0 +1,14 @@
+version: '1.2'
+timestamp: 1712773538
+count: 2
+index:
+  bastianhaaf:
+    storage_key: bastianhaaf
+    storage_timestamp: 1712773229
+    key: bastianhaaf
+    email: bastian@haaf.ch
+  jan:
+    storage_key: jan
+    storage_timestamp: 1712773470
+    key: jan
+    email: jan.n.martens@web.de
