@@ -1,8 +1,8 @@
 title: Grav
 default_lang: de
 author:
-  name: 'Joe Bloggs'
-  email: joe@test.com
+  name: 'Bastian Haaf'
+  email: bastian@haaf.ch
 taxonomies:
   - category
   - tag

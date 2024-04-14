@@ -1,0 +1,31 @@
+//import main css
+@import "fw-main";
+
+.fw-location {
+  padding-top: 0;
+  margin-top: 0;
+  color: white;
+  font-size: 16px;
+}
+
+#fw-logo-txt {
+  color: white;
+  font-size: 23px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+#fw-logo-img {
+  margin-top: 10px !important;
+}
+
+.logo-txt-col .columns {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.logo-txt-col .fw-location {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
