@@ -5,7 +5,6 @@
 data/*
 !data/.*
 !plugins/.*
-themes/*
 !themes/.*
 !themes/feuerwehr-hungen/
 accounts/*
