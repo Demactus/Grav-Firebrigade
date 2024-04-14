@@ -1,0 +1,6 @@
+enabled: true
+#icsfile is relative to user/data/calendars !
+icsfile: events.ics
+numevents: 2
+dateformat: dd.MM.Y
+
