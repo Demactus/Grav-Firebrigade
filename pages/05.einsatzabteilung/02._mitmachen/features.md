@@ -1,6 +1,6 @@
 ---
 title: Mitmachen
-class: small
+class: offset-box
 menu: Mitmachen
 features:
     -

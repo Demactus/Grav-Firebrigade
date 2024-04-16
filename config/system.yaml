@@ -160,14 +160,14 @@ log:
     facility: local6
     tag: grav
 debugger:
-  enabled: false
+  enabled: true
   provider: clockwork
   censored: false
   shutdown:
     close_connection: true
   twig: true
 images:
-  default_image_quality: 85
+  default_image_quality: 100
   cache_all: false
   cache_perms: '0755'
   debug: false

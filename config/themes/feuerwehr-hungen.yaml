@@ -11,12 +11,12 @@ spectre:
   exp: false
   icons: false
 custom_logo:
-  user/themes/feuerwehr-hungen/images/logo/logo_big.png:
-    name: logo_big.png
-    full_path: logo_big.png
+  user/themes/feuerwehr-hungen/images/logo/logo_slim.png:
+    name: logo_slim.png
+    full_path: logo_slim.png
     type: image/png
     size: 44437
-    path: user/themes/feuerwehr-hungen/images/logo/logo_big.png
+    path: user/themes/feuerwehr-hungen/images/logo/logo_slim.png
 mobile_custom_logo:
   '-name': logo/logo_slim.png
 custom_logo_mobile:
