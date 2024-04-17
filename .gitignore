@@ -2,13 +2,10 @@
 .sass-cache
 
 # Grav Specific
-!data/.*
-!plugins/.*
-!themes/.*
-!themes/feuerwehr-hungen/
 accounts/*
 #!accounts/.*
-!pages/.*
+/data/notifications/.*
+/data/flex/indexes/.*
 
 # OS Generated
 .DS_Store*
@@ -21,3 +18,4 @@ Thumbs.db
 .idea/*
 /themes/feuerwehr-hungen/node_modules/
 /themes/feuerwehr-hungen/scss/.sass-cache
+
