@@ -1,0 +1,28 @@
+title: Gallery
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          fields:
+              Rich-Preview:
+                type: section
+                title: Rich Preview
+                underline: true
+
+                fields:
+                    header.rich_preview_description:
+                      type: text
+                      label: PLUGIN_RICH_PREVIEW.DESC_LABEL
+                      help: PLUGIN_RICH_PREVIEW.DESC_HELP
+                    header.rich_preview_thumbnail:
+                      type: text
+                      label: PLUGIN_RICH_PREVIEW.THUMB_LABEL
+                      help: PLUGIN_RICH_PREVIEW.THUMB_HELP
