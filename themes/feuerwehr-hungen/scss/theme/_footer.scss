@@ -22,12 +22,12 @@ body.sticky-footer {
   color: white;
 }
 
-a:link, a:visited {
+ a.footer-anchor:link, a.footer-anchor:visited {
   color: white;
   text-decoration: none;
 }
 
-a:hover, a:active {
+a.footer-anchor:hover, a.footer-anchor:active {
   color: $fw-yellow !important;
   text-decoration: none;
 }
