@@ -1,3 +1,5 @@
+@import "../fw-main.scss";
+
 // Sticky Footer solution
 body.sticky-footer {
   height: 100%;
@@ -11,7 +13,21 @@ body.sticky-footer {
 }
 
 #footer {
-  color: #acb3c2;
+  background-color: $fw-blue;
   padding: 1rem $horiz-padding 0;
   text-align: center;
+}
+
+#copyright-txt {
+  color: white;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: $fw-yellow !important;
+  text-decoration: none;
 }

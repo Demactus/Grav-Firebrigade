@@ -1,5 +1,14 @@
-<section id="footer" class="section bg-gray">
+{% do assets.addCss('theme://scss/theme/_footer.scss') %}
+
+<section id="footer" class="section">
     <section class="container {{ grid_size }}">
-        <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart-o pulse "></i> by <a href="https://trilby.media">Trilby Media</a>.</p>
+        <div class="columns">
+            <div class="column col-5 col-md-12">
+                <p><a href="https://www.ff-inheiden.de/kontakt/">Kontakt</a> | <a href="https://www.ff-inheiden.de/impressum-und-datenschutz/">Impressum & Datenschutz</a></p>
+            </div>
+            <div id="copyright-txt" class="column col-7 col-md-12">
+                <p>Copyright © 2024 | gemeinsames Projekt der Feuerwehr Inheiden. All rights reserved</p>
+            </div>
+        </div>
     </section>
 </section>
