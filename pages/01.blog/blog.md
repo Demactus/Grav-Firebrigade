@@ -26,5 +26,7 @@ feed:
     limit: 10
 pagination: true
 media_order: 001_20140812_213249__MG_0994.jpg
+rich_preview_description: 'Homepage der Feuerwehr Inheiden'
+rich_preview_thumbnail: '1'
 ---
 
