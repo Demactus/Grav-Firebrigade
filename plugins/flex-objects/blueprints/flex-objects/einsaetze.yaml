@@ -43,22 +43,20 @@ config:
           link: toggle
         titel:
           link: edit
-        date:
-          link: edit
-        time:
+        datetime:
           link: edit
         standorte:
       options:
         per_page: 40
         order:
-          by: date
-          dir: dsc 
+          by: datetime
+          dir: asc
 
 
     # Edit View
     edit:
       title:
-        template: '{{ object.titel ?? ''Titel'' }}, {{ object.date ?? ''Datum'' }}, {{ object.ort ?? ''Ort'' }}'
+        template: '{{ object.titel ?? ''Titel'' }}, {{ object.datetime ?? ''Zeit'' }}, {{ object.ort ?? ''Ort'' }}'
 
     # Preview View
     preview:
@@ -115,7 +113,8 @@ config:
       # Fields to be searched
       fields:
         - titel 
-        - datum
+    ordering:
+      datetime: asc
 
 form:
   validation: loose
@@ -139,17 +138,12 @@ form:
       validate:
         required: true
 
-    date:
-      type: date
-      label: Datum
+    datetime:
+      type: datetime
+      label: Zeit
       validate:
         required: true
 
-    time:
-      type: time
-      label: Alarmzeit
-      validate:
-        required: true
     ort:
       type: text
       label: Einsatzort
