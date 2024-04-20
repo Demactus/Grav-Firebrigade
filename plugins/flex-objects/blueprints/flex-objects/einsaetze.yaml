@@ -113,7 +113,7 @@ config:
       fields:
         - titel 
     ordering:
-      date: desc
+      date: DSC 
 
 form:
   validation: loose
@@ -157,6 +157,17 @@ form:
       type: url
       label: News-Artikel
 
+    blog:
+      type: pages
+      size: large
+      classes: fancy
+      label: "News-Artikel"
+      start_route: "/blog"
+      show_all: true
+      show_modular: false
+      show_route: false
+
+
     kurzbeschreibung:
       type: text
       label: Kurzbeschreibung
@@ -164,6 +175,14 @@ form:
 
     standorte:
       type: selectize
+      selectize:
+        options:
+          - text: "Inheiden"
+            value: "Inheiden"
+          - text: "Hungen"
+            value: "Hungen"
+          - text: "Trais-Horloff"
+            value: "Trais-Horloff"
       size: large
       label: Standorte
       classes: fancy
