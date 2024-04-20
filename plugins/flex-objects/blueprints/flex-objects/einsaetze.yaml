@@ -43,20 +43,19 @@ config:
           link: toggle
         titel:
           link: edit
-        datetime:
+        date:
           link: edit
-        standorte:
+        time:
       options:
         per_page: 40
         order:
-          by: datetime
-          dir: asc
-
+          by: date
+          dir: desc 
 
     # Edit View
     edit:
       title:
-        template: '{{ object.titel ?? ''Titel'' }}, {{ object.datetime ?? ''Zeit'' }}, {{ object.ort ?? ''Ort'' }}'
+        template: '{{ object.titel ?? ''Titel'' }}, {{ object.date ?? ''Datum'' }}, {{ object.ort ?? ''Ort'' }}'
 
     # Preview View
     preview:
@@ -114,7 +113,7 @@ config:
       fields:
         - titel 
     ordering:
-      datetime: asc
+      date: desc
 
 form:
   validation: loose
@@ -138,8 +137,14 @@ form:
       validate:
         required: true
 
-    datetime:
-      type: datetime
+    date:
+      type: date
+      label: Datum
+      validate:
+        required: true
+
+    time:
+      type: time
       label: Zeit
       validate:
         required: true
