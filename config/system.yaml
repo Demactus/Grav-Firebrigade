@@ -2,10 +2,10 @@ absolute_urls: false
 timezone: null
 param_sep: ':'
 wrapped_site: false
-reverse_proxy_setup: false
+reverse_proxy_setup: true
 force_ssl: false
 force_lowercase_urls: true
-custom_base_url: null
+custom_base_url: 'https://grav.dev.ff-inheiden.de'
 username_regex: '^[a-z0-9_-]{3,16}$'
 pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 intl_enabled: true
