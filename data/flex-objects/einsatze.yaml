@@ -1,0 +1,57 @@
+e79798e19a6e245884d887ee8489ff38:
+  published: true
+  titel: 'Brennender Traktor'
+  datetime: '20.04.2024 14:28'
+  ort: 'Holzbrückenweg, Hu.-Inheiden'
+  standorte:
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+  date: '2024-04-15'
+  time: '14:28'
+  blog: /blog/brennender-traktor
+  kurzbeschreibung_freigegeben: false
+3af773f40bc978148c66c505aa6b022a:
+  published: true
+  titel: 'schwerer Verkehrsunfall'
+  datetime: '21.03.2024 07:51'
+  ort: 'B 457, Hungen -> Langsdorf'
+  standorte:
+    - Inheiden
+    - Hungen
+  date: '2024-03-21'
+  time: '07:51'
+  kurzbeschreibung_freigegeben: false
+681b75cd79aa70b4cbc28ee595d62ad6:
+  published: true
+  titel: 'Brennende Gartenhütte'
+  datetime: '03.02.2024 06:22'
+  ort: 'Utpher Kirchenpfad, Trais-Horloff'
+  standorte:
+    - Trais-Horloff
+    - Inheiden
+    - Hungen
+  date: '2024-02-03'
+  time: '06:22'
+1317b90386f35e6e6b779711f32eda97:
+  published: true
+  titel: 'Verkehrsunfall mit LKW'
+  datetime: '10.01.2024 16:31'
+  ort: 'B 489, Hungen -> Inheiden'
+  standorte:
+    - Hungen
+    - Inheiden
+  date: '2024-01-10'
+  time: '16:31'
+4db25553293412046d9b2fee51eb7df6:
+  published: true
+  titel: 'Brennender Baum in einer Hochspannungsleitung'
+  date: '2024-04-21'
+  time: '13:45'
+  ort: 'Bellersheimer Straße, Hu.-Trais-Horloff'
+  standorte:
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+    - Steinheim
+  kurzbeschreibung_freigegeben: false
