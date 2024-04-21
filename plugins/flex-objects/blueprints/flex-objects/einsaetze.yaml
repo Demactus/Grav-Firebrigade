@@ -136,12 +136,14 @@ form:
       label: Titel
       validate:
         required: true
+      help: "Beschreibung der Lage vor Ort. Dabei idealerweise Nominativ verwenden (z.B. brennender PKW, Wohnhausbrand) und keine Telegram-Form (z.B. brennt PKW)."
 
     date:
       type: date
       label: Datum
       validate:
         required: true
+      help: "Das Datum des Einsatzes"
 
     time:
       type: time
@@ -152,26 +154,9 @@ form:
     ort:
       type: text
       label: Einsatzort
-
-    link:
-      type: url
-      label: News-Artikel
-
-    blog:
-      type: pages
-      size: large
-      classes: fancy
-      label: "News-Artikel"
-      start_route: "/blog"
-      show_all: true
-      show_modular: false
-      show_route: false
-
-
-    kurzbeschreibung:
-      type: text
-      label: Kurzbeschreibung
-
+      validate:
+        required: true
+      help: "Der Einsatzort. Straße, Ort. Also z.B. Seestraße, Inheiden"
 
     standorte:
       type: selectize
@@ -183,8 +168,40 @@ form:
             value: "Hungen"
           - text: "Trais-Horloff"
             value: "Trais-Horloff"
-      size: large
+      size: long 
       label: Standorte
       classes: fancy
       validate:
         type: commalist
+
+    blog:
+      type: pages
+      size: long 
+      classes: fancy
+      label: "News-Artikel"
+      start_route: "/blog"
+      show_all: true
+      toggleable: true
+      show_modular: false
+      show_route: false
+      help: "Wenn es einen News-/Blog-Artikel gibt, kann dieser hier verlinkt werden"
+
+    kurzbeschreibung_freigegeben:
+      type: toggle
+      label: Kurzbeschreibung freigegebenn
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+        required: true
+
+    kurzbeschreibung:
+      type: textarea
+      label: Kurzbeschreibung
+      rows: 10
+      help: "Eine kurze Beschreibung der Tätigkeit der Feuerwehr. Dabei soll im wesentlichen beschrieben werden, was insgesamt passiert ist und nicht sehr speziell auf die Tätigkeiten eines einzelnen Standortes eingegangen werden."
+
+
