@@ -168,6 +168,12 @@ form:
             value: "Hungen"
           - text: "Trais-Horloff"
             value: "Trais-Horloff"
+          - text: "Steinheim"
+            value: "Steinheim"
+          - text: "Utphe"
+            value: "Utphe"
+          - text: "Bellersheim"
+            value: "Bellersheim"
       size: long 
       label: Standorte
       classes: fancy
