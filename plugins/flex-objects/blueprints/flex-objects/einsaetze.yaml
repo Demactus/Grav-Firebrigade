@@ -59,9 +59,9 @@ config:
 
     # Preview View
     preview:
-      enabled: false
+      enabled: true
       route:
-        #template: '/plugins/flex-objects/directory:contacts'
+        #template: '/plugins/flex-objects/directory:einsaetze'
 
     # Data Export
     export:
@@ -84,7 +84,7 @@ config:
           - 'flex/{TYPE}/object/{LAYOUT}{EXT}'
       defaults:
         # Default template {TYPE}; overridden by filename of this blueprint if template folder exists
-        type: contacts
+        type: einsaetze
         # Default template {LAYOUT}; can be overridden in render calls (usually Twig in templates)
         layout: default
 

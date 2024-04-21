@@ -20,5 +20,9 @@ To **reorder** things in the sidebar you need to modify the `partials/sidebar.ht
 {% set einsaetze = einsaetze.sort({date: 'DESC', time: 'DESC'}) %}
 <h4>Letzte Einsatze</h4>
   {% for einsatz in einsaetze.filterBy({published: true}).limit(0, 5) %}
-   <b> {{ einsatz.titel|e }}</b><br>{{ einsatz.date|e }} {{ einsatz.time|e }} Uhr <br>{{ einsatz.ort|e }}<br><br>
+   <b> {{ einsatz.titel|e }}</b><br>{{ einsatz.date|e }} {{ einsatz.time|e }} Uhr <br>{{ einsatz.ort|e }}<br>
+       {% if einsatz.blog %}
+       <a href="{{ einsatz.blog|e }}">mehr...</a><br>
+       {% endif %}
+       <br>
   {% endfor %}
