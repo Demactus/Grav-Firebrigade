@@ -3,7 +3,6 @@
 
 # Grav Specific
 accounts/*
-#!accounts/.*
 /data/notifications/.*
 /data/flex/indexes/.*
 
