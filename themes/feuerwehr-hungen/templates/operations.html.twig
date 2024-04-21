@@ -1,0 +1,74 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+
+{% set flex = grav.get('flex') %}
+
+{% set directory = flex.directory('einsaetze') %}
+
+{% set einsaetze = directory.collection() %}
+{% set einsaetze = einsaetze.sort({date: 'DESC', time: 'DESC'}) %}
+
+{% set grid_size = theme_var('grid-size') %}
+{% set columns = page.header.class == 'small' ? 'col-3 col-md-4 col-sm-6' : 'col-4 col-md-6 col-sm-12'  %}
+
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/bricklayer.css') %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% do assets.add('theme://js/bricklayer.min.js') %}
+    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
+{% endblock %}
+
+{% block hero %}
+    {% for module in page.collection() if module.template == 'modular/hero' %}
+        <div id="{{ module.menu|hyphenize }}"></div>
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}
+
+{% block body %}
+    <section class="section modular-features offset-box">
+        <section class="container {{ grid_size }}">
+            <div id="flex-objects" class="frame-box">
+
+                <h1>Berichte Liste</h1>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Meldezeit</th>
+                        <th>Ort</th>
+                        <th>Einsatzmeldung</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for einsatz in einsaetze.filterBy({published: true}) %}
+                        <tr class="active">
+                            <td>{{ einsatz.date|e }}</td>
+                            <td>{{ einsatz.time|e }}</td>
+                            <td>{{ einsatz.ort|e }}</td>
+                            <td>
+                                {% if einsatz.blog %}
+                                    <a href="{{ einsatz.blog|e }}">{{ einsatz.titel|e }}</a>
+                                {% else %}
+                                    {{ einsatz.titel|e }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        //Bricklayer
+        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
+    </script>
+{% endblock %}
