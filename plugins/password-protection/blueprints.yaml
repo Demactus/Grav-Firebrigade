@@ -1,0 +1,58 @@
+name: Password Protection
+version: 0.1.2
+description: "Password protection is a simple plugin which allows you to specify a uniqe password for a page. Every page can have a different password."
+icon: lock
+author:
+  name: Tom Schwarz
+  email: hi@tomschwarz.info
+homepage: https://github.com/tomschwarz/grav-plugin-password-protection
+keywords: grav, plugin, simple, password, protection, private
+bugs: https://github.com/tomschwarz/grav-plugin-password-protection/issues
+docs: https://github.com/tomschwarz/grav-plugin-password-protection/blob/master/README.md
+license: MIT
+
+dependencies:
+    - { name: admin }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    default_section:
+      type: section
+      title: Default Settings
+      underline: true
+    headline:
+      type: text
+      label: Headline
+      default: Password Protection
+    description:
+      type: textarea
+      label: Description
+      default: This page is protected by an password.
+      help: Markdown syntax is supported.
+    form_section:
+      type: section
+      title: Form Settings
+      underline: true
+    password_label:
+      type: text
+      label: Password Label
+      default: Password
+    password_placeholder:
+      type: text
+      label: Password Placeholder
+      default: Password
+    submit_label:
+      type: text
+      label: Submit Label
+      default: Enter
