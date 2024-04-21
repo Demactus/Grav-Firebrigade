@@ -149,7 +149,7 @@ form:
       type: time
       label: Zeit
       validate:
-        required: true
+            required: true
 
     ort:
       type: text

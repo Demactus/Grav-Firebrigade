@@ -23,7 +23,7 @@ pages:
   show_modular: true
   parents_levels: null
 session:
-  timeout: 1800
+  timeout: 604800
 edit_mode: normal
 frontend_preview_target: inline
 show_github_msg: true
