@@ -19,7 +19,7 @@
                       {% if feature.url %}</a>{% endif %}
                       <div class="feature-content">
                          {% if feature.text %}
-                         <p>{{ feature.text }}</p>
+                         <p>{{ feature.text | raw }}</p>
                          {% endif %}
                       </div>
                    </div>
