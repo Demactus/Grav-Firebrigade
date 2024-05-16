@@ -1,57 +1,1640 @@
-e79798e19a6e245884d887ee8489ff38:
-  published: true
-  titel: 'Brennender Traktor'
-  datetime: '20.04.2024 14:28'
-  ort: 'Holzbrückenweg, Hu.-Inheiden'
-  standorte:
-    - Inheiden
-    - Hungen
-    - Trais-Horloff
-  date: '2024-04-15'
-  time: '14:28'
-  blog: /blog/brennender-traktor
-  kurzbeschreibung_freigegeben: false
-3af773f40bc978148c66c505aa6b022a:
-  published: true
-  titel: 'schwerer Verkehrsunfall'
-  datetime: '21.03.2024 07:51'
-  ort: 'B 457, Hungen -> Langsdorf'
-  standorte:
-    - Inheiden
-    - Hungen
-  date: '2024-03-21'
-  time: '07:51'
-  kurzbeschreibung_freigegeben: false
-681b75cd79aa70b4cbc28ee595d62ad6:
-  published: true
-  titel: 'Brennende Gartenhütte'
-  datetime: '03.02.2024 06:22'
-  ort: 'Utpher Kirchenpfad, Trais-Horloff'
-  standorte:
-    - Trais-Horloff
-    - Inheiden
-    - Hungen
-  date: '2024-02-03'
-  time: '06:22'
-1317b90386f35e6e6b779711f32eda97:
-  published: true
-  titel: 'Verkehrsunfall mit LKW'
-  datetime: '10.01.2024 16:31'
-  ort: 'B 489, Hungen -> Inheiden'
-  standorte:
-    - Hungen
-    - Inheiden
-  date: '2024-01-10'
-  time: '16:31'
-4db25553293412046d9b2fee51eb7df6:
-  published: true
-  titel: 'Brennender Baum in einer Hochspannungsleitung'
+d07d04f86446f98bcc6c95c4a26dad0e42db018da66cfe8c237764948bc412c6:
   date: '2024-04-21'
-  time: '13:45'
-  ort: 'Bellersheimer Straße, Hu.-Trais-Horloff'
-  standorte:
-    - Inheiden
-    - Hungen
-    - Trais-Horloff
-    - Steinheim
+  kurzbeschreibung: 'Ein Ast war nach einer Windböe auf eine Stromleitung geraten
+    und hatte sich entzündet.
+
+    Nach dem Freischalten der Leitung durch den Versorger, konnte der Ast geborgen
+    und abgelöscht werden.'
   kurzbeschreibung_freigegeben: false
+  ort: Hu.-Tr. Horloff, Bellersheimer Str.
+  published: true
+  time: '13:45'
+  titel: Ast auf Hochspannungsleitung
+
+d0bd76e896a72a6c9a1870468a8f8ec79f87459eabeb8f598b8de39fce5e59e9:
+  date: '2024-04-15'
+  kurzbeschreibung: "Ein Kleintraktor brannte bei unserem Eintreffen schon in voller\
+    \ Ausdehnung. \nDer unter Atemschutz vorgehende Angriffstrupp brachte das Feuer\
+    \ schnell unter Kontrolle.\nDer Fahrer blieb unverletzt."
+  kurzbeschreibung_freigegeben: false
+  ort: Holzbrückenweg, Hu.- Inheiden
+  published: true
+  time: '14:28'
+  titel: Brennt Kleintraktor
+
+dd3ce4158e1f85fb79b97cfed58f3a850ed0eb9041f56834e38ac58493ce9ff4:
+  date: '2024-03-21'
+  kurzbeschreibung: 'Zwei beteiligte PKW. Eine Person im Fahrzeug eingeschlossen.
+
+    Kein Einsatz für die Feuerwehr Hu.- Inheiden.'
+  kurzbeschreibung_freigegeben: false
+  ort: B 457, Abfahrt Langsdorf
+  published: true
+  time: 07:51
+  titel: Verkehrsunfall - eingeklemmte Person
+
+c475f565db2e8e6c65fb0c116a4654bb85f6c18e67cc577f8a89117bde7009bb:
+  date: '2024-02-03'
+  kurzbeschreibung: 'Bei unserem Eintreffen stand die ungenutzte Hütte bereits im
+    Vollbrand.
+
+    Wir stellten die Wasserversorgung für die Löscharbeiten sicher und ein Trupp unserer
+    Atemschutzgeräteträger war im Einsatz.
+
+    <img class="alignnone size-medium wp-image-3909" src="https://www.ff-inheiden.de/wp-content/uploads/2024/02/WhatsApp-Bild-2024-02-03-um-10.13.34_f5ccd5de-300x226.jpg"
+    alt="" width="300" height="226" />'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu. Tr.-Horloff, Utpher Kirchpfad
+  published: true
+  time: 06:22
+  titel: Gartenhüttenbrand
+
+de5772573311eab8321d32da8baf4a0917d05193a0debe45ab73c8fc2e385af6:
+  date: '2024-01-10'
+  kurzbeschreibung: Auf der Bundesstraße kollidierte ein PKW mit einem LKW. Die Insassen
+    verletzten sich nur leicht. Die Feuerwehr sicherte die Einsatzstelle ab.
+  kurzbeschreibung_freigegeben: false
+  ort: B 489, Inheiden -> Hungen
+  published: true
+  time: '16:31'
+  titel: Verkehrsunfall mit LKW
+
+6ae0bcc27c99fb6bdc267b5f07e486ec5b2e363c128f814600a8b55c141b1c85:
+  date: '2023-06-30'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Wochenendgebiet, Hu.-Inheiden
+  published: true
+  time: 00:53
+  titel: Fehlalarm
+
+95afa03c9d6e0d7e887132395d2fd120a39a6ed608527396e548b3110d6dd106:
+  date: '2023-04-23'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu. Inheiden, Seegebiet
+  published: true
+  time: '16:20'
+  titel: Tierrettung
+
+12bccc25a755bdabbd20d7cc9f6415d0cbfed5963cd23d6cd0b0f69383a858dd:
+  date: '2023-04-22'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hu.-Inheiden
+  published: true
+  time: 09:44
+  titel: Tierrettung
+
+a896ca10a30faae4ffc59b279d21e20acb8f1fb84e21809ffad99c55877de6b1:
+  date: '2023-03-31'
+  kurzbeschreibung: 'In Laubach kam es infolge starker Regenfälle zu einem Hochwasserereignis.
+    Zur Unterstützung wurden mehrere Löschzüge aus angrenzenden Kommunen angefordert.
+    Die Feuerwehr Hungen entsendete ihren Katastrophenschutz Löschzug. Dieser setzt
+    sich aus Kräften aus Hungen, Langd, Steinheim, Trais-Horloff und Inheiden zusammen.
+
+    Vor Ort wurde der Löschzug eingesetzt um Sachwerte zu schützen. Zum Einsatz kamen
+    dabei Tauchpumpen und Tragkraftspritzen.'
+  kurzbeschreibung_freigegeben: false
+  ort: Dexionstraße, Laubach
+  published: true
+  time: '18:51'
+  titel: Hochwasser
+
+dfda949cb13b9cc14df8218efda0202acfa4003ba8c600f7182a8bafe916861c:
+  date: '2023-03-05'
+  kurzbeschreibung: Die Kollegen aus Langd forderten eine Tierrettungsbox an. Auf
+    der Bundesstraße saß ein verletzter Schwan. Der Schwan wurde von der Feuerwehr
+    in die Vogelklinik gebracht.
+  kurzbeschreibung_freigegeben: false
+  ort: B457, Langd
+  published: true
+  time: 02:06
+  titel: Tierrettung
+
+6526492f5eccb71ea23ebda93adf858deb1e9707d6e4f1aeb30bf43863b08a8d:
+  date: '2023-02-13'
+  kurzbeschreibung: Die Feuerwehr sicherte die Einsatzstelle ab.
+  kurzbeschreibung_freigegeben: false
+  ort: B489, Trais-Horloff
+  published: true
+  time: '15:50'
+  titel: Verkehrsunfall
+
+c16f33bb4cac33480c0f2e60be01bf4a8ef7880b62a3099113820907dd426be6:
+  date: '2023-02-06'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Ezetilstraße, Hu.-Inheiden
+  published: true
+  time: '18:21'
+  titel: Ausgelöste Brandmeldeanlage
+
+faecc6fa73e73a920567a8be66f38c48725f67574cbeb810f3bc044b5432789a:
+  date: '2023-01-27'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden
+  published: true
+  time: '21:20'
+  titel: Hilfeleistung
+
+86cc731455cac13173f80972b8b530501a0f22583ebe5154ee2f2b86a1968313:
+  date: '2023-01-14'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hu.-Inheiden
+  published: true
+  time: 08:59
+  titel: Hochwasser
+
+c79e31bd3fd24fbe6b51e513b04d2a7564620425f0e07b837b2bfacf6d738f37:
+  date: '2022-12-10'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Aalweg, Hu,-Inheiden
+  published: true
+  time: '17:39'
+  titel: Gartenhüttenbrand
+
+3792e454ffd9bc28e28e0d0a6b6f1e8d1dd73afad2d84e6d80738e59f30ab97d:
+  date: '2022-10-16'
+  kurzbeschreibung: Kein Brand feststellbar.
+  kurzbeschreibung_freigegeben: false
+  ort: Fa. Coleman, Hu.-Inheiden
+  published: true
+  time: '13:54'
+  titel: Ausgelöste Brandmeldeanlage
+
+25fee1fecd704009e06992c2dba0b8d509462ee6abad00672d86ce0c8ba7d01f:
+  date: '2022-08-22'
+  kurzbeschreibung: Die Löschgruppen aus Trais-Horloff und Inheiden wurden zu einer
+    brennenden Hecke nach Trais-Horloff alarmiert. Vor Ort gaben Anwohner an, das
+    Feuer mit Feuerlöschern gelöscht zu haben.
+  kurzbeschreibung_freigegeben: false
+  ort: Leimenkauter Weg, Hu.-Trais-Horloff
+  published: true
+  time: 00:30
+  titel: Brennende Hecke
+
+358b75a2d58d5797ebef2d35735bb8bcee1fa356b654d9b307ddbebd132d9592:
+  date: '2022-08-14'
+  kurzbeschreibung: 'Die Feuerwehr Dillenburg forderte - neben vielen weiteren Einheiten
+    - den Katastrophenschutz Löschzug aus Hungen an.<!--more-->Der Löschzug aus Hungen
+    wurde eingesetzt um Tanklöschfahrzeuge mit Löschwasser zu versorgen. Diese Fahrzeuge
+    wurden im Pendelverkehr eingesetzt um Wasser direkt an die Einsatzstelle zu bringen.
+
+    [gallery link="file" columns="5" ids="3526,3527,3528,3529,3530,3531,3532,3533,3534,3535"]'
+  kurzbeschreibung_freigegeben: false
+  ort: Waldgebiet, Dillenburg
+  published: true
+  time: '17:30'
+  titel: Waldbrand
+
+6d4d299b0f55d0548ff53b5d4f002a69014a13c55e3cfb625fe8004cf3c12e4d:
+  date: '2022-08-08'
+  kurzbeschreibung: 'Im Inheidener Seegebiet in der Nähe des Festplatzes brannte eine
+    Gartenhütte. Beim Eintreffen der ersten Einsatzkräfte aus Inheiden drohte das
+    Feuer auf das direkt angrenzende Gebäude überzugreifen.
+
+    Durch den schnellen Einsatz der Feuerwehr wurde eine Brandausbreitung verhindert.
+    Hierzu wurden mehrere Strahlrohre eingesetzt.
+
+    Im Einsatz waren Einsatzkräfte aus Trais-Horloff, Hungen und Inheiden.'
+  kurzbeschreibung_freigegeben: false
+  ort: Seestraße, Hu.-Inheiden
+  published: true
+  time: '20:08'
+  titel: Brennende Gartenhütte
+
+6e04929669b5ad73cd7a4be769d33754c5fb189f1430216125d8238bc5d09c77:
+  date: '2022-07-20'
+  kurzbeschreibung: 'In Cölbe (Landkreis Marburg-Biedenkopf) geriet ein Waldgebiet
+    in Brand. Örtliche Einsatzkräfte waren bereits seit dem vergangen Abend mit bis
+    zu 400 Kameraden im Einsatz um den 27 Hektar großen Brand zu löschen.
+
+    Um 8:50 Uhr wurden die Löschgruppen aus Inheiden und Trais-Horloff alarmiert um
+    mit dem Löschfahrzeug aus Inheiden überörtlich nach Cölbe auszurücken. Im Bereitstellungsraum
+    in Staufenberg sammelten sich Einsatzkräfte aus Hungen, Reiskirchen und Laubach
+    um als gemeinsamer Löschzug die Einsatzstelle anzufahren.<!--more-->
+
+    An der Einsatzstelle führten wir zusammen mit Kameraden aus Homberg (Ohm) folgende
+    Tätigkeiten in einem Einsatzabschnitt aus:
+
+    Löscharbeiten mit Löschrucksäcken, Wärmebildkamera, Gergui-Tool, Wiedekopfhacke,
+    Spatenschaufel und dem Selbstschutz FFP2-Maske mit Vollsichtbrille. Die Einheit
+    aus Hungen arbeitete mit den Wechselladern aus Linden und Buseck zusammen, die
+    jeweils mit einem 6000l-Tank bestückt waren.
+
+    Parallel wurden die am Vorabend für eine Brandschneise gefällten Bäume mit schweren
+    Forstmaschinen aus dem Wald gezogen, was die Gefahrenlage für unsere Einsatzkräfte
+    erhöhte. Ein Hubschrauber der Polizei bekämpfte unzugängliche Stellen im Wald
+    mit einem 2000l-Löschwasserbehälter, da der Wald nicht bewirtschaftet wird und
+    nur bedingt zugänglich ist. Landwirte aus der Region lieferten zusätzlich mit
+    Güllefässern Wasser, damit auch mit D-Rohren die Löscharbeiten gegen 15 Uhr beendet
+    wurden.
+
+    Die Rückkehr am Gerätehaus Inheiden war um 18 Uhr, wo bereits die bei der Alarmierung
+    zeitlich verhinderten Kameraden warteten, um die Einsatztauglichkeit des Fahrzeuges
+    wieder herzustellen.
+
+    Text: Johannes Pfeil, Bastian Haaf
+
+    Fotos: Jan Martens
+
+    [gallery link="file" size="large" ids="3482,3483,3489,3487,3488,3486,3485,3484,3490"]'
+  kurzbeschreibung_freigegeben: false
+  ort: Waldgebiet, Cölbe-Schönstadt
+  published: true
+  time: 08:50
+  titel: Waldbrand
+
+7c45ad4123b534434a7cd05b0147f7aff8103f4e42c10f022213717006876e82:
+  date: '2022-07-10'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: Köstweg, Hu.-Inheiden
+  published: true
+  time: '18:34'
+  titel: Ölspur
+
+09c0657bc484963bf75c53e965802427a02f4f087ed5223be8b54962b661f93a:
+  date: '2022-06-12'
+  kurzbeschreibung: Ein Einsatz der Feuerwehr war nicht notwendig, es bestand keine
+    Gefahr für eine Person.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hu.-Trais-Horloff
+  published: true
+  time: '17:16'
+  titel: Person im Wasser
+
+6aad90147e5e73231b41383bd713b7e954b9b9bac05948020486381deffd94f6:
+  date: '2022-05-18'
+  kurzbeschreibung: Ein Einsatz der Feuerwehr war nicht notwendig.
+  kurzbeschreibung_freigegeben: false
+  ort: K186, Trais-Horloff -> Steinheim
+  published: true
+  time: 07:54
+  titel: Tierrettung
+
+d942541d786ed6d88acc314fb0198a1fc56a5fefac23157ab0d293ed859e4db6:
+  date: '2022-05-10'
+  kurzbeschreibung: Die Feuerwehr rettete eine Katze von einem Dach.
+  kurzbeschreibung_freigegeben: false
+  ort: Seestraße, Hu.-Inheiden
+  published: true
+  time: '15:35'
+  titel: Tierrettung
+
+0b07ad791cfb0179c3b333ad97309d5fcea55e41c1452aa2e0cea23a699a9dd5:
+  date: '2022-03-25'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Seestraße, Hu.-Inheiden
+  published: true
+  time: '13:26'
+  titel: Tragehilfe für den Rettungsdienst
+
+57b82ed66a79771259979927f455008aef63742ea668e36b4d9d22430e514016:
+  date: '2021-12-12'
+  kurzbeschreibung: 'An einem Wochenendhaus kam es außen zu einer Rauchentwicklung.
+    Vermutlich entzündete sich in der Dämmung ein Wespennest. Die Anwohner hatten
+    mit einem Gartenschlauch das Feuer schon erfolgreich bekämpft.
+
+    Wir kontrollierten mit der Wärmebildkamera und konnten keine Gefahr feststellen.'
+  kurzbeschreibung_freigegeben: false
+  ort: Am Köstgraben, Hu.-Inheiden
+  published: true
+  time: '16:03'
+  titel: Kaminbrand
+
+2af83d893df9588d2002ee6c6b35c8ebd22b5be8cfc6f2d2d6af990be13d6f2c:
+  date: '2021-11-07'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: L3131, Trais-Horloff -> Bellersheim
+  published: true
+  time: '20:33'
+  titel: Verkehrsunfall
+
+3156eda8aa0e760ebfc3ff14d9bb4694e7b5d4d44d5e3cae9115666ed75adb0d:
+  date: '2021-09-19'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Leimenkauterweg, Hu.-Trais-Horloff
+  published: true
+  time: 01:02
+  titel: Heckenbrand
+
+dfc7acdf51827541b767409aa0ab15ee15f3b6e954b5855e133d57d599e38783:
+  date: '2021-09-15'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Fa. Coleman, Hu.-Inheiden
+  published: true
+  time: '14:54'
+  titel: Ausgelöste Brandmeldeanlage
+
+9f82a32257eccc611d87d1aa512cd998c9f2383c4a24b15f614cb6cc06a78b8b:
+  date: '2021-08-19'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: Andreas-Breidert-Str., Hu.-Inheiden
+  published: true
+  time: '21:08'
+  titel: Gefahrstoffaustritt
+
+83cf2f2717fa470f284e972d3ee4334178f12c4e7a6ca727880d22a1366909aa:
+  date: '2021-08-14'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Vor den Obergärten, Hu. Tr.- Horloff
+  published: true
+  time: '16:54'
+  titel: Brennt Hecke
+
+58bbc7f3da8db82c2cb45f03da8a344982a223830bce6932f82cbd3013877ea8:
+  date: '2021-07-30'
+  kurzbeschreibung: "In Pohlheim brannte ein Wohnhaus. \nLink zum Bericht der Feuerwehr\
+    \ Pohlheim: <a href=\"https://feuerwehr.pohlheim.de/einsaetze/einsaetze-2020/1036-scheunenbrand-drei-verletzte-personen.html\"\
+    \ target=\"_blank\" rel=\"noopener noreferrer\">https://feuerwehr.pohlheim.de/einsaetze/einsaetze-2020/1036-scheunenbrand-drei-verletzte-personen.html</a>\n\
+    Die Einsatzkräfte aus Inheiden wurden alarmiert, um mit dem Löschfahrzeug während\
+    \ des Einsatzes den Grundschutz in Pohlheim sicherzustellen. Das Fahrzeug und\
+    \ seine Besatzung besetzen dazu das Feuerwehrhaus in Pohlheim-Watzenborn-Steinberg."
+  kurzbeschreibung_freigegeben: false
+  ort: An der Haselhecke, Pohlheim-Garbenteich
+  published: true
+  time: '12:55'
+  titel: Wohnhausbrand
+
+307edf3f54881c101408b96b79c0a6f63a3272d7e640308e4ec01327c132ce30:
+  date: '2021-07-03'
+  kurzbeschreibung: 'Anwohner alarmierten die Feuerwehr, weil sie einen hilflosen
+    Marder vorfanden. Die Kräfte der Feuerwehr fingen den Marder ein und transportierten
+    ihn in die Tierklinik nach Gießen.
+
+    Im Einsatz waren Feuerwehrleute aus Hungen und aus Inheiden.'
+  kurzbeschreibung_freigegeben: false
+  ort: Tiergartenstraße, Hungen
+  published: true
+  time: '18:29'
+  titel: Tierrettung
+
+80111b188a1c5a0c2f57307480edc978fbe888fe6ca82ec1791d8215f57e24bb:
+  date: '2021-07-01'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hu.-Inheiden
+  published: true
+  time: '13:54'
+  titel: Rauchentwicklung aus Gebäude
+
+17eebdf9eff6eae5ecbd39fdf90e8a1f6e9dc87d597fcbe18c2327603c0508f8:
+  date: '2021-05-31'
+  kurzbeschreibung: In einem Vorgarten zwischen zwei Wohngebäuden brannte ein Baum.
+    Der Baum wurde abgelöscht und die angrenzenden Gebäude kontrolliert.
+  kurzbeschreibung_freigegeben: false
+  ort: Egerlandstraße, Hu.-Inheiden
+  published: true
+  time: '17:00'
+  titel: Brennender Baum
+
+12fa4bf846ebcbb7fa4876563e87021ce07b3fb7c6667e308975b983da3377f3:
+  date: '2021-04-29'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: K186, Trais-Horloff -> Steinheim
+  published: true
+  time: 06:45
+  titel: Ölspur
+
+b0346a43d6a6e2bd862dbb529a6ae91ec67c9d352c95c3ce7f314599b079f6c8:
+  date: '2021-04-15'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: Wingertsberg, Hu.-Steinheim
+  published: true
+  time: '17:22'
+  titel: Tierrettung
+
+eca036bff53472337f8ac13c7de254ac4974669a51a86a2315fd098515f2a5a7:
+  date: '2021-02-07'
+  kurzbeschreibung: 'Ein Fahrzeug überschlug sich auf eisglatter Fahrbahn am Ortseingang
+    von Hungen-Bellersheim. Der leichtverletzte Fahrer konnte das Fahrzeug selbstständig
+    verlassen.
+
+    Die Feuerwehr sicherte die Einsatzstelle ab.<a href="https://www.ff-inheiden.de/wp-content/uploads/2021/02/DSC_0287.jpg"><img
+    class="alignleft size-full wp-image-3326" src="https://www.ff-inheiden.de/wp-content/uploads/2021/02/DSC_0287.jpg"
+    alt="" width="1920" height="1280" /></a>'
+  kurzbeschreibung_freigegeben: false
+  ort: L3131, Trais-Horloff -> Bellersheim
+  published: true
+  time: '17:13'
+  titel: Schwerer Verkehrsunfall
+
+b1701165cd4d211516d75b00e7a0142619c8901e75600a02ca618b7e263670f9:
+  date: '2021-02-05'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden, Holzbrückenweg
+  published: true
+  time: '13:52'
+  titel: Ölspur
+
+d0361f8000fa3bf431dc87ae2a71a81d4daf0ee3333403ceb5a6e62ec314f5ce:
+  date: '2021-01-30'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Trais-Horloff, Seegebiet
+  published: true
+  time: 07:23
+  titel: Hochwasser
+
+8d2ec7bf352248eb04678b7508edc089a500ba3afff26c85019e2b9cf2108538:
+  date: '2021-01-29'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden, Seegebiet
+  published: true
+  time: '22:56'
+  titel: Hochwasser
+
+495912685d796ae32a5ba494ef723c9cb6099f1de5120962df6bc2edc2717dae:
+  date: '2021-01-23'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden, Seestraße
+  published: true
+  time: 09:54
+  titel: Person im Wasser
+
+f1111f92763c57a8a1be7490ea3a8f78376fbe922787c3c6687607a052d0b32d:
+  date: '2020-12-29'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden, OVAG-Straße
+  published: true
+  time: '15:13'
+  titel: Gartenhüttenbrand
+
+c9974ee06e0b5415feca63c03c9c918e9b9463555a4e3a13190ff19c14900e0e:
+  date: '2020-12-26'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Trais-Horloff, Bellersheimer Straße
+  published: true
+  time: 04:42
+  titel: Garagenbrand
+
+da2ffe7d76e53cba664152b09057e11c27bc3115b46bf0887edaf08af503b44e:
+  date: '2020-11-01'
+  kurzbeschreibung: Fehlauslösung. Es erfolgte nur die Kontrolle und Rückstellung
+    der Brandmeldeanlage.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden, Fa. Coleman
+  published: true
+  time: '23:35'
+  titel: Ausgelöste Brandmeldeanlage
+
+c63f93e9592797e9abfe800d868d1263c6361057ffba4d16cee53056e5adfaef:
+  date: '2020-10-01'
+  kurzbeschreibung: 'Ein Kaminbrand wurde gemeldet.
+
+    Kein Einsatz.'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Tr.-Horloff, Bellersheimer Str.
+  published: true
+  time: '11:42'
+  titel: Kaminbrand
+
+9180868ff2f5a254ed843287798cdd1edcb8fa42d2fd69e4747ebc6a393bc996:
+  date: '2020-08-09'
+  kurzbeschreibung: Wir öffneten ein kleines Seitenfenster um an den eingeschlossenen
+    Schlüssel des PKW zu kommen und das Tier zu befreien.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Tr.-Horloff, Parkplatz Seegebiet
+  published: true
+  time: '10:20'
+  titel: Tier in PKW
+
+320bcdb9b48d53f335ef08988e97872bc84a59493c181875ab069b321ef4f460:
+  date: '2020-07-31'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Römerpfad
+  published: true
+  time: '20:43'
+  titel: Hilflose Person in verschlossener Wohnung
+
+b864f02d8d3a1aab78e879f2aad68099250a9fe7eead9b44c224c8ac20f7d56f:
+  date: '2020-07-25'
+  kurzbeschreibung: Drei Rundballen wurden von uns abgelöscht.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Auf der Hohl
+  published: true
+  time: '15:18'
+  titel: Brennen Strohballen
+
+e52152968a407d99d91f2bb347b7a568d3e1433081982626e22d901e96dffe92:
+  date: '2020-07-14'
+  kurzbeschreibung: 'Ein Anwohner hatte versucht das trockene Gras auf der Straße
+    abzuflämmen.
+
+    Da die mit einem Gartenschlauch unternommenen Löschversuche schon erfolgreich
+    waren, wurde von uns lediglich die Brandstelle mit der Wärmebildkamera kontrolliert.'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Egerlandstr.
+  published: true
+  time: '15:32'
+  titel: Brennt Hecke
+
+68164348b2d4bdcf9dab27bad0c64270c1d40c5b5a8b3d891f8d5bd9e2b7ffda:
+  date: '2020-06-02'
+  kurzbeschreibung: 'In einer großen Logistikhalle war aus einer überhitzten Staplerbatterie
+    Dämpfe ausgetreten, die von mehreren Personen eingeatmet wurden.
+
+    Nach der Ersterkundung wurde unter Atemschutz mehrere Elektrolüfter in Stellung
+    gebracht sowie die Hallenentlüftung geöffnet. Während der gesamten Einsatzdauer
+    wurden laufend Messungen in und um die Halle vorgenommen sowie die Batterie gekühlt.
+
+    Die Zahl der durch das Einatmen der Dämpfe verletzten Personen erhöhte sich im
+    Laufe des Einsatzes. Der Einsatz wurde schließlich als MANV 10 (Massenanfall Verletzte)
+    eingestuft und entsprechend der Einstufung kamen nach und nach immer mehr Rettungsmittel
+    am Einsatzort an. Sie wurden zunächst in einem Bereitstellungsraum gesammelt und
+    dann an die direkte Einsatzstelle geschickt. Die Patienten wurden anschließend
+    zur Abklärung in Krankenhäuser gebracht.
+
+    Die Führung des Bereitstellungsraumes übernahm die FF Hu.- Inheiden.
+
+    <a href="https://www.giessener-allgemeine.de/kreis-giessen/hungen-ort848765/hungen-grosseinsatz-feuerwehr-rettungsdienst-nach-arbeitsunfall-verletzte-13785051.html">Bericht
+    der Gießener Allgemeinen</a>'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Ezetilstraße
+  published: true
+  time: 07:16
+  titel: Austretender Gefahrstoff
+
+2d0af7787f689d3587974364945821f49aff667bfd246bad3f4ac0fd2995c307:
+  date: '2020-05-26'
+  kurzbeschreibung: Der Unrat wurde von uns mit einem D-Rohr abgelöscht.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden, OVAG Straße
+  published: true
+  time: '15:52'
+  titel: Brennt Unrat
+
+ba8adfd02cd2049af0734890d260881bdbfa511d25d2b13600f436e0f53a1c0c:
+  date: '2020-05-22'
+  kurzbeschreibung: "Bei unserem Eintreffen stand die Gartenhütte und ein angrenzender\
+    \ Geräteschuppen bereits im Vollbrand. \nAn der Einsatzstelle hatten wir zunächst\
+    \ die Aufgabe die Wasserversorgung aus dem Riedbach zum Brandobjekt sicherzustellen.\
+    \ Wir bauten eine Riegelstellung zu einem benachbarten Wochenendhaus auf und beteiligten\
+    \ uns abschließend an den Nachlöscharbeiten. Dabei wurden mehrere unserer Atemschutzgeräteträger\
+    \ eingesetzt.\n<a href=\"https://www.giessener-allgemeine.de/kreis-giessen/hungen-ort848765/wochenendhaus-niedergebrannt-13774601.html\"\
+    >Bericht der Gießener Allgemeinen mit Bild</a>"
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Tr.- Horloff, Am Riedbach
+  published: true
+  time: 03:23
+  titel: Brennt Gartenhütte
+
+9449c7b94a6e18360980c2eaaf62e142bd4498bc831f2c8528c86bb0deaf9640:
+  date: '2020-04-28'
+  kurzbeschreibung: Brennender Unrat wurde von uns mit einem C Rohr abgelöscht.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Seegebiet, Am Köstgraben
+  published: true
+  time: '16:41'
+  titel: Brennt Unrat
+
+01ecd4c0450411b92880dfe8299e83c4f17d874ced637aea69b6cf5ef0a7ee43:
+  date: '2020-04-26'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Seegebiet, OVAG Straße
+  published: true
+  time: '16:34'
+  titel: Hilfeleistung "Tier"
+
+c2b18bcbd956f9f8e8b0b51da0e2b4831affe44368082d5fc5159c06b28edadc:
+  date: '2020-04-26'
+  kurzbeschreibung: Ein Kleintier war an einem PKW eingeklemmt. Es wurde befreit.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden, Seegebiet, Forellenweg
+  published: true
+  time: 09:48
+  titel: Hilfeleistung "Tier"
+
+c651b754be3d35975ac388aec3603b2066282a73d2028c0086c1789b6861c8e9:
+  date: '2020-04-20'
+  kurzbeschreibung: Kein Feuer vor Ort feststellbar.
+  kurzbeschreibung_freigegeben: false
+  ort: Fa. Coleman, Hungen-Inheiden
+  published: true
+  time: '17:23'
+  titel: Ausgelöste Brandmeldeanlage
+
+0b288dbf1480452b317a28aed93a9521e34be4402320bb8cc80323c94714af1f:
+  date: '2019-12-07'
+  kurzbeschreibung: '<!-- wp:paragraph -->
+
+    <p>Nachdem das gleiche Nutz-/ Lagerfeuer ein zweites mal als Schadfeuer (diesmal
+    PKW Brand) gemeldet wurde, wurde entschieden es abzulöschen.<br>Die FF Hu.-Inheiden
+    befand sich im Bereitstellungsplatz in der Nähe der Einsatzstelle.</p>
+
+    <!-- /wp:paragraph -->'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Utphe, B489, Hu.-Utphe --> Berstadt
+  published: true
+  time: '22:32'
+  titel: PKW Brand
+
+35aa4e23c0fe5e63ef8fef34b35a7bd77312e0394fc914f62d71367c5e32a992:
+  date: '2019-12-07'
+  kurzbeschreibung: '<!-- wp:paragraph -->
+
+    <p>Ein Nutz-/ Lagerfeuer wurde als Schadfeuer gemeldet.<br>Die FF Hu.- Inheiden
+    hielt sich in Bereitschaft in der Nähe der Einsatzstelle.</p>
+
+    <!-- /wp:paragraph -->'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Utphe, B489, Hu.- Utphe --> Berstadt
+  published: true
+  time: '18:12'
+  titel: Brennt Unrat
+
+67120c9a83eb9fd21a354d60957c40bda6712fd83edea29956e34c47c65d8e78:
+  date: '2019-12-03'
+  kurzbeschreibung: '<!-- wp:paragraph -->
+
+    <p>Auf der Rückfahrt von einer Atemschutzübung kam unser MTW an einem Verkehrsunfall
+    mit zwei beteiligten Fahrzeugen vorbei.<br>Die Besatzung des MTW übernahm die
+    Sicherung der Einsatzstelle und informierte die Leitstelle Gießen. <br>Die FF
+    Lich übernahm in der Folge die Einsatzstelle.<br>Bericht der FF Lich: [<a rel="noreferrer
+    noopener" aria-label=" (öffnet in neuem Tab)" href="https://www.ffw-lich.de/einsatzdetails/ausgelaufene-betriebsstoffe-nach-vu.html?day=20191203&amp;times=1575404220,1575404220"
+    target="_blank">Link</a>]</p>
+
+    <!-- /wp:paragraph -->'
+  kurzbeschreibung_freigegeben: false
+  ort: Lich, B457, Abfahrt Waldschwimmbad
+  published: true
+  time: '20:30'
+  titel: Verkehrsunfall
+
+1dbcdfea83c04deb93236e65b004f1103a8e79986093efe66467b9ae544c2a74:
+  date: '2019-11-11'
+  kurzbeschreibung: '<!-- wp:paragraph -->
+
+    <p>Wir begleiteten den Martinsumzug der Kindergartenkinder durch Inheiden.</p>
+
+    <!-- /wp:paragraph -->'
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.- Inheiden
+  published: true
+  time: '17:30'
+  titel: Brandsicherheitsdienst
+
+7d8fbddbfd202cee0c93b567a61ac77a435fe5be9c2e32e529ad2397145d751a:
+  date: '2019-08-05'
+  kurzbeschreibung: 'Gleich an zwei Stellen fing eine Hecke an zu brennen. Anwohner
+    konnten die Feuer jedoch mit Feuerlöschern ablöschen.
+
+    Unsere Aufgabe war die Kontrolle der Brandherde mit der Wärmebildkamera.'
+  kurzbeschreibung_freigegeben: false
+  ort: Riedbach, Hu.-Tr.-Horloff
+  published: true
+  time: '19:56'
+  titel: Brennende Hecke
+
+bd7c462619c412b3d81804d1627af195588a21287d337670c7d063692f29a44a:
+  date: '2019-08-02'
+  kurzbeschreibung: Brandsicherheitsdienste beim Seefest.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hungen Inheiden
+  published: true
+  time: '18:00'
+  titel: Brandsicherheitsdienste
+
+6213ec136fb90212e00efcd0abb9cc28b70de23cefed3bd3eddad0eda7700097:
+  date: '2019-07-07'
+  kurzbeschreibung: <a href="https://ff-nonnenroth.de/einsatzberichte/scheunenbrand/">Einsatzbericht
+    FF Hu.- Nonnenroth</a>
+  kurzbeschreibung_freigegeben: false
+  ort: Am Hainberg, Hu. Nonnenroth
+  published: true
+  time: 05:21
+  titel: Scheunenbrand
+
+9392f269967a0eba8826a1c6833835e9d40c52433923ab304a6f95e4d0d6a799:
+  date: '2019-07-05'
+  kurzbeschreibung: <a href="https://ff-nonnenroth.de/einsatzberichte/waldbrand/">Einsatzbericht
+    unserer Kameraden aus Hu.- Nonnenroth</a>
+  kurzbeschreibung_freigegeben: false
+  ort: Schottenerstr., Hungen
+  published: true
+  time: '18:14'
+  titel: Waldbrand
+
+b576099bf23d43ab1b6b6196b86832cd3f8b846ae3387a965eba7ec803da6ed7:
+  date: '2019-07-02'
+  kurzbeschreibung: Eine defekte Elektroinstallation hatte zu Rauchen angefangen.
+  kurzbeschreibung_freigegeben: false
+  ort: Im Gehren, Hu. Trais- Horloff
+  published: true
+  time: '12:48'
+  titel: Rauch aus Wohnung
+
+eec95ffdb0c41c4dd23e6308cde39dcd9c510a782305e500834d72f3d81d5cd4:
+  date: '2019-06-22'
+  kurzbeschreibung: Brandsicherheitsdienst bei einer Veranstaltung im Seegebiet.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet/ Festplatz, Hu.- Inheiden
+  published: true
+  time: '17:30'
+  titel: Brandsicherheitsdienst
+
+5a226ffc271dbb28421eccff38b7a20a3573fef1b2f38fe4a6b38bcfe89af5e7:
+  date: '2019-06-21'
+  kurzbeschreibung: Brandsicherheitsdienst bei einer Veranstaltung im Seegebiet.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet/ Festplatz, Hu.- Inheiden
+  published: true
+  time: '19:00'
+  titel: Brandsicherheitsdienst
+
+ba386113c8bb40d0f4bb755a8341d14d7641adac72fea964b1ba782616d7ed29:
+  date: '2019-06-15'
+  kurzbeschreibung: Brandsicherheitsdienst bei einer Abifeier in der Mehrzweckhalle.
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hu.- Inheiden
+  published: true
+  time: '19:30'
+  titel: Brandsicherheitsdienst
+
+df1db9a82218d37d43f440625b5ffc2ee6ddb95fa7878b9eab8ff5e0d617cb8e:
+  date: '2019-05-11'
+  kurzbeschreibung: Brandsicherheitsdienst bei einer Showtanzveranstaltung.
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hu.- Inheiden
+  published: true
+  time: '18:00'
+  titel: Brandsicherheitsdienst
+
+42ebc92ac647eca831fb832116a3ad09b870de2ce1d1dd616086bc9ea4639abe:
+  date: '2019-04-29'
+  kurzbeschreibung: Kein Einsatz.
+  kurzbeschreibung_freigegeben: false
+  ort: Fa. Coleman, Hungen-Inheiden
+  published: true
+  time: '12:10'
+  titel: Ausgelöste Brandmeldeanlage
+
+e633f83b163a4566e6180a6a7213b0ab0e120e39a7af76ecdc718331f9e0aa4a:
+  date: '2019-03-25'
+  kurzbeschreibung: Keine Tätigkeit für uns.
+  kurzbeschreibung_freigegeben: false
+  ort: Berstädter Str., Hungen - Utphe
+  published: true
+  time: '10:27'
+  titel: Auslaufende Betriebsstoffe
+
+168cf674fd24fb92b74f042548600bd4be4b65e4c342c71922f4ac528b40467d:
+  date: '2019-03-08'
+  kurzbeschreibung: 'Gemeldet wurde ein stechender Geruch in der Umgebung des Hu.-
+    Tr.- Horloffer Kreisels der Bundesstraße.
+
+    Nach eintreffen der Fahrzeuge und einer Erkundung konnte Entwarnung gegeben werden.
+    Zu riechen war der von einem Landwirt ausgebrachte Naturdünger.'
+  kurzbeschreibung_freigegeben: false
+  ort: B489, im Bereich Hu.- Tr. Horloff
+  published: true
+  time: '20:30'
+  titel: unklare Geruchsentwicklung
+
+e23c5dc4931ec9b806b644a96d1cf26cb6dc7f812648f11b748ab8cd26ff0abc:
+  date: '2019-02-16'
+  kurzbeschreibung: Brandsicherheitsdienst bei einer Faschingsveranstaltung in der
+    Mehrzweckhalle.
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hu.- Inheiden
+  published: true
+  time: '18:30'
+  titel: Brandsicherheitsdienst
+
+759b90e536d428c250f67a50e45bd42ba14bccaed6b67bc9ce9e4c75046b2f01:
+  date: '2019-01-30'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Bellersheimer Str., Hu. Tr.-Horloff
+  published: true
+  time: 08:41
+  titel: Unklarer Feuerschein am Waldrand
+
+f8225235624b2db9e7c02d3cf5e68fcbf22f3c99107d95a0ae7d3a546132d8b3:
+  date: '2019-01-26'
+  kurzbeschreibung: Brandsicherheitsdienst bei einer Faschingsveranstaltung in der
+    Mehrzweckhalle.
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hu.-Inheiden
+  published: true
+  time: '18:45'
+  titel: Brandsicherheitsdienst
+
+17af9ec03bb318f7dc9fce45bbaaa5926f9a4e0d70d5a7b178fac4e20269c32e:
+  date: '2019-01-25'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Holzweg, Hu. Tr.-Horloff
+  published: true
+  time: '19:21'
+  titel: Kaminbrand
+
+5bf95e1fbca7a7d12f0ec90cfc769827232420e8f5a4289c624aa5c01891c8cd:
+  date: '2019-01-23'
+  kurzbeschreibung: An der Einsatzstelle brannte lediglich ein Nutzfeuer.
+  kurzbeschreibung_freigegeben: false
+  ort: Weestraße, Hu.-Upthe
+  published: true
+  time: '17:20'
+  titel: Unklarer Feuerschein
+
+53cebdea7f89881eea74d70e90f4ebd8ccf7a989faeff79882c067a39b5c8423:
+  date: '2019-01-21'
+  kurzbeschreibung: Nach der ersten Lagemeldung, konnten wir die Einsatzfahrt abbrechen.
+  kurzbeschreibung_freigegeben: false
+  ort: Weedstr., Hu.-Utphe
+  published: true
+  time: '16:25'
+  titel: Brennt Unrat
+
+660350a5c505e31472074954e08395ad06a62df5a6b857099de6ed5c8cef4156:
+  date: '2019-01-16'
+  kurzbeschreibung: Eine Person war an einem Hochregal eingeklemmt worden. Nach kurzer
+    Betreuung durch uns, wurde die Person dem Rettungsdienst übergeben.
+  kurzbeschreibung_freigegeben: false
+  ort: Ezetilstr., Hu.- Inheiden
+  published: true
+  time: 06:50
+  titel: Eingeklemmte Person
+
+1d13946bbd33ba00faa8f342f85bc100ed08fde6d5a62315c2579e60487ccc24:
+  date: '2019-01-14'
+  kurzbeschreibung: Fehlalarm.
+  kurzbeschreibung_freigegeben: false
+  ort: Am Zwenger, Hungen
+  published: true
+  time: '16:35'
+  titel: Gasgeruch
+
+8ab2334ed30ca386d875c244a797e6422a77fff81f4313f0bd92fb3565818922:
+  date: '2019-01-04'
+  kurzbeschreibung: 'Zu einem Brand in einer KFZ-Werkstatt kam es in der Weedstraße
+    in Hungen-Upthe. Im Einsatz waren zahlreiche Einsatzkräfte aus dem Hungener Stadtgebiet.
+    Außerdem wurden Kräfte aus dem gesamten Kreisgebiet hinzugezogen.
+
+    Bericht der Gießener Allgemeinen: [<a href="https://www.giessener-allgemeine.de/regional/kreisgiessen/Kreis-Giessen-Kfz-Werkstatt-wird-Raub-der-Flammen;art457,536000"
+    target="_blank" rel="noopener">Link</a>]
+
+    Bericht des Gießener Anzeigers: [<a href="https://www.giessener-anzeiger.de/lokales/kreis-giessen/landkreis/rauchsaulegrossbrandin-utphe_19878257"
+    target="_blank" rel="noopener">Link</a>]'
+  kurzbeschreibung_freigegeben: false
+  ort: Weedstraße, Hu.-Upthe
+  published: true
+  time: '15:56'
+  titel: Ausgedehnter Brand in Kfz-Werkstatt
+
+86600f278d724b1eb25d86a6b3476db6098fdea6739917e23e0f6e6a76577f29:
+  date: '2018-12-14'
+  kurzbeschreibung: Im Wochenendgebiet war eine Gasflasche in Brand geraten. Die Gasflasche
+    lag im Garten des Wochenendgrundstückes. Vom Einsatzleiter wurde entschieden,
+    das Gas kontrolliert abbrennen zu lassen..<!--more--><a href="https://www.ff-inheiden.de/wp-content/uploads/2018/12/IMG_20181214_212945-2.jpg"><img
+    class="alignleft size-full wp-image-1639" src="https://www.ff-inheiden.de/wp-content/uploads/2018/12/IMG_20181214_212945-2.jpg"
+    alt="" width="1920" height="1280" /></a>
+  kurzbeschreibung_freigegeben: false
+  ort: ''
+  published: true
+  time: '21:06'
+  titel: Brennende Gasflasche
+
+87767156aa06ae65b80620f20a89246dc88994629bf79e266249c30bd7cd737b:
+  date: '2018-12-14'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: ''
+  published: true
+  time: '12:21'
+  titel: Hilfeleistung "Tier"
+
+429d339fbe7445a70b28ef88275770be5d25c51dd658a7ff2fd5a391601f22a0:
+  date: '2018-11-25'
+  kurzbeschreibung: Einsatzfahrt kurz hinter Ortsausgang Inheiden abgebrochen.
+  kurzbeschreibung_freigegeben: false
+  ort: Heegweg, Hu. Utphe
+  published: true
+  time: '16:57'
+  titel: Hilfeleistung "Tier"
+
+6c78768ceb32671846eecdfa45b062ce99c12e5d8f380245c0700579e5770f14:
+  date: '2018-11-09'
+  kurzbeschreibung: Wir begleiteten den Martinsumzug der Kindergartenkinder durch
+    Inheiden.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Inheiden
+  published: true
+  time: '17:00'
+  titel: Brandsicherheitsdienst
+
+ee022f2b0489fec44e2452e09cb06e5e8b950795254eb1e38128a3e4331f1187:
+  date: '2018-11-06'
+  kurzbeschreibung: Wir sicherten die Einsatzstelle gegen den fliessenden Verkehr.
+  kurzbeschreibung_freigegeben: false
+  ort: Niddaerstrasse, Hungen
+  published: true
+  time: '14:10'
+  titel: Verkehrsunfall
+
+7718a214cf21266d0ac1f11d701f465a2cd8fa390aaa583d83d375a12841a3c2:
+  date: '2018-10-21'
+  kurzbeschreibung: 'Kein Einsatz.
+
+    Das Tier konnte schon vor unserem Eintreffen befreit werden.'
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet Hu.- Inheiden
+  published: true
+  time: '10:39'
+  titel: Hilfeleistung "Tier"
+
+aed2dd104bdcd1e731977431cbe99fa6d51396ac6fe50fb0a64de02fb320d048:
+  date: '2018-10-18'
+  kurzbeschreibung: 'In der Lundwigstraße brannte eine Hecke. Das Feuer konnte schnell
+    gelöscht und ein Übergreifen auf benachbarte Gartenhütten verhindert werden.<!--more-->
+
+    <img class="alignleft size-full wp-image-1542" src="https://www.ff-inheiden.de/wp-content/uploads/2018/10/20181018.jpg"
+    alt="" width="1200" height="800" />'
+  kurzbeschreibung_freigegeben: false
+  ort: Ludwigstraße, Hu.- Inheiden
+  published: true
+  time: '15:40'
+  titel: brennende Hecke
+
+d18caa104ca75133b5f76980981559dce6ecbce5dd276efca8be2c65058a0fba:
+  date: '2018-09-28'
+  kurzbeschreibung: Kein Einsatz
+  kurzbeschreibung_freigegeben: false
+  ort: Rewe Lebensmittelmarkt, Gießener Str.
+  published: true
+  time: 00:00
+  titel: Ausgelöste Brandmeldeanlage
+
+3195674bb3e303cfb3fc96d02b1d53a7e1b38a4d480680d5658accc6e59d9207:
+  date: '2018-09-23'
+  kurzbeschreibung: 'Gemeldet wurde ein vollgelaufener Keller.
+
+    Nach Erkundung: kein Einsatz.'
+  kurzbeschreibung_freigegeben: false
+  ort: Bellersheimer Str., Hu.-Tr. Horloff
+  published: true
+  time: '16:14'
+  titel: Unwetter
+
+547183232cab2374568cd1e503f2514203507255b34fb862ec162f9f0b4b3825:
+  date: '2018-09-21'
+  kurzbeschreibung: Ein Katamaran war auf dem See gekentert. Nachdem das Boot mit
+    Hilfe des RTB 1 in Ufernähe gezogen war, wurde es von Land aus mit einem Seil
+    wieder aufgerichtet.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet Hu.-Inheiden
+  published: true
+  time: '13:00'
+  titel: Bootsunfall
+
+598a04adaa56912ec895a3b1ecbeb95ac4d239a9a235de3238ee9c26c70d1d8f:
+  date: '2018-09-11'
+  kurzbeschreibung: Ein verletzter Schwan wurde den Bauhof Mitarbeiter übergeben um
+    ihn in die Veterinärklinik Gießen zu bringen.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet Hu.-Inheiden
+  published: true
+  time: '15:27'
+  titel: Hilfeleistung "Tier"
+
+731a5db57bad262a36e066824478a751ae50a30df7bc83aa63d621735430152c:
+  date: '2018-09-07'
+  kurzbeschreibung: 'Gemeldet wurde eine Rauchentwicklung aus der Tiefgarage des Wohngebäudes/
+    Einkaufsmarktes.
+
+    Nach einer Erkundung - kein Einsatz.'
+  kurzbeschreibung_freigegeben: false
+  ort: Tiefgarage, Bürgerpark, Hungen
+  published: true
+  time: '15:26'
+  titel: Unklare Rauchentwicklung aus Tiefgarage
+
+ab60eae46a2ad44c10f4ebe66836d1a273042401edb38d24a35445158943f3de:
+  date: '2018-09-06'
+  kurzbeschreibung: Einsatzfahrt abgebrochen.
+  kurzbeschreibung_freigegeben: false
+  ort: K186, Hu.Tr.-Horloff --> Hu.Steinheim
+  published: true
+  time: '12:50'
+  titel: Hilfeleistung "Tier"
+
+f3bfddca167b7278ae424ba61262aba8738a6c4b4e7034c0588b160ffef82ce2:
+  date: '2018-09-04'
+  kurzbeschreibung: Ein geschwächter Schwan wurde eingefangen und in Tierklinik gebracht.
+  kurzbeschreibung_freigegeben: false
+  ort: Sachsensee bei Hu.-Bellersheim
+  published: true
+  time: '19:30'
+  titel: Hilfeleistung "Tier"
+
+3cf667e5d63878d6a533cb15d92f7d43edc4f18a8b1da3fdf7e8ee2c44a3ba80:
+  date: '2018-08-09'
+  kurzbeschreibung: Nach einem kurzen Gewitter wurden brennende Strohballen bei Hu.-Utphe
+    gemeldet. Vor Ort stellte sich nach einer Erkundung heraus, dass ein einzelner
+    Ballen betroffen war. Daraufhin konnte die Mehrzahl der anrückenden Kräfte die
+    Einsatzfahrt abbrechen. Die FF Hu.- Utphe löschte den Brand.
+  kurzbeschreibung_freigegeben: false
+  ort: Utpher Mühle/ Kläranlage, Hu.- Utphe
+  published: true
+  time: '16:20'
+  titel: Brennende Strohballen
+
+b4c0acf214032481fd672f02935927f4568d35657d1c69c24601c43bfc15d620:
+  date: '2018-08-07'
+  kurzbeschreibung: 'Auslösung durch Wartungsarbeiten. Die Einsatzfahrt wurde abgebrochen. '
+  kurzbeschreibung_freigegeben: false
+  ort: Rewe Zentrallager, Schottenerstr., Hungen
+  published: true
+  time: '12:00'
+  titel: Ausgelöste Brandmeldeanlage
+
+2511fe8f4f976a9bfc01655439a881d0a8a3e83ae85c65cdf7bff103c6fa30ca:
+  date: '2018-08-06'
+  kurzbeschreibung: Kein Einsatz.
+  kurzbeschreibung_freigegeben: false
+  ort: Holzweg, Hu.-Trais-Horloff
+  published: true
+  time: '21:34'
+  titel: Tierrettung
+
+6d83203d1aff786aa0441e8d4c3c8116ecdb450d19274f1b3dee8799761ccb1c:
+  date: '2018-08-06'
+  kurzbeschreibung: Fehlauslösung. Kein Einsatz.
+  kurzbeschreibung_freigegeben: false
+  ort: Hochwald Nahrungsmittel GmbH, Hungen
+  published: true
+  time: '11:35'
+  titel: Ausgelöste Brandmeldeanlage
+
+1f88132af7544af932e1547204ca3eff67136cb218d335af617b3511c1948a36:
+  date: '2018-08-04'
+  kurzbeschreibung: Brandsicherheitsdienst beim Seefest in Inheiden.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hu.-Inheiden
+  published: true
+  time: '17:00'
+  titel: Brandsicherheitsdienst
+
+2c4acbebc7f7521b488a204b3906ddff3f1cc83f147efc75c2526809509f1c77:
+  date: '2018-08-04'
+  kurzbeschreibung: In einem Abfallsammelfahrzeug geriet die Ladung in Brand. Der
+    Fahrer reagierte und entlud das Fahrzeug auf einem offenen Platz vor dem Feuerwehrhaus
+    in Upthe. Dort konnte das Müll durch die Feuerwehr abgelöscht werden.
+  kurzbeschreibung_freigegeben: false
+  ort: Am Heegweg, Hu.-Utphe
+  published: true
+  time: 06:18
+  titel: Brennender Müll
+
+6b4aa5c973c715078b2ee8293ebc743e594be80ce09b970b89797b4eeed54784:
+  date: '2018-08-03'
+  kurzbeschreibung: Brandsicherheitsdienst beim Seefest in Inheiden.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hu.-Inheiden
+  published: true
+  time: '20:00'
+  titel: Brandsicherheitsdienst
+
+b6389421777a46e4794745ca1fab8b99c002e23e6eea0161e231df635248196e:
+  date: '2018-07-30'
+  kurzbeschreibung: 'Im Seegebiet in Inheiden stand ein Wochenendhaus beim Eintreffen
+    der Feuerwehr im Vollbrand. Das Feuer hatte schon auf einen angrenzenden Wohnwagen
+    übergegriffen. Auch ein weiteres Wochenendhaus war bereits vom Brand betroffen.
+
+    Teilweise wurden bis zu fünf Strahlrohre im Außenangriff eingesetzt.
+
+    Bericht des Gießener Anzeigers vom 30.07.2018: [<a href="http://www.giessener-anzeiger.de/lokales/kreis-giessen/hungen/huette-und-wohnwagen-in-inheiden-abgebrannt_18959374.htm"
+    target="_blank" rel="noopener">Link...</a>]
+
+    Bericht der Gießener Allgemeinen Zeitung vom 30.07.2018: [<a href="https://www.giessener-allgemeine.de/regional/kreisgiessen/Kreis-Giessen-Brand-am-Inheidener-See;art457,464904"
+    target="_blank" rel="noopener">Link...</a>]'
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hungen-Inheiden
+  published: true
+  time: '16:20'
+  titel: Brennendes Wochenendhaus
+
+698135064e8e5c7efc7feac28591ed2cbc44115c01daaa8e5b138cea4d8e789a:
+  date: '2018-07-30'
+  kurzbeschreibung: In einem Wohnhaus brannte es in der Küche. Das Feuer konnte schnell
+    von einem Trupp mit Atemschutzgeräten unter Kontrolle gebracht werden.
+  kurzbeschreibung_freigegeben: false
+  ort: Seestr., Hu.- Inheiden
+  published: true
+  time: '15:58'
+  titel: Küchenbrand
+
+9f02b3ebd03b2bff37cb4f1a9b75bbd90abedc455c8068d6596327fa36c25028:
+  date: '2018-07-25'
+  kurzbeschreibung: Das Tier wurde eingefangen und Mitarbeitern des Bauhofs übergeben,
+    die den Transport in die Tierklinik übernahmen.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet Hu.- Inheiden
+  published: true
+  time: '14:00'
+  titel: Tier in Not
+
+b4a2dd3ade0b11ab52d38a23c3a7ef8a93c5fb273dd2c6a61e51feb1448bba70:
+  date: '2018-07-24'
+  kurzbeschreibung: Ein verletztes Tier konnte nicht lokalisiert werden.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet Hu.- Inheiden
+  published: true
+  time: '11:00'
+  titel: Tier in Not
+
+ef3c3100b41d777fa9ad2c2c72d786a821133574cc600f70265916e83dca88e0:
+  date: '2018-07-16'
+  kurzbeschreibung: Vor Ort war kein Brand feststellbar.
+  kurzbeschreibung_freigegeben: false
+  ort: Rewe-Markt, Gießener Straße, Hungen
+  published: true
+  time: 08:04
+  titel: Ausgelöste Brandmeldeanlage
+
+1fe88aa2846f828a637d8df2027b0e36b4ceee0d7e8cf4b7da0d72c557ff5d3a:
+  date: '2018-07-03'
+  kurzbeschreibung: Die Brandmeldanlage löst wegen eines technischen Defekts aus.
+    Kein Einsatz.
+  kurzbeschreibung_freigegeben: false
+  ort: Rewe Lebensmittelmarkt, Gießenerstr, Hungen
+  published: true
+  time: '12:25'
+  titel: Ausgelöste Brandmeldeanlage
+
+964d8c79b17a08549cb8959e878dc3b60f47b0c6676f340488aa4ac34b35ab8e:
+  date: '2018-06-22'
+  kurzbeschreibung: Durch Bürger wurde ein verletzter Schwan gemeldet. Das Tier lies
+    sich jedoch trotz großer Mühe nicht einfangen.
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hu.-Inheiden
+  published: true
+  time: '13:18'
+  titel: Tier in Not
+
+37f7992fe507ea8f34608b1af8d0e912bebfbfbd6c1d2f6c7fdaa7a61e98b300:
+  date: '2018-06-06'
+  kurzbeschreibung: 'Ein verletzter Schwan wurde eingefangen und in die Tierklinik
+    Gießen zur Behandlung gebracht. <!--more-->Nach ambulanter Behandlung wurde der
+    Schwan wieder im Inheidener See ausgesetzt.
+
+    <a href="https://www.ff-inheiden.de/wp-content/uploads/2018/06/20180606_2_3_IMG_3868.jpg"><img
+    class="alignleft wp-image-1320 size-full" src="https://www.ff-inheiden.de/wp-content/uploads/2018/06/20180606_2_3_IMG_3868.jpg"
+    alt="" width="1920" height="1280" /></a>'
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet Hu.-Inheiden
+  published: true
+  time: '15:05'
+  titel: Tier in Not
+
+e462b3ff4045309905bdcd6f76784b5c34d7e8ecf9e7d049ad13b02f15103fbe:
+  date: '2018-06-06'
+  kurzbeschreibung: Eine kleine Ölspur wurde mit Bindemittel abgestreut.
+  kurzbeschreibung_freigegeben: false
+  ort: Stefan Kuhn Str., Hu.-Inheiden
+  published: true
+  time: '11:25'
+  titel: Ölspur
+
+aac208305cee6c64f73d028c88b4347fd6d804556e98514c21da8654fef5d086:
+  date: '2018-05-29'
+  kurzbeschreibung: 'Am Abend des 30. Mai wurde Gießen von einem heftigen Unwetter
+    getroffen. Zur Unterstützung der Feuerwehr Gießen wurden Kräfte aus dem gesamten
+    Landkreis nachgefordert.<!--more-->Die Besatzung des Löschgruppenfahrzeuges aus
+    Inheiden arbeitete im Verlauf der Nacht elf Einsatzstellen ab. Ingesamt waren
+    in Gießen mehrere Hundert Einsatzstellen angefallen.
+
+    <h2>Berichte aus der Presse:</h2>
+
+    Gießener Allgemeine Zeitung:
+
+    <a href="https://www.giessener-allgemeine.de/regional/stadtgiessen/Stadt-Giessen-Giessen-nach-dem-Unwetter-Entwicklungen-Bilder-Schaeden;art71,438862"
+    target="_blank" rel="noopener">Gießen nach dem Unwetter: Entwicklungen, Bilder,
+    Schäden</a>
+
+    <a href="https://www.giessener-allgemeine.de/regional/stadtgiessen/Stadt-Giessen-Unwetter-in-Giessen-Die-erste-Bilanz;art71,438936"
+    target="_blank" rel="noopener">Unwetter in Gießen: Die erste Bilanz</a>
+
+    Gießener Anzeiger:
+
+    <a href="http://www.giessener-anzeiger.de/lokales/stadt-giessen/nachrichten-giessen/unwetter-in-giessen-ueberflutungen-sorgen-fuer-verkehrsbehinderungen-einkaufsmarkt-unter-wasser_18800790.htm#cxrecs_s"
+    target="_blank" rel="noopener">Unwetter in Gießen: Überflutungen sorgen für Verkehrsbehinderungen...</a>
+
+    <a href="http://www.giessener-anzeiger.de/lokales/stadt-giessen/nachrichten-giessen/nach-dem-unwetter-80-feuerwehrleute-in-giessen-bei-aufraeumarbeiten-im-einsatz_18802307.htm"
+    target="_blank" rel="noopener">Nach dem Unwetter: 80 Feuerwehrleute in Gießen
+    bei Aufräumarbeiten im Einsatz </a>
+
+    [gallery link="file" ids="1352,1353,1354,1355,1360,1357,1359,1358,1356"]'
+  kurzbeschreibung_freigegeben: false
+  ort: Stadtgebiet Gießen
+  published: true
+  time: '20:06'
+  titel: Unwetter
+
+386edb4ef2c988696955d18b09f72eb802b12990dba19836b761bfc818cbb012:
+  date: '2018-05-27'
+  kurzbeschreibung: 'Am späten Abend des 27.05 zog ein schweres Unwetter über den
+    Ostkreis Gießen. Im Gemeindegebiet Hungen waren hierbei Hu.- Bellersheim, Hu.-
+    Obbornhofen und Hu.- Trais-Horloff besonders von starken Regenfällen und Hagel
+    betroffen.<!--more-->
+
+    Während die Feuerwehren aus Hungen, Bellersheim und Obbornhofen einen Dachstuhlbrand
+    nach einem Blitzeinschlag aber mit vergleichsweise geringem Schaden ablöschten,
+    wurde das Unwetter immer schlimmer, immer größere Wassermassen prasselten herunter
+    und bahnten sich ihren Weg durch die Ortschaften. Unzählige Keller liefen dort
+    voll. In Trais-Horloff verwandelte sich das Gebiet rund um den Hochbehälter/ Kreisel
+    in eine Seenplatte. Hier liefen die Keller voll. Die vom Kreisel abgehende Straße
+    nach Hu.- Bellersheim/ Hu.- Obbornhofen war unpassierbar und wurde abgesperrt.
+    In Obbornhofen blockierte eine etwa 20 Zentimeter hohe Hagelschicht die Straßen.
+    Auch hier lief das Wasser in die Keller. Besonders dringlich wurde es, wenn das
+    Wasser die in den Kellern stehenden Öltanks anhob und diese umzukippen drohten.
+
+    Neben allen Hungener Feuerwehren waren Katastrophenschutzzüge aus Reiskirchen,
+    Staufenberg, Pohlheim, Laubach, Grünberg, Lich und Linden im Einsatz, um unzählige
+    Keller auszupumpen. Laut DWD betrug die Regenmengen ca. 150 l/m². Die Einsatzarbeiten
+    gingen bis weit in den nächsten Tag hinein. Am frühen Montagmorgen wurden die
+    erschöpften Einsatzkräfte nach und nach von den umliegenden Wehren abgelöst. Im
+    Einsatz waren ca. 150 Feuerwehrfrauen-/männer.
+
+    Die Feuerwehr Hungen- Inheiden war überwiegend in Obbornhofen im Einsatz. Hierbei
+    wurden nach und nach mehrere Keller - mit Priorisierung auf die erwähnten gefährdeten
+    Öltanks - ausgepumpt.
+
+    Weitere Informationen zum Einsatzgeschehen an diesem Tag haben die Kollegen von
+    der Feuerwehr Hungen-Obbornhofen zusammengetragen:
+
+    <a href="http://www.ffw-obbornhofen.de/index.php/newsreader-22/items/einsatz-032018-brandeinsatz-unwetterlage.html"
+    target="_blank" rel="noopener">http://www.ffw-obbornhofen.de/index.php/newsreader-22/items/einsatz-032018-brandeinsatz-unwetterlage.html</a>
+
+    [gallery link="file" ids="1301,1325,1326,1327,1328,1329,1330,1332,1333,1334,1335,1336"]'
+  kurzbeschreibung_freigegeben: false
+  ort: Stadtgebiet Hungen
+  published: true
+  time: '22:30'
+  titel: Unwetter
+
+536dacf28be1f71bfdeb8246cb017358665225d55fd4598aac8b78df23d9126c:
+  date: '2018-05-27'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Am Riedbach, Hungen-Trais-Horloff
+  published: true
+  time: '13:25'
+  titel: Ölspur
+
+a1735fc48e6faa7092f7c2a5d9c85bb2e1669d7c13f19e73b2871fae51e08d77:
+  date: '2018-05-09'
+  kurzbeschreibung: Wir mussten vor Ort nicht tätig werden.
+  kurzbeschreibung_freigegeben: false
+  ort: Sportstudio, Schottener Straße, Hungen
+  published: true
+  time: '12:30'
+  titel: Ausgelöste Brandmeldeanlage
+
+165b271d65b2fc51118fdbf90bed99fbd7a462784d1853d80219633e4786f1a4:
+  date: '2018-04-13'
+  kurzbeschreibung: Eine Person wurde bei dem Verkehrsunfall verletzt.
+  kurzbeschreibung_freigegeben: false
+  ort: L3137, Hungen -> Hu.-Villingen
+  published: true
+  time: '16:36'
+  titel: Verkehrsunfall
+
+93961f1826d1f2a8f49ece53278c9be6bd1cc4371a1c26c03f1ba2c7878ecc05:
+  date: '2018-02-25'
+  kurzbeschreibung: '<p style="padding-left: 30px;">Ein Schwan hatte sich mit dem
+    Hals in einem Kunststoffring mit ca. 20cm Durchmesser verfangen. Wir befreiten
+    den Schwan mit einem Seitenschneider. Der Schwan ist unverletzt.</p>
+
+    <!--more-->
+
+    <a href="https://www.ff-inheiden.de/wp-content/uploads/2018/02/IMG_20180225_154032.jpg"><img
+    class="alignleft wp-image-1018 size-full" src="https://www.ff-inheiden.de/wp-content/uploads/2018/02/IMG_20180225_154032.jpg"
+    alt="" width="1929" height="1286" /></a>'
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hungen-Inheiden
+  published: true
+  time: '15:05'
+  titel: Tierrettung
+
+f46a365e88c0d8411892dbef1b8c32a7dd0fb52de9556f0768c7a867a757c76b:
+  date: '2018-02-17'
+  kurzbeschreibung: 'Einsatz ohne Dringlichkeit:
+
+    Tier in Not.
+
+    Ein erschöpfter und verletzter Schwan wurde aufgenommen und in die Tierklinik
+    Gießen gebracht.'
+  kurzbeschreibung_freigegeben: false
+  ort: Oberer Knappensee, nähe Kläranlage
+  published: true
+  time: '17:58'
+  titel: Tier in Not
+
+4b4b7fcd16f948379f20882a1ea75bed6d97c28bd5916037bb9f056b515edd00:
+  date: '2018-02-13'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hungen-Inheiden
+  published: true
+  time: '14:11'
+  titel: Brandsicherheitsdienst
+
+11d1b1ed6285b2846d0f97eefddadc81e492e670e9cf541ad0b5e676e4b5c762:
+  date: '2018-01-27'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hungen-Inheiden
+  published: true
+  time: '18:45'
+  titel: Brandsicherheitsdienst
+
+5b881859d6f463d724cfbc0baedadd672a422e35ade5b704486222df20692773:
+  date: '2018-01-24'
+  kurzbeschreibung: Beim Eintreffen der Feuerwehr lief die Sprinkleranlage in einem
+    Bereich des Regallagers. Der Bereich wurde mit der Wärmebildkamera kontrolliert.
+    Es konnte kein Brand festgestellt werden.
+  kurzbeschreibung_freigegeben: false
+  ort: Fa. Coleman, Hungen-Inheiden
+  published: true
+  time: '18:39'
+  titel: Ausgelöste Brandmeldeanlage
+
+b7bc7831633204528941f2c4224adcbdaee6118df62499978275a7b3c96874a5:
+  date: '2018-01-19'
+  kurzbeschreibung: Die Brandmeldeanlage löste aufgrund eines technischen Defektes
+    aus. Es bestand keine Gefahr.
+  kurzbeschreibung_freigegeben: false
+  ort: Firma Hochwald, Hungen
+  published: true
+  time: '16:49'
+  titel: Ausgelöste Brandmeldeanlage
+
+126ea4d9588dde4f186f440fb5c66a09698be01f13f2e0c558451f53760e4aa5:
+  date: '2018-01-13'
+  kurzbeschreibung: ''
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hungen-Inheiden
+  published: true
+  time: '19:00'
+  titel: Brandsicherheitsdienst
+
+32db076f2af5109acba8426ac624bf59310c0573fb94331a76af12309a0ab8c1:
+  date: '2018-01-06'
+  kurzbeschreibung: 'Einsatz ohne Dringlichkeit:
+
+    Tierbergung.
+
+    Zwei tote Wasservögel wurden von Anwohnern gemeldet.
+
+    Ein Tier konnten wir nur noch bergen, das andere wurde in die Veterinärklinik
+    nach Gießen gebracht.'
+  kurzbeschreibung_freigegeben: false
+  ort: Seegebiet, Hungen-Inheiden
+  published: true
+  time: 09:43
+  titel: Tierbergung
+
+c8703a56c74f2ee100df8688df972bd58750a977caa999115eb76cbc9cbde136:
+  date: '2017-12-26'
+  kurzbeschreibung: 'Amtshilfe für die Polizei; Einsatz ohne Dringlichkeit:
+
+    Türöffnung
+
+    Ein Rauchmelder hatte in einem leerstehenden Gebäude ausgelöst. Nach dem Öffnen
+    der Tür wurde der Melder ausgeschaltet.'
+  kurzbeschreibung_freigegeben: false
+  ort: Köstweg, Hungen-Inheiden
+  published: true
+  time: '10:15'
+  titel: Türöffnung
+
+82305edd1cdb856ec1f7f9267aa890016fcdfaf996b39404e2692933270cf580:
+  date: '2017-12-21'
+  kurzbeschreibung: 'Wie am Tag zuvor, stieg Wasserdampf aus einem überflutetem Stromverteilerkasten
+    auf.
+
+    Im Rücksprache mit dem zuständigen Energieversorger war kein Eingreifen durch
+    die Feuerwehr erforderlich.'
+  kurzbeschreibung_freigegeben: false
+  ort: Hainer Weg, Hungen-Inheiden
+  published: true
+  time: '16:20'
+  titel: Qualm aus Stromverteilerkasten
+
+a4266d4ee93976d8163fbeeb42f2993a05d3d85fc4603e2adf89fe1d6c4ad221:
+  date: '2017-12-20'
+  kurzbeschreibung: 'Aufgrund der anhaltenden feuchten Witterung ist der Grundwasserspiegel
+    im Seegebiet Inheiden in den vergangen Wochen soweit angestiegen, dass der See
+    stellenweise über die Ufer getreten ist und in einige Stromverteilerkästen Wasser
+    eintrat sodass Wasserdampf aufstieg.
+
+    Im Rücksprache mit dem zuständigen Energieversorger war kein Eingreifen durch
+    die Feuerwehr erforderlich.'
+  kurzbeschreibung_freigegeben: false
+  ort: Hainer Weg, Hungen-Inheiden
+  published: true
+  time: 08:57
+  titel: Qualm aus Stromverteilerkasten
+
+4ab60de3dd7b83a24381cad59593712ffbfa6c6ae927e2d0d80d7b33c8dc703f:
+  date: '2017-12-16'
+  kurzbeschreibung: 'Aus einem defekten Schlauch liefen größere Mengen Wasser in einen
+    Kellerraum.
+
+    Die Feuerwehr pumpte den Keller leer.'
+  kurzbeschreibung_freigegeben: false
+  ort: Zum Sportplatz, Hungen-Inheiden
+  published: true
+  time: '11:19'
+  titel: Wasser im Keller
+
+80b3d68358e5e281062afad6f0681ea630f3a423a39828b0a42138c51bb5ff6b:
+  date: '2017-12-08'
+  kurzbeschreibung: 'Vermutlich durch Reinigungsarbeiten wurde die Brandmeldeanlage
+    ausgelöst.
+
+    Für die Feuerwehr waren vor Ort keine weiteren Maßnahmen zu treffen.'
+  kurzbeschreibung_freigegeben: false
+  ort: Hochwald Nahrungsmittelwerke, Hungen
+  published: true
+  time: '11:15'
+  titel: Ausgelöste Brandmeldeanlage
+
+56571ef69922252ac08ed27097f602c0c3954ef070e49668c220ce6e252c50c7:
+  date: '2017-11-13'
+  kurzbeschreibung: Die Feuerwehr sicherte den Laternenumzug des Kindergartens gegen
+    den fließenden Straßenverkehr ab.
+  kurzbeschreibung_freigegeben: false
+  ort: Ortsgebiet, Hungen-Inheiden
+  published: true
+  time: '17:00'
+  titel: Brandsicherheitsdienst
+
+2b79109e4547e0b52f30273aae8b53c8e6ef052ba0f4ff29cb0027e0c72f9300:
+  date: '2017-11-11'
+  kurzbeschreibung: Brandsicherheitsdienst im Rahmen einer Karnevalsveranstaltung.
+  kurzbeschreibung_freigegeben: false
+  ort: Mehrzweckhalle, Hungen-Inheiden
+  published: true
+  time: '18:30'
+  titel: Brandsicherheitsdienst
+
+0aa87518a8e7f44c7e8e874f21210ec93e23549b2851d0ff36022e003eb07d88:
+  date: '2017-10-04'
+  kurzbeschreibung: 'Bei der Erkundung konnte eine Rauchentwicklung aus dem unteren
+    Bereich eines Kühlschrankes, der sich in einer Gartenhütte befand, festgestellt
+    werden.
+
+    Der Brand wurde zügig abgelöscht.'
+  kurzbeschreibung_freigegeben: false
+  ort: Beethovenstraße, Hungen
+  published: true
+  time: '17:11'
+  titel: Rauch aus Wohnung
+
+574a163a4091057f0fbce1438a2bb061c6944b3c390931b213cf9a6895945c9a:
+  date: '2017-08-06'
+  kurzbeschreibung: Brandsicherheitsdienst im Rahmen des Seefestes.
+  kurzbeschreibung_freigegeben: false
+  ort: Festplatz, Hungen-Inheiden
+  published: true
+  time: '18:25'
+  titel: Brandsicherheitsdienst
+
+e223a44b51925341a13f4376400d9e199d754d839492f1294ffa48920f5f2a3c:
+  date: '2017-08-05'
+  kurzbeschreibung: Brandsicherheitsdienst im Rahmen des Seefestes.
+  kurzbeschreibung_freigegeben: false
+  ort: Festplatz, Hungen-Inheiden
+  published: true
+  time: '17:00'
+  titel: Brandsicherheitsdienst
+
+23b195e1368d035db7b62b8f12b0001cc5c5de9251aa5c81e1307ac1da7e9881:
+  date: '2017-08-04'
+  kurzbeschreibung: Brandsicherheitsdienst im Rahmen des Seefestes.
+  kurzbeschreibung_freigegeben: false
+  ort: Festplatz, Hungen-Inheiden
+  published: true
+  time: '20:15'
+  titel: Brandsicherheitsdienst
+
+207fb11c3d92a9c7bcb13afacc4b61031ce06f96f993092af3a05f42f4a0ffa4:
+  date: '2017-07-31'
+  kurzbeschreibung: Im Zuge <span class="editSpan">der Aufbauarbeiten des Feuerwerkes
+    zum Seefest 2017, ist der Bootsbesatzung ein Schwan aufgefallen, aus dessen Schnabel
+    eine Angelschnur hing. </span><span class="editSpan">Die Bootsbesatzung fing das
+    Tier ein und transportierte es nach Gießen in die Veterinärklinik.</span>
+  kurzbeschreibung_freigegeben: false
+  ort: Inheidener See, Hungen-Inheiden
+  published: true
+  time: '20:02'
+  titel: Tier in Not
+
+0a80f41e56a117a7453186eacdb4b19308f4486fc35f320c3749e4de57b5569e:
+  date: '2017-06-08'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Köstweg, Hungen-Inheiden
+  published: true
+  time: 02:22
+  titel: Türöffnung
+
+d15110c56c6a5f4e673b28f8b1dace7a09edbc5d374dcc998d17940222b5969a:
+  date: '2017-06-06'
+  kurzbeschreibung: 'Ein Ausgelöster Druckknopfmelder löste die Brandmeldeanlage aus.
+
+    Vor Ort stellte sich heraus, dass es sich um einen Fehlalarm handelte und durch
+    die Feuerwehr keine weiteren Maßnahmen getroffen werden mussten.'
+  kurzbeschreibung_freigegeben: false
+  ort: Gesamtschule Hungen, Hungen
+  published: true
+  time: 09:53
+  titel: Ausgelöste Brandmeldeanlage
+
+fb52df3ba4668c6c52340437d1540f4dcc70256ececb7335005e04c6176d6787:
+  date: '2017-06-01'
+  kurzbeschreibung: 'Die Feuerwehr wurde zu einer unklaren Rauchentwicklung im Stadtwald
+    alarmiert.
+
+    Vor Ort konnte kein Feuer festgestellt werden.'
+  kurzbeschreibung_freigegeben: false
+  ort: Stadtwald, Hungen
+  published: true
+  time: '16:39'
+  titel: Waldbrand
+
+bcc128e7e97d2050d25360ba556fded183dcd9082230e9e5d9eb43840929c39f:
+  date: '2017-05-20'
+  kurzbeschreibung: ./.
+  kurzbeschreibung_freigegeben: false
+  ort: Frankfurter Straße, Hungen-Inheiden
+  published: true
+  time: '18:14'
+  titel: Türöffnung
+
+4cf2dd1588c4734c66453112f54277599efc2b7d12b5ebc096bf84a11b31f6d9:
+  date: '2017-03-03'
+  kurzbeschreibung: 'Angler entdeckten einen Tresor, ca. einen Meter vor dem Ufer
+    im Wasser und benachrichtigten die Polizei. Diese wiederum alarmierte die Feuerwehr.
+
+    Der Tresor wurde geborgen und der Polizei übergeben.'
+  kurzbeschreibung_freigegeben: false
+  ort: Sachsensee, Hungen-Bellersheim
+  published: true
+  time: '15:41'
+  titel: Bergung aus Gewässer
+
+89cb5fc2bd8433f75378b4561da98faab94fb38992ff553c6f0a4d72c950467c:
+  date: '2017-02-27'
+  kurzbeschreibung: Vor Ort waren keine Maßnahmen durch die Feuerwehr zu treffen.
+  kurzbeschreibung_freigegeben: false
+  ort: Hochwald Nahrungsmittelwerke, Hungen
+  published: true
+  time: '10:24'
+  titel: Ausgelöste Brandmeldeanalge
+
+77ae38aee8066efc791b8f9a2d1a62f660912f801ac2c5f3c29451ed4e7c6238:
+  date: '2017-02-15'
+  kurzbeschreibung: 'Aus einem Fahrzeug liefen größere Mengen Öl auf die Fahrbahn.
+    Die Feuerwehr verhinderte, dass die Flüssigkeit ins Erdreich eindringen konnte.
+
+    Eine Fachfirma reinigte anschließend den betroffenen Fahrbahnbereich.'
+  kurzbeschreibung_freigegeben: false
+  ort: ''
+  published: true
+  time: '17:28'
+  titel: Öl auf Fahrbahn
+
+9962c18067a499592b12f270e69fd87487e1e11bb1fac18b31bd8aa36da4be74:
+  date: '2017-01-01'
+  kurzbeschreibung: Wir unterstützten bei der Brandbekämpfung durch einen Atemschutztrupp
+    und unser Gerät ersetzte einen ausgefallenen Stromerzeuger.
+  kurzbeschreibung_freigegeben: false
+  ort: Hu.-Bellersheim
+  published: true
+  time: 03:00
+  titel: Scheunenbrand
+
