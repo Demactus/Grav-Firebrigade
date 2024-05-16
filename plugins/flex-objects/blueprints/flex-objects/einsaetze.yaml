@@ -29,7 +29,7 @@ config:
       # Primary permissions
       admin.contacts:
         type: crudpl
-        label: Eomsatue
+        label: Einsatzberichte 
 
     # List view
     list:
