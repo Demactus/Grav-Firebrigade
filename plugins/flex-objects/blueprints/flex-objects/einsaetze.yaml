@@ -38,14 +38,22 @@ config:
         published:
           field:
             type: toggle
-            label: Published
-          width: 8
-          link: toggle
-        titel:
-          link: edit
+            label: 🖥️ 
+          width: 6
         date:
-          link: edit
+          search: true
+          width: 8
         time:
+          width: 8
+        kurzbeschreibung_freigegeben:
+          field:
+            type: toggle
+            label: 🆗
+          width: 6
+        titel:
+          search: true
+          link: edit
+        ort:
       options:
         per_page: 40
         order:
@@ -203,6 +211,7 @@ form:
       validate:
         type: bool
         required: true
+      help: "Freigabe des Textes durch Wehrführung erteilt"
 
     kurzbeschreibung:
       type: textarea
