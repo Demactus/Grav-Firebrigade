@@ -1,0 +1,37 @@
+aecc46abb3ee1883310b98e66808c6d7:
+  published: true
+  picked_image: 001_20240402_194702_DSC09810.jpg
+  name: Haaf
+  vorname: Bastian
+  funktion: 'stellvertretender Wehrführer'
+  beschreibung: 'Dieses und jenes und auch sonst noch was...'
+  add_image:
+    'image://vorstellung-images/001_20240402_194702_DSC09810.jpg':
+      name: 001_20240402_194702_DSC09810.jpg
+      type: image/jpeg
+      size: 588455
+      path: 'image://vorstellung-images/001_20240402_194702_DSC09810.jpg'
+cafd2d40bd22580562b9dbf6907a609d:
+  published: true
+  picked_image: 001_20240402_193954_DSC09796.jpg
+  name: Martens
+  vorname: Jan
+  funktion: 'coole Socke'
+  add_image:
+    'image://vorstellung-images/001_20240402_193954_DSC09796.jpg':
+      name: 001_20240402_193954_DSC09796.jpg
+      type: image/jpeg
+      size: 594593
+      path: 'image://vorstellung-images//001_20240402_193954_DSC09796.jpg'
+7042789a3fa82300ad8010c21c553df6:
+  published: true
+  picked_image: 001_20240402_194934_DSC09838.jpg
+  name: Roth
+  vorname: Florian
+  funktion: 'Auch ne coole Socke'
+  add_image:
+    'image://vorstellung-images/001_20240402_194934_DSC09838.jpg':
+      name: 001_20240402_194934_DSC09838.jpg
+      type: image/jpeg
+      size: 594489
+      path: 'image://vorstellung-images//001_20240402_194934_DSC09838.jpg'

@@ -1,0 +1,14 @@
+enabled: true
+content: 'Ankündigung: <b>Frühlingsfest</b> am 9. Mai<br>Banner nur für besondere Ankündigungen oder News nutzen. Design noch gemeinsam Diskutieren.'
+position: bottom
+button-text: 'Zum Artikel'
+button: '1'
+button-url: '-> Link'
+dismiss-text: Ausblenden
+dismiss-button: '1'
+cdn-fix: '0'
+bg-colour: '#A1C3B2'
+fg-colour: 'rgba(0, 20, 10, 0.90)'
+box-shadow: '0'
+show-on-pages:
+  - /blog
