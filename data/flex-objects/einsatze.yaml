@@ -1158,3 +1158,12 @@ bcc128e7e97d2050d25360ba556fded183dcd9082230e9e5d9eb43840929c39f:
   published: true
   time: '03:00'
   titel: Scheunenbrand
+dc941149a87be24b41a06ec3651f69e9:
+  published: true
+  titel: 'Brennender PKW'
+  date: '2024-05-09'
+  time: '01:09'
+  ort: 'Erlenstraße, Hu.-Inheiden'
+  standorte:
+    - Inheiden
+  kurzbeschreibung_freigegeben: true
