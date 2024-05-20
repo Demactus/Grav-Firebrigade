@@ -219,4 +219,15 @@ form:
       rows: 10
       help: "Eine kurze Beschreibung der Tätigkeit der Feuerwehr. Dabei soll im wesentlichen beschrieben werden, was insgesamt passiert ist und nicht sehr speziell auf die Tätigkeiten eines einzelnen Standortes eingegangen werden."
 
+    add_image:
+      type: file
+      destination: 'image://einsatz-images/'
+      accept:
+        - image/*
+      filesize: 5
+      help: "Ein Foto welches die Tätigkeit der Feuerwehr beschreibt. Persönlichkeitsrechte und Bildrechte beachten! Bildgröße: 1920x1080 Pixel."
 
+    picked_image:
+      type: filepicker
+      folder: 'image://einsatz-images/'
+      preview_images: true

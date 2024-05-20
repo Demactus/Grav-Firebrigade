@@ -25,7 +25,7 @@ pp_protect: '0'
                 {% endif %}
             
                 {% if (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) %}
-                    [modal name="Kurzinfo"]<h2>{{ einsatz.titel|e }}</h2>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo"]ℹ️Kurzinfo[/modal-launch]<br>
+                    [modal name="Kurzinfo"]<h2>{{ einsatz.titel|e }}</h2> <img class="" src="user/images/einsatz-images/{{ einsatz.picked_image }}" /><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo"]ℹ️Kurzinfo[/modal-launch]<br>
             	{% else %}
             	  🚫 Keine weitere Info verfügbar.<br>
                 {% endif %}
