@@ -25,11 +25,11 @@ pp_protect: '0'
                 {% endif %}
                 
                 {% if (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) and (einsatz.picked_image) %}
-                    [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><img class="" src="user/images/einsatz-images/{{ einsatz.picked_image }}" /><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]ℹ️📷 Kurzinfo[/modal-launch]<br>
+                    [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><img class="" src="user/images/einsatz-images/{{ einsatz.picked_image }}" /><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]<i class="fa fa-info-circle"></i> <i class="fa fa-camera"></i> Kurzinfo[/modal-launch]<br>
                 {% elseif (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) and (einsatz.picked_image == false) %}
-                    [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]ℹ️ Kurzinfo[/modal-launch]<br>
+                    [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]<i class="fa fa-info-circle"></i> Kurzinfo[/modal-launch]<br>
             	{% else %}
-            	  🚫 Keine weitere Info verfügbar.<br>
+            	  <i class="fa fa-ban"></i> Keine weitere Info verfügbar.<br>
                 {% endif %}
             
                 <br>
