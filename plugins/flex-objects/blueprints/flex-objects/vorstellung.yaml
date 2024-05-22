@@ -47,6 +47,14 @@ config:
           link: edit
         funktion:
           link: edit
+        beruf:
+          link: edit
+        ausbildung:
+          link: edit
+        datum:
+          link: edit
+        beschreibung:
+          link: edit
       options:
         per_page: 40
         order:
@@ -160,6 +168,18 @@ form:
     funktion:
       type: text
       label: Funktion
+
+    beruf:
+      type: text
+      label: Beruf
+
+    ausbildung:
+      type: text
+      label: Ausbildung
+
+    datum:
+      type: number
+      label: Bei der Feuerwehr seit
 
     beschreibung:
       type: textarea

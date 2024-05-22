@@ -8,6 +8,16 @@ features:
         header: Löschen
         text: 'Bei uns kannst du lernen wie man nicht nur seinen Durscht löscht'
         url: null
+    - 
+        icon: 'fa fa-handshake'
+        header: Anpacken
+        text: 'Manchmal ersetzen Einsatz und Übung sogar das Fitnessstudio'
+        url: null
+    -
+        icon: 'fa fa-cogs'
+        header: Verantwortung
+        text: 'Übernehme Verantwortung für den Einsatzerfolg'
+        url: null
 ---
 
 # Mitmachen

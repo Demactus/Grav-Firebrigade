@@ -9,3 +9,24 @@ $fw-text-underline: #6D6E6F;
   background: $fw-background;
 }
 
+
+.modal-container {
+  background-color: $fw-blue;
+}
+
+.modal-lg::backdrop {
+  opacity: 0.6 !important;
+}
+
+.modal-header {
+  color: white !important;
+}
+
+.content h4 {
+  color: white !important;
+}
+
+.modal-image {
+  width: auto;
+  height: auto;
+}
