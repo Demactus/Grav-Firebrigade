@@ -4,7 +4,9 @@
 # Grav Specific
 accounts/*
 /data/notifications/.*
-/data/flex/indexes/.*
+data/flex/indexes/accounts.yaml
+data/flex/indexes/pages.json
+
 
 # OS Generated
 .DS_Store*
