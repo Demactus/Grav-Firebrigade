@@ -2,6 +2,9 @@
 
 {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
 
+{# B.H., 24.05.2024 - next line is because set show_onmpage_menu via header does not work for unclear reasons #}
+{% set show_onpage_menu = false %}
+
 {% block javascripts %}
     {% if show_onpage_menu %}
         {% do assets.add('theme://js/singlepagenav.min.js') %}
