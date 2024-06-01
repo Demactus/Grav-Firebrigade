@@ -15,7 +15,7 @@ summary:
   size: 300
   delimiter: '==='
 redirects:
-  /changelog: /blog/the-urban-jungle
+  /ical: /user/pages/01.home/events.ics
 routes:
   /something/else: /blog/focus-and-blur
   '/another/one/(.*)': /blog/$1
