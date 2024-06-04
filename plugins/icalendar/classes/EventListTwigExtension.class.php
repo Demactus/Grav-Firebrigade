@@ -44,6 +44,26 @@ class EventListTwigExtension extends \Twig_Extension
                 // Extract the first word from SUMMARY
                 $firstWord = rtrim(strtok($r['SUMMARY'], ' '), ':');
 
+                $icon;
+                // set icon variable
+                switch ($firstWord) {
+                    case 'Ausbildung':
+                        $icon = 'fa-chalkboard-teacher';
+                        break;
+                    case 'Einsatzabteilung':
+                        $icon = 'fa-fire';
+                        break;
+                    case 'Jugendfeuerwehr':
+                        $icon = 'fa-hard-hat';
+                        break;
+                    case 'Feuerwehrverein':
+                        $icon = 'fa-fire-alt';
+                        break;
+                    default:
+                        $icon = 'fa-calendar';
+                        break;
+                }
+
                 // Remove the first word and colon from the SUMMARY
                 $cleanSummary = preg_replace('/^' . preg_quote($firstWord . ':', '/') . '\s*/', '', $r['SUMMARY']);
 
@@ -53,7 +73,7 @@ class EventListTwigExtension extends \Twig_Extension
 
                 // Build the event HTML with the dynamic class
                 $eventList .= '<div class="event ' . htmlspecialchars($firstWord) . '">' . PHP_EOL;
-                $eventList .= '    <a class="event-summary">' . $summaryLink . '</a>' . PHP_EOL;
+                $eventList .= '    <a class="event-summary"><i class="fa '. $icon .'"></i>' . $summaryLink . '</a>' . PHP_EOL;
                 $eventList .= '    <p class="event-date">' . $r['DTSTART']->format('d. F | H:i - ') . $r['DTEND']->format('H:i') . ' Uhr</p>' . PHP_EOL;
                 $eventList .= '</div>' . PHP_EOL;
 
