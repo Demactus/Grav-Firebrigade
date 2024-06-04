@@ -25,11 +25,11 @@
 
 {% if config.plugins.icalendar.enabled %}
 <div class="sidebar-content">
-    <div class="card">
+    <div class="card side-card">
         <div class="card-header fw-card-header">
             <div class="card-title h4" >Veranstaltungen</div>
         </div>
-        <div class="card-body">
+        <div class="card-body side-card-body">
             <div class="container grid-md">
 
                 {{ eventlist() | raw }}

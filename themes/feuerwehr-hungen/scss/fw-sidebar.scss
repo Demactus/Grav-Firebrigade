@@ -6,3 +6,32 @@
   background: $fw-blue !important;
   color: white;
 }
+
+.card-title {
+  margin-bottom: 15px;
+}
+
+.side-card {
+  width: 350px !important;
+}
+
+.side-card-body {
+  margin-top: -35px !important;
+}
+
+
+.Ausbildung a {
+  color: $fw-yellow;
+}
+
+.Einsatzabteilung a {
+  color: $fw-red;
+}
+
+.Jugendfeuerwehr a {
+  color: $fw-orange;
+}
+
+.Feuerwehrverein a {
+  color: $fw-blue;
+}

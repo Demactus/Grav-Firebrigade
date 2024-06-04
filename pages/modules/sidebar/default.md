@@ -12,11 +12,11 @@ pp_protect: '0'
 
 {% set einsaetze = directory.collection() %}
 {% set einsaetze = einsaetze.sort({date: 'DESC', time: 'DESC'}) %}
-<div class="card">
+<div class="card side-card">
     <div class="card-header fw-card-header">
         <div class="card-title h4"> Letzte Einsätze</div> 
     </div>
-    <div class="card-body">
+    <div class="card-body side-card-body">
         <div class="container grid-md">
             {% for einsatz in einsaetze.filterBy({published: true}).limit(0, 4) %}
                  <b> {{ einsatz.titel|e }}</b><br>{{ einsatz.date|date('d') }}. {{ 'GRAV.MONTHS_OF_THE_YEAR'|ta(einsatz.date|date('n') - 1)}} {{einsatz.date|date('Y') }} {{ einsatz.time|e }} Uhr <br>{{ einsatz.ort|e }}<br>

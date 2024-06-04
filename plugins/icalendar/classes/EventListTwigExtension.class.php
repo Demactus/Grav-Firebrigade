@@ -41,9 +41,18 @@ class EventListTwigExtension extends \Twig_Extension
 		foreach ($cal->getSortedEvents() as $r) {
 			// DONE: include URL !
 			if (((int) $r['DTSTART']->format('U')) > $today)	{
-                $summaryLink = isset($r['URL']) ? sprintf('<a href="%s" target="_blank">%s</a>', $r['URL'], $r['SUMMARY']) : $r['SUMMARY'];
+                // Extract the first word from SUMMARY
+                $firstWord = rtrim(strtok($r['SUMMARY'], ' '), ':');
 
-                $eventList .= '<div class="event">' . PHP_EOL;
+                // Remove the first word and colon from the SUMMARY
+                $cleanSummary = preg_replace('/^' . preg_quote($firstWord . ':', '/') . '\s*/', '', $r['SUMMARY']);
+
+                // Create the summary link with URL if it exists
+                $summaryLink = isset($r['URL']) ? sprintf('<a href="%s" target="_blank">%s</a>', $r['URL'], $cleanSummary) : $cleanSummary;
+
+
+                // Build the event HTML with the dynamic class
+                $eventList .= '<div class="event ' . htmlspecialchars($firstWord) . '">' . PHP_EOL;
                 $eventList .= '    <a class="event-summary">' . $summaryLink . '</a>' . PHP_EOL;
                 $eventList .= '    <p class="event-date">' . $r['DTSTART']->format('d. F | H:i - ') . $r['DTEND']->format('H:i') . ' Uhr</p>' . PHP_EOL;
                 $eventList .= '</div>' . PHP_EOL;
