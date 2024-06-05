@@ -38,13 +38,20 @@ class EventListTwigExtension extends \Twig_Extension
 		$i = 0;
 		// DONE: start list Today (not oldest Event)
 		$today = (int) date('U');	// seconds since 01.01.1970
+
+        // Month names mapping (German example)
+        $monthNames = [
+            1 => 'Januar', 2 => 'Februar', 3 => 'März', 4 => 'April',
+            5 => 'Mai', 6 => 'Juni', 7 => 'Juli', 8 => 'August',
+            9 => 'September', 10 => 'Oktober', 11 => 'November', 12 => 'Dezember'
+        ];
+
 		foreach ($cal->getSortedEvents() as $r) {
 			// DONE: include URL !
 			if (((int) $r['DTSTART']->format('U')) > $today)	{
                 // Extract the first word from SUMMARY
                 $firstWord = rtrim(strtok($r['SUMMARY'], ' '), ':');
 
-                $icon;
                 // set icon variable
                 switch ($firstWord) {
                     case 'Ausbildung':
@@ -70,11 +77,22 @@ class EventListTwigExtension extends \Twig_Extension
                 // Create the summary link with URL if it exists
                 $summaryLink = isset($r['URL']) ? sprintf('<a href="%s" target="_blank">%s</a>', $r['URL'], $cleanSummary) : $cleanSummary;
 
+                // Check if full day event
+                $startHour = $r['DTSTART']->format('H');
+                $startMinute = $r['DTSTART']->format('i');
+                $endHour = $r['DTEND']->format('H');
+                $endMinute = $r['DTEND']->format('i');
+                $isFullDay = $startHour == $endHour && $startMinute == $endMinute;
+
+                // Get the day and month
+                $day = $r['DTSTART']->format('d');
+                $monthNumber = (int) $r['DTSTART']->format('m');
+                $monthName = $monthNames[$monthNumber];
 
                 // Build the event HTML with the dynamic class
                 $eventList .= '<div class="event ' . htmlspecialchars($firstWord) . '">' . PHP_EOL;
                 $eventList .= '    <a class="event-summary"><i class="fa '. $icon .'"></i>' . $summaryLink . '</a>' . PHP_EOL;
-                $eventList .= '    <p class="event-date">' . $r['DTSTART']->format('d. F | H:i - ') . $r['DTEND']->format('H:i') . ' Uhr</p>' . PHP_EOL;
+                $eventList .= ($isFullDay) ? '    <p class="event-date">' . $day . '. ' . $monthName . '</p>' . PHP_EOL : '    <p class="event-date">' . $day . '. ' . $monthName . ' | ' . $startHour . ':' . $startMinute . ' - ' . $endHour . ':' . $endMinute . ' Uhr</p>' . PHP_EOL;
                 $eventList .= '</div>' . PHP_EOL;
 
 				$i++;
