@@ -31,7 +31,7 @@ pp_protect: '0'
                     {% endif %}
                 </b>
                 <br>
-                {{ einsatz.date|date('d') }}. {{ 'GRAV.MONTHS_OF_THE_YEAR'|ta(einsatz.date|date('n') - 1)}} {{einsatz.date|date('Y') }} {{ einsatz.time|e }} Uhr 
+                {{ einsatz.date|date('d') }}. {{ 'GRAV.MONTHS_OF_THE_YEAR'|ta(einsatz.date|date('n') - 1)}} {{einsatz.date|date('Y') }} | {{ einsatz.time|e }} Uhr 
                 <br>
                 {{ einsatz.ort|e }}
                 <br>
