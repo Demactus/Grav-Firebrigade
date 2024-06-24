@@ -37,8 +37,6 @@ pp_protect: '0'
                 <br>
                 {% if (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) and (einsatz.picked_image) %}
                 {% elseif (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) and (einsatz.picked_image == false) %}
-            	{% else %}
-            	  <i class="fa fa-ban"></i> Keine weitere Info verfügbar.<br>
                 {% endif %}
             
                 <br>
