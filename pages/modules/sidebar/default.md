@@ -14,7 +14,7 @@ pp_protect: '0'
 {% set einsaetze = einsaetze.sort({date: 'DESC', time: 'DESC'}) %}
 <div class="card side-card">
     <div class="card-header fw-card-header">
-        <div class="card-title h4"> Letzte Einsätze</div> 
+        <div class="card-title h4"><strong>Letzte Einsätze</strong></div> 
     </div>
     <div class="card-body side-card-body">
         <div class="container grid-md">
