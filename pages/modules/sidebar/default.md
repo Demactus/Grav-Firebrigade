@@ -18,7 +18,7 @@ pp_protect: '0'
     </div>
     <div class="card-body side-card-body">
         <div class="container grid-md">
-            {% for einsatz in einsaetze.filterBy({published: true}).limit(0, 4) %}
+            {% for einsatz in einsaetze.filterBy({published: true}).limit(0, 5) %}
                 <b> 
                     {% if einsatz.blog %}
                         <a href="{{ einsatz.blog|e }}">{{ einsatz.titel|e }}</a>
