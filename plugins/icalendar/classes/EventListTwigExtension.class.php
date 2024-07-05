@@ -91,7 +91,7 @@ class EventListTwigExtension extends \Twig_Extension
 
                 // Build the event HTML with the dynamic class
                 $eventList .= '<div class="event ' . htmlspecialchars($firstWord) . '">' . PHP_EOL;
-                $eventList .= '    <a class="event-summary"><i class="fa '. $icon .'"></i> ' . $summaryLink . '</a>' . PHP_EOL;
+                $eventList .= '<i class="fa '. $icon .'"></i> '  . $summaryLink .  PHP_EOL;
                 $eventList .= ($isFullDay) ? '    <p class="event-date">' . $day . '. ' . $monthName . '</p>' . PHP_EOL : '    <p class="event-date">' . $day . '. ' . $monthName . ' | ' . $startHour . ':' . $startMinute . ' - ' . $endHour . ':' . $endMinute . ' Uhr</p>' . PHP_EOL;
                 $eventList .= '</div>' . PHP_EOL;
 

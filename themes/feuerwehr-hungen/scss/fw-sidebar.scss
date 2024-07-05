@@ -21,18 +21,22 @@
 }
 
 
-.Ausbildung a {
+.Ausbildung i {
   color: $fw-yellow;
 }
 
-.Einsatzabteilung a {
+.Einsatzabteilung i {
   color: $fw-red;
 }
 
-.Jugendfeuerwehr a {
+.Jugendfeuerwehr i {
   color: $fw-orange;
 }
 
-.Feuerwehrverein a {
+.Feuerwehrverein i {
   color: $fw-blue;
+}
+
+.Förderverein i {
+  color: green;
 }
