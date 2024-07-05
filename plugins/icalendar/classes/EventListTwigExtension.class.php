@@ -55,19 +55,19 @@ class EventListTwigExtension extends \Twig_Extension
                 // set icon variable
                 switch ($firstWord) {
                     case 'Ausbildung':
-                        $icon = 'fa-chalkboard-teacher';
+                        $icon = 'fa-chalkboard-teacher fa-lg';
                         break;
                     case 'Einsatzabteilung':
-                        $icon = 'fa-fire';
+                        $icon = 'fa-fire fa-lg';
                         break;
                     case 'Jugendfeuerwehr':
-                        $icon = 'fa-hard-hat';
+                        $icon = 'fa-hard-hat fa-lg';
                         break;
                     case 'Feuerwehrverein':
-                        $icon = 'fa-fire-alt';
+                        $icon = 'fa-fire-alt fa-lg';
                         break;
                     default:
-                        $icon = 'fa-calendar';
+                        $icon = 'fa-calendar fa-lg';
                         break;
                 }
 
