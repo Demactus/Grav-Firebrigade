@@ -8,12 +8,12 @@ features:
     text: ''
     url: null
   -
-    icon: 'fa fa-hands-helping'
+    icon: 'fa-solid fa-users-between-lines'
     header: Mitgliedergewinnung
     text: ''
     url: null
   -
-    icon: 'fa fa-fire'
+    icon: 'fa-solid fa-person-chalkboard'
     header: Jugendarbeit
     text: ''
     url: null
