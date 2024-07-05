@@ -47,7 +47,7 @@ e.preventDefault();
 [/owl-carousel]
 
 {% for eintrag in vorstellung.filterBy({published: true})%}
- <div class="modal modal-lg" id="{{ eintrag.name|e}}{{ eintrag.vorname|e}}">
+ <div class="modal" id="{{ eintrag.name|e}}{{ eintrag.vorname|e}}">
       <a href="#close" class="modal-overlay modal-close" aria-label="Close"></a>
       <div class="modal-container">
           <div class="modal-header">
@@ -56,7 +56,7 @@ e.preventDefault();
          </div>
           <div class="modal-body">
             <div class="content">
-            <img class="modal-image" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 3/2;"/>
+            <img class="modal-image" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 3/2; height: auto; "/>
                <h4>
                   <span>
                      <strong>Funktion:</strong>
