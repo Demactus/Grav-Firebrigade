@@ -23,9 +23,9 @@ pp_protect: '0'
                     {% if einsatz.blog %}
                         <a href="{{ einsatz.blog|e }}">{{ einsatz.titel|e }}</a>
                     {% elseif (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) and (einsatz.picked_image) %}
-                        [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><img class="" src="user/images/einsatz-images/{{ einsatz.picked_image }}" /><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]{{ einsatz.titel|e }}<i class="fa fa-info-circle"></i> <i class="fa fa-camera"></i>[/modal-launch]
+                        [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><img class="" src="user/images/einsatz-images/{{ einsatz.picked_image }}" /><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]<i class="fa fa-info-circle"></i> <i class="fa fa-camera"></i> {{ einsatz.titel|e }}[/modal-launch]
                     {% elseif (einsatz.kurzbeschreibung) and (einsatz.kurzbeschreibung_freigegeben == true) and (einsatz.picked_image == false) %}
-                        [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]{{ einsatz.titel|e }} <i class="fa fa-info-circle"></i>[/modal-launch]
+                        [modal name="Kurzinfo-{{loop.index}}"]<h3>{{ einsatz.titel|e }}</h3><br><p>Datum: {{einsatz.date|e}}, Uhrzeit: {{einsatz.time|e}}<br>Einsatzort: {{einsatz.ort}}</p><br>{{ einsatz.kurzbeschreibung|e }}[/modal][modal-launch modal="Kurzinfo-{{loop.index}}"]<i class="fa fa-info-circle"></i> {{ einsatz.titel|e }} [/modal-launch]
                     {% else %}
                         {{ einsatz.titel|e }} 
                     {% endif %}

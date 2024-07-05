@@ -31,3 +31,8 @@ $fw-orange: #e24c31;
   width: auto;
   height: auto;
 }
+
+.jqmodal, .jqmodal h3{
+  background-color: $fw-blue !important;
+  color: white !important;
+}
