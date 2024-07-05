@@ -52,35 +52,35 @@ e.preventDefault();
       <div class="modal-container">
           <div class="modal-header">
             <a href="#close" class="btn btn-clear float-right modal-close" aria-label="Close"></a>
-            <div class="modal-title h1">{{ eintrag.vorname|e}}</div>
+            <div class="modal-title h2">{{ eintrag.vorname|e}}</div>
          </div>
           <div class="modal-body">
             <div class="content">
-            <img class="modal-image" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 3/2; height: auto; "/>
-               <h4>
+            <img class="modal-image" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 2/3; max-width: 70% "/>
+               <h5>
                   <span>
                      <strong>Funktion:</strong>
                      {{ eintrag.funktion|e }}
                   </span>
-               </h4>
-               <h4>
+               </h5>
+               <h5>
                   <span>
                      <strong>Beruf:</strong>
                      {{ eintrag.beruf|e }}
                   </span>
-               </h4>
-               <h4>
+               </h5>
+               <h5>
                   <span>
                      <strong>Bei der Feuerwehr seit:</strong>
                      {{ eintrag.datum|e }}
                   </span>
-               </h4>
-               <h4>
+               </h5>
+               <h5>
                   <span>
                      <strong>Über Mich:</strong>
                      {{ eintrag.beschreibung|e}}
                   </span>
-               </h4>
+               </h5>
             </div>
          </div>
       </div>
