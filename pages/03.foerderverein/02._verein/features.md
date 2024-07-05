@@ -3,12 +3,12 @@ title: Verein
 class: offset-box
 features:
   -
-    icon: 'fa fa-fire'
+    icon: 'fa fa-fire-alt'
     header: Brandschutzes
-    text: 'Bei uns kannst du lernen wie man nicht nur seinen Durscht löscht'
+    text: ''
     url: null
   -
-    icon: 'fa fa-fire'
+    icon: 'fa fa-hands-helping'
     header: Mitgliedergewinnung
     text: ''
     url: null
