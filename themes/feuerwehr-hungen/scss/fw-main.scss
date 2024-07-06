@@ -21,11 +21,12 @@ $fw-light-yellow: #ffff00;
   height: auto;
 }
 
-.jqmodal, .jqmodal h3, .jqmodal h2, .jqmodal h5{
+.jqmodal, .jqmodal h2, .jqmodal h5{
   background-color: $fw-blue !important;
   color: white !important;
 }
 
-.jqmodal h2 {
+.jqmodal h3, .jqmodal h2 {
+  color: white;
   margin-top: 1%;
 }
