@@ -1,7 +1,7 @@
 d07d04f86446f98bcc6c95c4a26dad0e42db018da66cfe8c237764948bc412c6:
   date: '2024-04-21'
   kurzbeschreibung: "Ein Ast war nach einer Windböe auf eine Stromleitung geraten und hatte sich entzündet.\nNach dem Freischalten der Leitung durch den Versorger, konnte der Ast geborgen und abgelöscht werden."
-  kurzbeschreibung_freigegeben: false
+  kurzbeschreibung_freigegeben: true
   ort: 'Bellersheimer Str., Hu.-Tr. Horloff'
   published: true
   time: '13:45'
@@ -1177,3 +1177,58 @@ dc941149a87be24b41a06ec3651f69e9:
   standorte:
     - Inheiden
   kurzbeschreibung_freigegeben: true
+  kurzbeschreibung: 'Ein PKW brannte in einer Hofeinfahrt. Die Anwohner versuchten bereits das Feuer zu löschen. Als die Feuerwehr eintraf, waren noch Nachlöscharbeiten durchzuführen. Eine Person wurde mit einer Rauchvergiftung ins Krankenhaus eingeliefert.'
+  add_image: {  }
+b2c21a085a1494a90e2a2b00d604e77a:
+  published: true
+  titel: 'Ausgelöste automatische Brandmeldeanlage'
+  date: '2024-06-21'
+  time: '14:05'
+  ort: 'Fa. Coleman, Hu,-Inheiden'
+  standorte:
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+  kurzbeschreibung_freigegeben: false
+  add_image: {  }
+c5bf72149d6fbafbf8e2a5407d2fba1d:
+  published: true
+  titel: 'Ausgelöste automatische Brandmeldeanlage'
+  date: '2024-06-21'
+  time: '15:19'
+  ort: 'Fa. Coleman, Hu.-Inheiden'
+  standorte:
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+  kurzbeschreibung_freigegeben: false
+  add_image: {  }
+cd4db8fe6e5ddd6cfcca73001c2e51c6:
+  published: true
+  titel: 'Ausgelöste automatische Brandmeldeanlage'
+  date: '2024-06-21'
+  time: '16:09'
+  ort: 'Fa. Coleman, Hu.-Inheiden'
+  standorte:
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+  kurzbeschreibung_freigegeben: false
+  add_image: {  }
+9eeec86dc9b8ba77fedf3fadc0ab9e5e:
+  published: true
+  titel: Ölspur
+  date: '2024-07-05'
+  time: '22:06'
+  ort: 'Holzbrückenweg, Hu.-Inheiden'
+  standorte:
+    - Inheiden
+  kurzbeschreibung_freigegeben: true
+  kurzbeschreibung: 'Ein defekter PKW verursachte eine Ölspur. Die Ölspur führte über den Holzbrückenweg bis nach Hungen. Die Ölspur wurde durch eine Fachfirma beseitigt.'
+  add_image:
+    'image://einsatz-images/IMG_3416.jpeg':
+      name: IMG_3416.jpeg
+      type: image/jpeg
+      size: 983766
+      path: 'image://einsatz-images/IMG_3416.jpeg'
+  picked_image: IMG_3416.jpeg
