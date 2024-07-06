@@ -11,25 +11,6 @@ $fw-light-yellow: #ffff00;
   background: $fw-background;
 }
 
-
-.modal-container {
-  background-color: $fw-blue;
-}
-
-.modal-body {
-  margin-top: -10px;
-  padding-top: -10px;
-}
-
-.modal-lg::backdrop {
-  opacity: 0.6 !important;
-}
-
-.modal-header {
-  color: white !important;
-  margin-bottom: -10px;
-}
-
 .content h5 {
   color: white !important;
   margin-top: 2% !important;
@@ -40,7 +21,11 @@ $fw-light-yellow: #ffff00;
   height: auto;
 }
 
-.jqmodal, .jqmodal h3{
+.jqmodal, .jqmodal h3, .jqmodal h2, .jqmodal h5{
   background-color: $fw-blue !important;
   color: white !important;
+}
+
+.jqmodal h2 {
+  margin-top: 1%;
 }

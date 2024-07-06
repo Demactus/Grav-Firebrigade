@@ -32,6 +32,7 @@ e.preventDefault();
 
 [owl-carousel items=2 margin=5 center=false loop=true mergefit=true nav=true responsive={0:{items:2},1000:{items:3},1600:{items:4}}]
    {% for eintrag in vorstellung.filterBy({published: true})%}
+[modal-launch modal="Kurzinfo-{{loop.index}}"]   
    <article class="">
       <div class="modal-toggle" data-modal="#{{ eintrag.name|e}}{{ eintrag.vorname|e}}">
          <div class="">
@@ -40,49 +41,22 @@ e.preventDefault();
             </h3>
          </div>
          <img class="" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 1/1; object-fit: cover;"/>
-
       </div>
    </article>
+[/modal-launch]
    {% endfor %}
 [/owl-carousel]
 
 {% for eintrag in vorstellung.filterBy({published: true})%}
- <div class="modal" id="{{ eintrag.name|e}}{{ eintrag.vorname|e}}">
-      <a href="#close" class="modal-overlay modal-close" aria-label="Close"></a>
-      <div class="modal-container">
-          <div class="modal-header">
-            <a href="#close" class="btn btn-clear float-right modal-close" aria-label="Close"></a>
-            <div class="modal-title h2">{{ eintrag.vorname|e}}</div>
-         </div>
-          <div class="modal-body">
-            <div class="content">
-            <img class="modal-image" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 2/3; max-width: 70% "/>
-               <h5>
-                  <span>
-                     <strong>Funktion:</strong>
-                     {{ eintrag.funktion|e }}
-                  </span>
-               </h5>
-               <h5>
-                  <span>
-                     <strong>Beruf:</strong>
-                     {{ eintrag.beruf|e }}
-                  </span>
-               </h5>
-               <h5>
-                  <span>
-                     <strong>Bei der Feuerwehr seit:</strong>
-                     {{ eintrag.datum|e }}
-                  </span>
-               </h5>
-               <h5>
-                  <span>
-                     <strong>Über Mich:</strong>
-                     {{ eintrag.beschreibung|e}}
-                  </span>
-               </h5>
-            </div>
-         </div>
-      </div>
-   </div>
+
+[modal name="Kurzinfo-{{loop.index}}"]<h2>{{ eintrag.vorname|e}}</h3><br><img class="modal-image" src="user/images/vorstellung-images/{{ eintrag.picked_image }} "/><br><h5><span><strong>Funktion:</strong>{{ eintrag.funktion|e }}</span></h5><h5><span><strong>Beruf:</strong>{{ eintrag.beruf|e }}</span></h5><h5><span><strong>Bei der Feuerwehr seit:</strong>{{ eintrag.datum|e }}</span></h5><h5><span><strong>Über Mich:</strong>{{ eintrag.beschreibung|e}}</span></h5>[/modal]
+   
+      
+  
+
+
+
+
+
+
 {% endfor %}
