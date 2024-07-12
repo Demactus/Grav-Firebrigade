@@ -37,7 +37,7 @@ e.preventDefault();
       <div class="modal-toggle" data-modal="#{{ eintrag.name|e}}{{ eintrag.vorname|e}}">
          <div class="">
             <h3 class="">
-               {{ eintrag.name|e}}, {{ eintrag.vorname|e}}
+               {{ eintrag.vorname|e}}
             </h3>
          </div>
          <img class="" src="user/images/vorstellung-images/{{ eintrag.picked_image }}" style="aspect-ratio: 1/1; object-fit: cover;"/>
