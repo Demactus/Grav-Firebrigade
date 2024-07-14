@@ -2,22 +2,21 @@
 title: Verein
 class: offset-box
 features:
-  -
-    icon: 'fa fa-fire-alt'
-    header: Brandschutzes
-    text: ''
-    url: null
-  -
-    icon: 'fa-solid fa-users-between-lines'
-    header: Mitgliedergewinnung
-    text: ''
-    url: null
-  -
-    icon: 'fa-solid fa-person-chalkboard'
-    header: Jugendarbeit
-    text: ''
-    url: null
-    
+    -
+        icon: 'fa fa-fire-alt'
+        header: Brandschutzes
+        text: ''
+        url: null
+    -
+        icon: 'fa-solid fa-users-between-lines'
+        header: Mitgliedergewinnung
+        text: ''
+        url: null
+    -
+        icon: 'fa-solid fa-person-chalkboard'
+        header: Jugendarbeit
+        text: ''
+        url: null
 image_align: left
 process:
     markdown: true

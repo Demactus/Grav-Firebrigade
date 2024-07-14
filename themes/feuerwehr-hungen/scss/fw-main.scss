@@ -30,3 +30,35 @@ $fw-light-yellow: #ffff00;
   color: white;
   margin-top: 1%;
 }
+
+.accordion-body {
+  overflow: hidden !important; /* Initially hidden */
+  max-height: 0 !important;    /* Initially hidden */
+  transition: max-height 0.2s ease-out !important; /* Smooth transition */
+}
+
+.accordion-body.open {
+  max-height: 2000px !important; /* Arbitrary large value */
+}
+
+.accordion-header i {
+  transition: transform 0.2s ease-in-out;
+}
+.accordion-header i.rotate {
+  transform: rotate(90deg);
+}
+
+form .form-column {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1em; // trick to space items (see https://stackoverflow.com/a/42875628)
+  > div {
+    flex-basis: 10%; // far smaller than we need
+    flex-grow: 1; // flex-grow fills up the space
+    min-width: 18em; // just here to demonstrate responsive on mobile, can remove
+    margin: 0 1em; // other part of the trick to space items
+  }
+}
+.form-label span.required {
+  line-height: 0; // may not be needed. on one of my forms, this fixes a vertical misalignment between the two side-by-side fields
+}
