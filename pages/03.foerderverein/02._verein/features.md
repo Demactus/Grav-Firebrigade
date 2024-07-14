@@ -24,7 +24,37 @@ process:
 cache_enable: false
 ---
 
-## Zweck des Feuerwehr
-Feuerwehren als solches sind grundsätzlich öffentlich-rechtliche Organisationen und damit Abteilungen der Stadtverwaltung. Trotzdem gibt es in fast allen Stadtteilen auch Feuerwehrvereine, die als Förderverein auftreten.
+## Unterstützen Sie unsere Feuerwehr - Ohne selbst einzugreifen!
+
+<div class="container">
+    <div class="columns">
+    <div class="column col-4">
+        {{ page.media['Designer.png'].html('My title', 'Some ALT text', 'myclass')|raw }}
+    </div>
+    <div class="column col-4">
+    <p>
+{% markdown %}
+Willkommen beim Feuerwehr Förderverein, wo Gemeinschaft und Engagement Hand in Hand gehen. Unter der engagierten Leitung von Oliver Tag und Patrick Frutig setzen wir uns dafür ein, unsere örtliche Feuerwehr zu unterstützen und zu stärken.
+
+Unser Verein bietet Ihnen die einzigartige Möglichkeit, einen wertvollen Beitrag zu leisten, ohne selbst in brenzlige Situationen eingreifen zu müssen. Mit Ihrer Hilfe können wir die Ausstattung verbessern, Schulungen finanzieren und die Sicherheit unserer Gemeinde erhöhen.
+
+Haben Sie Fragen oder möchten Sie mehr darüber erfahren, wie Sie sich einbringen können? Oliver und Patrick stehen Ihnen jederzeit zur Verfügung und freuen sich darauf, von Ihnen zu hören. Werden Sie Teil unserer Gemeinschaft und helfen Sie uns, die Helden des Alltags zu unterstützen!
+
+{% endmarkdown %}
+
+
+</p>
+    </div>
+    <div class="column col-4">
+        {{ page.media['Designer2.png'].html('My title', 'Some ALT text', 'myclass')|raw }}
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
 
 ### Der Feuerwehrverein hat folgende Aufgaben:
