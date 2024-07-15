@@ -6,7 +6,7 @@ content:
     items: '@self.modular'
 pp_protect: '0'
 process:
-  markdown: true
-  twig: true
+    markdown: true
+    twig: true
 ---
 
