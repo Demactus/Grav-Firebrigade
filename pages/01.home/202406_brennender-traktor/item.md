@@ -18,7 +18,6 @@ show_sidebar: false
 media_order: Dominik_PXL_20240415_123649204.MP.jpg
 rich_preview_description: ''
 rich_preview_thumbnail: ''
-body_classes: header-dark
 header_image: '0'
 pp_protect: '0'
 ---

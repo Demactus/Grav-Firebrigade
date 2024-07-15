@@ -21,7 +21,32 @@
   margin-bottom: 0;
 }
 
+.fw-location-item {
+  color: $fw-blue;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: -8px;
+}
+
+.scrolled .fw-location-item {
+  font-size: 9px;
+  color: $fw-blue;
+
+}
+
+#fw-logo-txt-item {
+  color: $fw-blue;
+  font-size: 23px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+
 .scrolled #fw-logo-txt {
+  font-size: 18px;
+  color: $fw-blue;
+}
+
+.scrolled #fw-logo-txt-item {
   font-size: 18px;
   color: $fw-blue;
 }

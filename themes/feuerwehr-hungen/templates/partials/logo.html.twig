@@ -10,6 +10,15 @@
       <div class="column col-auto">
         <img id="fw-logo-img" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.title }}" />
         </div>
+      {% if itempage %}
+        <div id="fw-logo-txt-item" class="column col-auto">Feuerwehr
+          <div class="columns">
+            <div class="column text-normal fw-location">
+              Hungen-Inheiden
+            </div>
+          </div>
+        </div>
+      {% endif %}
       <div id="fw-logo-txt" class="column col-auto">Feuerwehr
         <div class="columns">
           <div class="column text-normal fw-location">

@@ -1,0 +1,28 @@
+{% do assets.addCss('theme://css/fw-logo.css') %}
+
+{% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
+<a href="{{ home_url }}" class="navbar-brand mr-10">
+    {% if logo %}
+        {% set logo_file = (logo|first).name %}
+
+        <div class="container">
+            <div class="columns">
+                <div class="column col-auto">
+                    <img id="fw-logo-img" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.title }}" />
+                </div>
+                    <div id="fw-logo-txt-item" class="column col-auto">Feuerwehr
+                        <div class="columns">
+                            <div class="column text-normal fw-location-item">
+                                Hungen-Inheiden
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+    {% else %}
+        {% include('@images/grav-logo.svg') %}
+    {% endif %}
+</a>
+
