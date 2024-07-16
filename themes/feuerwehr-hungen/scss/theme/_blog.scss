@@ -41,13 +41,18 @@
 
   .bricklayer-column {
     padding-left: 0px;
-    padding-right: 25px;
+    //padding-right: 25px;
 
   }
   .card {
     margin-bottom: 25px;
     border: 0;
     box-shadow: 0 10px 45px -9px rgba(0,0,0,0.1);
+  }
+
+  .reordered {
+    margin-right: 20px !important;
+
   }
 
   .card-footer {

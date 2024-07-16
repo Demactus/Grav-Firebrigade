@@ -20,6 +20,7 @@ rich_preview_description: ''
 rich_preview_thumbnail: ''
 header_image: '0'
 pp_protect: '0'
+cache_enable: true
 ---
 
 Ein Kleintraktor brannte bei unserem Eintreffen schon in voller Ausdehnung.
