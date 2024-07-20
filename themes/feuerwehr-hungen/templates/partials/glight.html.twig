@@ -1,0 +1,62 @@
+{% do assets.addCss('theme://css/glightbox.css') %}
+
+<script type="module">
+    import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+
+    const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+    lightbox.on('open', (target) => {
+        console.log('lightbox opened');
+    });
+    var lightboxDescription = GLightbox({
+        openEffect: 'bounce', // Define that we want the bounce animation on open
+        cssEfects: {
+            // register our new animation
+            bounce: {in: 'bounceIn', out: 'bounceOut'}
+        },
+        closeEffect: 'zoom',
+        touchNavigation: true,
+        loop: true,
+        selector: '.glightbox2'
+    });
+    var lightboxVideo = GLightbox({
+        selector: '.glightbox3'
+    });
+    var lightboxInlineIframe = GLightbox({
+        selector: '.glightbox4'
+    });
+</script>
+
+
+{% set flex = grav.get('flex') %}
+{% set directory = flex.directory('vorstellung') %}
+{% set vorstellung = directory.collection() %}
+
+
+<ul class="box-container four-cols">
+    {% for eintrag in vorstellung.filterBy({published: true}) %}
+        <li class="box">
+            <div class="inner">
+                <a
+                        href="user/images/vorstellung-images/{{ eintrag.picked_image }}"
+                        class="glightbox2"
+                        data-title="{{ eintrag.vorname }}"
+                        data-description="<h5><span><strong>Funktion:</strong>{{ eintrag.funktion|e }}</span></h5><h5><span><strong>Beruf:</strong>{{ eintrag.beruf|e }}</span></h5><h5><span><strong>Bei der Feuerwehr seit:</strong>{{ eintrag.datum|e }}</span></h5><h5><span><strong>Über Mich:</strong>{{ eintrag.beschreibung|e }}</span></h5>"
+                        data-desc-position="right"
+                        data-type="image"
+                        data-effect="fade"
+                        data-height="auto"
+                        data-width="900px"
+                        data-zoomable="true"
+                        data-draggable="true"
+                >
+                    <img src="user/images/vorstellung-images/{{ eintrag.picked_image }}" alt="bla"/>
+                </a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+
