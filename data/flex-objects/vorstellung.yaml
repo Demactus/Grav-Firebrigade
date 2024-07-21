@@ -60,7 +60,7 @@ c10e58497c0c293ff83d6c243c385a7e:
       path: 'image://vorstellung-images//20210216_165959_DSC007401-scaled.jpg'
 961e2285ab836faa018660d8f8eb99b8:
   published: true
-  picked_image: 20220614_195203_DSC09124-scaled.jpg
+  picked_image: 20200114_IMG_0477.jpg
   name: Pfeil
   vorname: Johannes
   funktion: 'Atemschutzgeräteträger, Maschinist, Gruppenführer'
@@ -69,8 +69,103 @@ c10e58497c0c293ff83d6c243c385a7e:
   datum: 1996
   beschreibung: 'In dem Dorf aus dem ich komme gehörte der Einsatz in der Feuerwehr zum Dorfleben dazu. So bin mit 9 Jahren in die Jugendfeuerwehr eingetreten, Übernahm mit Übergang in die Einsatzabteilung die Stellvertetende Leitung der Jugendfeuerwehr und hatte ein paar Jahre später die Funktion des Gerätewarts inne. Mit Familiengründung in Inheiden, wurde mir von den sehr offenen Kameraden direkt ein Spind zugwiesen. So konnte ich neue Kontakte knüpfen, Freundschaften schließen und nun auch Einsatzerfahrung auf dem Wasser sammeln.'
   add_image:
-    'image://vorstellung-images/20220614_195203_DSC09124-scaled.jpg':
-      name: 20220614_195203_DSC09124-scaled.jpg
+    'image://vorstellung-images/20200114_IMG_0477.jpg':
+      name: 20200114_IMG_0477.jpg
       type: image/jpeg
-      size: 496047
-      path: 'image://vorstellung-images//20220614_195203_DSC09124-scaled.jpg'
+      size: 663765
+      path: 'image://vorstellung-images//20200114_IMG_0477.jpg'
+f49f9ac84e967ede6cacb9aa2d1dbb40:
+  published: true
+  picked_image: 20200114_IMG_0453.jpg
+  name: Frutig
+  vorname: Patrick
+  funktion: 'Gruppenführer und Maschinist'
+  beruf: Lagerist
+  ausbildung: Maurer
+  datum: 2005
+  beschreibung: 'Ich habe Freude daran etwas für die Allgemeinheit zu tun. Ausserdem habe ich bei der Feuerwehr viele Freunde gefunden und Vieles gelernt.'
+  add_image:
+    'image://vorstellung-images/20200114_IMG_0453.jpg':
+      name: 20200114_IMG_0453.jpg
+      type: image/jpeg
+      size: 716504
+      path: 'image://vorstellung-images//20200114_IMG_0453.jpg'
+31b94c1486eb680a0af07356fa61dd56:
+  published: true
+  picked_image: 20200114_IMG_0451.jpg
+  name: Brinster
+  vorname: Jonas
+  funktion: 'Jugendwart, Atemschutzgeräteträger'
+  beruf: 'LKW Mechatroniker'
+  ausbildung: 'PKW Mechatroniker'
+  datum: 2007
+  beschreibung: 'Eigentlich bin ich schon immer Feuer & Flamme für die Feuerwehr, da mein Vater auch ziehmlich aktiv war. Ich fand es immer toll, was eine Feuerwehr auf die Beine stellt und leistet. Die Kameradschaft und Teamarbeit, sowie das Arbeiten an den Gerätschaften macht mir am meisten Spaß.'
+  add_image:
+    'image://vorstellung-images/20200114_IMG_0451.jpg':
+      name: 20200114_IMG_0451.jpg
+      type: image/jpeg
+      size: 601908
+      path: 'image://vorstellung-images//20200114_IMG_0451.jpg'
+8c2b5f4714067eac88bae382c5611e5f:
+  published: true
+  picked_image: 20220517_194932_DSC01048.jpg
+  name: Schmidt
+  vorname: Robin
+  funktion: Atemschutzgeräteträger
+  beruf: Industriemechaniker
+  ausbildung: 'Industriemechaniker für Maschinen- und Anlagenbau'
+  datum: 2007
+  beschreibung: 'Zur Feuerwehr bin ich gekommen um anderen Menschen in Not zu helfen und weil mir die Teamarbeit sehr gut gefällt.'
+  add_image:
+    'image://vorstellung-images/20220517_194932_DSC01048.jpg':
+      name: 20220517_194932_DSC01048.jpg
+      type: image/jpeg
+      size: 535867
+      path: 'image://vorstellung-images//20220517_194932_DSC01048.jpg'
+d55e5161aa7b0d8c3bb3677028d2ecab:
+  published: true
+  picked_image: 20221022_122353_DSC03434-scaled.jpg
+  name: Tag
+  vorname: Dominik
+  funktion: 'Wehrführer, Gruppenführer'
+  beruf: Justizvollzugsdienst
+  ausbildung: 'KFZ Mechatroniker'
+  datum: 2004
+  beschreibung: 'Ich bin damals zur Feuerwehr kommen um meinen Wehrersatzdienst zu leisten. Seitdem bin ich dabei und auch in der Jugendfeuerwehr als Jugendgruppenleiter aktiv. Am meisten Spaß machen mir die Ausbildungsabende mit der Mannschaft und der Jugendfeuerwehr.'
+  add_image:
+    'image://vorstellung-images/20221022_122353_DSC03434-scaled.jpg':
+      name: 20221022_122353_DSC03434-scaled.jpg
+      type: image/jpeg
+      size: 609340
+      path: 'image://vorstellung-images//20221022_122353_DSC03434-scaled.jpg'
+cf25e534c1f4cb18d922c4c10ba23322:
+  published: true
+  picked_image: 20200114_203005_IMG_0468.jpg
+  name: Tag
+  vorname: Oliver
+  funktion: 'Maschinist, Bootsführer, Gerätewart, Vorsitzender Förderverein'
+  beruf: 'Netzführer Wasser'
+  ausbildung: 'Energieelektroniker, Elektromeister'
+  datum: 1998
+  beschreibung: 'Als Jugendlicher bin ich mal Mitglied der Jugendfeuerwehr in Hungen gewesen. Anstatt Wehrdienst zu leisten, bin ich die zehnjährige Verpflichtung im Katastrophenschutz eingegangen. Dienst für die Gesellschaft zu leisten und Menschen in Not zu helfen ist eine zufriedenstellende Tätigkeit für mich. Außerdem habe ich Spaß an Technik, Aus- und Weiterbildung. Rückhalt und Freundschaft mit den Kolleg-innen sind etwas Tolles für mich.'
+  add_image:
+    'image://vorstellung-images/20200114_203005_IMG_0468.jpg':
+      name: 20200114_203005_IMG_0468.jpg
+      type: image/jpeg
+      size: 529183
+      path: 'image://vorstellung-images//20200114_203005_IMG_0468.jpg'
+9f87b711fa77002d30f24ac89220fc8c:
+  published: true
+  picked_image: 20220517_194344_DSC01034.jpg
+  name: Reipold
+  vorname: Pascal
+  funktion: Atemschutzgeräteträger
+  beruf: 'Maschinen- und Anlagenbediener'
+  ausbildung: Metzger
+  beschreibung: 'Weil es mir Spaß macht, anderen Leuten zu Helfen'
+  add_image:
+    'image://vorstellung-images/20220517_194344_DSC01034.jpg':
+      name: 20220517_194344_DSC01034.jpg
+      type: image/jpeg
+      size: 669346
+      path: 'image://vorstellung-images//20220517_194344_DSC01034.jpg'

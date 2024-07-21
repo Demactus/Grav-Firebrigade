@@ -171,14 +171,14 @@
 body { font-family: sans-serif; }
 
 .carousel {
-  background: #EEE;
+  background: rgba(238, 238, 238, 0.87);
 }
 
 .carousel-cell {
   margin-right: 20px;
   overflow: hidden;
   text-align: center;
-  color: blue;
+  color: white;
 }
 
 .top-left {
@@ -187,7 +187,8 @@ body { font-family: sans-serif; }
   left: 16px;
 }
 
-.testo {
+.magnify {
+  color: whitesmoke;
   position: absolute;
   top: 50%;
   left: 50%;

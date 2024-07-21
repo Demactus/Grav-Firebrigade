@@ -43,25 +43,13 @@
         wrapAround: true,
         //contain: true,
         draggable: true,
-        pageDots: false,
+        pageDots: true,
         imagesLoaded: true,
         percentPosition: false,
-        groupCells: 4
+        //groupCells: 3
     });
 
-    var imgs = carousel.querySelectorAll('.carousel-cell img');
-    // get transform property
-    var docStyle = document.documentElement.style;
-    var transformProp = typeof docStyle.transform == 'string' ?
-        'transform' : 'WebkitTransform';
 
-    flkty.on( 'scroll', function() {
-        flkty.slides.forEach( function( slide, i ) {
-            var img = imgs[i];
-            var x = ( slide.target + flkty.x ) * -1/3;
-            img.style[ transformProp ] = 'translateX(' + x  + 'px)';
-        });
-    });
 </script>
 
 
@@ -74,7 +62,7 @@
 <div class="carousel main-carousel">
     {% for eintrag in vorstellung.filterBy({published: true}) %}
         <div class="carousel-cell">
-                <div class="top-left">{{ eintrag.vorname }}</div>
+                <div class="top-left"><strong>{{ eintrag.vorname }}</strong></div>
                 <a
                         href="user/images/vorstellung-images/{{ eintrag.picked_image }}"
                         class="glightbox2"
@@ -88,7 +76,7 @@
                         data-zoomable="true"
                         data-draggable="true"
                 >
-                    <i class="fa-solid fa-magnifying-glass testo"></i>
+                    <i class="fa-solid fa-magnifying-glass magnify"></i>
                 </a>
                 <img src="user/images/vorstellung-images/{{ eintrag.picked_image }}" alt="bla"/>
 
