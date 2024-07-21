@@ -44,6 +44,7 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "flickity": "^3.0.0",
     "glightbox": "^3.3.0",
     "gulp-sourcemaps": "^2.6.4"
   }

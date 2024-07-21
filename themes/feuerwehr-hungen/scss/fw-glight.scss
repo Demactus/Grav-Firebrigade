@@ -1,4 +1,5 @@
 @import "../css-compiled/glightbox.css";
+@import "../css-compiled/flickity.css";
 
 .pair {
   background: #f8f8f8;
@@ -46,8 +47,8 @@
 }
 
 .box img {
-  width: calc(100% + 50px);
-  max-width: calc(100% + 50px);
+  width: calc(200%);
+  max-width: calc(100% + 150px);
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(-40px, 0, 0);
 }
@@ -83,18 +84,6 @@
   margin-left: 0;
 }
 
-.options-list {
-  width: 700px;
-  margin: 0 auto;
-  border: 1px solid #ececec;
-  border-radius: 2px;
-}
-
-.options-list .option {
-  overflow: hidden;
-  border-bottom: 1px solid #ececec;
-}
-
 .inline-inner {
   padding: 40px;
 }
@@ -115,102 +104,6 @@
 
 .inline-close-btn:hover {
   border-color: #000;
-}
-
-.mcbutton {
-  padding: 11px 45px;
-  margin-top: 20px;
-  display: inline-block;
-  border-radius: 4px;
-  margin-right: 10px;
-  color: #000;
-  border: 2px solid #000;
-  font-weight: 600;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: .7em;
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
-
-.mcbutton::before,
-.mcbutton::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #000;
-  transition: all 0.2s ease-in-out;
-  z-index: 99;
-}
-
-.mcbutton::before {
-  left: 0;
-  top: 0;
-}
-
-.mcbutton::after {
-  right: 0;
-  bottom: 0;
-}
-
-.mcbutton:hover::before,
-.mcbutton:hover::after {
-  width: 100%;
-  transition: all 0.4s ease-in-out;
-}
-
-.mcbutton span::before,
-.mcbutton span::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 2px;
-  height: 0;
-  background: #000;
-  transition: all 0.3s ease-in-out;
-}
-
-.mcbutton span::before {
-  left: 0;
-  top: 0;
-}
-
-.mcbutton span::after {
-  right: 0;
-  bottom: 0;
-}
-
-.mcbutton:hover span::before,
-.mcbutton:hover span::after {
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-.mcbutton.primary {
-  background: #FFC107;
-}
-
-.mcbutton.black {
-  background: #1b1b1b;
-  color: #fff;
-}
-
-.lead .mcbutton.primary {
-  border-color: #a2a2a2;
-}
-
-.lead .mcbutton {
-  padding: 16px 45px;
-  font-size: 0.6em;
-}
-
-.mcbutton i {
-  color: inherit;
-  font-size: 1.5em;
-  margin-right: 10px;
 }
 
 @media (min-width: 390px) {
@@ -267,5 +160,47 @@
   .box:hover a::before {
     opacity: 0.3;
     transition: opacity 0.5s;
+  }
+}
+
+
+// flickity
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: blue;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.testo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-cell img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
   }
 }

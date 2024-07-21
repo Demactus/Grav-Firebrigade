@@ -42,3 +42,35 @@ cafd2d40bd22580562b9dbf6907a609d:
       type: image/jpeg
       size: 594489
       path: 'image://vorstellung-images//001_20240402_194934_DSC09838.jpg'
+c10e58497c0c293ff83d6c243c385a7e:
+  published: true
+  picked_image: 20210216_165959_DSC007401-scaled.jpg
+  name: Imig
+  vorname: Alexander
+  funktion: 'Maschinist, Atemschutzgeräteträger, sowie Kassenwart im Förderverein'
+  beruf: Bankkaufmann
+  ausbildung: Bankkaufmann
+  datum: 2009
+  beschreibung: 'Irgendwann haben mich Freunde mal mit in die Jugendfeuerwehr geschleppt. Damals hatte ich als Jugendlicher weder Interesse an Technik noch irgendwelche Ahnung von Feuerwehr. Spaß gemacht hat mir alles rund um Feuerwehr dann aber vom ersten Tag an. Nach dem Umzug nach Inheiden stand dann erst mal Familiengründung und Hausbau an, als dann wieder mehr Zeit war, zog es mich wieder in die Feuerwehr. Warum? Ich finde, ich verbringe hier meine Zeit sehr sinnvoll, lerne dauernd etwas dazu und treffe aufgeschlossene nette Menschen, auf die man sich verlassen kann. Im Laufe der Jahre sind hier viele Freundschaften entstanden.'
+  add_image:
+    'image://vorstellung-images/20210216_165959_DSC007401-scaled.jpg':
+      name: 20210216_165959_DSC007401-scaled.jpg
+      type: image/jpeg
+      size: 548076
+      path: 'image://vorstellung-images//20210216_165959_DSC007401-scaled.jpg'
+961e2285ab836faa018660d8f8eb99b8:
+  published: true
+  picked_image: 20220614_195203_DSC09124-scaled.jpg
+  name: Pfeil
+  vorname: Johannes
+  funktion: 'Atemschutzgeräteträger, Maschinist, Gruppenführer'
+  beruf: Projektingenieur
+  ausbildung: 'Industriemechaniker, Maschinenbaustudium'
+  datum: 1996
+  beschreibung: 'In dem Dorf aus dem ich komme gehörte der Einsatz in der Feuerwehr zum Dorfleben dazu. So bin mit 9 Jahren in die Jugendfeuerwehr eingetreten, Übernahm mit Übergang in die Einsatzabteilung die Stellvertetende Leitung der Jugendfeuerwehr und hatte ein paar Jahre später die Funktion des Gerätewarts inne. Mit Familiengründung in Inheiden, wurde mir von den sehr offenen Kameraden direkt ein Spind zugwiesen. So konnte ich neue Kontakte knüpfen, Freundschaften schließen und nun auch Einsatzerfahrung auf dem Wasser sammeln.'
+  add_image:
+    'image://vorstellung-images/20220614_195203_DSC09124-scaled.jpg':
+      name: 20220614_195203_DSC09124-scaled.jpg
+      type: image/jpeg
+      size: 496047
+      path: 'image://vorstellung-images//20220614_195203_DSC09124-scaled.jpg'
