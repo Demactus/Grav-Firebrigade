@@ -1,0 +1,43 @@
+title: Carousel
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        carousel:
+          type: tab
+          title: Carousel
+          fields:
+            header.flexDirectory:
+              type: text
+              label: FlexDirectory
+
+            setting.loop:
+                  label: Loop
+                  type: toggle
+                  default: 0
+                  options:
+                    1: 'Yes'
+                    0: 'No'
+            setting.pageDots:
+                  label: Pagedots
+                  type: toggle
+                  default: 0
+                  options:
+                    1: 'Yes'
+                    0: 'No'
+            setting.imagesLoaded:
+                  label: Images loaded
+                  type: toggle
+                  default: 0
+                  options:
+                    1: 'Yes'
+                    0: 'No'
+            setting.autoplay:
+                  label: Autoplay
+                  type: toggle
+                  default: 1
+                  options:
+                    1: 'Yes'
+                    0: 'No'

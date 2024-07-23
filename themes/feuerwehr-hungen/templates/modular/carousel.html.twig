@@ -1,0 +1,94 @@
+{%  block stylesheets %}
+    {% do assets.addCss('theme://css/glightbox.css') %}
+{% endblock %}
+
+{% block javascript %}
+{% do assets.addJs('theme://js/flickity.pkgd.min.js', {group:'bottom'}) %}
+{% do assets.addJs('theme://js/glightbox.min.js', {group:'bottom'}) %}
+{% endblock %}
+
+<script type="module">
+    //import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+    //import "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js";
+
+    const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+    lightbox.on('open', (target) => {
+        console.log('lightbox opened');
+    });
+    var lightboxDescription = GLightbox({
+        openEffect: 'bounce', // Define that we want the bounce animation on open
+        cssEfects: {
+            // register our new animation
+            bounce: {in: 'bounceIn', out: 'bounceOut'}
+        },
+        closeEffect: 'zoom',
+        touchNavigation: true,
+        loop: true,
+        moreLength: 0,
+        selector: '.glightbox2'
+    });
+    var lightboxVideo = GLightbox({
+        selector: '.glightbox3'
+    });
+    var lightboxInlineIframe = GLightbox({
+        selector: '.glightbox4'
+    });
+
+    var carousel = document.querySelector('.main-carousel');
+    var flkty = new Flickity( carousel, {
+        // options
+        wrapAround: true,
+        //contain: true,
+        draggable: true,
+        pageDots: true,
+        imagesLoaded: true,
+        percentPosition: false,
+        //groupCells: 3
+    });
+
+
+</script>
+
+
+{% set flex = grav.get('flex') %}
+{% set directory = flex.directory('vorstellung') %}
+{% set list = directory.collection() %}
+
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="section pair {{ page.header.class}}">
+    <div class="container {{ grid_size }}">
+        <div class="row">
+            <div class="column col-md-12">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="carousel main-carousel">
+    {% for entry in list.filterBy({published: true}) %}
+        <div class="carousel-cell">
+            <div class="top-left"><strong>{{ entry.vorname }}</strong></div>
+            <a
+                    href="user/images/vorstellung-images/{{ entry.picked_image }}"
+                    class="glightbox2"
+                    data-title="{{ entry.vorname }}"
+                    data-description="<h5><p><strong>Funktion:</strong> {{ entry.funktion|e }}</p></h5><h5><span><strong>Beruf:</strong> {{ entry.beruf|e }}</span></h5><h5><span><strong>Bei der Feuerwehr seit:</strong> {{ entry.datum|e }}</span></h5><h5><span><strong>Über Mich:</strong> {{ entry.beschreibung|e }}</span></h5>"
+                    data-desc-position="right"
+                    data-type="image"
+                    data-effect="fade"
+                    data-height="auto"
+                    data-width="900px"
+                    data-zoomable="true"
+                    data-draggable="true"
+            >
+                <i class="fa-solid fa-magnifying-glass magnify"></i>
+            </a>
+            <img src="user/images/vorstellung-images/{{ entry.picked_image }}" alt="bla"/>
+
+        </div>
+    {% endfor %}
+</div>
