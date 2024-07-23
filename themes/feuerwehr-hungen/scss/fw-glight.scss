@@ -166,8 +166,8 @@
 // glightbox modal
 // overrides glightbox defaults
 
-.gslide-image {
-  //padding-bottom: 2em !important;
+.gslide-media {
+  margin-bottom: 2em !important;
 }
 
 .description-right {
@@ -183,6 +183,10 @@
 .gslide-title {
   font-size: 1.75em !important;
   margin-top: 5px !important;
+}
+
+.glightbox-mobile .glightbox-container .gslide-description {
+  top: 500px !important;
 }
 
 

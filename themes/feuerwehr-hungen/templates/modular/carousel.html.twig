@@ -34,6 +34,33 @@
     var lightboxVideo = GLightbox({
         selector: '.glightbox3'
     });
+    lightboxVideo.on('slide_changed', ({ prev, current }) => {
+        console.log('Prev slide', prev);
+        console.log('Current slide', current);
+
+        const { slideIndex, slideNode, slideConfig, player } = current;
+
+        if (player) {
+            if (!player.ready) {
+                // If player is not ready
+                player.on('ready', (event) => {
+                    // Do something when video is ready
+                });
+            }
+
+            player.on('play', (event) => {
+                console.log('Started play');
+            });
+
+            player.on('volumechange', (event) => {
+                console.log('Volume change');
+            });
+
+            player.on('ended', (event) => {
+                console.log('Video ended');
+            });
+        }
+    });
     var lightboxInlineIframe = GLightbox({
         selector: '.glightbox4'
     });
@@ -42,12 +69,12 @@
     var flkty = new Flickity( carousel, {
         // options
         wrapAround: true,
-        //contain: true,
+        contain: true,
         draggable: true,
         pageDots: true,
         imagesLoaded: true,
         percentPosition: false,
-        //groupCells: 3
+        groupCells: 0
     });
 
 
@@ -60,35 +87,39 @@
 
 {% set grid_size = theme_var('grid-size') %}
 
-<section class="section pair {{ page.header.class}}">
+<!-- <section class="section pair {{ page.header.class}}">
     <div class="container {{ grid_size }}">
         <div class="row">
-            <div class="column col-md-12">
-            </div>
+             <div class="column col-md-12">
+                <div class="carouselDescription">
+                    {{ content | raw }}
+                </div> -->
+
+                <div class="carousel main-carousel">
+                    {% for entry in list.filterBy({published: true}) %}
+                        <div class="carousel-cell">
+                            <div class="top-left"><strong>{{ entry.vorname }}</strong></div>
+                            <a
+                                    href="user/images/vorstellung-images/{{ entry.picked_image }}"
+                                    class="glightbox2"
+                                    data-title="{{ entry.vorname }}"
+                                    data-description="<h5><p><strong>Funktion:</strong> {{ entry.funktion|e }}</p></h5><h5><span><strong>Beruf:</strong> {{ entry.beruf|e }}</span></h5><h5><span><strong>Bei der Feuerwehr seit:</strong> {{ entry.datum|e }}</span></h5><h5><span><strong>Über Mich:</strong> {{ entry.beschreibung|e }}</span></h5>"
+                                    data-desc-position="right"
+                                    data-type="image"
+                                    data-effect="fade"
+                                    data-height="auto"
+                                    data-width="900px"
+                                    data-zoomable="true"
+                                    data-draggable="true"
+                            >
+                                <i class="fa-solid fa-magnifying-glass magnify"></i>
+                            </a>
+                            <img src="user/images/vorstellung-images/{{ entry.picked_image }}" alt="bla"/>
+
+                        </div>
+                    {% endfor %}
+                </div>
+            <!-- </div>
         </div>
     </div>
-</section>
-<div class="carousel main-carousel">
-    {% for entry in list.filterBy({published: true}) %}
-        <div class="carousel-cell">
-            <div class="top-left"><strong>{{ entry.vorname }}</strong></div>
-            <a
-                    href="user/images/vorstellung-images/{{ entry.picked_image }}"
-                    class="glightbox2"
-                    data-title="{{ entry.vorname }}"
-                    data-description="<h5><p><strong>Funktion:</strong> {{ entry.funktion|e }}</p></h5><h5><span><strong>Beruf:</strong> {{ entry.beruf|e }}</span></h5><h5><span><strong>Bei der Feuerwehr seit:</strong> {{ entry.datum|e }}</span></h5><h5><span><strong>Über Mich:</strong> {{ entry.beschreibung|e }}</span></h5>"
-                    data-desc-position="right"
-                    data-type="image"
-                    data-effect="fade"
-                    data-height="auto"
-                    data-width="900px"
-                    data-zoomable="true"
-                    data-draggable="true"
-            >
-                <i class="fa-solid fa-magnifying-glass magnify"></i>
-            </a>
-            <img src="user/images/vorstellung-images/{{ entry.picked_image }}" alt="bla"/>
-
-        </div>
-    {% endfor %}
-</div>
+</section> -->
