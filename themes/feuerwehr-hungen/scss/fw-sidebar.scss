@@ -30,14 +30,14 @@
   border-radius: 0.5em;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   //left: 25%;
-  max-width: 90%;
+  max-width: 90% !important;
   pointer-events: none;
   //position: absolute;
   //top: 25%;
   //transform: translate(-50%, -50%);
-  width: 30em;
+  width: 40em !important;
   text-align: left;
-  max-height: 90vh;
+  max-height: 90vh !important;
   display: flex;
   flex-direction: column;
 
@@ -72,8 +72,13 @@
     border-top: 1px solid #e0e0e0;
     color: whitesmoke;
     padding-top: 1em;
+    padding-bottom: 1em;
     pointer-events: all;
     overflow: auto;
+
+    p {
+      padding-top: 5px;
+    }
   }
 }
 
