@@ -1,5 +1,6 @@
 @import "../css-compiled/glightbox.css";
 @import "../css-compiled/flickity.css";
+@import "fw-main";
 
 .pair {
   background: #f8f8f8;
@@ -166,10 +167,6 @@
 // glightbox modal
 // overrides glightbox defaults
 
-.gslide-media {
-  margin-bottom: 2em !important;
-}
-
 .description-right {
   max-width: 320px !important;
 }
@@ -179,6 +176,22 @@
   padding: 10px 1em !important;
 }
 
+.glightbox-open:not(.glightbox-mobile) .description-right {
+  background: $fw-blue !important;
+}
+
+.glightbox-clean .gslide-title {
+  color: whitesmoke !important;
+}
+
+.descText {
+  color: whitesmoke;
+}
+
+.glightbox-mobile .descText {
+  color: whitesmoke !important;
+}
+
 
 .gslide-title {
   font-size: 1.75em !important;
@@ -186,7 +199,7 @@
 }
 
 .glightbox-mobile .glightbox-container .gslide-description {
-  top: 500px !important;
+  top: 530px !important;
 }
 
 
