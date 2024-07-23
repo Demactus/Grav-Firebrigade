@@ -16,21 +16,6 @@ $fw-light-yellow: #ffff00;
   margin-top: 2% !important;
 }
 
-.modal-image {
-  width: auto;
-  height: auto;
-}
-
-.jqmodal, .jqmodal h2, .jqmodal h5{
-  background-color: $fw-blue !important;
-  color: white !important;
-}
-
-.jqmodal h3, .jqmodal h2 {
-  color: white;
-  margin-top: 1%;
-}
-
 .accordion-body {
   overflow: hidden !important; /* Initially hidden */
   max-height: 0 !important;    /* Initially hidden */
