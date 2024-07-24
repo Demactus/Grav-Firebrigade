@@ -176,7 +176,7 @@
   padding: 10px 1em !important;
 }
 
-.glightbox-open:not(.glightbox-mobile) .description-right {
+.glightbox-open .description-right {
   background: $fw-blue !important;
 }
 
@@ -186,6 +186,8 @@
 
 .descText {
   color: whitesmoke;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 .glightbox-mobile .descText {
@@ -195,11 +197,23 @@
 
 .gslide-title {
   font-size: 1.75em !important;
-  margin-top: 5px !important;
+  margin-top: 0 !important;
+}
+
+.glightbox-mobile .glightbox-container .ginner-container {
+  //background: $fw-blue !important;
+}
+
+.glightbox-mobile .glightbox-container .gslide-media {
+  position: absolute;
+  top: 5vh !important;
+  padding-top: 20px;
 }
 
 .glightbox-mobile .glightbox-container .gslide-description {
-  top: 530px !important;
+  top: 37vh !important;
+  position: absolute;
+  padding-top: 10px !important;
 }
 
 
