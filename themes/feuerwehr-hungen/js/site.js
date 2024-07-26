@@ -23,7 +23,11 @@ jQuery(document).ready(function($){
             scrollHeader();
             parallaxBackground();
         });
-    };
+    }
+
+    if($(window).width()<830){
+        $(".carousel").addClass("mobileview");
+    }
 
     // Touch scroll
     $(document).on({

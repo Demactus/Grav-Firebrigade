@@ -10,6 +10,13 @@
 <script type="module">
     //import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
     //import "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js";
+    let isMobile;
+    jQuery(document).ready(function($){
+        if($(window).width() < 830){
+            isMobile = true;
+            $(".carousel").addClass("mobileview");
+        }
+    });
 
     const lightbox = GLightbox({
         touchNavigation: true,
@@ -66,16 +73,34 @@
     });
 
     var carousel = document.querySelector('.main-carousel');
-    var flkty = new Flickity( carousel, {
-        // options
-        wrapAround: true,
-        contain: true,
-        draggable: true,
-        pageDots: true,
-        imagesLoaded: true,
-        percentPosition: false,
-        groupCells: 0
-    });
+    if (!isMobile){
+        var flkty = new Flickity( carousel, {
+            // options
+            wrapAround: true,
+            contain: true,
+            draggable: true,
+            pageDots: true,
+            prevNextButtons: false,
+            imagesLoaded: true,
+            resizable: true,
+            percentPosition: false,
+            groupCells: 0
+        });
+    } else {
+        var flkty = new Flickity( carousel, {
+            // options
+            wrapAround: true,
+            contain: true,
+            draggable: true,
+            pageDots: true,
+            imagesLoaded: true,
+            percentPosition: false,
+            groupCells: 0
+        });
+    }
+
+
+
 
 
 </script>
