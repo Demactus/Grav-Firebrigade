@@ -13,25 +13,17 @@
         options.closeOther = options.closeOther || false;
         options.activeSelector = options.activeSelector || ".active";
 
-        this.addClass("treemenu");
+        //this.addClass("treemenu");
 
-        if (!options.nonroot) {
-            this.addClass("treemenu-root");
-        }
+        //if (!options.nonroot) {
+        //    this.addClass("treemenu-root");
+        //}
 
         options.nonroot = true;
 
         this.find("> li").each(function() {
             e = $(this);
             var subtree = e.find('> ul');
-            var button = e.find('.toggler').eq(0);
-
-            if(button.length == 0) {
-                // create toggler
-                var button = $('<span>');
-                button.addClass('toggler');
-                e.prepend(button);
-            }
 
             if(subtree.length > 0) {
                 subtree.hide();
