@@ -123,6 +123,7 @@
   overflow-y: scroll;
   visibility: hidden;
   transition: all .375s;
+  pointer-events: auto;
 }
 
 .overlay-menu.is-open {
@@ -206,6 +207,9 @@
   font-size: 2em;
   text-decoration: none;
   font-weight: bold;
+  pointer-events: auto;
+  position: relative;
+  z-index: 14;
 }
 
 
