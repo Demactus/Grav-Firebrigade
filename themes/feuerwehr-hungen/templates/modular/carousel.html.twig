@@ -8,6 +8,32 @@
 {% endblock %}
 
 <script type="module">
+
+
+    const vornamenArray = [
+        'Bastian', // Index 0
+        'Jan',     // Index 1
+        'Florian', // Index 2
+        'Alexander', // Index 3
+        'Johannes', // Index 4
+        'Patrick', // Index 5
+        'Jonas',   // Index 6
+        'Robin',   // Index 7
+        'Dominik', // Index 8
+        'Oliver',  // Index 9
+        'Pascal'   // Index 10
+    ];
+
+    const lowerCaseVornamenArray = vornamenArray.map(name => name.toLowerCase());
+
+
+    const searchVorname = (vorname) => {
+        const lowerCaseVorname = vorname.toLowerCase();
+        const index = lowerCaseVornamenArray.indexOf(lowerCaseVorname);
+        return index !== -1 ? index : null;
+    };
+
+
     //import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
     //import "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js";
     let isMobile;
@@ -16,7 +42,33 @@
             isMobile = true;
             $(".carousel").addClass("mobileview");
         }
+
+        var param = GetURLParameter('person')
+
+        if(param !== null && param !== undefined) {
+            //lightboxDescription.open(document.getElementById(param))
+            lightboxDescription.openAt(searchVorname(param))
+            lightboxDescription.on('afterLoad.glightbox', function(event, instance) {
+                console.log('lightbox opened for person'+ param);
+            });
+        }
     });
+
+
+    //Catch param
+    function GetURLParameter(sParam)
+    {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++)
+        {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam)
+            {
+                return sParameterName[1];
+            }
+        }
+    }
 
     const lightbox = GLightbox({
         touchNavigation: true,
@@ -125,6 +177,7 @@
                         <div class="carousel-cell">
                             <div class="top-left"><strong>{{ entry.vorname }}</strong></div>
                             <a
+                                    id="{{ entry.vorname }}"
                                     href="user/images/vorstellung-images/{{ entry.picked_image }}"
                                     class="glightbox2"
                                     data-title="{{ entry.vorname }}"
