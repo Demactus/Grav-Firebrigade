@@ -16,16 +16,16 @@ aecc46abb3ee1883310b98e66808c6d7:
   datum: 2001
 cafd2d40bd22580562b9dbf6907a609d:
   published: true
-  picked_image: 001_20240402_193954_DSC09796.jpg
+  picked_image: 20221022_122431_DSC03437.jpg
   name: Martens
   vorname: Jan
   funktion: 'coole Socke'
   add_image:
-    'image://vorstellung-images/001_20240402_193954_DSC09796.jpg':
-      name: 001_20240402_193954_DSC09796.jpg
+    'image://vorstellung-images/20221022_122431_DSC03437.jpg':
+      name: 20221022_122431_DSC03437.jpg
       type: image/jpeg
-      size: 594593
-      path: 'image://vorstellung-images/001_20240402_193954_DSC09796.jpg'
+      size: 525286
+      path: 'image://vorstellung-images//20221022_122431_DSC03437.jpg'
   beruf: Student
   datum: 2008
   beschreibung: 'Mein Onkel war Wehrführer und damit war für mich klar: "Da muss ich hin...". Später kam noch die Motivation dazu, etwas Gutes zu tun und sich für die Menschen einzusetzen.'
@@ -108,7 +108,7 @@ f49f9ac84e967ede6cacb9aa2d1dbb40:
       path: 'image://vorstellung-images//20200114_IMG_0451.jpg'
 8c2b5f4714067eac88bae382c5611e5f:
   published: true
-  picked_image: 20220517_194932_DSC01048.jpg
+  picked_image: DSC02670.jpg
   name: Schmidt
   vorname: Robin
   funktion: Atemschutzgeräteträger
@@ -117,14 +117,14 @@ f49f9ac84e967ede6cacb9aa2d1dbb40:
   datum: 2007
   beschreibung: 'Zur Feuerwehr bin ich gekommen um anderen Menschen in Not zu helfen und weil mir die Teamarbeit sehr gut gefällt.'
   add_image:
-    'image://vorstellung-images/20220517_194932_DSC01048.jpg':
-      name: 20220517_194932_DSC01048.jpg
+    'image://vorstellung-images/DSC02670.jpg':
+      name: DSC02670.jpg
       type: image/jpeg
-      size: 535867
-      path: 'image://vorstellung-images//20220517_194932_DSC01048.jpg'
+      size: 443991
+      path: 'image://vorstellung-images//DSC02670.jpg'
 d55e5161aa7b0d8c3bb3677028d2ecab:
   published: true
-  picked_image: 20221022_122353_DSC03434-scaled.jpg
+  picked_image: DSC01979.jpg
   name: Tag
   vorname: Dominik
   funktion: 'Wehrführer, Gruppenführer'
@@ -133,14 +133,14 @@ d55e5161aa7b0d8c3bb3677028d2ecab:
   datum: 2004
   beschreibung: 'Ich bin damals zur Feuerwehr kommen um meinen Wehrersatzdienst zu leisten. Seitdem bin ich dabei und auch in der Jugendfeuerwehr als Jugendgruppenleiter aktiv. Am meisten Spaß machen mir die Ausbildungsabende mit der Mannschaft und der Jugendfeuerwehr.'
   add_image:
-    'image://vorstellung-images/20221022_122353_DSC03434-scaled.jpg':
-      name: 20221022_122353_DSC03434-scaled.jpg
+    'image://vorstellung-images/DSC01979.jpg':
+      name: DSC01979.jpg
       type: image/jpeg
-      size: 609340
-      path: 'image://vorstellung-images//20221022_122353_DSC03434-scaled.jpg'
+      size: 500960
+      path: 'image://vorstellung-images/DSC01979.jpg'
 cf25e534c1f4cb18d922c4c10ba23322:
   published: true
-  picked_image: 20200114_203005_IMG_0468.jpg
+  picked_image: DSC01959.jpg
   name: Tag
   vorname: Oliver
   funktion: 'Maschinist, Bootsführer, Gerätewart, Vorsitzender Förderverein'
@@ -149,11 +149,11 @@ cf25e534c1f4cb18d922c4c10ba23322:
   datum: 1998
   beschreibung: 'Als Jugendlicher bin ich mal Mitglied der Jugendfeuerwehr in Hungen gewesen. Anstatt Wehrdienst zu leisten, bin ich die zehnjährige Verpflichtung im Katastrophenschutz eingegangen. Dienst für die Gesellschaft zu leisten und Menschen in Not zu helfen ist eine zufriedenstellende Tätigkeit für mich. Außerdem habe ich Spaß an Technik, Aus- und Weiterbildung. Rückhalt und Freundschaft mit den Kolleg-innen sind etwas Tolles für mich.'
   add_image:
-    'image://vorstellung-images/20200114_203005_IMG_0468.jpg':
-      name: 20200114_203005_IMG_0468.jpg
+    'image://vorstellung-images/DSC01959.jpg':
+      name: DSC01959.jpg
       type: image/jpeg
-      size: 529183
-      path: 'image://vorstellung-images//20200114_203005_IMG_0468.jpg'
+      size: 596574
+      path: 'image://vorstellung-images//DSC01959.jpg'
 9f87b711fa77002d30f24ac89220fc8c:
   published: true
   picked_image: 20220517_194344_DSC01034.jpg
@@ -169,3 +169,59 @@ cf25e534c1f4cb18d922c4c10ba23322:
       type: image/jpeg
       size: 669346
       path: 'image://vorstellung-images//20220517_194344_DSC01034.jpg'
+04bb1f49ebd5c091d1434e1a167f9bbb:
+  published: true
+  picked_image: DSC01904.jpg
+  name: Tiedemann
+  vorname: Alex
+  datum: 2017
+  add_image:
+    'image://vorstellung-images/DSC01904.jpg':
+      name: DSC01904.jpg
+      type: image/jpeg
+      size: 410798
+      path: 'image://vorstellung-images/DSC01904.jpg'
+b83d23d6622ee8465bbfc2e7e03640ef:
+  published: true
+  picked_image: DSC01893.jpg
+  name: Brinster
+  vorname: Bianca
+  add_image:
+    'image://vorstellung-images/DSC01893.jpg':
+      name: DSC01893.jpg
+      type: image/jpeg
+      size: 366893
+      path: 'image://vorstellung-images//DSC01893.jpg'
+0bf9ad32c52fb06a82b09bdd4239edfb:
+  published: true
+  picked_image: DSC01930.jpg
+  name: Reitz
+  vorname: Gerrit
+  add_image:
+    'image://vorstellung-images/DSC01930.jpg':
+      name: DSC01930.jpg
+      type: image/jpeg
+      size: 467567
+      path: 'image://vorstellung-images//DSC01930.jpg'
+740e76d9e1fe1f85d5ce6a35a650490a:
+  published: true
+  picked_image: _MG_6789.jpg
+  name: Reitz
+  vorname: Gerald
+  add_image:
+    'image://vorstellung-images/_MG_6789.jpg':
+      name: _MG_6789.jpg
+      type: image/jpeg
+      size: 415227
+      path: 'image://vorstellung-images//_MG_6789.jpg'
+abc73667f7bf658b348a2d6027489e95:
+  published: true
+  picked_image: DSC01990.jpg
+  name: Hötteges
+  vorname: Matheo
+  add_image:
+    'image://vorstellung-images/DSC01990.jpg':
+      name: DSC01990.jpg
+      type: image/jpeg
+      size: 395277
+      path: 'image://vorstellung-images//DSC01990.jpg'

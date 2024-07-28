@@ -1,1 +1,6 @@
-{  }
+cache-clear:
+  state: success
+  last-run: 1722135601
+cache-purge:
+  state: success
+  last-run: 1722139201

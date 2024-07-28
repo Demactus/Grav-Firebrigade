@@ -8,7 +8,7 @@ process:
 cache_enable: false
 ---
 
-## Unsere Mannschaft!
+## Unser Team
 
 
 {% include 'modular/carousel.html.twig' %}

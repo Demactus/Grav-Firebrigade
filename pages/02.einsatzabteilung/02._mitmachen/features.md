@@ -4,12 +4,7 @@ class: standard
 menu: Mitmachen
 features:
     -
-        icon: 'fa fa-fire'
-        header: Löschen
-        text: 'Bei uns kannst du lernen wie man nicht nur seinen Durscht löscht'
-        url: null
-    -
-        icon: 'fa fa-handshake'
+        icon: 'fa fa-dumbbell'
         header: Anpacken
         text: 'Manchmal ersetzen Einsatz und Übung sogar das Fitnessstudio'
         url: null
@@ -17,6 +12,11 @@ features:
         icon: 'fa fa-cogs'
         header: Verantwortung
         text: 'Übernehme Verantwortung für den Einsatzerfolg'
+        url: null
+    -
+        icon: 'fa fa-clock'
+        header: 24/7
+        text: '24 Stunden am Tag, 7 Tage die Woche einsatzbereit'
         url: null
 ---
 
