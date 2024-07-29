@@ -1,7 +1,6 @@
 ---
 title: Mitmachen
-class: standard
-menu: Mitmachen
+class: offset-box
 features:
     -
         icon: 'fa fa-dumbbell'
@@ -18,6 +17,7 @@ features:
         header: 24/7
         text: '24 Stunden am Tag, 7 Tage die Woche einsatzbereit'
         url: null
+body_classes: 'bg-gray'
 ---
 
 # Mitmachen
