@@ -24,7 +24,8 @@ b83d23d6622ee8465bbfc2e7e03640ef:
       name: DSC01893.jpg
       type: image/jpeg
       size: 366893
-      path: 'image://vorstellung-images//DSC01893.jpg'
+      path: 'image://vorstellung-images/DSC01893.jpg'
+  funktion: Jugendgruppenleiterin
 d55e5161aa7b0d8c3bb3677028d2ecab:
   published: true
   picked_image: DSC01979.jpg
@@ -43,48 +44,48 @@ d55e5161aa7b0d8c3bb3677028d2ecab:
       path: 'image://vorstellung-images/DSC01979.jpg'
 aecc46abb3ee1883310b98e66808c6d7:
   published: true
-  picked_image: 001_20240402_194702_DSC09810.jpg
+  picked_image: DSC06885.jpg
   name: Haaf
   vorname: Bastian
-  funktion: 'stellvertretender Wehrführer'
-  beschreibung: 'Dieses und jenes und auch sonst noch was...'
+  funktion: 'Zugführer, stellvertretender Wehrführer'
+  beschreibung: 'Weil mein Vater Feuerwehrbeamter ist, war Feuerwehr schon immer ein großes Thema in der Familie. Das hat mich dann auch in die freiwillige Feuerwehr geführt. Ich mag an der Feuerwehr die Kombination aus Technik und Teamplay. Besonders reizend finde ich, dass die Aufgaben so wahnsinnig vielfältig sein können. Ich engagiere ich mich in der Aus- und Fortbildung von Führungskräften, lerne aber auch selbst ständig dazu. Für mich ist die Mitarbeit bei der Feuerwehr der Inbegriff für "lebenslanges Lernen".'
   add_image:
-    'image://vorstellung-images/001_20240402_194702_DSC09810.jpg':
-      name: 001_20240402_194702_DSC09810.jpg
+    'image://vorstellung-images/DSC06885.jpg':
+      name: DSC06885.jpg
       type: image/jpeg
-      size: 588455
-      path: 'image://vorstellung-images/001_20240402_194702_DSC09810.jpg'
+      size: 441440
+      path: 'image://vorstellung-images//DSC06885.jpg'
   beruf: IT-Security-Spezialist
-  ausbildung: 'Ausbildung als Vermessungstechniker, anschließend Maschinenbaustudium'
   datum: 2001
 cafd2d40bd22580562b9dbf6907a609d:
   published: true
   picked_image: 20221022_122431_DSC03437.jpg
   name: Martens
   vorname: Jan
-  funktion: 'coole Socke'
+  funktion: Feuerwehrmann
   add_image:
     'image://vorstellung-images/20221022_122431_DSC03437.jpg':
       name: 20221022_122431_DSC03437.jpg
       type: image/jpeg
       size: 525286
-      path: 'image://vorstellung-images//20221022_122431_DSC03437.jpg'
+      path: 'image://vorstellung-images/20221022_122431_DSC03437.jpg'
   beruf: Student
   datum: 2008
   beschreibung: 'Mein Onkel war Wehrführer und damit war für mich klar: "Da muss ich hin...". Später kam noch die Motivation dazu, etwas Gutes zu tun und sich für die Menschen einzusetzen.'
   ausbildung: 'Bachelor of Science Informatics'
 7042789a3fa82300ad8010c21c553df6:
   published: true
-  picked_image: 001_20240402_194934_DSC09838.jpg
+  picked_image: DSC06781.jpg
   name: Roth
   vorname: Florian
-  funktion: 'Auch ne coole Socke'
+  funktion: Feuerwehrmann-Anwärter
   add_image:
-    'image://vorstellung-images/001_20240402_194934_DSC09838.jpg':
-      name: 001_20240402_194934_DSC09838.jpg
+    'image://vorstellung-images/DSC06781.jpg':
+      name: DSC06781.jpg
       type: image/jpeg
-      size: 594489
-      path: 'image://vorstellung-images//001_20240402_194934_DSC09838.jpg'
+      size: 474630
+      path: 'image://vorstellung-images//DSC06781.jpg'
+  beruf: Informatiker
 c10e58497c0c293ff83d6c243c385a7e:
   published: true
   picked_image: 20210216_165959_DSC007401-scaled.jpg
@@ -106,7 +107,7 @@ c10e58497c0c293ff83d6c243c385a7e:
   picked_image: 20200114_IMG_0477.jpg
   name: Pfeil
   vorname: Johannes
-  funktion: 'Atemschutzgeräteträger, Maschinist, Gruppenführer'
+  funktion: 'Atemschutzgeräteträger, Maschinist, Gruppenführer, Kinderfeuerwehrwart'
   beruf: Projektingenieur
   ausbildung: 'Industriemechaniker, Maschinenbaustudium'
   datum: 1996
@@ -116,7 +117,7 @@ c10e58497c0c293ff83d6c243c385a7e:
       name: 20200114_IMG_0477.jpg
       type: image/jpeg
       size: 663765
-      path: 'image://vorstellung-images//20200114_IMG_0477.jpg'
+      path: 'image://vorstellung-images/20200114_IMG_0477.jpg'
 0bf9ad32c52fb06a82b09bdd4239edfb:
   published: true
   picked_image: DSC01930.jpg
@@ -127,7 +128,8 @@ c10e58497c0c293ff83d6c243c385a7e:
       name: DSC01930.jpg
       type: image/jpeg
       size: 467567
-      path: 'image://vorstellung-images//DSC01930.jpg'
+      path: 'image://vorstellung-images/DSC01930.jpg'
+  funktion: 'Feuerwehrmann, Sprechfunker'
 740e76d9e1fe1f85d5ce6a35a650490a:
   published: true
   picked_image: _MG_6789.jpg
@@ -138,8 +140,8 @@ c10e58497c0c293ff83d6c243c385a7e:
       name: _MG_6789.jpg
       type: image/jpeg
       size: 415227
-      path: 'image://vorstellung-images//_MG_6789.jpg'
-
+      path: 'image://vorstellung-images/_MG_6789.jpg'
+  funktion: 'Maschinist, Zugführer'
 31b94c1486eb680a0af07356fa61dd56:
   published: true
   picked_image: 20200114_IMG_0451.jpg
@@ -172,7 +174,6 @@ c10e58497c0c293ff83d6c243c385a7e:
       type: image/jpeg
       size: 443991
       path: 'image://vorstellung-images//DSC02670.jpg'
-
 cf25e534c1f4cb18d922c4c10ba23322:
   published: true
   picked_image: DSC01959.jpg
@@ -216,6 +217,7 @@ cf25e534c1f4cb18d922c4c10ba23322:
       type: image/jpeg
       size: 410798
       path: 'image://vorstellung-images/DSC01904.jpg'
+  funktion: Feuerwehrmann-Anwärter
 abc73667f7bf658b348a2d6027489e95:
   published: true
   picked_image: DSC01990.jpg
@@ -226,4 +228,5 @@ abc73667f7bf658b348a2d6027489e95:
       name: DSC01990.jpg
       type: image/jpeg
       size: 395277
-      path: 'image://vorstellung-images//DSC01990.jpg'
+      path: 'image://vorstellung-images/DSC01990.jpg'
+  funktion: Feuerwehrmann-Anwärter
