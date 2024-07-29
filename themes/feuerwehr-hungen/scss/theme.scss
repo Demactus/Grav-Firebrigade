@@ -24,3 +24,7 @@
 @import "fw-sidebar";
 @import "fw-logo";
 @import "fw-glight";
+
+.modular-features .feature-icon h6 {
+  z-index: 0 !important;
+}
