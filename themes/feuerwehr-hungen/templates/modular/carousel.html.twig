@@ -41,11 +41,11 @@
 
     //import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
     //import "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js";
-    let isMobile;
+    var isMobile;
     jQuery(document).ready(function($){
         if($(window).width() < 830){
             isMobile = true;
-            $(".carousel").addClass("mobileview");
+            $(".carousel").addClass("mobileView");
         }
 
         var param = GetURLParameter('person')
@@ -55,6 +55,34 @@
             lightboxDescription.openAt(searchVorname(param))
             lightboxDescription.on('afterLoad.glightbox', function(event, instance) {
                 console.log('lightbox opened for person'+ param);
+            });
+        }
+
+        const carousel = document.querySelector('.main-carousel');
+        if (!isMobile){
+            var flkty = new Flickity( carousel, {
+                // options
+                wrapAround: true,
+                contain: true,
+                draggable: true,
+                pageDots: true,
+                imagesLoaded: true,
+                resizable: true,
+                percentPosition: false,
+                groupCells: 0
+            });
+        } else {
+            var flkty = new Flickity( carousel, {
+                // options
+                wrapAround: true,
+                contain: true,
+                draggable: true,
+                pageDots: false,
+                imagesLoaded: true,
+                resizable: false,
+                prevNextButtons: false,
+                percentPosition: false,
+                groupCells: 0
             });
         }
     });
@@ -129,32 +157,7 @@
         selector: '.glightbox4'
     });
 
-    var carousel = document.querySelector('.main-carousel');
-    if (!isMobile){
-        var flkty = new Flickity( carousel, {
-            // options
-            wrapAround: true,
-            contain: true,
-            draggable: true,
-            pageDots: true,
-            prevNextButtons: false,
-            imagesLoaded: true,
-            resizable: true,
-            percentPosition: false,
-            groupCells: 0
-        });
-    } else {
-        var flkty = new Flickity( carousel, {
-            // options
-            wrapAround: true,
-            contain: true,
-            draggable: true,
-            pageDots: true,
-            imagesLoaded: true,
-            percentPosition: false,
-            groupCells: 0
-        });
-    }
+
 
 
 

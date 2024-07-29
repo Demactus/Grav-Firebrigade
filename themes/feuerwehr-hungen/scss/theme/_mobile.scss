@@ -119,7 +119,6 @@
   background: #FFF;
   opacity: 0;
   z-index: -1;
-  height: 100%;
   overflow-y: scroll;
   visibility: hidden;
   transition: all .375s;
@@ -155,7 +154,7 @@
 .overlay-menu ul {
   display: inline-flex;
   flex-direction: column;
-  height: 93%; /* Should be 100%, but we have a notice message :D */
+  height: 100%;
   align-items: flex-end;
   justify-content: center;
   transform: translateX(-18%) skew(-16deg);

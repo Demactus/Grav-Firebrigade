@@ -245,8 +245,13 @@ body { font-family: sans-serif; }
   position: absolute;
   top: 8px;
   left: 16px;
-
 }
+
+.mobileView .carousel-cell img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 .magnify {
   color: whitesmoke;
