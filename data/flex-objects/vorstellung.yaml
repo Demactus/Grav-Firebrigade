@@ -1,3 +1,46 @@
+f49f9ac84e967ede6cacb9aa2d1dbb40:
+  published: true
+  picked_image: 20200114_IMG_0453.jpg
+  name: Frutig
+  vorname: Patrick
+  funktion: 'Gruppenführer und Maschinist'
+  beruf: Lagerist
+  ausbildung: Maurer
+  datum: 2005
+  beschreibung: 'Ich habe Freude daran etwas für die Allgemeinheit zu tun. Ausserdem habe ich bei der Feuerwehr viele Freunde gefunden und Vieles gelernt.'
+  add_image:
+    'image://vorstellung-images/20200114_IMG_0453.jpg':
+      name: 20200114_IMG_0453.jpg
+      type: image/jpeg
+      size: 716504
+      path: 'image://vorstellung-images//20200114_IMG_0453.jpg'
+b83d23d6622ee8465bbfc2e7e03640ef:
+  published: true
+  picked_image: DSC01893.jpg
+  name: Brinster
+  vorname: Bianca
+  add_image:
+    'image://vorstellung-images/DSC01893.jpg':
+      name: DSC01893.jpg
+      type: image/jpeg
+      size: 366893
+      path: 'image://vorstellung-images//DSC01893.jpg'
+d55e5161aa7b0d8c3bb3677028d2ecab:
+  published: true
+  picked_image: DSC01979.jpg
+  name: Tag
+  vorname: Dominik
+  funktion: 'Wehrführer, Gruppenführer'
+  beruf: Justizvollzugsdienst
+  ausbildung: 'KFZ Mechatroniker'
+  datum: 2004
+  beschreibung: 'Ich bin damals zur Feuerwehr kommen um meinen Wehrersatzdienst zu leisten. Seitdem bin ich dabei und auch in der Jugendfeuerwehr als Jugendgruppenleiter aktiv. Am meisten Spaß machen mir die Ausbildungsabende mit der Mannschaft und der Jugendfeuerwehr.'
+  add_image:
+    'image://vorstellung-images/DSC01979.jpg':
+      name: DSC01979.jpg
+      type: image/jpeg
+      size: 500960
+      path: 'image://vorstellung-images/DSC01979.jpg'
 aecc46abb3ee1883310b98e66808c6d7:
   published: true
   picked_image: 001_20240402_194702_DSC09810.jpg
@@ -74,22 +117,29 @@ c10e58497c0c293ff83d6c243c385a7e:
       type: image/jpeg
       size: 663765
       path: 'image://vorstellung-images//20200114_IMG_0477.jpg'
-f49f9ac84e967ede6cacb9aa2d1dbb40:
+0bf9ad32c52fb06a82b09bdd4239edfb:
   published: true
-  picked_image: 20200114_IMG_0453.jpg
-  name: Frutig
-  vorname: Patrick
-  funktion: 'Gruppenführer und Maschinist'
-  beruf: Lagerist
-  ausbildung: Maurer
-  datum: 2005
-  beschreibung: 'Ich habe Freude daran etwas für die Allgemeinheit zu tun. Ausserdem habe ich bei der Feuerwehr viele Freunde gefunden und Vieles gelernt.'
+  picked_image: DSC01930.jpg
+  name: Reitz
+  vorname: Gerrit
   add_image:
-    'image://vorstellung-images/20200114_IMG_0453.jpg':
-      name: 20200114_IMG_0453.jpg
+    'image://vorstellung-images/DSC01930.jpg':
+      name: DSC01930.jpg
       type: image/jpeg
-      size: 716504
-      path: 'image://vorstellung-images//20200114_IMG_0453.jpg'
+      size: 467567
+      path: 'image://vorstellung-images//DSC01930.jpg'
+740e76d9e1fe1f85d5ce6a35a650490a:
+  published: true
+  picked_image: _MG_6789.jpg
+  name: Reitz
+  vorname: Gerald
+  add_image:
+    'image://vorstellung-images/_MG_6789.jpg':
+      name: _MG_6789.jpg
+      type: image/jpeg
+      size: 415227
+      path: 'image://vorstellung-images//_MG_6789.jpg'
+
 31b94c1486eb680a0af07356fa61dd56:
   published: true
   picked_image: 20200114_IMG_0451.jpg
@@ -122,22 +172,7 @@ f49f9ac84e967ede6cacb9aa2d1dbb40:
       type: image/jpeg
       size: 443991
       path: 'image://vorstellung-images//DSC02670.jpg'
-d55e5161aa7b0d8c3bb3677028d2ecab:
-  published: true
-  picked_image: DSC01979.jpg
-  name: Tag
-  vorname: Dominik
-  funktion: 'Wehrführer, Gruppenführer'
-  beruf: Justizvollzugsdienst
-  ausbildung: 'KFZ Mechatroniker'
-  datum: 2004
-  beschreibung: 'Ich bin damals zur Feuerwehr kommen um meinen Wehrersatzdienst zu leisten. Seitdem bin ich dabei und auch in der Jugendfeuerwehr als Jugendgruppenleiter aktiv. Am meisten Spaß machen mir die Ausbildungsabende mit der Mannschaft und der Jugendfeuerwehr.'
-  add_image:
-    'image://vorstellung-images/DSC01979.jpg':
-      name: DSC01979.jpg
-      type: image/jpeg
-      size: 500960
-      path: 'image://vorstellung-images/DSC01979.jpg'
+
 cf25e534c1f4cb18d922c4c10ba23322:
   published: true
   picked_image: DSC01959.jpg
@@ -181,39 +216,6 @@ cf25e534c1f4cb18d922c4c10ba23322:
       type: image/jpeg
       size: 410798
       path: 'image://vorstellung-images/DSC01904.jpg'
-b83d23d6622ee8465bbfc2e7e03640ef:
-  published: true
-  picked_image: DSC01893.jpg
-  name: Brinster
-  vorname: Bianca
-  add_image:
-    'image://vorstellung-images/DSC01893.jpg':
-      name: DSC01893.jpg
-      type: image/jpeg
-      size: 366893
-      path: 'image://vorstellung-images//DSC01893.jpg'
-0bf9ad32c52fb06a82b09bdd4239edfb:
-  published: true
-  picked_image: DSC01930.jpg
-  name: Reitz
-  vorname: Gerrit
-  add_image:
-    'image://vorstellung-images/DSC01930.jpg':
-      name: DSC01930.jpg
-      type: image/jpeg
-      size: 467567
-      path: 'image://vorstellung-images//DSC01930.jpg'
-740e76d9e1fe1f85d5ce6a35a650490a:
-  published: true
-  picked_image: _MG_6789.jpg
-  name: Reitz
-  vorname: Gerald
-  add_image:
-    'image://vorstellung-images/_MG_6789.jpg':
-      name: _MG_6789.jpg
-      type: image/jpeg
-      size: 415227
-      path: 'image://vorstellung-images//_MG_6789.jpg'
 abc73667f7bf658b348a2d6027489e95:
   published: true
   picked_image: DSC01990.jpg
