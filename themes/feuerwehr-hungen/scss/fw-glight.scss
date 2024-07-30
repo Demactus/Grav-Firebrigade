@@ -184,6 +184,15 @@
   height: auto;
 }
 
+.gslide-image {
+  display: inline-flex !important;
+}
+
+.glightbox-open .gslide-media img{
+  width: 95% !important;
+  margin-right: 0;
+}
+
 .glightbox-clean .gslide-title {
   color: whitesmoke !important;
 }

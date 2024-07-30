@@ -17,7 +17,7 @@
         'Bastian',
         'Jan',
         'Florian',
-        'Alexander',
+        'Alex',
         'Johannes',
         'Gerrit',
         'Gerald',
@@ -25,7 +25,7 @@
         'Robin',
         'Oliver',
         'Pascal',
-        'Alex',
+        'Alexander',
         'Matheo'
     ];
 
@@ -195,7 +195,9 @@
                                     {% if entry.beruf %}<strong>Beruf:</strong> {{ entry.beruf|e }}
                                     </span></h5>
                                     {% endif %}
+                                    {% if entry.datum %}
                                     <h5 class='descText'><span><strong>Bei der Feuerwehr seit:</strong> {{ entry.datum|e }}</span></h5>
+                                    {% endif %}
                                     {% if entry.beschreibung %}
                                     <h5 class='descText'><span><strong>Über Mich:</strong> {{ entry.beschreibung|e }}</span></h5>
                                     {% endif %}"
