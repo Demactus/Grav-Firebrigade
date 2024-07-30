@@ -211,7 +211,7 @@ form:
       validate:
         type: bool
         required: true
-      help: "Freigabe des Textes durch Wehrführung erteilt"
+      help: "Kurzbeschreibungstext freigegeben und veröffentlicht."
 
     kurzbeschreibung:
       type: textarea

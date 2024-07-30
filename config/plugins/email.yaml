@@ -1,13 +1,19 @@
 enabled: true
-from: text@email.de
-to: text@email.de
+from: web@ffinh.de
+to: bastian@haaf.ch
 mailer:
-  engine: mail
+  engine: smtps
   smtp:
-    server: localhost
-    port: 25
-    encryption: none
-    user: ''
-    password: ''
+    server: mxe94a.netcup.net
+    port: 465
+    encryption: tls
+    user: web@ffinh.de
+    password: Bhr6_8r75
   sendmail:
-    bin: '/usr/sbin/sendmail'
+    bin: /usr/sbin/sendmail
+content_type: text/plain
+debug: false
+cc: null
+bcc: null
+reply_to: null
+body: null
