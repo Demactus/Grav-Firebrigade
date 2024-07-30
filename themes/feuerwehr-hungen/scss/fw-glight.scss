@@ -223,6 +223,11 @@
   padding-top: 20px;
 }
 
+.glightbox-mobile .glightbox-container .gslide-media img {
+  width: 100% !important;
+  margin: 0 0 0;
+}
+
 .glightbox-mobile .glightbox-container .gslide-description {
   top: 37vh !important;
   position: absolute;
