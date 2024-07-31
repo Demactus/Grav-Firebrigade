@@ -20,3 +20,5 @@ profiles:
         deployment: 36
 ---
 
+# Vereinsvorstand
+### Wenn ihr Fragen habt wendet euch einfach an unseren Vereinsvorstand
