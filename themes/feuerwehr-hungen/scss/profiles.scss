@@ -14,7 +14,11 @@
 
 .profile-column {
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+}
+
+#start {
+  background: #f8f9fa;
 }
 
 .profile-card {
@@ -23,8 +27,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  width: 250px;
-  height: 400px;
+  width: 300px;
+  height: 410px;
   border-radius: 10px;
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
   background: whitesmoke;
@@ -36,7 +40,7 @@
     right: 0;
     left: 0;
     width: 300px;
-    height: 80px;
+    height: 90px;
     background: $fw-blue;
     animation: dsTop 1.5s;
   }
@@ -47,8 +51,8 @@
     top: -40px;
     right: 0;
     left: 0;
-    width: 130px;
-    height: 130px;
+    width: 155px;
+    height: 155px;
     border-radius: 50%;
     border: 5px whitesmoke solid;
 
@@ -103,7 +107,7 @@
     //left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    top: 2px;
+    top: -10px;
     right: 0;
     bottom: 0;
     left: 50%;
