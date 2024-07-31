@@ -47,8 +47,8 @@
     top: -40px;
     right: 0;
     left: 0;
-    width: 125px;
-    height: 125px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 5px whitesmoke solid;
 
@@ -153,8 +153,18 @@
         //text-transform: uppercase;
         color: $fw-blue;
         margin-top: 0;
+
+        button {
+          border-radius: 10px !important;
+        }
+      }
+      .beforI {
+        -ms-transform: translate(-40%, 10%);
+        transform: translate(-40%, 10%);
+        font-size: 25px;
       }
     }
+
     .ds {
       &:nth-of-type(2) {
         animation-delay: .5s;
