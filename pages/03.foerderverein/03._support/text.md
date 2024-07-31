@@ -83,7 +83,7 @@ form:
           fields:
             terms:
               type: checkbox
-              label: "Hiermit akzpetiere ich die Datenverarbeitung <a href='test.de'>AGB</a>"
+              label: "Hiermit akzpetiere ich die <a href='https://dev.ff-inheiden.de/impressum/'>Datenschutzvereinbarung</a>"
             
         column7:
           type: column
@@ -142,7 +142,10 @@ form:
       classes: btn btn-primary
       value: Submit
   process:
-    message: 'Danke für deinen Beitritt'
+    message: 'Danke für deinen Antrag!'
+    email:
+      subject: "[Site Contact Form] {{ form.value.name|e }}"
+      body: "{% include 'forms/data.html.twig' %}"
     display: thankyou
 pp_protect: '0'
 ---
