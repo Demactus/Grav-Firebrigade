@@ -1,6 +1,6 @@
 ---
 title: Mitmachen
-class: offset-box
+class: small
 features:
     -
         icon: 'fa fa-dumbbell'
@@ -17,12 +17,12 @@ features:
         header: 24/7
         text: '24 Stunden am Tag, 7 Tage die Woche einsatzbereit'
         url: null
-body_classes: 'bg-gray'
+body_classes: bg-gray
 ---
 
 # Mitmachen
-## Selber anpacken
+## **... und selbst anpacken**
 
 Wenn du auf der Suche nach einer neuen Herausforderung bist, melde dich gerne bei uns. Wir suchen engagierte Kollegen, die Spaß an Technik und an Teamplay haben. Schreib uns gerne deine Fragen oder wie wir dich erreichen können. Wir freuen uns auf deine Nachricht!
 
-Unsere Treffen und Ausbildungsveranstaltungen finden typischerweise jeden Dienstag um 19:30 Uhr statt.
+Unsere Treffen und Ausbildungsveranstaltungen finden typischerweise **jeden Dienstag um 19:30 Uhr** statt.

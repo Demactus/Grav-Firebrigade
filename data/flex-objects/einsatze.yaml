@@ -1189,8 +1189,9 @@ b2c21a085a1494a90e2a2b00d604e77a:
     - Inheiden
     - Hungen
     - Trais-Horloff
-  kurzbeschreibung_freigegeben: false
+  kurzbeschreibung_freigegeben: true
   add_image: {  }
+  kurzbeschreibung: 'Fehlalarm durch einen technischen Defekt.'
 c5bf72149d6fbafbf8e2a5407d2fba1d:
   published: true
   titel: 'Ausgelöste automatische Brandmeldeanlage'
@@ -1201,8 +1202,9 @@ c5bf72149d6fbafbf8e2a5407d2fba1d:
     - Inheiden
     - Hungen
     - Trais-Horloff
-  kurzbeschreibung_freigegeben: false
+  kurzbeschreibung_freigegeben: true
   add_image: {  }
+  kurzbeschreibung: 'Fehlalarm durch einen technischen Defekt.'
 cd4db8fe6e5ddd6cfcca73001c2e51c6:
   published: true
   titel: 'Ausgelöste automatische Brandmeldeanlage'
@@ -1213,8 +1215,9 @@ cd4db8fe6e5ddd6cfcca73001c2e51c6:
     - Inheiden
     - Hungen
     - Trais-Horloff
-  kurzbeschreibung_freigegeben: false
+  kurzbeschreibung_freigegeben: true
   add_image: {  }
+  kurzbeschreibung: 'Fehlalarm durch einen technischen Defekt.'
 9eeec86dc9b8ba77fedf3fadc0ab9e5e:
   published: true
   titel: Ölspur
