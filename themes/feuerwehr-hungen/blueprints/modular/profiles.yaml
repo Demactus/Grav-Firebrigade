@@ -1,0 +1,56 @@
+title: Profiles
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: Profiles
+          fields:
+            custom_file:
+              type: file
+              label: Bild Hochladen
+              destination: 'theme://images/profile-images'
+              multiple: true
+              limit: 10
+              filesize: 10
+              accept:
+                - image/*
+
+
+            header.profiles:
+              name: profiles
+              type: list
+              label: Kontakte
+              fields:
+                .picked_image:
+                  type: filepicker
+                  folder: 'theme://images/profile-images'
+                  label: Select a file
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                    - .jpeg
+                .vorname:
+                  type: text
+                  label: Vorname
+                .name:
+                  type: text
+                  label: Nachname
+                .function:
+                  type: text
+                  label: Funktion
+                .email:
+                  type: text
+                  label: Email
+                  validate:
+                    type: email
+                .tel:
+                  type: text
+                  label: Telefon
+                .deployment:
+                  type: number
+                  label: Einsätze

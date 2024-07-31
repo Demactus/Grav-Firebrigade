@@ -3,8 +3,8 @@
 {% endblock %}
 
 {% block javascript %}
-{% do assets.addJs('theme://js/flickity.pkgd.min.js', {group:'bottom'}) %}
-{% do assets.addJs('theme://js/glightbox.min.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/flickity.pkgd.min.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/glightbox.min.js', {group:'bottom'}) %}
 {% endblock %}
 
 <script type="module">
@@ -158,12 +158,6 @@
     var lightboxInlineIframe = GLightbox({
         selector: '.glightbox4'
     });
-
-
-
-
-
-
 
 </script>
 
