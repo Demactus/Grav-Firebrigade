@@ -93,6 +93,43 @@
       width: 45px;
     }
   }
+  .profile-btn {
+    position: relative;
+    margin: 0;
+    padding: 8px;
+    border: none;
+    border-radius: 17px;
+    //top: 50%;
+    //left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 2px;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    height: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    outline: none;
+    display: inline-block;
+    background: $fw-blue;
+    color: white;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 1s;
+    font-size: 0.8em;
+    span {
+      padding: 5px 20px;
+      border-radius: 10px;
+      color: white;
+      background: $fw-blue;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      font-size: 10px;
+      transition: all 1s;
+    }
+  }
   .ds-info {
     position: relative;
     margin: auto;

@@ -6,7 +6,7 @@ profiles:
         picked_image: _fe63c831-6a8d-4017-bc62-50edc19a2a17.jpeg
         vorname: Oliver
         name: Tag
-        function: Chef
+        function: Vereinsvorsitzender
         email: oli@tag.de
         tel: '12315123'
         deployment: 20

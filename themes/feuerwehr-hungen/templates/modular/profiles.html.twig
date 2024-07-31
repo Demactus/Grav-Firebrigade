@@ -36,12 +36,15 @@
                         <h6 title="Einsätze"><i class="fas fa-users"></i> <span class="followers">{{ profile.deployment }}</span></h6>
                         {% endif %}
                     </div>
+                    <button class="profile-btn">
+                        {{ profile.function }}
+                    </button>
                     <div class="ds-info">
                         <div class="ds pens">
                             <h6 title="Email"><i class="fa-solid fa-envelope"></i>
                                 <div class="tooltip">
-                                    <button class="btn">{{ profile.email }} <a onclick="copyToClipboard('{{ profile.email }}')"><i class="fa-regular fa-copy"></i><span class="tooltiptext" id="{{ profile.email }}-tooltip">Copy to clipboard</span></a>
-
+                                    <button class="btn">
+                                        {{ profile.email }} <a onclick="copyToClipboard('{{ profile.email }}')"><i class="fa-regular fa-copy"></i><span class="tooltiptext" id="{{ profile.email }}-tooltip">Copy to clipboard</span></a>
                                     </button>
                                 </div>
                             </h6>
