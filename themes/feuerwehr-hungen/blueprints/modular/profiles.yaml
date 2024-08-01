@@ -26,6 +26,14 @@ form:
               options:
                 'left': 'Links'
                 'right': 'Rechts'
+            header.order_mobile:
+              type: select
+              label: Reihenfolge (Mobil)
+              classes: fancy
+              default: text-first
+              options:
+                'text-first': 'Text zuerst'
+                'card-first': 'Profile zuerst'
 
             header.profiles:
               name: profiles

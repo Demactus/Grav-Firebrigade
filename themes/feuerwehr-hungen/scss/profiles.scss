@@ -6,18 +6,27 @@
   box-sizing: border-box;
 }
 
-.modular-profiles{
+.modular-profiles {
+  margin: 10px;
+
   h1 {
+    margin-top: 0;
     color: $fw-blue;
     font-weight: bold;
+    height: auto;
+  }
+
+  .profiles-content {
+    padding: 15px 0;
   }
 }
 
-.profile-column {
-  margin-top: 25px;
-  margin-bottom: 60px;
-}
+@media screen and (max-width: 600px) {
+  .modular-profiles .container .mobile-reorder {
+    flex-direction: column-reverse !important;
 
+  }
+}
 
 
 .text-column {
@@ -29,161 +38,181 @@
   }
 }
 
-.profile-card {
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 310px;
-  height: 420px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
-  background: whitesmoke;
-  overflow: hidden;
-  .ds-top {
+.profile-column {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0;
+
+  .profile-card {
     position: relative;
-    //margin: auto;
+    margin: auto;
     top: 0;
     right: 0;
-    left: 0;
-    width: 350px;
-    height: 90px;
-    background: $fw-blue;
-    animation: dsTop 1.5s;
-  }
-  .avatar-holder {
-    position: relative;
-    margin: auto;
-    margin-top: 0;
-    top: -40px;
-    right: 0;
-    left: 0;
-    width: 155px;
-    height: 155px;
-    border-radius: 50%;
-    border: 5px whitesmoke solid;
-
-    background: white;
-    overflow: hidden;
-    animation: mvTop 1.5s;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  .name {
-    position: relative;
-    margin: auto;
-    top: -40px;
-    right: 0;
     bottom: 0;
     left: 0;
-    width: inherit;
-    height: 40px;
-    text-align: center;
-    animation: fadeIn 2s ease-in;
-    p {
-      color: $fw-blue;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 18px;
-      &:hover {
-        text-decoration: none;
-        color: $fw-text-underline;
+    width: 310px;
+    height: 420px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+    background: whitesmoke;
+    overflow: hidden;
+
+    .ds-top {
+      position: relative;
+      //margin: auto;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 350px;
+      height: 90px;
+      background: $fw-blue;
+      animation: dsTop 1.5s;
+    }
+
+    .avatar-holder {
+      position: relative;
+      margin: auto;
+      margin-top: 0;
+      top: -40px;
+      right: 0;
+      left: 0;
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      border: 5px whitesmoke solid;
+
+      background: white;
+      overflow: hidden;
+      animation: mvTop 1.5s;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
-    h6 {
+
+    .name {
       position: relative;
-      margin: 0 auto auto;
-      top: -15px;
-      left: 0;
+      margin: auto;
+      top: -40px;
       right: 0;
       bottom: 0;
-      color: $fw-text-underline;
-      width: 45px;
-    }
-  }
-  .profile-btn {
-    position: relative;
-    margin: 0;
-    padding: 8px;
-    border: none;
-    border-radius: 17px;
-    //top: 50%;
-    //left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    top: -10px;
-    right: 0;
-    bottom: 0;
-    left: 50%;
-    width: auto;
-    height: 40px;
-    text-align: center;
-    animation: fadeIn 2s ease-in;
-    outline: none;
-    display: inline-block;
-    background: $fw-blue;
-    color: white;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    transition: all 1s;
-    font-size: 0.8em;
-    span {
-      padding: 5px 20px;
-      border-radius: 10px;
-      color: white;
-      background: $fw-blue;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      font-size: 10px;
-      transition: all 1s;
-    }
-  }
-  .ds-info {
-    position: relative;
-    margin: auto;
-    //margin-left: 20px;
-    //top: -40px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    animation: fadeIn 1.5s ease-in;
-    transition: all 1s;
-    width: inherit;
-    height: 40px;
-    display: flex;
-    .pens, .projects, .posts {
-      position: relative;
-      //left: -300px;
-      margin-left: 15px;
-      //width: calc(250px / 3);
+      left: 0;
+      width: inherit;
+      height: 40px;
       text-align: center;
-      color: $fw-text-underline;
-      h6 {
-        //text-transform: uppercase;
-        color: $fw-blue;
-        margin-top: 0;
+      animation: fadeIn 2s ease-in;
 
-        button {
-          border-radius: 10px !important;
+      p {
+        color: $fw-blue;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 20px;
+
+        &:hover {
+          text-decoration: none;
+          color: $fw-text-underline;
         }
       }
-      .beforI {
-        -ms-transform: translate(-10%, 20%);
-        transform: translate(-10%, 20%);
-        font-size: 25px;
+
+      h6 {
+        position: relative;
+        margin: 0 auto auto;
+        top: -15px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: $fw-text-underline;
+        width: 45px;
       }
     }
 
-    .ds {
-      &:nth-of-type(2) {
-        animation-delay: .5s;
+    .profile-btn {
+      position: relative;
+      margin: 0;
+      padding: 8px;
+      border: none;
+      border-radius: 17px;
+      //top: 50%;
+      //left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      top: -10px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      width: auto;
+      height: 40px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+      outline: none;
+      display: inline-block;
+      background: $fw-blue;
+      color: white;
+      text-decoration: none;
+      transition: all 1s;
+      font-size: 1em;
+
+      span {
+        padding: 5px 20px;
+        border-radius: 10px;
+        color: white;
+        background: $fw-blue;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        font-size: 10px;
+        transition: all 1s;
       }
-      &:nth-of-type(1) {
-        animation-delay: 1s;
+    }
+
+    .ds-info {
+      position: relative;
+      margin: auto;
+      //margin-left: 20px;
+      //top: -40px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      animation: fadeIn 1.5s ease-in;
+      transition: all 1s;
+      width: inherit;
+      height: 40px;
+      display: flex;
+
+      .pens, .projects, .posts {
+        position: relative;
+        //left: -300px;
+        margin-left: 15px;
+        //width: calc(250px / 3);
+        text-align: center;
+        color: $fw-text-underline;
+
+        h6 {
+          //text-transform: uppercase;
+          color: $fw-blue;
+          margin-top: 0;
+
+          button {
+            border-radius: 10px !important;
+          }
+        }
+
+        .beforI {
+          -ms-transform: translate(-10%, 20%);
+          transform: translate(-10%, 20%);
+          font-size: 25px;
+        }
+      }
+
+      .ds {
+        &:nth-of-type(2) {
+          animation-delay: .5s;
+        }
+
+        &:nth-of-type(1) {
+          animation-delay: 1s;
+        }
       }
     }
   }
@@ -201,29 +230,39 @@
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes mvBottom {
-  0% {bottom: -150px;}
-  100% {bottom: 10px;}
+  0% {
+    bottom: -150px;
+  }
+  100% {
+    bottom: 10px;
+  }
 }
 
 @keyframes mvTop {
-  0% {top: -150px;}
-  100% {top: -40px;}
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: -40px;
+  }
 }
 
 @keyframes dsTop {
-  0% {top: -150px;}
-  100% {top: 0;}
-}
-
-
-.tooltip {
-  position: relative;
-  display: inline-block;
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .tooltip .tooltiptext {
@@ -236,8 +275,8 @@
   padding: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 150%;
-  left: 50%;
+  top: -5px;
+  left: 105%;
   margin-left: -75px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -246,15 +285,10 @@
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 50%;
+  left: 100%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }

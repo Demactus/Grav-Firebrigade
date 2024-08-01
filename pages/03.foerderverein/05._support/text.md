@@ -22,7 +22,7 @@ form:
             name:
               label: Name
               classes: my-field-class-1
-              placeholder: Enter your name
+              placeholder: ''
               autocomplete: on
               type: text
               validate:
@@ -30,7 +30,7 @@ form:
 
             surname:
               label: Vorname
-              placeholder: test
+              placeholder: ''
               type: text
         column2:
           type: column
@@ -38,11 +38,11 @@ form:
           fields:
             street:
               label: Straße
-              placeholder: test
+              placeholder: ''
               type: text
             city:
               label: PLZ / Ort
-              placeholder: test
+              placeholder: ''
               type: text
         column3:
           type: column
@@ -51,14 +51,14 @@ form:
             email:
               classes: form-control form-control-lg
               label: Email
-              placeholder: Enter your email address
+              placeholder: ''
               type: email
               validate:
                   rule: email
                   required: true
             phone:
               label: Telefon
-              placeholder: Your Phone Number
+              placeholder: ''
               type: tel
         column4:
           type: column
