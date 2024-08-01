@@ -58,3 +58,46 @@
 .frame-box {
   margin: -3rem -1.4rem 2.5rem;
 }
+
+// special blog item link
+
+.link {
+  color: #3085ee;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.link--arrowed {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+
+  .arrow-icon {
+    position: relative;
+    top: -1px;
+    left: -3px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    vertical-align: middle;
+  }
+
+  .arrow-icon--circle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+  }
+
+  &:hover {
+    text-decoration: none;
+    .arrow-icon {
+      transform: translate3d(5px, 0, 0);
+    }
+
+    .arrow-icon--circle {
+      stroke-dashoffset: 0;
+    }
+  }
+}
