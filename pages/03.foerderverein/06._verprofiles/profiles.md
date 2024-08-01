@@ -19,6 +19,22 @@ profiles:
         email: patrick.frutig@ff-inheiden.de
         tel: null
         content: null
+    -
+        picked_image: IMG_0366.jpeg
+        vorname: Alexander
+        name: Imig
+        function: Kassenverwalter
+        email: alexander.imig@ff-inheiden.de
+        tel: null
+        content: null
+    -
+        picked_image: image_jan.jpg
+        vorname: Jan
+        name: Martens
+        function: Schriftführer
+        email: jan.martens@ff-inheiden.de
+        tel: null
+        content: null
 ---
 
 # Unser Vorstand
