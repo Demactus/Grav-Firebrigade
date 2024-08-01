@@ -23,7 +23,7 @@
 
         <div class="columns">
             {% for profile in page.header.profiles %}
-                {% if page.header.content_align == 'left' %}
+                {% if page.header.content_align == 'left' and profile.content %}
 
                 <div class="column profile-column col-6 col-md-6 col-sm-12 text-column">
 
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-                {%  if page.header.content_align == 'right' %}
+                {%  if page.header.content_align == 'right' and profile.content %}
                     <div class="column profile-column col-6 col-md-6 col-sm-12 text-column">
 
                         {{ profile.content|markdown(true) }}
