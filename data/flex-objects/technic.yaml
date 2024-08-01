@@ -1,41 +1,47 @@
 ac4e499df93242fca59c1cdc9f792164:
   published: true
-  outerImage: image_largex.jpeg
-  innerImage: image2_largex.jpeg
-  name: 'LF 10'
-  beschreibung: "Technische Daten zum Fahrzeug\n\n    DIN: 14530-5\n    Radstand: 3.860 mm\n    Motorleistung: 299 PS\n    Zul. Gesamtmasse: 14.000 kg\n    Fahrzeugabmessungen (LxBxH): 7.300 x 2.500 x 3.300 mm\n    Kabine / Besatzung: Z-Cab / 1+8\n    Pumpentyp: FPN 10-2000\n    Löschwasserbehälter: 1.200 l\n"
+  outerImage: _MG_6824.jpg
+  innerImage: _MG_6824.jpg
+  name: 'LF 10 KatS'
+  beschreibung: "Informationen zum Fahrzeug:\n\nHersteller: Albert Ziegler GmbH\nBaujahr: 2014\nDienstzeit: 2014-heute\nBesatzung: 1/8\nFunkrufname: Florian Hungen 3-43\n\nAuszug aus der Beladeliste:\n\n1 Funkgerät 4 m\n4 Handsprechfunkgeräte (FuG 11)\n1 Funkgerät digital\n4 Adalit Handlampen\n4 Pressluftatmer (zwei in der Mannschaftskabine)\n2 Flutlichtstrahler (1000 W)\n1 pneumatisch ausfahrbarer Flutlichtmast (elektrisch bedienbar)\n1 tragbarer Stromerzeuger 5 kVA\n1 Motorkettensäge\n1 Hochleistungslüfter\n1 Twinsaw-Rettungssäge\n1200l Löschwasser\n120l Schaummittel\n1 Werkzeugkasten\n1 Verkehrsunfallkasten\n1 Schornsteinfeger-Werkzeug\n1 Notfall-Rucksack\n1 Tragkraftspritze 8/8 (Pneumatisch absenkbar)\n1 eingebaute Feuerlöschkreiselpumpe (FPN 10 – 2000)\n1 Tauchpumpe 4/1\n1 Steckleiter 4-teilig\n1 Ölsperre\n2 Wathosen\n1 Kälteschutzanzug\nÖlbindemittel\n14 C-Schläuche\n18 B-Schläuche\n3 Hohlstrahlrohre Leader Quadrafog 150\n1 Hohlstrahlrohr Leader Ultimatic FO6 AA Modell Frankfut a. M.\n1 Kombischaumrohr S4/M4"
   add_image:
-    'image://technik-images/image_largex.jpeg':
-      name: image_largex.jpeg
+    'image://technic-images/_MG_6824.jpg':
+      name: _MG_6824.jpg
       type: image/jpeg
-      size: 591029
-      path: 'image://technik-images//image_largex.jpeg'
-    'image://technik-images/image2_largex.jpeg':
-      name: image2_largex.jpeg
-      type: image/jpeg
-      size: 609049
-      path: 'image://technik-images//image2_largex.jpeg'
+      size: 1057377
+      path: 'image://technic-images/_MG_6824.jpg'
 c761e635015d70338a2487b4cf3a34bb:
   published: true
-  outerImage: picture.jpeg
-  innerImage: picture.jpeg
-  name: MTTW
-  beschreibung: "Volkswagen T6\n\nMTW Feuerwehr Calw\n\nHänsch DBS 3000 LED\nHänsch Sputnik SL"
+  outerImage: IMG_7936.jpg
+  innerImage: IMG_7936.jpg
+  name: MTW
+  beschreibung: "Hersteller: Ford\nTyp: Transit\nBaujahr: 2008\nBesatzung: 1 Gruppe (1/8 -> 9 Personen)\n\nSonstiges:\nFahrzeug besitzt Stromeinspeisungsvorrichtung (elektrische Geräte werden in der Unterkunft automatisch geladen).\n\nAuszug aus der Beladeliste:\n\n1 MRT (Motorola)\n2 HRT (Motorola)\n1 Pulverlöscher\n4 Handlampen"
   add_image:
-    'image://technic-images/picture.jpeg':
-      name: picture.jpeg
+    'image://technic-images/IMG_7936.jpg':
+      name: IMG_7936.jpg
       type: image/jpeg
-      size: 114071
-      path: 'image://technic-images//picture.jpeg'
+      size: 666245
+      path: 'image://technic-images/IMG_7936.jpg'
 3d797a00114892bf124b1114cc937225:
   published: true
-  outerImage: 25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg
-  innerImage: 25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg
-  name: Boot
-  beschreibung: bla
+  outerImage: _MG_4460.jpg
+  innerImage: _MG_4460.jpg
+  name: Rettungsboot
+  beschreibung: "Hersteller: SBS Schmitt Boot und Schwimmende Anlagen\nBaujahr: 2011\nDienstzeit: 2011-heute\n\nSonstiges:\nDas Rettungsboot Typ RTB1 wird von einem 40PS Honda Außenbordmotor angetrieben und ist durch seine Bauart (Aluminium Zweikieler, Flachbodenboot in Spantenbauweise mit Luftkammer im doppelten Boden) unsinkbar.\n\nAuszug aus der Beladeliste:\n\nSteuerstand\nBugklappe\nBeleuchtung nach BSH bzw. BinSchStrO/BSO\nleistungsfähige Arbeits- und Umfeldbeleuchtung\nEcholot\nSpinboard\nhandgeführte Suchscheinwerfer\nKlappanker\nRettungsring"
   add_image:
-    'image://technic-images/25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg':
-      name: 25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg
+    'image://technic-images/_MG_4460.jpg':
+      name: _MG_4460.jpg
       type: image/jpeg
-      size: 372396
-      path: 'image://technic-images//25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg'
+      size: 794313
+      path: 'image://technic-images/_MG_4460.jpg'
+46010c3713f777036120b211f9e0d7a5:
+  published: true
+  outerImage: DSC01336.jpg
+  innerImage: DSC01336.jpg
+  name: Schlauchboot
+  add_image:
+    'image://technic-images/DSC01336.jpg':
+      name: DSC01336.jpg
+      type: image/jpeg
+      size: 1594791
+      path: 'image://technic-images//DSC01336.jpg'

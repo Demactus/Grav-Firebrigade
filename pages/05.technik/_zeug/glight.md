@@ -6,10 +6,7 @@ entryTitle: name
 entryDesc: beschreibung
 entryOuterPic: outerImage
 entryInnerPic: innerImage
-
 cache_enable: false
 ---
-
-# Eine Übersicht unser Gerätschaft
 
 ## Fahrzeuge

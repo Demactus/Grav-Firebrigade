@@ -37,4 +37,4 @@ profiles:
         content: null
 ---
 
-## Unser Vorstand
+## Vereinsvorstand

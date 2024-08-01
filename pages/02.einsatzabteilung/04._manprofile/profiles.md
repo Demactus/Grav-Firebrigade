@@ -24,4 +24,4 @@ profiles:
 content_align: left
 ---
 
-# Wehrführung
+## Kontakt

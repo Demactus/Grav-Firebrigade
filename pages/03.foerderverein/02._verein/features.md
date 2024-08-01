@@ -1,6 +1,6 @@
 ---
 title: Verein
-class: offset-box
+class: small
 features:
     -
         icon: 'fa fa-fire-alt'
@@ -25,6 +25,6 @@ cache_enable: false
 body_classes: offset-box
 ---
 
-# Feuerwehrförderverein
+# Förderverein
 ## **Unterstützung und Dorfleben**
 Satzungsgemäß hat der Feuerwehrförderverein folgende **Aufgaben**:

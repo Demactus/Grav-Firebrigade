@@ -20,11 +20,12 @@ features:
 process:
     markdown: true
     twig: true
+body_classes: offset-box
 ---
 
 # Mitmachen
-## **... und selbst anpacken**
+## ... und selbst **anpacken**
 
-Du bist auf der Suche nach einer neuen Herausforderung? Perfekt, dann bist du bei uns genau richtig! Wir sind auf der Suche nach engagierten Kollegen, die genauso viel Spaß an Technik und Teamplay haben wie wir. Wenn du dich angesprochen fühlst, zögere nicht länger und schreib uns deine Fragen oder wie wir dich erreichen können. Wir freuen uns auf deine Nachricht!
+Du bist auf der Suche nach einer neuen Herausforderung? Perfekt, dann bist du bei uns genau richtig! Wir sind auf der Suche nach engagierten Menschen, die genauso viel Spaß an Technik und Teamplay haben wie wir. Wenn du dich angesprochen fühlst, zögere nicht länger und schreib uns deine Fragen oder wie wir dich erreichen können. Wir freuen uns auf deine Nachricht!
 
 Unsere Treffen und Ausbildungsveranstaltungen finden typischerweise **jeden Dienstag um 19:30 Uhr** statt.

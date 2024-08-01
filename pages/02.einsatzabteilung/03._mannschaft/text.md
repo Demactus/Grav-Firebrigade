@@ -8,7 +8,7 @@ process:
 cache_enable: false
 ---
 
-## Unser Team
+## Team
 
 
 {% include 'modular/carousel.html.twig' %}

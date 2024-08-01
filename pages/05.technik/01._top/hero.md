@@ -1,8 +1,8 @@
 ---
 title: Top
 body_classes: modular
-media_order: teaserbox_2462333788.JPG
+media_order: _MG_6815.jpg
 hero_classes: 'parallax text-light hero-large'
-hero_image: teaserbox_2462333788.JPG
+hero_image: _MG_6815.jpg
 ---
 
