@@ -1,0 +1,24 @@
+---
+title: verProfiles
+body_classes: modular
+content_align: right
+profiles:
+    -
+        picked_image: IMG_0371.jpeg
+        vorname: Oliver
+        name: Tag
+        function: Vereinsvorsitzender
+        email: oli.tag@ff-inheiden.de
+        tel: null
+        content: null
+    -
+        picked_image: IMG_0367.jpeg
+        vorname: Patrick
+        name: Frutig
+        function: 'stellv. Vereinsvorsitzender'
+        email: patrick.frutig@ff-inheiden.de
+        tel: null
+        content: null
+---
+
+# Unser Vorstand

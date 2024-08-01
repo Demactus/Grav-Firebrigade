@@ -20,6 +20,8 @@
 <section class="modular-profiles">
     <div class="container {{ grid_size }}">
 
+        {{ content|raw }}
+
         <div class="columns {{ page.header.content_align|default('align-right') }}">
             {% for profile in page.header.profiles %}
             <div class="column profile-column col-6 col-md-6 col-sm-12 ">
