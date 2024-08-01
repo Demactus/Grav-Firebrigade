@@ -88,7 +88,7 @@ jQuery(document).ready(function($){
     const menuList = document.getElementById('tree-menu');
     if (isTouch){
         document.addEventListener('click', (event) => {
-            if (!menuList.contains(event.target) && !menuButton.contains(event.target)) {
+            if (!menuList.contains(event.target) && !menuButton.contains(event.target) && menuButton.classList.contains('is-open')) {
                 $(menuButton).toggleClass('active');
                 $('#overlay').toggleClass('open');
                 $('body').toggleClass('mobile-nav-open');

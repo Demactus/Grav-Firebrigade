@@ -26,9 +26,21 @@
 @import "fw-glight";
 @import "profiles";
 
-.modular-features .feature-icon h6 {
-  z-index: 0 !important;
+.modular-features{
+  .feature-icon h6 {
+    z-index: 0 !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0);
+  }
+
+  p {
+    color: rgba(105, 105, 105, 1);
+    font-weight: 500;
+  }
 }
+
 
 #start h1 {
   text-align: center;
