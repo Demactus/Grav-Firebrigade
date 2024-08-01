@@ -21,8 +21,18 @@
 
         {{ content|raw }}
 
-        <div class="columns {{ page.header.content_align|default('align-right') }}">
+        <div class="columns">
             {% for profile in page.header.profiles %}
+                {% if page.header.content_align == 'left' %}
+
+                <div class="column profile-column col-6 col-md-6 col-sm-12 text-column">
+
+                    {{ profile.content|markdown(true) }}
+
+                </div>
+                {% endif %}
+
+
             <div class="column profile-column col-6 col-md-6 col-sm-12 ">
                 <div class="profile-card">
                     <div class="ds-top"></div>
@@ -64,7 +74,7 @@
                     </div>
                 </div>
             </div>
-                {%  if profile.content %}
+                {%  if page.header.content_align == 'right' %}
                     <div class="column profile-column col-6 col-md-6 col-sm-12 text-column">
 
                         {{ profile.content|markdown(true) }}
