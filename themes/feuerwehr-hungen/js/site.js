@@ -1,4 +1,3 @@
-var isTouch = window.DocumentTouch && document instanceof DocumentTouch;
 
 function scrollHeader() {
     // Has scrolled class on header
@@ -13,7 +12,25 @@ function parallaxBackground() {
     $('.parallax').css('background-positionY', ($(window).scrollTop() * 0.3) + 'px');
 }
 
+function is_touch_device() {
+    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+    var mq = function(query) {
+        return window.matchMedia(query).matches;
+    }
+
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+        return true;
+    }
+
+    // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+    return mq(query);
+}
+
 jQuery(document).ready(function($){
+    var isTouch = is_touch_device();
+
+
     let burger = document.getElementById('toggle'),
         nav= document.getElementById('main-nav');
 
@@ -69,7 +86,6 @@ jQuery(document).ready(function($){
 
     const menuButton = document.getElementById('toggle');
     const menuList = document.getElementById('tree-menu');
-    console.log(isTouch);
     if (isTouch){
         document.addEventListener('click', (event) => {
             if (!menuList.contains(event.target) && !menuButton.contains(event.target)) {
