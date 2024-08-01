@@ -69,6 +69,7 @@ jQuery(document).ready(function($){
 
     const menuButton = document.getElementById('toggle');
     const menuList = document.getElementById('tree-menu');
+    console.log(isTouch);
     if (isTouch){
         document.addEventListener('click', (event) => {
             if (!menuList.contains(event.target) && !menuButton.contains(event.target)) {

@@ -1,5 +1,4 @@
-{%  block stylesheets %}
-    {% do assets.addCss('theme://css/glightbox.css') %}
+{% block stylesheets %}
 {% endblock %}
 
 {% block javascript %}
@@ -41,31 +40,43 @@
 {% set directory = flex.directory(page.header.directory ) %}
 {% set directory_list = directory.collection() %}
 {% set entryDesc =  page.header.entryDesc %}
-{% set entryTitle =  page.header.entryTitle  %}
+{% set entryTitle =  page.header.entryTitle %}
 {% set outerPic =  page.header.entryOuterPic %}
 {% set innerPic = page.header.entryInnerPic %}
 
-<ul class="box-container four-cols">
-    {% for entry in directory_list.filterBy({published: true}) %}
-        <li class="box">
-            <div class="inner">
-                <a
-                        href="user/images/{{ page.header.directory }}-images/{{ attribute(entry, innerPic) }}"
-                        class="glightbox2"
-                        data-title="{{ attribute(entry, entryTitle) }}"
-                        data-description="{{ attribute(entry, entryDesc) }}"
-                        data-desc-position="right"
-                        data-type="image"
-                        data-effect="fade"
-                        data-height="auto"
-                        data-width="900px"
-                        data-zoomable="true"
-                        data-draggable="true"
-                >
-                    <img src="user/images/{{ page.header.directory }}-images/{{ attribute(entry, outerPic) }}" alt="bla"/>
-                </a>
-            </div>
-        </li>
-    {% endfor %}
-</ul>
 
+<section class="section pair">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                {{ content|raw }}
+
+                <div class="columns box-container">
+                    {% for entry in directory_list.filterBy({published: true}) %}
+                        <div class="column col-3 col-md-6 col-sm-12 box show" style="transition-delay: 0s;">
+                            <div class="inner">
+                                <a
+                                        href="user/images/{{ page.header.directory }}-images/{{ attribute(entry, innerPic) }}"
+                                        class="glightbox2"
+                                        data-title="{{ attribute(entry, entryTitle) }}"
+                                        data-description="{{ attribute(entry, entryDesc) }}"
+                                        data-desc-position="right"
+                                        data-type="image"
+                                        data-effect="fade"
+                                        data-height="auto"
+                                        data-width="900px"
+                                        data-zoomable="true"
+                                        data-draggable="true"
+                                >
+                                    <img src="user/images/{{ page.header.directory }}-images/{{ attribute(entry, outerPic) }}"
+                                         alt="bla"/>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,12 +1,9 @@
 @import "../css-compiled/glightbox.css";
+@import "../css-compiled/flickity.css";
 @import "fw-main";
 
 .pair {
   background: #f8f8f8;
-}
-
-.gslide-desc {
-  color: white;
 }
 
 @media (min-width: 1200px) {
@@ -14,63 +11,6 @@
     max-width: 1040px;
   }
 }
-
-.box-container {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  margin-top: 1.4em;
-  width: 100%;
-}
-
-.box {
-  list-style-type: none;
-  float: left;
-  opacity: 0;
-  transform: translate3d(0, 40px, 0);
-  transition: opacity 0.2s, transform 0.35s;
-}
-
-.box.show {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: opacity 0.4s, transform 0.35s;
-}
-
-.box .inner {
-  padding: 10px;
-  position: relative;
-}
-
-.box a {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.box img {
-  width: calc(200%);
-  max-width: calc(100% + 150px);
-  transition: opacity 0.35s, transform 0.35s;
-  transform: translate3d(-40px, 0, 0);
-}
-
-.box a::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #000;
-  z-index: 99;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
 
 .inline-inner {
   padding: 40px;
@@ -92,41 +32,6 @@
 
 .inline-close-btn:hover {
   border-color: #000;
-}
-
-@media (min-width: 576px) {
-  .intro h1 {
-    font-size: 4.3em;
-  }
-
-  .intro {
-    max-height: 70vh;
-    min-height: 640px;
-    padding-top: 0px;
-  }
-
-  .intro h1,
-  .tagline {
-    text-align: left;
-  }
-
-  .tagline {
-    font-size: 100%;
-  }
-
-}
-
-
-@media (min-width: 992px) {
-  .box:hover img {
-    transform: translate3d(0, 0, 0);
-    transition: opacity 0.35s, transform 0.35s;
-  }
-
-  .box:hover a::before {
-    opacity: 0.3;
-    transition: opacity 0.5s;
-  }
 }
 
 // glightbox modal
@@ -199,3 +104,55 @@
   padding-top: 10px !important;
 }
 
+
+
+
+// flickity
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: rgba(238, 238, 238, 0.87);
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.top-left {
+  font-size: 1.5em;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.mobileView .carousel-cell img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.magnify {
+  color: whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 250px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+}

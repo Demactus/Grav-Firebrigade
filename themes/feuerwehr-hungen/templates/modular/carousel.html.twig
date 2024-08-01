@@ -1,6 +1,6 @@
-{%  block stylesheets %}
-    {% do assets.addCss('theme://css/glightbox.css') %}
-{% endblock %}
+<head>
+    <link rel="stylesheet" href="{{ url('theme://css-compiled/carousel.min.css') }}" />
+</head>
 
 {% block javascript %}
     {% do assets.addJs('theme://js/flickity.pkgd.min.js', {group:'bottom'}) %}

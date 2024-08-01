@@ -27,3 +27,15 @@ c761e635015d70338a2487b4cf3a34bb:
       type: image/jpeg
       size: 114071
       path: 'image://technic-images//picture.jpeg'
+3d797a00114892bf124b1114cc937225:
+  published: true
+  outerImage: 25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg
+  innerImage: 25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg
+  name: Boot
+  beschreibung: bla
+  add_image:
+    'image://technic-images/25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg':
+      name: 25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg
+      type: image/jpeg
+      size: 372396
+      path: 'image://technic-images//25758399-so-ein-feuerwehr-rettungsboot-aus-aluminium-mit-steuerstand-und-einer-bugklappe-zur-leichenbergung-aus-der-lenne-hat-die-stadt-werdohl-fuer-die-3sea.jpg'
