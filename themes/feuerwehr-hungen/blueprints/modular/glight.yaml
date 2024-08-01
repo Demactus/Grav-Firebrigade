@@ -1,0 +1,26 @@
+title: Gallery
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        gallery:
+          type: tab
+          title: Gallery
+          fields:
+            header.directory:
+              type: text
+              label: Flex-Directory
+            header.entryTitle:
+              type: text
+              label: Flex Eintragstitel
+            header.entryDesc:
+              type: text
+              label: Flex Eintragsbeschreibung
+            header.entryOuterPic:
+              type: text
+              label: Externes Bild Flex Name
+            header.entryInnerPic:
+              type: text
+              label: Innere Bild Flex Name

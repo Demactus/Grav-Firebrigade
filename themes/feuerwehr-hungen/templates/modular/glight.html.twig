@@ -38,18 +38,22 @@
 
 
 {% set flex = grav.get('flex') %}
-{% set directory = flex.directory('vorstellung') %}
-{% set vorstellung = directory.collection() %}
+{% set directory = flex.directory(page.header.directory ) %}
+{% set directory_list = directory.collection() %}
+{% set entryDesc =  page.header.entryDesc %}
+{% set entryTitle =  page.header.entryTitle  %}
+{% set outerPic =  page.header.entryOuterPic %}
+{% set innerPic = page.header.entryInnerPic %}
 
 <ul class="box-container four-cols">
-    {% for eintrag in vorstellung.filterBy({published: true}) %}
+    {% for entry in directory_list.filterBy({published: true}) %}
         <li class="box">
             <div class="inner">
                 <a
-                        href="user/images/vorstellung-images/{{ eintrag.picked_image }}"
+                        href="user/images/{{ page.header.directory }}-images/{{ attribute(entry, innerPic) }}"
                         class="glightbox2"
-                        data-title="{{ eintrag.vorname }}"
-                        data-description="<h5><span><strong>Funktion:</strong>{{ eintrag.funktion|e }}</span></h5><h5><span><strong>Beruf:</strong>{{ eintrag.beruf|e }}</span></h5><h5><span><strong>Bei der Feuerwehr seit:</strong>{{ eintrag.datum|e }}</span></h5><h5><span><strong>Über Mich:</strong>{{ eintrag.beschreibung|e }}</span></h5>"
+                        data-title="{{ attribute(entry, entryTitle) }}"
+                        data-description="{{ attribute(entry, entryDesc) }}"
                         data-desc-position="right"
                         data-type="image"
                         data-effect="fade"
@@ -58,7 +62,7 @@
                         data-zoomable="true"
                         data-draggable="true"
                 >
-                    <img src="user/images/vorstellung-images/{{ eintrag.picked_image }}" alt="bla"/>
+                    <img src="user/images/{{ page.header.directory }}-images/{{ attribute(entry, outerPic) }}" alt="bla"/>
                 </a>
             </div>
         </li>

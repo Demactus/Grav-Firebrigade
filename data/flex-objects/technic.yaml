@@ -1,0 +1,29 @@
+ac4e499df93242fca59c1cdc9f792164:
+  published: true
+  outerImage: image_largex.jpeg
+  innerImage: image2_largex.jpeg
+  name: 'LF 10'
+  beschreibung: "Technische Daten zum Fahrzeug\n\n    DIN: 14530-5\n    Radstand: 3.860 mm\n    Motorleistung: 299 PS\n    Zul. Gesamtmasse: 14.000 kg\n    Fahrzeugabmessungen (LxBxH): 7.300 x 2.500 x 3.300 mm\n    Kabine / Besatzung: Z-Cab / 1+8\n    Pumpentyp: FPN 10-2000\n    Löschwasserbehälter: 1.200 l\n"
+  add_image:
+    'image://technik-images/image_largex.jpeg':
+      name: image_largex.jpeg
+      type: image/jpeg
+      size: 591029
+      path: 'image://technik-images//image_largex.jpeg'
+    'image://technik-images/image2_largex.jpeg':
+      name: image2_largex.jpeg
+      type: image/jpeg
+      size: 609049
+      path: 'image://technik-images//image2_largex.jpeg'
+c761e635015d70338a2487b4cf3a34bb:
+  published: true
+  outerImage: picture.jpeg
+  innerImage: picture.jpeg
+  name: MTTW
+  beschreibung: "Volkswagen T6\n\nMTW Feuerwehr Calw\n\nHänsch DBS 3000 LED\nHänsch Sputnik SL"
+  add_image:
+    'image://technic-images/picture.jpeg':
+      name: picture.jpeg
+      type: image/jpeg
+      size: 114071
+      path: 'image://technic-images//picture.jpeg'
