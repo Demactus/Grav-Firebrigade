@@ -1,5 +1,5 @@
 {%  block stylesheets %}
-    {% do assets.addCss('theme://css-compiled/profiles.css') %}
+    {% do assets.addCss('theme://css-compiled/profiles.min.css') %}
 {% endblock %}
 
 {% set grid_size = theme_var('grid-size') %}
@@ -20,16 +20,9 @@
 <section class="modular-profiles">
     <div class="container {{ grid_size }}">
 
-        {{ content|raw }}
-
-        <div class="columns">
-
-            <div class="column profile-column col-6 col-md-6 col-sm-12">
-
-
-
+        <div class="columns {{ page.header.content_align|default('align-right') }}">
             {% for profile in page.header.profiles %}
-            <div class="column profile-column col-6 col-md-6 col-sm-12">
+            <div class="column profile-column col-6 col-md-6 col-sm-12 ">
                 <div class="profile-card">
                     <div class="ds-top"></div>
                     <div class="avatar-holder">
@@ -70,6 +63,14 @@
                     </div>
                 </div>
             </div>
+                {%  if profile.content %}
+                    <div class="column profile-column col-6 col-md-6 col-sm-12 text-column">
+
+                        {{ profile.content|markdown(true) }}
+
+                    </div>
+
+                {% endif %}
             {% endfor %}
         </div>
     </div>

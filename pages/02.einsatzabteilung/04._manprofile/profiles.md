@@ -1,6 +1,9 @@
 ---
 title: manProfile
 body_classes: modular
+process:
+    markdown: true
+    twig: true
 profiles:
     -
         picked_image: IMG_0368.jpeg
@@ -9,7 +12,7 @@ profiles:
         function: Wehrführer
         email: dominik.tag@ff-inheiden.de
         tel: null
-        deployment: null
+        content: "# Kleiner Test\n\n- Hier\n- Könnte\n- Eine\n- Liste\n- Sein\n\n### Oder was anderes"
     -
         picked_image: IMG_0369.jpeg
         vorname: Bastian
@@ -17,7 +20,8 @@ profiles:
         function: 'stellv. Wehrführer'
         email: bastian.haaf@ff-inheiden.de
         tel: null
-        deployment: null
+        content: null
+content_align: left
 ---
 
 # Wehrführung

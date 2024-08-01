@@ -18,7 +18,14 @@ form:
               filesize: 10
               accept:
                 - image/*
-
+            header.content_align:
+              type: select
+              label: Inhalts / Beschreibungs Position
+              classes: fancy
+              default: left
+              options:
+                'left': 'Links'
+                'right': 'Rechts'
 
             header.profiles:
               name: profiles
@@ -51,6 +58,14 @@ form:
                 .tel:
                   type: text
                   label: Telefon
-                .deployment:
-                  type: number
-                  label: Einsätze
+                .content:
+                  type: editor
+                  label: Beschreibung oder Inhalt
+                  autofocus: true
+                  codemirror:
+                    indentUnit: 4
+                    autofocus: true
+                    indentWithTabs: false
+                    lineNumbers: true
+                    styleActiveLine: true
+                    lint: true
