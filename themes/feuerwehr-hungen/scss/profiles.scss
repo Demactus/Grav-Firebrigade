@@ -154,18 +154,18 @@
     bottom: 0;
     right: 0;
     left: 0;
+    animation: fadeIn 1.5s ease-in;
+    transition: all 1s;
     width: inherit;
     height: 40px;
     display: flex;
     .pens, .projects, .posts {
       position: relative;
-      left: -300px;
+      //left: -300px;
       margin-left: 15px;
       //width: calc(250px / 3);
       text-align: center;
       color: $fw-text-underline;
-      animation: fadeInMove 2s;
-      animation-fill-mode: forwards;
       h6 {
         //text-transform: uppercase;
         color: $fw-blue;

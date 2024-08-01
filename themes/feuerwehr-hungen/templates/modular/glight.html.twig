@@ -1,11 +1,8 @@
-{% block stylesheets %}
-{% endblock %}
 
-{% block javascript %}
-    {% do assets.addJs('theme://js/glightbox.min.js', {group:'bottom'}) %}
-{% endblock %}
+<script type="text/javascript" src="{{ url('theme://js/glightbox.min.js') }}"></script>
 
 <script type="module">
+
 
     const lightbox = GLightbox({
         touchNavigation: true,

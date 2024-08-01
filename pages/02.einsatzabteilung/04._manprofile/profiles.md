@@ -12,7 +12,7 @@ profiles:
         function: Wehrführer
         email: dominik.tag@ff-inheiden.de
         tel: null
-        content: "# Kleiner Test\n\n- Hier\n- Könnte\n- Eine\n- Liste\n- Sein\n\n### Oder was anderes"
+        content: null
     -
         picked_image: IMG_0369.jpeg
         vorname: Bastian
