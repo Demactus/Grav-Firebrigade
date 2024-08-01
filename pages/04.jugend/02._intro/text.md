@@ -1,6 +1,8 @@
 ---
 title: Intro
-class: small
+body_classes: modular
+image_align: left
+media_order: jf-tdot-haase.jpg
 ---
 
 Du interessierst dich für die Feuerwehr und möchtest gerne Zeit mit anderen Jugendlichen verbringen? Du bist zwischen 10 und 17 Jahren alt? Du freust dich auf Zeltlager, Ausflüge und Wettkämpfe mit anderen Jugendfeuerwehren? Dann bist du bei uns genau richtig!

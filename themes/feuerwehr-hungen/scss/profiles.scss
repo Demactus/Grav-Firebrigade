@@ -8,8 +8,11 @@
   box-sizing: border-box;
 }
 
-.modular-profiles {
-  background: #f8f9fa;
+.modular-profiles{
+  h1 {
+    color: $fw-blue;
+    font-weight: bold;
+  }
 }
 
 .profile-column {
@@ -17,9 +20,6 @@
   margin-bottom: 60px;
 }
 
-#start {
-  background: #f8f9fa;
-}
 
 .columns.left {
   flex-direction: row-reverse;
@@ -28,6 +28,11 @@
 
 .text-column {
   padding: 0 25px;
+  color: $fw-blue;
+
+  h2 {
+    color: $fw-blue;
+  }
 }
 
 .profile-card {
