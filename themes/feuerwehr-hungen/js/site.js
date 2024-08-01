@@ -67,4 +67,19 @@ jQuery(document).ready(function($){
     // Tree Menu
     $(".tree").treemenu({delay:300});
 
+    const menuButton = document.getElementById('toggle');
+    const menuList = document.getElementById('tree-menu');
+    if (isTouch){
+        document.addEventListener('click', (event) => {
+            if (!menuList.contains(event.target) && !menuButton.contains(event.target)) {
+                $(menuButton).toggleClass('active');
+                $('#overlay').toggleClass('open');
+                $('body').toggleClass('mobile-nav-open');
+                $('#main-nav').toggleClass('is-open');
+                $(menuButton).toggleClass('is-open');
+            }
+        });
+    }
+
+
 });

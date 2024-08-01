@@ -23,6 +23,11 @@
         {{ content|raw }}
 
         <div class="columns">
+
+            <div class="column profile-column col-6 col-md-6 col-sm-12">
+
+
+
             {% for profile in page.header.profiles %}
             <div class="column profile-column col-6 col-md-6 col-sm-12">
                 <div class="profile-card">
@@ -52,10 +57,12 @@
                     </div>
                     <div class="ds-info">
                         <div class="ds projects">
+                            {% if profile.tel %}
                             <h6 title="Telefon"><i class="fa-solid fa-phone beforI"></i>
                                 <button class="btn">{{ profile.tel }} <a onclick="copyToClipboard('{{ profile.email }}')"><i class="fa-regular fa-copy"></i></a>
                                 </button>
                             </h6>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="ds-info">
