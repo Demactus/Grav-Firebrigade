@@ -13,6 +13,23 @@
   }
 }
 
+
+.mobile-nav-open {
+  #header {
+    #fw-logo-txt {
+      color: whitesmoke;
+    }
+
+    .fw-location {
+      color: whitesmoke;
+    }
+
+    &.scrolled {
+      background: #063480;
+    }
+  }
+}
+
 // Hamburger Menu
 .mobile-menu {
 
@@ -61,6 +78,23 @@
         transform: translateY(-($bar-offset)) translateX(0) rotate(-45deg);
         background: $mobile-color-active;
       }
+    }
+
+    &.scrolled:not(.active) {
+      .top {
+        //transform: translateY($bar-offset) translateX(0) rotate(45deg);
+        background: #063480;
+      }
+      .middle {
+        //opacity: 0;
+        background: #063480;
+      }
+
+      .bottom {
+        //transform: translateY(-($bar-offset)) translateX(0) rotate(-45deg);
+        background: #063480;
+      }
+
     }
 
     span {

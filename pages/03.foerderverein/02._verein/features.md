@@ -1,6 +1,5 @@
 ---
 title: Verein
-class: small
 features:
     -
         icon: 'fa fa-fire-alt'
@@ -22,7 +21,7 @@ process:
     markdown: true
     twig: true
 cache_enable: false
-body_classes: offset-box
+class: offset-box
 ---
 
 # Förderverein
