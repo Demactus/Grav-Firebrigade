@@ -40,6 +40,7 @@
   max-height: 90vh !important;
   display: flex;
   flex-direction: column;
+  animation: fadeIn 0.3s ease-in;
 
 
   // -------------- TITLE
@@ -79,6 +80,24 @@
     p {
       padding-top: 5px;
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mvTop {
+  0% {
+    top: -400px;
+  }
+  100% {
+    top: -40px;
   }
 }
 

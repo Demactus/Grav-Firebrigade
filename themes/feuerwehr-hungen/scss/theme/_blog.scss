@@ -7,6 +7,17 @@
   }
 }
 
+
+
+#item {
+  padding: 0 3rem;
+  p {
+    font-weight: 550;
+    //font-size: 1.2rem;
+  }
+
+}
+
 /** Breadcrumbs styling **/
 #breadcrumbs {
   padding-left: 0;
@@ -48,6 +59,14 @@
     margin-bottom: 25px;
     border: 0;
     box-shadow: 0 10px 45px -9px rgba(0,0,0,0.1);
+
+    .card-title {
+      padding-top: 2px;
+      h5 {
+        font-weight: 700;
+        font-size: 1.3em;
+      }
+    }
   }
 
   .reordered {

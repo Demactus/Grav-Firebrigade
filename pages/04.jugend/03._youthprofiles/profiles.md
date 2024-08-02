@@ -14,4 +14,4 @@ profiles:
 order_mobile: text-first
 ---
 
-## Kinderfeuerwehr
+<h2><i class="fa-solid fa-fire-flame-simple" style="color: #e24c31;"></i> Kinderfeuerwehr </h2>
