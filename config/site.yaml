@@ -1,4 +1,4 @@
-title: Grav
+title: 'Feuerwehr Hungen-Inheiden'
 default_lang: de
 author:
   name: 'Bastian Haaf'
@@ -6,9 +6,8 @@ author:
 taxonomies:
   - category
   - tag
-  - month
 metadata:
-  description: 'Feuerwehr Hungen Inheiden, wir sind die örtliche Freiwillige Feuerwehr und zeigen euch gerne was bei uns passiert'
+  description: 'Feuerwehr Hungen-Inheiden, wir sind die örtliche Freiwillige Feuerwehr und zeigen euch gerne was bei uns passiert'
 summary:
   enabled: true
   format: short

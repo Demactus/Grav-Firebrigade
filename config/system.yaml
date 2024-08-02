@@ -1,12 +1,11 @@
 absolute_urls: false
 timezone: null
-default_locale: null
 param_sep: ':'
 wrapped_site: false
 reverse_proxy_setup: true
 force_ssl: false
 force_lowercase_urls: true
-custom_base_url: 'https://grav.dev.ff-inheiden.de'
+custom_base_url: 'https://www.ff-inheiden.de'
 username_regex: '^[a-z0-9_-]{3,16}$'
 pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 intl_enabled: true
@@ -26,7 +25,6 @@ languages:
   session_store_active: false
   http_accept_language: false
   override_locale: true
-  content_fallback: {  }
   pages_fallback_only: false
   debug: false
 home:
@@ -169,7 +167,7 @@ debugger:
     close_connection: true
   twig: true
 images:
-  default_image_quality: 100
+  default_image_quality: 80
   cache_all: false
   cache_perms: '0755'
   debug: false
@@ -208,7 +206,7 @@ session:
   domain: null
   path: null
 gpm:
-  releases: testing
+  releases: stable
   official_gpm_only: true
 http:
   method: auto

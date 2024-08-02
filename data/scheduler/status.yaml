@@ -1,6 +1,6 @@
 cache-clear:
   state: success
-  last-run: 1722481201
+  last-run: 1722567601
 cache-purge:
   state: success
-  last-run: 1722484801
+  last-run: 1722571201
