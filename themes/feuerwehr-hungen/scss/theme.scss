@@ -102,8 +102,19 @@
   }
 }
 
+@media screen and (max-width: 374px){
+  .card {
+    .card-footer {
+      a {
+        text-align: left;
+      }
+      span {
+        width: min-content;
 
-
+      }
+    }
+  }
+}
 
 .scrolldown {
   --color: white;
