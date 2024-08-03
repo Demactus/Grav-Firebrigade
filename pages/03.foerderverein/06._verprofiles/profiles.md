@@ -8,7 +8,7 @@ profiles:
         vorname: Oliver
         name: Tag
         function: Vereinsvorsitzender
-        email: oli.tag@ff-inheiden.de
+        email: oliver.tag@ff-inheiden.de
         tel: null
         content: null
     -
@@ -35,6 +35,7 @@ profiles:
         email: jan.martens@ff-inheiden.de
         tel: null
         content: null
+order_mobile: card-first
 ---
 
 ## Vereinsvorstand
