@@ -104,15 +104,21 @@
   }
 }
 
+@media screen and (max-width: 1170px) {
+  .card {
+    .card-footer {
+      span {
+        width: min-content;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 374px){
   .card {
     .card-footer {
       a {
         text-align: left;
-      }
-      span {
-        width: min-content;
-
       }
     }
   }
