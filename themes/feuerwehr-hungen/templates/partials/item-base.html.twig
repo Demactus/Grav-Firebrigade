@@ -37,10 +37,10 @@
     {{ assets.js()|raw }}
     {% endblock %}
 </head>
-<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+<body id="top" class="blog-view {% block body_classes %}{{ body_classes }}{% endblock %}">
 <div id="page-wrapper">
     {% block header %}
-        <section id="header" class="section">
+        <section id="header" class="blog-header section">
             <section class="container {{ grid_size }}">
                 <nav class="navbar">
                     <section class="navbar-section logo">
@@ -98,7 +98,7 @@
             <div class="mobile-logo">
                 {% include 'partials/logo.html.twig' with {mobile: true} %}
             </div>
-            <nav class="overlay-menu">
+            <nav id="main-nav" class="overlay-menu">
                 {% include 'partials/navigation.html.twig' with {tree: true} %}
             </nav>
         </div>

@@ -1,4 +1,4 @@
-
+@import "../fw-main";
 
 .mobile-logo {
   svg, img {
@@ -12,7 +12,6 @@
 
   }
 }
-
 
 .mobile-nav-open {
   #header {
@@ -115,6 +114,31 @@
       &:nth-of-type(3) {
         top: $bar-offset * 2;
       }
+    }
+  }
+}
+
+// Extra ruling for blog items
+.blog-view {
+  .nav-open {
+    #header{
+      background: $fw-blue;
+    }
+  }
+  .button_container {
+
+    .top {
+      //transform: translateY($bar-offset) translateX(0) rotate(45deg);
+      background: $fw-blue;
+    }
+    .middle {
+      //opacity: 0;
+      background: $fw-blue;
+    }
+
+    .bottom {
+      //transform: translateY(-($bar-offset)) translateX(0) rotate(-45deg);
+      background: #063480;
     }
   }
 }
@@ -245,14 +269,9 @@
   z-index: 14;
 }
 
-
-
-
 .button_container:focus {
   outline: none;
 }
-
-
 
 .mobile-nav-open {
   overflow-y: hidden;

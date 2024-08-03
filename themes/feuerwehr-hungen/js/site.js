@@ -82,6 +82,7 @@ jQuery(document).ready(function($){
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
         $('body').toggleClass('mobile-nav-open');
+        $('#page-wrapper').toggleClass('nav-open');
     });
 
     // Tree Menu
