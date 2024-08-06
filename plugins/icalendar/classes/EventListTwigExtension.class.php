@@ -46,7 +46,7 @@ class EventListTwigExtension extends \Twig_Extension
             9 => 'September', 10 => 'Oktober', 11 => 'November', 12 => 'Dezember'
         ];
 
-		foreach ($cal->getSortedEvents() as $r) {
+		foreach ($cal->getEvents()->sorted() as $r) {
 			// DONE: include URL !
 			if (((int) $r['DTSTART']->format('U')) > $today)	{
                 // Extract the first word from SUMMARY
