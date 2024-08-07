@@ -53,4 +53,27 @@ class EventsList extends ArrayObject {
         return $this;
     }
 
+    /**
+     * Combine two EventsList instances into a new one
+     *
+     * @param EventsList $otherList
+     * @return EventsList
+     */
+    public function combine(EventsList $otherList): EventsList {
+        // Create a new EventsList to store the combined events
+        $combinedList = new EventsList();
+
+        // Add all events from the current list
+        foreach ($this as $event) {
+            $combinedList->append($event);
+        }
+
+        // Add all events from the other list
+        foreach ($otherList as $event) {
+            $combinedList->append($event);
+        }
+
+        return $combinedList;
+    }
+
 }

@@ -33,7 +33,8 @@ class EventListTwigExtension extends \Twig_Extension
 		require_once __DIR__ . '/../vendor/autoload.php';
         $cal = new \om\IcalParser();
         if (! file_exists($this->ICSfile))	return NULL;
-		$results = $cal->parseFile($this->ICSfile	);
+		$icsResults = $cal->parseFile($this->ICSfile);
+        $icsEvents = $cal->getEvents();
 		$eventList = '';
 		$i = 0;
 		// DONE: start list Today (not oldest Event)
@@ -46,7 +47,7 @@ class EventListTwigExtension extends \Twig_Extension
             9 => 'September', 10 => 'Oktober', 11 => 'November', 12 => 'Dezember'
         ];
 
-		foreach ($cal->getEvents()->sorted() as $r) {
+		foreach ($icsEvents->sorted() as $r) {
 			// DONE: include URL !
 			if (((int) $r['DTSTART']->format('U')) > $today)	{
                 // Extract the first word from SUMMARY

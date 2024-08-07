@@ -285,7 +285,8 @@ class IcalParser {
                     $value = $matches[1];
                 }
                 $value = $this->toTimezone($value);
-                $this->timezone = new DateTimeZone($value);
+            } else {
+                $this->timezone = new DateTimeZone('Europe/Berlin');
             }
 
             // have some middle part ?
@@ -314,7 +315,8 @@ class IcalParser {
         // process simple dates with timezone
         if (in_array($key, ['DTSTAMP', 'LAST-MODIFIED', 'CREATED', 'DTSTART', 'DTEND'], true)) {
             try {
-                $value = new DateTime($value, ($timezone ?: $this->timezone));
+                $value = new DateTime($value);
+                $value->setTimezone($this->timezone);
             } catch (Exception $e) {
                 $value = null;
             }
@@ -371,6 +373,14 @@ class IcalParser {
         }
 
         return [$key, $middle, $value];
+    }
+
+    function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
     }
 
     /**
