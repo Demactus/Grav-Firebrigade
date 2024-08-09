@@ -69,6 +69,9 @@ class IcalParser {
         }
 
         $section = 'VCALENDAR';
+        $eventSection = null;
+        $inValarm = false;
+        $currentEvent = [];
 
         // Replace \r\n with \n
         $string = str_replace("\r\n", "\n", $string);
@@ -80,27 +83,51 @@ class IcalParser {
 
             switch ($row) {
                 case 'BEGIN:DAYLIGHT':
-                case 'BEGIN:VALARM':
                 case 'BEGIN:VTIMEZONE':
                 case 'BEGIN:VFREEBUSY':
                 case 'BEGIN:VJOURNAL':
                 case 'BEGIN:STANDARD':
                 case 'BEGIN:VTODO':
-                case 'BEGIN:VEVENT':
                     $section = substr($row, 6);
                     $this->counters[$section] = isset($this->counters[$section]) ? $this->counters[$section] + 1 : 0;
+                    continue 2; // while
+                case 'BEGIN:VEVENT':
+                    $section = substr($row, 6);
+                    $eventSection = $section;
+                    $this->counters[$section] = isset($this->counters[$section]) ? $this->counters[$section] + 1 : 0;
+                    $currentEvent = [];
+                    continue 2; // while
+                case 'BEGIN:VALARM':
+                    if ($eventSection === 'VEVENT') {
+                        $inValarm = true;
+                    }
+                    $section = substr($row, 6);
+                    $this->counters[$section] = isset($this->counters[$section]) ? $this->counters[$section] + 1 : 0;
+                    continue 2; // while
+                case 'END:VALARM':
+                    if ($eventSection === 'VEVENT') {
+                        $inValarm = false;
+                    }
                     continue 2; // while
                 case 'END:VEVENT':
                     $section = substr($row, 4);
                     $currCounter = $this->counters[$section];
-                    $event = $this->data[$section][$currCounter];
+                    $event = $currentEvent;
                     if (!empty($event['RECURRENCE-ID'])) {
                         $this->data['_RECURRENCE_IDS'][$event['RECURRENCE-ID']] = $event;
                     }
 
+                    // Skip events with no DTSTART
+                    if (empty($event['DTSTART'])) {
+                        unset($this->data[$section][$currCounter]);
+                        $this->counters[$section]--;
+                        continue 2; // while
+                    }
+
+                    $this->data[$section][$currCounter] = $event;
+                    $eventSection = null;
                     continue 2; // while
                 case 'END:DAYLIGHT':
-                case 'END:VALARM':
                 case 'END:VTIMEZONE':
                 case 'END:VFREEBUSY':
                 case 'END:VJOURNAL':
@@ -136,43 +163,33 @@ class IcalParser {
                 if ($section === 'VCALENDAR') {
                     $this->data[$key] = $value;
                 } else {
-
-                    // use an array since there can be multiple entries for this key.  This does not
-                    // break the current implementation--it leaves the original key alone and adds
-                    // a new one specifically for the array of values.
-
-                    if ($newKey = $this->isMultipleKey($key)) {
-                        $this->data[$section][$this->counters[$section]][$newKey][] = $value;
-                    }
-
-                    // CATEGORIES can be multiple also but there is special case that there are comma separated categories
-
-                    if ($this->isMultipleKeyWithCommaSeparation($key)) {
-
-                        if (str_contains($value, ',')) {
-                            $values = array_map('trim', preg_split('/(?<![^\\\\]\\\\),/', $value));
-                        } else {
-                            $values = [$value];
-                        }
-
-                        foreach ($values as $value) {
-                            $this->data[$section][$this->counters[$section]][$key][] = $value;
-                        }
-
+                    if ($inValarm) {
+                        $currentEvent['VALARM'][$this->counters['VALARM']] = $value;
                     } else {
-                        if (in_array($key, ['ORGANIZER'])) {
-                            foreach ($middle as $midKey => $midVal) {
-                                $this->data[$section][$this->counters[$section]][$key . '-' . $midKey] = $midVal;
+                        if ($newKey = $this->isMultipleKey($key)) {
+                            $currentEvent[$newKey][] = $value;
+                        } elseif ($this->isMultipleKeyWithCommaSeparation($key)) {
+                            if (str_contains($value, ',')) {
+                                $values = array_map('trim', preg_split('/(?<![^\\\\]\\\\),/', $value));
+                            } else {
+                                $values = [$value];
                             }
+                            foreach ($values as $value) {
+                                $currentEvent[$key][] = $value;
+                            }
+                        } else {
+                            if (in_array($key, ['ORGANIZER'])) {
+                                foreach ($middle as $midKey => $midVal) {
+                                    $currentEvent[$key . '-' . $midKey] = $midVal;
+                                }
+                            }
+                            if (in_array($key, ['ATTENDEE', 'ORGANIZER'])) {
+                                $value = $value['VALUE'];    // backwards compatibility (leaves ATTENDEE entry as it was)
+                            }
+                            $currentEvent[$key] = $value;
                         }
-                        if (in_array($key, ['ATTENDEE', 'ORGANIZER'])) {
-                            $value = $value['VALUE'];    // backwards compatibility (leaves ATTENDEE entry as it was)
-                        }
-                        $this->data[$section][$this->counters[$section]][$key] = $value;
                     }
-
                 }
-
             }
         }
 

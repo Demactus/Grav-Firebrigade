@@ -6,6 +6,14 @@ use RocketTheme\Toolbox\File\File;
 
 class EventListTwigExtension extends \Twig_Extension
 {
+
+    function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+    }
     private $numevents = 1;
     public function setNumEvents($numevents) { 
         $this->numevents = $numevents; 
@@ -28,8 +36,27 @@ class EventListTwigExtension extends \Twig_Extension
             new \Twig_SimpleFunction('eventlist', [$this, 'eventFunction'])
         ];
     }
-    public function eventFunction()
-    {
+
+    /**
+     * Format DateTime with utc if TZID is set as datetime is already correct format then
+     *
+     * @param \DateTime $dateTime
+     * @param string|null $tzid
+     * @return \DateTime
+     */
+    public function formatDateTime(\DateTime $dateTime, ?string $tzid = null): \DateTime {
+        if ($tzid) {
+            try {
+                $timezone = new \DateTimeZone('UTC');
+                $dateTime->setTimezone($timezone);
+            } catch (\Exception $e) {
+                // Handle exception if the timezone is invalid
+            }
+        }
+        return $dateTime;
+    }
+
+    public function eventFunction() {
 		require_once __DIR__ . '/../vendor/autoload.php';
         $cal = new \om\IcalParser();
         if (! file_exists($this->ICSfile))	return NULL;
@@ -72,6 +99,9 @@ class EventListTwigExtension extends \Twig_Extension
                         break;
                 }
 
+                $formattedStartDate = $this->formatDateTime($r['DTSTART'], $r['TZID'] ?? null);
+                $formattedEndDate = $this->formatDateTime($r['DTEND'], $r['TZID']?? null);
+
                 // Remove the first word and colon from the SUMMARY
                 $cleanSummary = preg_replace('/^' . preg_quote($firstWord . ':', '/') . '\s*/', '', $r['SUMMARY']);
 
@@ -79,10 +109,10 @@ class EventListTwigExtension extends \Twig_Extension
                 $summaryLink = isset($r['URL']) ? sprintf('<a href="%s" target="_blank">%s</a>', $r['URL'], $cleanSummary) : $cleanSummary;
 
                 // Check if full day event
-                $startHour = $r['DTSTART']->format('H');
-                $startMinute = $r['DTSTART']->format('i');
-                $endHour = $r['DTEND']->format('H');
-                $endMinute = $r['DTEND']->format('i');
+                $startHour = $formattedStartDate->format('H');
+                $startMinute = $formattedStartDate->format('i');
+                $endHour = $formattedEndDate->format('H');
+                $endMinute = $formattedEndDate->format('i');
                 $isFullDay = $startHour == $endHour && $startMinute == $endMinute;
 
                 // Get the day and month
