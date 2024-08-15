@@ -11,7 +11,7 @@ mailer:
     password: Bhr6_8r75
   sendmail:
     bin: /usr/sbin/sendmail
-content_type: text/plain
+content_type: text/html
 debug: false
 cc: null
 bcc: null
