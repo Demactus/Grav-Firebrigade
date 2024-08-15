@@ -27,9 +27,9 @@ config:
     # Permissions
     permissions:
       # Primary permissions
-      admin.contacts:
+      admin.einsaetze:
         type: crudpl
-        label: Einsatzberichte 
+        label: Flex Einsatzberichte 
 
     # List view
     list:

@@ -1235,3 +1235,31 @@ cd4db8fe6e5ddd6cfcca73001c2e51c6:
       size: 983766
       path: 'image://einsatz-images/IMG_3416.jpeg'
   picked_image: IMG_3416.jpeg
+a18b81b28b89f09d797526c4e9f79ec7:
+  published: true
+  titel: 'Person im Wasser'
+  date: '2024-08-11'
+  time: '18:19'
+  ort: 'Seegebiet, Hungen-Trais-Horloff'
+  standorte:
+    - Steinheim
+    - Utphe
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+  kurzbeschreibung_freigegeben: true
+  kurzbeschreibung: 'Eine Person wurde beim Eintreffen der Kräfte aus Inheiden schon vom Rettungsdienst versorgt.'
+  add_image: {  }
+becae106e32079c13d431d4bb170231a:
+  published: true
+  titel: 'Person im Wasser'
+  date: '2024-08-13'
+  time: '12:18'
+  ort: 'Seegebiet, Inheiden'
+  standorte:
+    - Inheiden
+    - Hungen
+    - Trais-Horloff
+  kurzbeschreibung_freigegeben: true
+  kurzbeschreibung: 'Die vermisste Person wurde bereits vor dem Eintreffen der Feuerwehr wieder angetroffen. Alle Rettungskräfte konnten den Einsatz abbrechen.'
+  add_image: {  }

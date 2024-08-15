@@ -17,7 +17,7 @@ config:
         title: Technik
         icon: fa-car
         # Authorization to collection admin
-        authorize: ['admin.einsaetze.list', 'admin.super']
+        authorize: ['admin.technic.list', 'admin.super']
         # Priority -10 .. 10 (highest goes up)
         priority: 2
 
@@ -27,9 +27,9 @@ config:
     # Permissions
     permissions:
       # Primary permissions
-      admin.contacts:
+      admin.technic:
         type: crudpl
-        label: Eomsatue
+        label: Flex Technik
 
     # List view
     list:
