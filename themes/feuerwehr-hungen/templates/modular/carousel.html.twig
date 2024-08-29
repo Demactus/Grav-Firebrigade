@@ -9,25 +9,27 @@
 
 <script type="module">
 
+    let carouselList;
+    let namesList = [];
 
-    const vornamenArray = [
-        'Patrick',
-        'Bianca',
-        'Dominik',
-        'Bastian',
-        'Jan',
-        'Florian',
-        'Alex',
-        'Johannes',
-        'Gerrit',
-        'Gerald',
-        'Jonas',
-        'Robin',
-        'Oliver',
-        'Pascal',
-        'Alexander',
-        'Matheo'
-    ];
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.main-carousel');
+        carouselList = JSON.parse(carousel.getAttribute('data-list'));
+        namesList = extractNames(carouselList);
+    })
+
+    function extractNames(data) {
+        const names = [];
+        for (const key in carouselList) {
+            if (data.hasOwnProperty(key) && data[key].name) {
+                names.push(data[key].name);
+            }
+        }
+        return names;
+    }
+
+
+    const vornamenArray = namesList;
 
     const lowerCaseVornamenArray = vornamenArray.map(name => name.toLowerCase());
 
@@ -176,7 +178,7 @@
                     {{ content | raw }}
                 </div> -->
 
-                <div class="carousel main-carousel">
+                <div class="carousel main-carousel" data-list="{{ list|json_encode() }}">
                     {% for entry in list.filterBy({published: true}) %}
                         <div class="carousel-cell">
                             <div class="top-left"><strong>{{ entry.vorname }}</strong></div>

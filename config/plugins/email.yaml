@@ -1,6 +1,6 @@
 enabled: true
 from: web@ffinh.de
-to: bastian@haaf.ch
+to: info@ff-inheiden.de
 mailer:
   engine: smtps
   smtp:

@@ -97,6 +97,7 @@ class EventListTwigExtension extends \Twig_Extension
                         break;
                     default:
                         $icon = 'fa-calendar fa-lg';
+                        $firstWord = 'default';
                         break;
                 }
 
