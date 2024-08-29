@@ -91,6 +91,9 @@ class EventListTwigExtension extends \Twig_Extension
                     case 'Jugendfeuerwehr':
                         $icon = 'fa-hard-hat fa-lg';
                         break;
+                    case 'Kinderfeuerwehr':
+                        $icon = 'fa-solid fa-shapes fa-lg';
+                        break;
                     case 'Förderverein':
                     case 'Feuerwehrverein':
                         $icon = 'fa-beer-mug-empty fa-lg';
