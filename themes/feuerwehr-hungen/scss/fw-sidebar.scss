@@ -155,7 +155,7 @@ details {
 }
 
 .Feuerwehrverein i {
-  color: $fw-blue;
+  color: green;
 }
 
 .Förderverein i {
@@ -164,5 +164,8 @@ details {
 
 .Kinderfeuerwehr i {
   color: #45c6bf;
+}
 
+.default i {
+  color: $fw-blue;
 }

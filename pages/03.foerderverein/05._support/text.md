@@ -44,6 +44,9 @@ form:
               label: PLZ / Ort
               placeholder: ''
               type: text
+            honeypot:
+              type: honeypot
+              label: Address  
         column3:
           type: column
           classes: my-column-class
@@ -136,12 +139,23 @@ form:
               type: text
               label: IBAN
               placeholder:  DE 12 3456 1234 4567 7890 00
-              
+            honeypot:
+              type: honeypot
+              label: Wallet Address
+        column13:
+          type: column
+          fields:
+            basic-captcha:
+              type: basic-captcha
+              placeholder: übertrage die 6 Zeichen hier
+              label: Leider müssen wir zur Sicherheit eine kleine Überprüfung machen
   buttons:
     - type: submit
       classes: btn btn-primary
       value: Submit
   process:
+    basic_captcha: 
+        message: 'Captcha Überprüfung fehlgeschlagen'
     message: 'Danke für deinen Antrag!'
     email:
       subject: "[Site Contact Form] {{ form.value.name|e }}"
