@@ -158,7 +158,7 @@ form:
         message: 'Captcha Überprüfung fehlgeschlagen'
     message: 'Danke für deinen Antrag!'
     email:
-      subject: "[Site Contact Form] {{ form.value.name|e }}"
+      subject: "Vereinsanmeldung von {{ form.value.surname|e }} {{ form.value.name|e }}"
       body: "{% include 'forms/data.html.twig' %}"
     display: thankyou
 pp_protect: '0'
