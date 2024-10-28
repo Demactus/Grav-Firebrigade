@@ -178,7 +178,7 @@
 
 
 .gslide-title {
-  font-size: 1.75em !important;
+  font-size: 2em !important;
   margin-top: 0 !important;
 }
 
@@ -202,4 +202,7 @@
   position: absolute;
   padding-top: 10px !important;
 }
-
+.glightbox-mobile .glightbox-container .gcontainer .gslide-description .gslide-desc{
+  color: whitesmoke;
+  font-size: 1.25em;
+}
