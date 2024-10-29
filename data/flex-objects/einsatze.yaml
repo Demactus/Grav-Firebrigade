@@ -1263,3 +1263,11 @@ becae106e32079c13d431d4bb170231a:
   kurzbeschreibung_freigegeben: true
   kurzbeschreibung: 'Die vermisste Person wurde bereits vor dem Eintreffen der Feuerwehr wieder angetroffen. Alle Rettungskräfte konnten den Einsatz abbrechen.'
   add_image: {  }
+efed1e4935530066778e943c4e120cc5:
+  published: true
+  titel: Scheunenbrand
+  date: '2024-09-23'
+  time: '00:59'
+  ort: Lollar
+  kurzbeschreibung_freigegeben: false
+  add_image: {  }
