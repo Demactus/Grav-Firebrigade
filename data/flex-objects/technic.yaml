@@ -3,7 +3,7 @@ ac4e499df93242fca59c1cdc9f792164:
   outerImage: _MG_6824.jpg
   innerImage: _MG_6824.jpg
   name: 'LF 10 KatS'
-  beschreibung: "Informationen zum Fahrzeug:\n\nHersteller: Albert Ziegler GmbH\nBaujahr: 2014\nDienstzeit: 2014-heute\nBesatzung: 1/8\nFunkrufname: Florian Hungen 3-43\n\nAuszug aus der Beladeliste:\n\n1 Funkgerät 4 m\n4 Handsprechfunkgeräte (FuG 11)\n1 Funkgerät digital\n4 Adalit Handlampen\n4 Pressluftatmer (zwei in der Mannschaftskabine)\n2 Flutlichtstrahler (1000 W)\n1 pneumatisch ausfahrbarer Flutlichtmast (elektrisch bedienbar)\n1 tragbarer Stromerzeuger 5 kVA\n1 Motorkettensäge\n1 Hochleistungslüfter\n1 Twinsaw-Rettungssäge\n1200l Löschwasser\n120l Schaummittel\n1 Werkzeugkasten\n1 Verkehrsunfallkasten\n1 Schornsteinfeger-Werkzeug\n1 Notfall-Rucksack\n1 Tragkraftspritze 8/8 (Pneumatisch absenkbar)\n1 eingebaute Feuerlöschkreiselpumpe (FPN 10 – 2000)\n1 Tauchpumpe 4/1\n1 Steckleiter 4-teilig\n1 Ölsperre\n2 Wathosen\n1 Kälteschutzanzug\nÖlbindemittel\n14 C-Schläuche\n18 B-Schläuche\n3 Hohlstrahlrohre Leader Quadrafog 150\n1 Hohlstrahlrohr Leader Ultimatic FO6 AA Modell Frankfut a. M.\n1 Kombischaumrohr S4/M4"
+  beschreibung: "Informationen zum Fahrzeug:  <br>\n<br>\nHersteller: Albert Ziegler GmbH <br>\nBaujahr: 2014 <br>\nDienstzeit: 2014-heute <br>\nBesatzung: 1/8 <br>\nFunkrufname: Florian Hungen 3-43 <br>\n<br>\nAuszug aus der Beladeliste: <br>\n<ul>\n <li> 1 Funkgerät 4 m </li>\n<li>4 Handsprechfunkgeräte (FuG 11) </li>\n<li>1 Funkgerät digital </li>\n<li>4 Adalit Handlampen </li>\n<li>4 Pressluftatmer (zwei in der Mannschaftskabine) </li>\n<li>2 Flutlichtstrahler (1000 W) </li>\n<li>1 pneumatisch ausfahrbarer Flutlichtmast (elektrisch bedienbar) </li>\n<li>1 tragbarer Stromerzeuger 5 kVA </li>\n<li>1 Motorkettensäge </li>\n<li>1 Hochleistungslüfter </li>\n<li>1 Twinsaw-Rettungssäge </li>\n<li>1200l Löschwasser </li>\n<li>120l Schaummittel </li>\n<li>1 Werkzeugkasten </li>\n<li>1 Verkehrsunfallkasten </li>\n<li>1 Schornsteinfeger-Werkzeug </li>\n<li>1 Notfall-Rucksack </li>\n<li>1 Tragkraftspritze 8/8 (Pneumatisch absenkbar) </li>\n<li>1 eingebaute Feuerlöschkreiselpumpe (FPN 10 – 2000) </li>\n<li>1 Tauchpumpe 4/1 </li>\n<li>1 Steckleiter 4-teilig </li>\n<li>1 Ölsperre </li>\n<li>2 Wathosen </li>\n<li>1 Kälteschutzanzug </li>\n<li>Ölbindemittel </li>\n<li>14 C-Schläuche </li>\n<li>18 B-Schläuche </li>\n<li>3 Hohlstrahlrohre Leader Quadrafog 150 </li>\n<li>1 Hohlstrahlrohr Leader Ultimatic FO6 AA Modell Frankfut a. M.  </li>\n<li>1 Kombischaumrohr S4/M4 </li>\n</ul>"
   add_image:
     'image://technic-images/_MG_6824.jpg':
       name: _MG_6824.jpg
@@ -15,7 +15,7 @@ c761e635015d70338a2487b4cf3a34bb:
   outerImage: IMG_7936.jpg
   innerImage: IMG_7936.jpg
   name: MTW
-  beschreibung: "Hersteller: Ford\nTyp: Transit\nBaujahr: 2008\nBesatzung: 1 Gruppe (1/8 -> 9 Personen)\n\nSonstiges:\nFahrzeug besitzt Stromeinspeisungsvorrichtung (elektrische Geräte werden in der Unterkunft automatisch geladen).\n\nAuszug aus der Beladeliste:\n\n1 MRT (Motorola)\n2 HRT (Motorola)\n1 Pulverlöscher\n4 Handlampen"
+  beschreibung: "Hersteller: Ford <br>\nTyp: Transit <br>\nBaujahr: 2008 <br>\nBesatzung: 1 Gruppe (1/8 -> 9 Personen) <br>\n<br>\nSonstiges: <br>\nFahrzeug besitzt Stromeinspeisungsvorrichtung (elektrische Geräte werden in der Unterkunft automatisch geladen). <br>\n<br>\nAuszug aus der Beladeliste: <br>\n<ul>\n <li>1 MRT (Motorola)</li>\n <li>2 HRT (Motorola)</li>\n <li>1 Pulverlöscher</li>\n <li>4 Handlampen</li>\n</ul>"
   add_image:
     'image://technic-images/IMG_7936.jpg':
       name: IMG_7936.jpg
@@ -27,7 +27,7 @@ c761e635015d70338a2487b4cf3a34bb:
   outerImage: _MG_4460.jpg
   innerImage: _MG_4460.jpg
   name: Rettungsboot
-  beschreibung: "Hersteller: SBS Schmitt Boot und Schwimmende Anlagen\nBaujahr: 2011\nDienstzeit: 2011-heute\n\nSonstiges:\nDas Rettungsboot Typ RTB1 wird von einem 40PS Honda Außenbordmotor angetrieben und ist durch seine Bauart (Aluminium Zweikieler, Flachbodenboot in Spantenbauweise mit Luftkammer im doppelten Boden) unsinkbar.\n\nAuszug aus der Beladeliste:\n\nSteuerstand\nBugklappe\nBeleuchtung nach BSH bzw. BinSchStrO/BSO\nleistungsfähige Arbeits- und Umfeldbeleuchtung\nEcholot\nSpinboard\nhandgeführte Suchscheinwerfer\nKlappanker\nRettungsring"
+  beschreibung: "Hersteller: SBS Schmitt Boot und Schwimmende Anlagen <br>\nBaujahr: 2011 <br>\nDienstzeit: 2011-heute <br>\n<br>\nSonstiges:\nDas Rettungsboot Typ RTB1 wird von einem 40PS Honda Außenbordmotor angetrieben und ist durch seine Bauart (Aluminium Zweikieler, Flachbodenboot in Spantenbauweise mit Luftkammer im doppelten Boden) unsinkbar. <br>\n<br>\nAuszug aus der Beladeliste: <br>\n\n- Steuerstand <br>\n- Bugklappe <br>\n- Beleuchtung nach BSH bzw. BinSchStrO/BSO <br>\n- leistungsfähige Arbeits- und Umfeldbeleuchtung <br>\n- Echolot <br>\n- Spinboard <br>\n- handgeführte Suchscheinwerfer <br>\n- Klappanker <br>\n- Rettungsring <br>"
   add_image:
     'image://technic-images/_MG_4460.jpg':
       name: _MG_4460.jpg

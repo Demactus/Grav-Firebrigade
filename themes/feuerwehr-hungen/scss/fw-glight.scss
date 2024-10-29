@@ -137,7 +137,7 @@
 // overrides glightbox defaults
 
 .description-right {
-  max-width: 320px !important;
+  max-width: 335px !important;
 }
 
 .description-right .gdesc-inner {
@@ -157,8 +157,15 @@
   display: inline-flex !important;
 }
 
+.glightbox-open .gslide-media {
+  width: 65%;
+}
+
+.glightbox-open.glightbox-mobile .gslide-media {
+  width: 100%;
+}
+
 .glightbox-open .gslide-media img{
-  width: 95% !important;
   margin-right: 0;
 }
 
@@ -178,7 +185,7 @@
 
 
 .gslide-title {
-  font-size: 1.75em !important;
+  font-size: 2em !important;
   margin-top: 0 !important;
 }
 
@@ -202,4 +209,7 @@
   position: absolute;
   padding-top: 10px !important;
 }
-
+.glightbox-mobile .glightbox-container .gcontainer .gslide-description .gslide-desc{
+  color: whitesmoke;
+  font-size: 1.25em;
+}

@@ -87,7 +87,6 @@ form:
             terms:
               type: checkbox
               label: "Hiermit akzpetiere ich die <a href='https://dev.ff-inheiden.de/impressum/'>Datenschutzvereinbarung</a>"
-            
         column7:
           type: column
           classes: display-column-class
@@ -149,6 +148,24 @@ form:
               type: basic-captcha
               placeholder: übertrage die 6 Zeichen hier
               label: Leider müssen wir zur Sicherheit eine kleine Überprüfung machen
+        column14:
+           type: column
+           fields:
+            test:
+             type: spacer
+             title: ''
+             text: ''
+             underline: true      
+        column15:
+          type: column
+          classes: display-column-class
+          fields:
+            newsletter:
+              type: checkboxes
+              label: "Wir würden ihnen einen Newsletter über die örtliche Feuerwehr anbieten, dieser Informiert über anstehende Feierlichkeiten, Events und auch mal wichtige Informationen rund um die Feuerwehr. Möchten Sie diesen erhalten?"
+              options:
+                  option1: 'Jetzt anmelden & keine Neuigkeiten verpassen!'
+
   buttons:
     - type: submit
       classes: btn btn-primary
