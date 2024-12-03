@@ -1,0 +1,213 @@
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/shop.min.css') %}
+{% endblock %}
+
+<head>
+    <link rel="stylesheet" href="{{ url('theme://css-compiled/shop.min.css') }}"/>
+</head>
+
+<script type="module">
+
+    let productsList;
+    let products = [];
+    let cart = []
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.product-list');
+        productsList = JSON.parse(carousel.getAttribute('data-list'));
+        products = extractProducts(productsList);
+
+        console.log(products);
+
+        const productsHTML = products.map(
+            (product) => `<div class="product-card">
+            <img src="{{ url('image://product-images//')}}/${product.imageName}"/>
+            <h2 class="product-name">${product.name}</h2>
+            <strong>${product.price}€</strong>
+            <select class="product-size" id="size-${product.id}">
+                ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
+            </select>
+            <button class="product-btn" id="${product.id}">Add to Cart</button>
+        </div>`
+        );
+
+        const result = document.querySelector(".result");
+        result.innerHTML = productsHTML.join("");
+
+
+        const productButtons = document.querySelectorAll(".product-btn");
+        productButtons.forEach(button => {
+            button.addEventListener("click", function (e) {
+                const productId = parseInt(e.target.id);
+                const sizeSelect = document.getElementById(`size-${productId}`);
+                const selectedSize = sizeSelect.value;
+                addToCart(products, productId, selectedSize);
+            });
+        });
+
+        function addToCart(products, id, size) {
+            const product = products.find((product) => product.id == id); // Use == for comparison
+            const cartProduct = cart.find((product) => product.id == id && product.size === size); // Use == for comparison
+            if (cartProduct) {
+                incrItem(id, size);
+            } else {
+                cart.unshift({...product, size: size, quantity: 1});
+            }
+            updateCart();
+            getTotal(cart);
+        };
+
+        function updateCart() {
+            const cartHTML = cart.map(
+                (item) => `<div class="cart-item">
+                <h3>${item.name} - ${item.size}</h3>
+                <div class="cart-detail">
+                    <div class="mid">
+                        <button data-id="${item.id}" data-size="${item.size}">-</button>
+                        <p>${item.quantity}</p>
+                        <button data-id="${item.id}" data-size="${item.size}">+</button>
+                    </div>
+                    <p>${item.price}€</p>
+                    <button data-id="${item.id}" data-size="${item.size}" class="cart-product">D</button>
+                </div>
+            </div>`
+            );
+
+            const cartItems = document.querySelector(".cart-items");
+            cartItems.innerHTML = cartHTML.join("");
+
+            // Attach event listeners after updating cartHTML
+            attachEventListenersToCart();
+        }
+
+        function attachEventListenersToCart() {
+            // Get all the newly added buttons in the cart
+            const buttons = document.querySelectorAll(".cart-item button");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function(e) {
+                    const itemId = parseInt(e.target.dataset.id);
+                    const itemSize = e.target.dataset.size;
+
+                    if (e.target.textContent === "-") {
+                        decrItem(itemId, itemSize);
+                    } else if (e.target.textContent === "+") {
+                        incrItem(itemId, itemSize);
+                    } else if (e.target.textContent === "D") {
+                        const cartItem = e.target.closest('.cart-item'); // Find the closest cart-item
+                        const itemId = parseInt(cartItem.querySelector('.mid button:first-child').dataset.id); // Get id from the '-' button
+                        const itemSize = cartItem.querySelector('.mid button:first-child').dataset.size; // Get size from the '-' button
+                        deleteItem(itemId, itemSize);
+                    }
+                });
+            });
+        }
+
+
+        function getTotal(cart) {
+            let {totalItem, cartTotal} = cart.reduce(
+                (total, cartItem) => {
+                    const price = parseFloat(cartItem.price.replace(",", ".")); // Convert price to number
+                    total.cartTotal += price * cartItem.quantity;
+                    total.totalItem += cartItem.quantity;
+                    return total;
+                },
+                {totalItem: 0, cartTotal: 0}
+            );
+            const totalItemsHTML = document.querySelector(".noOfItems");
+            totalItemsHTML.innerHTML = `${totalItem} items`;
+            const totalAmountHTML = document.querySelector(".total");
+            totalAmountHTML.innerHTML = `${cartTotal.toFixed(2)}€`; // Format total with 2 decimal places
+        }
+
+        function incrItem(id, size) {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i] && cart[i].id == id && cart[i].size === size) {
+                    cart[i].quantity += 1;
+                }
+            }
+            updateCart();
+            getTotal(cart);
+        }
+
+        function decrItem(id, size) {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].id == id && cart[i].size === size && cart[i].quantity > 1) {
+                    cart[i].quantity -= 1;
+                }
+            }
+            updateCart();
+            getTotal(cart);
+        }
+
+        function deleteItem(id, size) {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].id == id && cart[i].size === size) { // Use == for comparison
+                    cart.splice(i, 1);  // Remove the item from the cart
+                    break;              // Exit the loop after deleting the item
+                }
+            }
+            updateCart();
+            getTotal(cart);
+        }
+
+    })
+
+    function extractProducts(data) {
+        const products = [];
+
+        for (const key in data) {
+            const productData = data[key];
+            const sizes = Object.values(productData.size);
+            let imageName = "";
+            if (productData.add_image) { // Check if add_image exists
+                const imageKey = Object.keys(productData.add_image)[0];
+                imageName = productData.add_image[imageKey].name;
+            }
+
+            const product = {
+                id: productData.id,
+                name: productData.name,
+                price: productData.price,
+                sizes: sizes,
+                imageName: imageName,
+            };
+
+            products.push(product);
+        }
+
+        return products;
+    }
+
+
+
+
+</script>
+
+{% set flex = grav.get('flex') %}
+{% set directory = flex.directory('products') %}
+{% set list = directory.collection() %}
+
+<h1 class="">Shopping Cart</h1>
+<div class="body">
+    <div class="container">
+        <h3 class="heading">Products</h3>
+        <div class="product-list" data-list="{{ list|json_encode() }}">
+            <div class="result"></div>
+        </div>
+    </div>
+    <div class="cart">
+        <div class="cart-header">
+            <h3>CART</h3>
+            <p class="noOfItems">0 items</p>
+        </div>
+        <hr noshade="true" size="1px"/>
+        <div class="cart-items"></div>
+        <hr noshade="true" size="1px"/>
+        <div class="cart-footer cart-header">
+            <h4>Total</h4>
+            <p class="total">0€</p>
+        </div>
+        <button class="buy-btn">PROCEED TO BUY</button>
+    </div>
+</div>
