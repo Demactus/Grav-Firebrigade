@@ -34,16 +34,24 @@
         const result = document.querySelector(".result");
         result.innerHTML = productsHTML.join("");
 
+        // Attach event listeners after the product HTML is added to the DOM
+        attachAddToCartListeners();
 
-        const productButtons = document.querySelectorAll(".product-btn");
-        productButtons.forEach(button => {
-            button.addEventListener("click", function (e) {
-                const productId = parseInt(e.target.id);
-                const sizeSelect = document.getElementById(`size-${productId}`);
-                const selectedSize = sizeSelect.value;
-                addToCart(products, productId, selectedSize);
+        function attachAddToCartListeners() {
+            const productButtons = document.querySelectorAll(".product-btn");
+            productButtons.forEach(button => {
+                button.addEventListener("click", function (e) {
+                    const productId = e.target.id;
+                    const sizeSelect = document.getElementById(`size-${productId}`);
+                    if (sizeSelect) {
+                        const selectedSize = sizeSelect.value;
+                        addToCart(products, productId, selectedSize);
+                    } else {
+                        console.error(`Size select element not found for product ID: ${productId}`);
+                    }
+                });
             });
-        });
+        }
 
         function addToCart(products, id, size) {
             const product = products.find((product) => product.id == id); // Use == for comparison
@@ -86,17 +94,14 @@
 
             buttons.forEach(button => {
                 button.addEventListener("click", function(e) {
-                    const itemId = parseInt(e.target.dataset.id);
+                    const itemId = e.target.dataset.id;
                     const itemSize = e.target.dataset.size;
 
                     if (e.target.textContent === "-") {
                         decrItem(itemId, itemSize);
                     } else if (e.target.textContent === "+") {
                         incrItem(itemId, itemSize);
-                    } else if (e.target.textContent === "D") {
-                        const cartItem = e.target.closest('.cart-item'); // Find the closest cart-item
-                        const itemId = parseInt(cartItem.querySelector('.mid button:first-child').dataset.id); // Get id from the '-' button
-                        const itemSize = cartItem.querySelector('.mid button:first-child').dataset.size; // Get size from the '-' button
+                    } else if (e.target.classList.contains("cart-product")) { // Check for the "D" button using class
                         deleteItem(itemId, itemSize);
                     }
                 });
@@ -158,15 +163,14 @@
 
         for (const key in data) {
             const productData = data[key];
-            const sizes = Object.values(productData.size);
+            const sizes = getTrueSizes(productData.size);
             let imageName = "";
-            if (productData.add_image) { // Check if add_image exists
-                const imageKey = Object.keys(productData.add_image)[0];
-                imageName = productData.add_image[imageKey].name;
+            if (productData.productImage) { // Check if add_image exists
+                imageName = productData.productImage;
             }
 
             const product = {
-                id: productData.id,
+                id: key,
                 name: productData.name,
                 price: productData.price,
                 sizes: sizes,
@@ -178,7 +182,10 @@
 
         return products;
     }
-
+    // Helper function to get true sizes from given sizes array
+    function getTrueSizes(sizes) {
+        return Object.keys(sizes).filter(key => sizes[key]);
+    }
 
 
 

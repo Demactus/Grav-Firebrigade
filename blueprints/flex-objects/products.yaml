@@ -160,9 +160,12 @@ form:
       type: checkboxes
       label: Größe
       options:
+        'XS': 'XS'
         'S': 'S'
         'M': 'M'
         'L': 'L'
         'XL': 'XL'
         'XXL': 'XXL'
         'XXXL': 'XXXL'
+        'XXXXL': 'XXXXL'
+      use: keys
