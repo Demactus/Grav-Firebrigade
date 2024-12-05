@@ -1,0 +1,29 @@
+5fbfd3f0aef1ac29b75c1155b646ed0c:
+  published: true
+  name: Test
+  size:
+    size-S: S
+    size-M: M
+    size-L: L
+    size-XL: XL
+    size-XXL: XXL
+    size-XXXL: XXXL
+  add_image: {  }
+5256722f6f5038410c4bf9b95b679583:
+  published: true
+  productImage: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
+  name: T-Shirt
+  price: '99,90'
+  size:
+    size-S: S
+    size-M: M
+    size-L: L
+    size-XL: XL
+    size-XXL: XXL
+    size-XXXL: XXXL
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png':
+      name: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
+      type: image/png
+      size: 329383
+      path: 'image://product-images//e_s_T-Shirt_cotton-8065-3-637868078148839799.png'
