@@ -1,0 +1,168 @@
+title: Produkte
+description: Aktuelle Produkte im Vereinsshop
+type: flex-objects
+
+# Flex Configuration
+config:
+  # Administration Configuration
+  admin:
+    # Admin router (optional)
+    router:
+      path: '/products'
+
+    # Admin menu (optional)
+    menu:
+      list:
+        route: '/products'
+        title: Produkte
+        icon: fa-cart-shopping
+        # Authorization to collection admin
+        authorize: ['admin.technic.list', 'admin.super']
+        # Priority -10 .. 10 (highest goes up)
+        priority: 2
+
+    # Admin template type / folder
+    template: default
+
+    # Permissions
+    permissions:
+      # Primary permissions
+      admin.technic:
+        type: crudpl
+        label: Flex Products
+
+    # List view
+    list:
+      title: name
+      fields:
+        published:
+          field:
+            type: toggle
+            label: Published
+          width: 8
+          link: toggle
+        name:
+          link: edit
+        beschreibung:
+          link: edit
+        funktion:
+          link: edit
+      options:
+        per_page: 40
+        order:
+          by: name
+          dir: desc
+
+    # Edit View
+    edit:
+      title:
+        template: '{{ object.name ?? ''Name'' }}'
+
+    # Preview View
+    preview:
+      enabled: true
+      route:
+      #template: '/plugins/flex-objects/directory:products'
+
+    # Data Export
+    export:
+      enabled: true
+      method: 'yamlSerialize'
+      formatter:
+        class: 'Grav\Framework\File\Formatter\YamlFormatter'
+      filename: 'product'
+
+  # Site Configuration
+  site:
+    templates:
+      collection:
+        # Lookup for the template layout files for collections of objects
+        paths:
+          - 'flex/{TYPE}/collection/{LAYOUT}{EXT}'
+      object:
+        # Lookup for the template layout files for objects
+        paths:
+          - 'flex/{TYPE}/object/{LAYOUT}{EXT}'
+      defaults:
+        # Default template {TYPE}; overridden by filename of this blueprint if template folder exists
+        type: products
+        # Default template {LAYOUT}; can be overridden in render calls (usually Twig in templates)
+        layout: default
+
+  # Data Configuration
+  data:
+    # Object class to be used, allowing custom methods for the object
+    object: 'Grav\Common\Flex\Types\Generic\GenericObject'
+    # Collection class to be used, allowing custom methods for the collections
+    collection: 'Grav\Common\Flex\Types\Generic\GenericCollection'
+    # Index class to be used, works as a quick database-like lookup index
+    index: 'Grav\Common\Flex\Types\Generic\GenericIndex'
+    storage:
+      # Storage class, use single file storage (does not support images and assets)
+      class: 'Grav\Framework\Flex\Storage\SimpleStorage'
+      options:
+        formatter:
+          # File formatter class, in this case the file is stored in markdown
+          class: 'Grav\Framework\File\Formatter\YamlFormatter'
+        # JSON file where all the objects will be stored
+        folder: user-data://flex-objects/products.yaml
+    search:
+      # Search options
+      options:
+        contains: 1
+      # Fields to be searched
+      fields:
+        - Name
+    ordering:
+      Name: DSC
+
+form:
+  validation: loose
+
+  fields:
+    published:
+      type: toggle
+      label: Published
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+        required: true
+
+    add_image:
+      type: file
+      destination: 'image://product-images/'
+      limit: 3
+      accept:
+        - image/*
+      filesize: 10
+
+    productImage:
+      type: filepicker
+      label: Produkt Bild
+      folder: 'image://product-images/'
+      preview_images: true
+
+    name:
+      type: text
+      label: Name
+      validate:
+        required: true
+
+    price:
+      type: text
+      label: Preis
+
+    size:
+      type: checkboxes
+      label: Größe
+      options:
+        'S': 'S'
+        'M': 'M'
+        'L': 'L'
+        'XL': 'XL'
+        'XXL': 'XXL'
+        'XXXL': 'XXXL'
