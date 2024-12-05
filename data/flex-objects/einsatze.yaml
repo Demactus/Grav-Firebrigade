@@ -1268,6 +1268,7 @@ efed1e4935530066778e943c4e120cc5:
   titel: Scheunenbrand
   date: '2024-09-23'
   time: '00:59'
-  ort: Lollar
-  kurzbeschreibung_freigegeben: false
+  ort: 'Gießener Straße, Lollar'
+  kurzbeschreibung_freigegeben: true
   add_image: {  }
+  kurzbeschreibung: 'Zur Unterstützung bei einem langwierigen und zeitintensiven Einsatz wurde das LF 10 KatS aus Inheiden alarmiert. Die Kräfte aus Inheiden unterstützen die Brandbekämpfung über mehrere Stunden.'

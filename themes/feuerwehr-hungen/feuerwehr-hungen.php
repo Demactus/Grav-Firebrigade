@@ -3,7 +3,6 @@ namespace Grav\Theme;
 
 use Grav\Common\Grav;
 use Grav\Common\Theme;
-use Twig\Extensions\ArrayExtension;
 
 class FeuerwehrHungen extends Theme
 {
@@ -51,7 +50,6 @@ class FeuerwehrHungen extends Theme
         ];
 
         $twig->twig_vars = array_merge($twig->twig_vars, $form_class_variables);
-       // $twig->addExtension(new ArrayExtension());
 
     }
 
