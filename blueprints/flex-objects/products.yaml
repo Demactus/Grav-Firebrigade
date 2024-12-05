@@ -15,7 +15,7 @@ config:
       list:
         route: '/products'
         title: Produkte
-        icon: fa-cart-shopping
+        icon: fa-shopping-cart
         # Authorization to collection admin
         authorize: ['admin.technic.list', 'admin.super']
         # Priority -10 .. 10 (highest goes up)
