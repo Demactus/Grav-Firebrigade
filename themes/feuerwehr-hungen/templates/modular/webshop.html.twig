@@ -27,7 +27,12 @@
             <select class="product-size" id="size-${product.id}">
                 ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
             </select>
-            <button class="product-btn" id="${product.id}">Add to Cart</button>
+            <div class="button product-btn">
+                <a class="addtocart" id="${product.id}">
+                    <div class="add">Add to Cart</div>
+                    <div class="added">Added!</div>
+                </a>
+            </div>
         </div>`
         );
 
@@ -38,10 +43,16 @@
         attachAddToCartListeners();
 
         function attachAddToCartListeners() {
-            const productButtons = document.querySelectorAll(".product-btn");
+            const productButtons = document.querySelectorAll(".addtocart");
             productButtons.forEach(button => {
                 button.addEventListener("click", function (e) {
-                    const productId = e.target.id;
+                    // Trigger animation on Add to Cart button click
+                    $(this).addClass('active');
+                    setTimeout(function () {
+                        $('.addtocart').removeClass('active');
+                    }, 1000);
+
+                    const productId = this.id;
                     const sizeSelect = document.getElementById(`size-${productId}`);
                     if (sizeSelect) {
                         const selectedSize = sizeSelect.value;
@@ -186,6 +197,8 @@
     function getTrueSizes(sizes) {
         return Object.keys(sizes).filter(key => sizes[key]);
     }
+
+
 
 
 

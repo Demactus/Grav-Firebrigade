@@ -48,9 +48,103 @@ button {
   font-size: 0.9rem;
 }
 
-button:hover {
-  background-color: #fbcc24;
-  transform: translateY(2px);
+
+.product-btn {
+  background-color: #ffd84d;
+  color: rgb(60, 60, 60);
+  padding: 0;
+  border: none;
+  //border-radius: 0.6rem;
+  cursor: pointer;
+  margin: 0.7rem;
+  transition: 0.1s ease-in-out;
+  font-weight: 600;
+  font-size: 0.9rem;
+  perspective: 1000px; // Add perspective for 3D effect
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 50px;
+  border-radius: 0.6rem;
+
+  /* Button magic */
+
+  a.addtocart {
+    position: absolute;
+    left: -5px;
+    top: 0px;
+    right: 0px;
+    width: 160px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 300ms;
+    cursor: pointer;
+    border-radius: inherit;
+    text-decoration: none;
+
+    > div {
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      line-height: 50px;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &:hover { // Add a hover state to the <a> tag
+      background-color: #fbcc24; // Example hover effect
+    }
+
+    > .add {
+      background-color: #ffd84d;
+      color: rgb(60, 60, 60);
+      transform: rotateY(0deg) translateZ(25px);
+      transition: background 150ms ease-out;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        background-color: #fbcc24;
+      }
+    }
+
+    > .added {
+      background: #f63;
+      color: #fff;
+      transform: rotateX(90deg) translateZ(25px);
+      backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .addtocart.active { // Apply rotation when "active" class is added
+    animation-name: rotate;
+    animation-duration: 1s;
+  }
+
+  &:hover {
+    background-color: #fbcc24;
+    transform: translateY(2px);
+  }
+}
+
+@keyframes rotate { // Define the rotation animation
+  35% {
+    transform: translateZ(-100px) rotateX(-90deg);
+  }
+  72% {
+    transform: translateZ(-100px) rotateX(-90deg);
+  }
+  100% {
+    transform: translateZ(-100px);
+  }
 }
 
 .result {
