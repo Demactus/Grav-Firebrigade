@@ -1,203 +1,194 @@
-function Product(id,name,price)
-{
-    this.id=id;
-    this.name=name;
-    this.price=price;
-}
-var p1 = new Product(1,"Google Pixel",45000)
-var p2 = new Product(2,"Iphone",60000)
-var p3 = new Product(3,"MacBook Pro",130000)
-var p4 = new Product(4,"Sony Headphones",12000)
-var p5 = new Product(5,"Play Station 4",60000)
-var p6 = new Product(6,"Microsoft Surface",55000)
 
-var products = [p1,p2,p3,p4,p5,p6];
-var purchase = [];
+let productsList;
+let products = [];
+let cart = []
 
-function retrievePurchase()
-{
-    var purchase = JSON.parse(localStorage.getItem('purchases')?localStorage.getItem('purchases'):"[]");
-    return purchase
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.product-list');
+    productsList = JSON.parse(carousel.getAttribute('data-list'));
+    products = extractProducts(productsList);
 
-}
-function savePurchase()
-{
-    localStorage.setItem('purchases',JSON.stringify(purchase));
-}
-function updatePurchases(purch)
-{
-    localStorage.setItem('purchases',JSON.stringify(purch));
+    console.log(products);
 
-}
-function savedetails()
-{
-    localStorage.setItem('products',JSON.stringify(products));
-}
+    const productsHTML = products.map(
+        (product) => `<div class="product-card">
+            <img src="user/images/product-images/${product.imageName}"/>
+            <h2 class="product-name">${product.name}</h2>
+            <strong>${product.price}€</strong>
+            <select class="product-size" id="size-${product.id}">
+                ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
+            </select>
+            <div class="button product-btn">
+                <a class="addtocart" id="${product.id}">
+                    <div class="add">Add to Cart</div>
+                    <div class="added">Added!</div>
+                </a>
+            </div>
+        </div>`
+    );
 
-function refreshTotal(total)
-{
-    // console.log(total);
-    var x = document.getElementById('totalLabel');
-    x.innerText=total;
-}
-function refreshTable()
-{
-    $('#item-table-body').html('');
-    var pur = retrievePurchase()
-    var t = JSON.parse(localStorage.getItem('total'));
-    var total=0;
+    const result = document.querySelector(".result");
+    result.innerHTML = productsHTML.join("");
 
-    for(var p of pur)
-    {
-        var pq = (p.qty)*(p.price)
-        $('#item-table').append("<tr> <td>" + p.id + " </td> <td>" + p.name + "</td> <td>" + p.price + " </td> <td>" + "  <button id=plus"+p.id+">+</button> "  + p.qty + "  <button id=sub"+p.id+">-</button>" +  "</td> <td>" + pq + " </td></tr>")
-        total+=pq;
-    }
+    // Attach event listeners after the product HTML is added to the DOM
+    attachAddToCartListeners();
 
+    function attachAddToCartListeners() {
+        const productButtons = document.querySelectorAll(".addtocart");
+        productButtons.forEach(button => {
+            button.addEventListener("click", function (e) {
+                // Trigger animation on Add to Cart button click
+                $(this).addClass('active');
+                setTimeout(function () {
+                    $('.addtocart').removeClass('active');
+                }, 1000);
 
-    $("button").click(function(e){
-        var idClicked = e.target.id;
-        var pp = retrievePurchase();
-        for(i=0;i<pp.length;i++)
-        {
-            var ob=pp[i];
-            if(("plus"+ob.id)===idClicked)
-            {
-                ob.qty++;
-            }
-            if(("sub"+ob.id)===idClicked)
-            {
-                ob.qty--;
-                if(ob.qty<=0)
-                {
-                    pp.splice(i,1);
-
+                const productId = this.id;
+                const sizeSelect = document.getElementById(`size-${productId}`);
+                if (sizeSelect) {
+                    const selectedSize = sizeSelect.value;
+                    addToCart(products, productId, selectedSize);
+                } else {
+                    console.error(`Size select element not found for product ID: ${productId}`);
                 }
-            }
-
-        }
-
-        updatePurchases(pp)
-        refreshTable()
-    });
-
-    refreshTotal(total);
-}
-
-function checkPurchases(id)
-{
-    var pur = retrievePurchase();
-    for(var p of pur)
-    {
-        if(p.id==id)
-        {
-            return p.qty;
-        }
-    }
-
-    return 0;
-
-}
-
-window.onscroll = function() {	scrollFunction()	};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-
-function topFunction() {
-    // console.log("top button clicked")
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-$(document).ready(function(){
-    $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
-
-        var target = this.hash;
-        var $target = $(target);
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
+            });
         });
-    });
-});
+    }
 
-$(function()
-{
-    savedetails()
-    retrievePurchase();
-    refreshTable();
-    $("button").click(function(e)
-    {
-        var	idClicked = e.target.id;
+    function addToCart(products, id, size) {
+        const product = products.find((product) => product.id == id); // Use == for comparison
+        const cartProduct = cart.find((product) => product.id == id && product.size === size); // Use == for comparison
+        if (cartProduct) {
+            incrItem(id, size);
+        } else {
+            cart.unshift({...product, size: size, quantity: 1});
+        }
+        updateCart();
+        getTotal(cart);
+    };
 
-        for(i=1;i<=6;i++)
-        {
-            if(idClicked===("btn"+i))
-            {
-                console.log(idClicked)
-                purchase = retrievePurchase();
-                var id=i;
-                var det = getDetails(id);
-                if(det!==0)
-                {
-                    purchase.push({
-                        id:id,
-                        name:det.name,
-                        price:det.price,
-                        qty:det.qty
-                    });
+    function updateCart() {
+        const cartHTML = cart.map(
+            (item) => `<div class="cart-item">
+                <h3>${item.name} - ${item.size}</h3>
+                <div class="cart-detail">
+                    <div class="mid">
+                        <button data-id="${item.id}" data-size="${item.size}">-</button>
+                        <p>${item.quantity}</p>
+                        <button data-id="${item.id}" data-size="${item.size}">+</button>
+                    </div>
+                    <p>${item.price}€</p>
+                    <button data-id="${item.id}" data-size="${item.size}" class="cart-product"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>`
+        );
+
+        const cartItems = document.querySelector(".cart-items");
+        cartItems.innerHTML = cartHTML.join("");
+
+        // Attach event listeners after updating cartHTML
+        attachEventListenersToCart();
+    }
+
+    function attachEventListenersToCart() {
+        // Get all the newly added buttons in the cart
+        const buttons = document.querySelectorAll(".cart-item button");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function(e) {
+                const itemId = e.target.dataset.id;
+                const itemSize = e.target.dataset.size;
+
+                if (e.target.textContent === "-") {
+                    decrItem(itemId, itemSize);
+                } else if (e.target.textContent === "+") {
+                    incrItem(itemId, itemSize);
+                } else if (e.target.classList.contains("cart-product")) { // Check for the "D" button using class
+                    deleteItem(itemId, itemSize);
                 }
-                savePurchase();
-                retrievePurchase();
-                refreshTable();
-            }
-
-        }
-
-    });
-
-    function getDetails(id)
-    {
-        var pro;
-        var containsAlready = checkPurchases(id);
-        var inc = containsAlready+1;
-        // console.log(containsAlready)
-        var products = JSON.parse(localStorage.getItem('products'));
-        if(containsAlready==0)
-        {
-            for(p of products)
-            {
-
-                if(p.id===id)
-                {
-                    pro =
-                        {
-                            name:p.name,
-                            price:p.price,
-                            qty:1
-                        }
-                }
-            }
-            return pro
-        }
-        else
-        {
-            window.alert("This item exists in Cart. Kindly view your cart !");
-            return 0;
-        }
-
+            });
+        });
     }
 
 
+    function getTotal(cart) {
+        let {totalItem, cartTotal} = cart.reduce(
+            (total, cartItem) => {
+                const price = parseFloat(cartItem.price.replace(",", ".")); // Convert price to number
+                total.cartTotal += price * cartItem.quantity;
+                total.totalItem += cartItem.quantity;
+                return total;
+            },
+            {totalItem: 0, cartTotal: 0}
+        );
+        const totalItemsHTML = document.querySelector(".noOfItems");
+        totalItemsHTML.innerHTML = `${totalItem} items`;
+        const totalAmountHTML = document.querySelector(".total");
+        totalAmountHTML.innerHTML = `${cartTotal.toFixed(2)}€`; // Format total with 2 decimal places
+    }
 
+    function incrItem(id, size) {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i] && cart[i].id == id && cart[i].size === size) {
+                cart[i].quantity += 1;
+            }
+        }
+        updateCart();
+        getTotal(cart);
+    }
+
+    function decrItem(id, size) {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id == id && cart[i].size === size && cart[i].quantity > 1) {
+                cart[i].quantity -= 1;
+            }
+        }
+        updateCart();
+        getTotal(cart);
+    }
+
+    function deleteItem(id, size) {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id == id && cart[i].size === size) { // Use == for comparison
+                cart.splice(i, 1);  // Remove the item from the cart
+                break;              // Exit the loop after deleting the item
+            }
+        }
+        updateCart();
+        getTotal(cart);
+    }
 
 })
+
+function extractProducts(data) {
+    const products = [];
+
+    for (const key in data) {
+        const productData = data[key];
+        const sizes = getTrueSizes(productData.size);
+        let imageName = "";
+        if (productData.productImage) { // Check if add_image exists
+            imageName = productData.productImage;
+        }
+
+        const product = {
+            id: key,
+            name: productData.name,
+            price: productData.price,
+            sizes: sizes,
+            imageName: imageName,
+        };
+
+        products.push(product);
+    }
+
+    return products;
+}
+// Helper function to get true sizes from given sizes array
+function getTrueSizes(sizes) {
+    return Object.keys(sizes).filter(key => sizes[key]);
+}
+
+
+
+

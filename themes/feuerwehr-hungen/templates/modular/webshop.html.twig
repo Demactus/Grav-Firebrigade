@@ -21,7 +21,7 @@
 
         const productsHTML = products.map(
             (product) => `<div class="product-card">
-            <img src="{{ url('image://product-images//')}}/${product.imageName}"/>
+            <img src="user/images/product-images/${product.imageName}"/>
             <h2 class="product-name">${product.name}</h2>
             <strong>${product.price}€</strong>
             <select class="product-size" id="size-${product.id}">
@@ -167,7 +167,12 @@
             getTotal(cart);
         }
 
-    })
+        const buyButton = document.querySelector(".buy-btn");
+        buyButton.addEventListener("click", function() {
+            saveCartToCSV();
+        });
+
+    });
 
     function extractProducts(data) {
         const products = [];
@@ -198,9 +203,65 @@
         return Object.keys(sizes).filter(key => sizes[key]);
     }
 
+    async function saveCartToCSV() {
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
 
+        const csvHeader = "Product Name,Size,Quantity,Price\n";
+        const csvRows = cart.map(item =>
+            `${item.name},${item.size},${item.quantity},${item.price}`
+        ).join("\n");
+        const csvData = csvHeader + csvRows;
 
+        // Get the name from the input field
+        const nameInput = document.getElementById("csv-name");
+        const name = nameInput.value;
 
+        if (!name) {  // Check if the name is empty
+            nameInput.style.border = "1px solid red"; // Add a red border to indicate error
+            return; // Don't proceed with saving
+        } else {
+            nameInput.style.border = ""; // Reset border if there was an error
+        }
+
+        try {
+            const response = await fetch('/user/save_cart.php', { // Replace 'save_cart.php' with your PHP script
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `csvData=${encodeURIComponent(csvData)}&filename=${encodeURIComponent(name)}.csv`,
+            });
+
+            if (response.ok) {
+                // CSV saved successfully (you can add a success message here)
+                console.log("CSV saved successfully!");
+
+                // Add a success message to the page
+                const successMessage = document.createElement("div");
+                successMessage.textContent = "Cart saved successfully!";
+                successMessage.style.color = "green"; // Style the message
+                // Add more styling as needed...
+
+                const cartContainer = document.querySelector(".cart"); // Get the cart container element
+                cartContainer.prepend(successMessage); // Add the message to the cart container
+
+                // Optionally remove the message after a few seconds
+                setTimeout(() => {
+                    cartContainer.removeChild(successMessage);
+                }, 3000); // Remove after 3 seconds
+
+            } else {
+                console.error('Failed to save CSV:', response.status);
+                // Handle the error, e.g., show an error message to the user
+            }
+        } catch (error) {
+            console.error('Error saving CSV:', error);
+            // Handle the error, e.g., show an error message to the user
+        }
+    }
 
 </script>
 
@@ -228,6 +289,7 @@
             <h4>Total</h4>
             <p class="total">0€</p>
         </div>
+        <input type="text" id="csv-name" placeholder="Bestellung für: ...">
         <button class="buy-btn">PROCEED TO BUY</button>
     </div>
 </div>

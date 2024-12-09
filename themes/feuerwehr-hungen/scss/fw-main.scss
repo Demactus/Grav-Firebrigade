@@ -60,6 +60,7 @@ form .form-column {
   position: absolute;
   z-index: 2;
   top: -5vh;
+  left: 0; /* Initial position - prevent overflow */
 }
 
 @keyframes snowfall {
@@ -68,7 +69,6 @@ form .form-column {
   }
   100% {
     transform: translate3d(var(--left-end), 110vh, 0);
-
   }
 }
 
