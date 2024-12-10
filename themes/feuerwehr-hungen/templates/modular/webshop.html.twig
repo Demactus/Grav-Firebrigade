@@ -39,13 +39,12 @@
         const result = document.querySelector(".result");
         result.innerHTML = productsHTML.join("");
 
-        // Attach event listeners after the product HTML is added to the DOM
         attachAddToCartListeners();
 
         function attachAddToCartListeners() {
             const productButtons = document.querySelectorAll(".addtocart");
             productButtons.forEach(button => {
-                button.addEventListener("click", function (e) {
+                button.addEventListener("click", function () {
                     // Trigger animation on Add to Cart button click
                     $(this).addClass('active');
                     setTimeout(function () {
@@ -65,8 +64,8 @@
         }
 
         function addToCart(products, id, size) {
-            const product = products.find((product) => product.id == id); // Use == for comparison
-            const cartProduct = cart.find((product) => product.id == id && product.size === size); // Use == for comparison
+            const product = products.find((product) => product.id == id);
+            const cartProduct = cart.find((product) => product.id == id && product.size === size);
             if (cartProduct) {
                 incrItem(id, size);
             } else {
@@ -95,12 +94,10 @@
             const cartItems = document.querySelector(".cart-items");
             cartItems.innerHTML = cartHTML.join("");
 
-            // Attach event listeners after updating cartHTML
             attachEventListenersToCart();
         }
 
         function attachEventListenersToCart() {
-            // Get all the newly added buttons in the cart
             const buttons = document.querySelectorAll(".cart-item button");
 
             buttons.forEach(button => {
@@ -112,7 +109,7 @@
                         decrItem(itemId, itemSize);
                     } else if (e.target.textContent === "+") {
                         incrItem(itemId, itemSize);
-                    } else if (e.target.classList.contains("cart-product")) { // Check for the "D" button using class
+                    } else if (e.target.classList.contains("cart-product")) {
                         deleteItem(itemId, itemSize);
                     }
                 });
@@ -158,9 +155,9 @@
 
         function deleteItem(id, size) {
             for (let i = 0; i < cart.length; i++) {
-                if (cart[i].id == id && cart[i].size === size) { // Use == for comparison
-                    cart.splice(i, 1);  // Remove the item from the cart
-                    break;              // Exit the loop after deleting the item
+                if (cart[i].id == id && cart[i].size === size) {
+                    cart.splice(i, 1);
+                    break;
                 }
             }
             updateCart();
@@ -181,7 +178,7 @@
             const productData = data[key];
             const sizes = getTrueSizes(productData.size);
             let imageName = "";
-            if (productData.productImage) { // Check if add_image exists
+            if (productData.productImage) {
                 imageName = productData.productImage;
             }
 
@@ -198,7 +195,7 @@
 
         return products;
     }
-    // Helper function to get true sizes from given sizes array
+
     function getTrueSizes(sizes) {
         return Object.keys(sizes).filter(key => sizes[key]);
     }
@@ -215,19 +212,18 @@
         ).join("\n");
         const csvData = csvHeader + csvRows;
 
-        // Get the name from the input field
         const nameInput = document.getElementById("csv-name");
         const name = nameInput.value;
 
-        if (!name) {  // Check if the name is empty
-            nameInput.style.border = "1px solid red"; // Add a red border to indicate error
-            return; // Don't proceed with saving
+        if (!name) {
+            nameInput.style.border = "1px solid red";
+            return;
         } else {
-            nameInput.style.border = ""; // Reset border if there was an error
+            nameInput.style.border = "";
         }
 
         try {
-            const response = await fetch('/user/save_cart.php', { // Replace 'save_cart.php' with your PHP script
+            const response = await fetch('/user/save_cart.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -236,30 +232,25 @@
             });
 
             if (response.ok) {
-                // CSV saved successfully (you can add a success message here)
                 console.log("CSV saved successfully!");
 
-                // Add a success message to the page
                 const successMessage = document.createElement("div");
                 successMessage.textContent = "Cart saved successfully!";
-                successMessage.style.color = "green"; // Style the message
-                // Add more styling as needed...
+                successMessage.style.color = "green";
 
-                const cartContainer = document.querySelector(".cart"); // Get the cart container element
-                cartContainer.prepend(successMessage); // Add the message to the cart container
 
-                // Optionally remove the message after a few seconds
+                const cartContainer = document.querySelector(".cart");
+                cartContainer.prepend(successMessage);
+
                 setTimeout(() => {
                     cartContainer.removeChild(successMessage);
-                }, 3000); // Remove after 3 seconds
+                }, 3000);
 
             } else {
                 console.error('Failed to save CSV:', response.status);
-                // Handle the error, e.g., show an error message to the user
             }
         } catch (error) {
             console.error('Error saving CSV:', error);
-            // Handle the error, e.g., show an error message to the user
         }
     }
 
