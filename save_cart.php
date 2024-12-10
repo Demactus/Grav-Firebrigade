@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check and set file permissions
     if (file_exists($filepath)) {
-        //chmod($filepath, 0755); // Set permissions for existing file
+        chmod($filepath, 0755); // Set permissions for existing file
 
         // Read existing CSV data
         $existingCsv = array_map('str_getcsv', file($filepath));
