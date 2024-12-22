@@ -1,5 +1,5 @@
 ---
-title: Shop
+title: 'Intern 🔒'
 content:
     items: '@self.modular'
 sitemap:
