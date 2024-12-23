@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['finished_data'])) {
         // Successfully saved, now delete old files
         $files = glob("orders/*.csv"); // Get all CSV files in the directory
         foreach ($files as $file) {
-            if (is_file($file) && $file != $filename) { // Don't delete the new file
+            if (is_file($file) && $file != $filename) {
                 unlink($file);
             }
         }
-        echo "Orders finished and saved successfully!";
+        echo "Bestellung abgeschlossen und erfolgreich gespeichert!";
     } else {
         echo "Error saving orders.";
     }
