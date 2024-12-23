@@ -1,0 +1,204 @@
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 10px;
+}
+
+.container {
+  margin: 0 auto 2rem auto;
+  padding: 0 10px;
+}
+
+.order-container {
+  padding-bottom: 500px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.columns > .column {
+  box-sizing: border-box;
+  position: relative;
+  transition: padding-bottom 0.3s ease; /* Add transition for smoothness */
+}
+
+.columns > .column::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .columns > .column.col-8 {
+    width: calc(66% - 2rem);
+  }
+  .columns > .column.col-4 {
+    width: calc(33% - 2rem);
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  min-height: calc(3rem + (3 * 2.5rem));
+}
+
+
+/* Styles for all tables */
+.order-table,
+.total-order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td,
+.total-order-table th,
+.total-order-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.order-table th,
+.total-order-table th {
+  border-bottom: 2px solid #ddd;
+}
+
+/* Styles for the "Einzelne Bestellungen" table */
+.order-table th:nth-child(1),
+.order-table td:nth-child(1) {
+  width: 80%;
+}
+
+.order-table th:nth-child(2),
+.order-table td:nth-child(2) {
+  width: 20%;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+/* Styles for the "Gesamt Bestellung" table */
+.total-order-table th:nth-child(1),
+.total-order-table td:nth-child(1) {
+  width: 40%;
+}
+
+.total-order-table th:nth-child(2),
+.total-order-table td:nth-child(2) {
+  width: 30%;
+}
+
+.total-order-table th:nth-child(3),
+.total-order-table td:nth-child(3) {
+  text-align: center;
+  width: 30%;
+}
+
+/* Styles for nested tables inside details */
+details > table {
+  width: 100%;
+  margin-top: 0.2rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+details > table th,
+details > table td {
+  padding: 0.2rem 0.5rem;
+  border: none;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+details > table th {
+  border-bottom: 1px solid #ddd;
+}
+
+
+details > table th:nth-child(1),
+details > table td:nth-child(1) {
+  width: 50%; /* Product Name */
+  box-sizing: border-box;
+}
+
+details > table th:nth-child(2),
+details > table td:nth-child(2) {
+  width: 20%; /* Size */
+  box-sizing: border-box;
+}
+
+details > table th:nth-child(3),
+details > table td:nth-child(3) {
+  text-align: center;
+  width: 20%;
+}
+
+details > table th:nth-child(4),
+details > table td:nth-child(4) {
+  width: 15%; /* Price - reduced */
+  text-align: right;
+  box-sizing: border-box;
+}
+
+details > table tr:last-child td {
+  border-bottom: none;
+}
+
+details {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+details > summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+details > summary::marker {
+  display: none;
+}
+
+details > summary::before {
+  content: "+ ";
+}
+
+details[open] > summary::before {
+  content: "- ";
+}
+
+details > summary > span {
+  flex-grow: 1;
+}
+
+/* Button styles */
+.button-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.download-button,
+.finish-button {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+details > table {
+  table-layout: auto !important; /* Allow content to determine column widths */
+}
+
+details > table th,
+details > table td {
+  white-space: normal; /* Allow wrapping if needed */
+}
