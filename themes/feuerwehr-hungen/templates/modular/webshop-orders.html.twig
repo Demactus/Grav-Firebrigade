@@ -60,10 +60,10 @@
             const innerTHead = innerTable.createTHead();
             const innerTBody = innerTable.createTBody();
             const headerRow = innerTHead.insertRow();
-            headerRow.insertCell().textContent = "Product Name";
-            headerRow.insertCell().textContent = "Size";
-            headerRow.insertCell().textContent = "Quantity";
-            headerRow.insertCell().textContent = "Price";
+            headerRow.insertCell().textContent = "Produkt Name";
+            headerRow.insertCell().textContent = "Größe";
+            headerRow.insertCell().textContent = "Anzahl";
+            headerRow.insertCell().textContent = "Preis";
 
 
             order.orders.forEach(item => {
@@ -223,19 +223,19 @@
         fetch('/user/finish_orders.php', { // Create this PHP script
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded', // Important for PHP to parse data
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: 'finished_data=' + encodeURIComponent(csvContent) // Send the CSV data
+            body: 'finished_data=' + encodeURIComponent(csvContent)
         })
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error ${response.status}`);
                 }
-                return response.text(); // Or response.json() if your PHP returns JSON
+                return response.text();
             })
             .then(message => {
-                alert(message); // Display the message from the server (success or error)
-                loadOrders(); // Refresh the order list
+                alert(message);
+                loadOrders();
             })
             .catch(error => {
                 console.error("Error finishing orders:", error);
