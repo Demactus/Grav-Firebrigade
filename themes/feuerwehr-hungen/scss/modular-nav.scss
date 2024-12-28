@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #E6B01D;
+    transition: color 0.3s ease;
+}
+a:visited {
+  color: #E6B01D;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffff00;
+}
+
+
+
+.modular-navbar {
+  margin-top: 70px;
+  background: #063480;
+  color: #E6B01D;
+  border-color: #ffff00;
+  padding: .5rem 0;
+}
+
+.modular-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modular-nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav--ul__one {
+  margin: 0 auto;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.modular-nav-container, .nav--ul__one{
+  display: flex;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+}
+
+// Mobile Navigation
+@media (max-width: 850px) {
+  .modular-nav-container {
+    flex-direction: column; /* Stack container items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .modular-nav {
+    width: 100%; /* Make nav take full width */
+  }
+
+  .nav--ul__one {
+    flex-direction: column; /* Stack list items vertically */
+    align-items: stretch; /* Stretch items to full width */
+    margin: 0; /* Remove auto margins */
+    width: 100%;
+  }
+
+  .nav-link a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+    background-color: #042457; /* Base background color */
+    color: #E6B01D;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+
+  .nav-link a:active { /* Use :active for touch feedback */
+    background-color: #042457; /* Slightly darker on press */
+    transform: scale(0.98); /* Subtle scale down on press */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-link:last-child a {
+    margin-bottom: 0;
+  }
+
+
+
+}

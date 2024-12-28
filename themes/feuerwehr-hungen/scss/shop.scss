@@ -1,3 +1,25 @@
+
+//Header
+#fw-logo-txt {
+  color: #063480 !important;
+
+  .fw-location {
+    color: #063480;
+  }
+}
+
+.mobile-menu {
+  #toggle {
+    span {
+      background: #063480;
+    }
+  }
+}
+
+
+
+
+
 h1 {
   text-align: center;
   margin: 1rem 0;
@@ -27,9 +49,10 @@ h1 {
   box-shadow: 5px 5px lightblue;
 }
 
-.container{
+.shop-container{
   padding: 0 1rem 0 2rem;
 }
+
 .heading{
   text-align: center;
   font-size: 1.3rem;
@@ -248,7 +271,7 @@ hr {
     justify-content: center;
   }
 
-  .container {
+  .shop-container {
     width: 100%;
     padding: 2rem;
   }
