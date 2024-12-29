@@ -29,8 +29,8 @@
             </select>
             <div class="button product-btn">
                 <a class="addtocart" id="${product.id}">
-                    <div class="add">Add to Cart</div>
-                    <div class="added">Added!</div>
+                    <div class="add">Hinzufügen</div>
+                    <div class="added">Hinzugefügt!</div>
                 </a>
             </div>
         </div>`
@@ -128,7 +128,7 @@
                 {totalItem: 0, cartTotal: 0}
             );
             const totalItemsHTML = document.querySelector(".noOfItems");
-            totalItemsHTML.innerHTML = `${totalItem} items`;
+            totalItemsHTML.innerHTML = `${totalItem} Produkte`;
             const totalAmountHTML = document.querySelector(".total");
             totalAmountHTML.innerHTML = `${cartTotal.toFixed(2)}€`; // Format total with 2 decimal places
         }
@@ -202,7 +202,7 @@
 
     async function saveCartToCSV() {
         if (cart.length === 0) {
-            alert("Your cart is empty!");
+            alert("Der Einkaufswagen ist noch leer!");
             return;
         }
 
@@ -235,7 +235,7 @@
                 console.log("CSV saved successfully!");
 
                 const successMessage = document.createElement("div");
-                successMessage.textContent = "Cart saved successfully!";
+                successMessage.textContent = "Bestellung erfolgreich gespeichert!";
                 successMessage.style.color = "green";
 
 
@@ -244,7 +244,7 @@
 
                 setTimeout(() => {
                     cartContainer.removeChild(successMessage);
-                }, 3000);
+                }, 5000);
 
             } else {
                 console.error('Failed to save CSV:', response.status);
@@ -271,7 +271,7 @@
     <div class="cart">
         <div class="cart-header">
             <h3>Einkaufswagen</h3>
-            <p class="noOfItems">0 items</p>
+            <p class="noOfItems">0 Produkte</p>
         </div>
         <hr noshade="true" size="1px"/>
         <div class="cart-items"></div>
@@ -281,6 +281,6 @@
             <p class="total">0€</p>
         </div>
         <input type="text" id="csv-name" placeholder="Bestellung für: ...">
-        <button class="buy-btn">PROCEED TO BUY</button>
+        <button class="buy-btn">Bestellung abgeben</button>
     </div>
 </div>
