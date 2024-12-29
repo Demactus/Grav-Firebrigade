@@ -202,3 +202,16 @@ details > table th,
 details > table td {
   white-space: normal; /* Allow wrapping if needed */
 }
+
+// Modal Style
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  display: none; /* Use flexbox for centering */
+  overflow-y: auto;
+}

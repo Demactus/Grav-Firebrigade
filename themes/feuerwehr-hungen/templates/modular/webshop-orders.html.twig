@@ -16,7 +16,29 @@
 
         const finishButton = document.querySelector('.finish-button');
         finishButton.addEventListener('click', () => {
+            toggleFinishOrderModal(true); // Open the modal first
+        });
+
+        const cancelButton = document.getElementById('modal-cancel');
+        cancelButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            toggleFinishOrderModal(false);
+        });
+
+        const modalOverlay = document.querySelector('#finish-order-modal .modal-overlay');
+        modalOverlay.addEventListener('click', () => {
+            toggleFinishOrderModal(false);
+        });
+
+        const modalCloseButton = document.querySelector('#finish-order-modal .btn-clear');
+        modalCloseButton.addEventListener('click', () => {
+            toggleFinishOrderModal(false);
+        });
+
+        const confirmButton = document.getElementById('modal-confirm');
+        confirmButton.addEventListener('click', () => {
             finishOrder(allOrdersData);
+            toggleFinishOrderModal(false);
         });
 
     });
@@ -174,7 +196,7 @@
 
     function finishOrder(orders) {
         if (orders.length === 0) {
-            alert("No orders to finish!");
+            alert("Keine Bestellungen zum Abschließen vorhanden!");
             return;
         }
 
@@ -219,6 +241,7 @@
             }
         }
 
+
         // Send the CSV content to the server
         fetch('/user/finish_orders.php', { // Create this PHP script
             method: 'POST',
@@ -243,6 +266,10 @@
             });
     }
 
+    function toggleFinishOrderModal(show) {
+        const modal = document.getElementById('finish-order-modal');
+        modal.classList.toggle('active', show);
+    }
 
 </script>
 {% set grid_size = theme_var('grid-size') %}
@@ -289,6 +316,25 @@
                     <button class="btn btn-error finish-button">Bestellung Fertig</button>
                 </div>
             </div>
+        </div>
+
+        <div id="finish-order-modal" class="modal modal-sm">
+            <a href="#close" class="modal-overlay" aria-label="Close"></a>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a href="#close" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5">Bestellungen abschließen</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content">
+                        <p>Sind Sie sicher, dass Sie die Bestellungen abschließen möchten? <br><br> Dieser Vorgang kann nicht rückgängig gemacht werden.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a id="modal-cancel" class="btn btn-link" aria-label="close">Abbrechen</a>
+                    <button id="modal-confirm" class="btn btn-primary">Bestellungen abschließen</button>
+                </div>
+        </div>
         </div>
 
     </section>
