@@ -18,11 +18,13 @@
 
 
 
-
-
 h1 {
   text-align: center;
   margin: 1rem 0;
+}
+
+.cart-h4 {
+  margin-top: 0;
 }
 
 .body {
@@ -43,10 +45,14 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
-  height: 80%;
+  width: 40%;
+  height: 70%;
   text-align: center;
   box-shadow: 5px 5px lightblue;
+
+  strong {
+    padding-bottom: 0.3rem;
+  }
 }
 
 .shop-container{
@@ -205,6 +211,14 @@ hr {
   border: 1px solid rgb(203, 203, 203);
   padding: 0rem 1rem;
   margin: 0.3rem 0;
+
+  h3 {
+    margin-top: .8rem;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 .cart-detail{
   display: flex;
@@ -244,6 +258,63 @@ hr {
 .footer{
   text-align: center;
   padding: 3rem 0 1rem 0;
+}
+
+// Input styling
+
+$size-bezel: .5rem;
+$size-radius: 4px;
+
+$color-signal: #dfa608;
+$color-light: white;
+
+$color-background: $color-light;
+$color-accent: $color-signal;
+
+.cart-input {
+
+  font-size: calc(.6rem + .4vw);
+
+  margin-top: 30px;
+  font-family: 'Inter', sans-serif;
+
+  .input {
+    position: relative;
+
+    &__label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: calc($size-bezel * 0.75) calc($size-bezel * .5);
+      margin: calc($size-bezel * 0.75 + 3px) calc($size-bezel * .5);
+      white-space: nowrap;
+      transform: translate(0, 0);
+      transform-origin: 0 0;
+      background: $color-background;
+      transition: transform 120ms ease-in;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    &__field {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border: 3px solid currentColor;
+      padding: calc($size-bezel * 1.5) $size-bezel;
+      color: currentColor;
+      background: transparent;
+      border-radius: $size-radius;
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .input__label {
+          transform: translate(.25rem, -70%) scale(.8);
+          color: $color-accent;
+          z-index: -10;
+        }
+      }
+    }
+  }
 }
 
 

@@ -12,7 +12,7 @@
     let products = [];
     let cart = []
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.querySelector('.product-list');
         productsList = JSON.parse(carousel.getAttribute('data-list'));
         products = extractProducts(productsList);
@@ -101,7 +101,7 @@
             const buttons = document.querySelectorAll(".cart-item button");
 
             buttons.forEach(button => {
-                button.addEventListener("click", function(e) {
+                button.addEventListener("click", function (e) {
                     const itemId = e.target.dataset.id;
                     const itemSize = e.target.dataset.size;
 
@@ -165,7 +165,7 @@
         }
 
         const buyButton = document.querySelector(".buy-btn");
-        buyButton.addEventListener("click", function() {
+        buyButton.addEventListener("click", function () {
             saveCartToCSV();
         });
 
@@ -262,25 +262,38 @@
 
 <h1 class="">Vereins Shop</h1>
 <div class="body">
-    <div class="container shop-container">
-        <h3 class="heading">Produkte</h3>
-        <div class="product-list" data-list="{{ list|json_encode() }}">
-            <div class="result"></div>
+    <div class="columns">
+        <div class="column col-md-12 col-8">
+            <div class="container shop-container">
+                <h3 class="heading">Produkte</h3>
+                <div class="product-list" data-list="{{ list|json_encode() }}">
+                    <div class="result"></div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="cart">
-        <div class="cart-header">
-            <h3>Einkaufswagen</h3>
-            <p class="noOfItems">0 Produkte</p>
+        <div class="column col-md-12 col-4">
+            <div class="cart">
+                <div class="cart-header">
+                    <h3>Einkaufswagen</h3>
+                    <p class="noOfItems">0 Produkte</p>
+                </div>
+                <hr noshade="true" size="1px"/>
+                <div class="cart-items"></div>
+                <hr noshade="true" size="1px"/>
+                <div class="cart-footer cart-header">
+                    <h4 class="cart-h4">Total</h4>
+                    <p class="total">0€</p>
+                </div>
+
+                <div class="cart-input">
+                    <label class="input">
+                        <input class="input__field" id="csv-name" type="text" placeholder=" " />
+                        <span class="input__label">Besteller</span>
+                    </label>
+                </div>
+
+                <button class="buy-btn">Bestellung abgeben</button>
+            </div>
         </div>
-        <hr noshade="true" size="1px"/>
-        <div class="cart-items"></div>
-        <hr noshade="true" size="1px"/>
-        <div class="cart-footer cart-header">
-            <h4>Total</h4>
-            <p class="total">0€</p>
-        </div>
-        <input type="text" id="csv-name" placeholder="Bestellung für: ...">
-        <button class="buy-btn">Bestellung abgeben</button>
     </div>
 </div>
