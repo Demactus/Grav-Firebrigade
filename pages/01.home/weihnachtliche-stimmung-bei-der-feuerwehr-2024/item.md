@@ -5,6 +5,7 @@ sitemap:
 show_sidebar: false
 pp_protect: '0'
 media_order: DSCF9352.jpeg
+date: '29.11.2024 16:19'
 ---
 
 Das Feuerwehrhaus erstrahlt in diesem Jahr in festlichem Glanz: Dank der tatkräftigen Unterstützung der Kinderfeuerwehr wurde das Feuerwehrhaus liebevoll weihnachtlich dekoriert. 

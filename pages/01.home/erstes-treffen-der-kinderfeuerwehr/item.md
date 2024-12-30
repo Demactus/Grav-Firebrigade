@@ -5,6 +5,7 @@ sitemap:
 pp_protect: '0'
 media_order: start_kinderfeuerwehr_2024.jpg
 show_sidebar: false
+date: '05.09.2024 19:34'
 ---
 
 Die Kinderfeuerwehr feierte ihren erfolgreichen Start mit 14 Kindern und vielen spannenden Aktivitäten. Das nächste Treffen wird am 22. September stattfinden – das Programm bleibt jedoch eine Überraschung.
