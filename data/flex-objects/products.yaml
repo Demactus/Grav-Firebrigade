@@ -1,33 +1,160 @@
-5256722f6f5038410c4bf9b95b679583:
+bd4632b4756daed05ee44d66eeee277d:
   published: true
   productImage: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
-  name: T-Shirt
-  price: '99,90'
+  name: 'e.s. T-Shirt cotton'
+  price: '5'
   size:
-    size-S: S
-    size-M: M
-    size-L: L
-    size-XL: XL
-    size-XXL: XXL
-    size-XXXL: XXXL
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
   add_image:
     'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png':
       name: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
       type: image/png
       size: 329383
-      path: 'image://product-images//e_s_T-Shirt_cotton-8065-3-637868078148839799.png'
-a8ca30f9514df760c2fec5dbb2b3bdd6:
+      path: 'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png'
+9647ea41c33b5ee1fd55e45ff4e83e8b:
   published: true
-  name: Test
+  productImage: e_s_T-Shirt_cotton_V-Neck_Damen-8189-2-638169033470425840.png
+  name: 'e.s. T-Shirt cotton V-Neck, Damen'
+  price: '8'
   size:
+    S: true
+    M: true
     L: true
     XL: true
     XXL: true
+    XXXL: true
     XS: false
-    S: false
-    M: false
+    XXXXL: false
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton_V-Neck_Damen-8189-2-638169033470425840.png':
+      name: e_s_T-Shirt_cotton_V-Neck_Damen-8189-2-638169033470425840.png
+      type: image/png
+      size: 285835
+      path: 'image://product-images/e_s_T-Shirt_cotton_V-Neck_Damen-8189-2-638169033470425840.png'
+9a5dd3ae238eaa26d5d888ad93066348:
+  published: true
+  productImage: e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png
+  name: 'e.s. T-Shirt cotton stretch, Damen'
+  price: '5'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: false
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png':
+      name: e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png
+      type: image/png
+      size: 264737
+      path: 'image://product-images/e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png'
+b6d8ebae5c011ffa5b3468efec87eb32:
+  published: true
+  productImage: e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png
+  name: 'e.s. T-Shirt cotton stretch, slim fit'
+  price: '8,00'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
     XXXL: false
     XXXXL: false
-  add_image: {  }
-  productImage: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
-  price: '25'
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png':
+      name: e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png
+      type: image/png
+      size: 238504
+      path: 'image://product-images//e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png'
+5909b040209d54bdb7e2bf04b5ad79c0:
+  published: true
+  productImage: e_s_Polo-Shirt_cotton-8259-3-638124905855516975.png
+  name: 'e.s. Polo-Shirt cotton'
+  price: '14'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  add_image:
+    'image://product-images/e_s_Polo-Shirt_cotton-8259-3-638124905855516975.png':
+      name: e_s_Polo-Shirt_cotton-8259-3-638124905855516975.png
+      type: image/png
+      size: 243337
+      path: 'image://product-images/e_s_Polo-Shirt_cotton-8259-3-638124905855516975.png'
+234a5ab4cdaa79ed8233b85d79e7d297:
+  published: true
+  productImage: e_s_Polo-Shirt_cotton_Damen-8214-3-638453191981713521.png
+  name: 'e.s. Polo-Shirt cotton, Damen'
+  price: '14'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: false
+  add_image:
+    'image://product-images/e_s_Polo-Shirt_cotton_Damen-8214-3-638453191981713521.png':
+      name: e_s_Polo-Shirt_cotton_Damen-8214-3-638453191981713521.png
+      type: image/png
+      size: 264720
+      path: 'image://product-images/e_s_Polo-Shirt_cotton_Damen-8214-3-638453191981713521.png'
+8dcd4fbcacf08e4e90906275288258f4:
+  published: true
+  productImage: Fleecejacke_e_s_classic-8733-3-637981279333252591.png
+  name: 'Fleecejacke e.s.classic'
+  price: '20'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  add_image:
+    'image://product-images/Fleecejacke_e_s_classic-8733-3-637981279333252591.png':
+      name: Fleecejacke_e_s_classic-8733-3-637981279333252591.png
+      type: image/png
+      size: 327643
+      path: 'image://product-images/Fleecejacke_e_s_classic-8733-3-637981279333252591.png'
+0340c5cbe7424fda3c86787823bf5416:
+  published: true
+  productImage: e_s_ZIP-Sweatshirt_poly_cotton-8162-2-637807810107152339.png
+  name: 'e.s. ZIP-Sweatshirt poly cotton'
+  price: '18'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  add_image:
+    'image://product-images/e_s_ZIP-Sweatshirt_poly_cotton-8162-2-637807810107152339.png':
+      name: e_s_ZIP-Sweatshirt_poly_cotton-8162-2-637807810107152339.png
+      type: image/png
+      size: 336829
+      path: 'image://product-images/e_s_ZIP-Sweatshirt_poly_cotton-8162-2-637807810107152339.png'
