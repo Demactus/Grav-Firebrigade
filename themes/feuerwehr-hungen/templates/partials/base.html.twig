@@ -30,6 +30,7 @@
     {% do assets.addJs('jquery', 101) %}
     {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
     {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% do assets.add('theme://js/fireworks.js') %}
 {% endblock %}
 
 {% block assets deferred %}
@@ -40,6 +41,12 @@
 
 
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+
+<div id="fireworks-container" class="pyro" style="display: none">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+
     <div id="page-wrapper">
     {% block header %}
         <section id="header" class="section">
