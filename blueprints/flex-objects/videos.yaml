@@ -1,0 +1,119 @@
+title: Videos
+description: Auflistung von eigenen Videos
+type: flex-objects
+config:
+  admin:
+    router:
+      path: /videos
+    menu:
+      list:
+        route: /videos
+        title: Videos
+        icon: fa-video
+        authorize:
+          - admin.videos.list
+          - admin.super
+        priority: 2
+    template: default
+    permissions:
+      admin.technic:
+        type: crudpl
+        label: Flex Videos
+    list:
+      title: Titel
+      fields:
+        published:
+          field:
+            type: toggle
+            label: Published
+          width: 8
+          link: toggle
+        title:
+          link: edit
+        summary:
+          link: edit
+        funktion:
+          link: edit
+      options:
+        per_page: 40
+        order:
+          by: name
+          dir: desc
+    edit:
+      title:
+        template: "{{ object.title ?? 'Titel' }}"
+    preview:
+      enabled: true
+      route: null
+    export:
+      enabled: true
+      method: yamlSerialize
+      formatter:
+        class: Grav\Framework\File\Formatter\YamlFormatter
+      filename: videos
+  site:
+    templates:
+      collection:
+        paths:
+          - flex/{TYPE}/collection/{LAYOUT}{EXT}
+      object:
+        paths:
+          - flex/{TYPE}/object/{LAYOUT}{EXT}
+      defaults:
+        type: videos
+        layout: default
+  data:
+    object: Grav\Common\Flex\Types\Generic\GenericObject
+    collection: Grav\Common\Flex\Types\Generic\GenericCollection
+    index: Grav\Common\Flex\Types\Generic\GenericIndex
+    storage:
+      class: Grav\Framework\Flex\Storage\SimpleStorage
+      options:
+        formatter:
+          class: Grav\Framework\File\Formatter\YamlFormatter
+        folder: user-data://flex-objects/videos.yaml
+    search:
+      options:
+        contains: 1
+      fields:
+        - title
+    ordering:
+      Name: DSC
+form:
+  validation: loose
+  fields:
+    published:
+      type: toggle
+      label: Published
+      highlight: 1
+      default: 1
+      options:
+        "0": PLUGIN_ADMIN.NO
+        "1": PLUGIN_ADMIN.YES
+      validate:
+        type: bool
+        required: true
+    add_video:
+      type: file
+      destination: image://videos/
+      multiple: false
+      accept:
+        - video/*
+      filesize: 1000
+    cardVideo:
+      type: filepicker
+      label: null
+      folder: image://videos/
+      preview_images: true
+    title:
+      type: text
+      label: Titel
+      validate:
+        required: true
+    summary:
+      type: textarea
+      label: Beschreibung
+      rows: 10
+    date:
+      type: date
+      label: Datum
