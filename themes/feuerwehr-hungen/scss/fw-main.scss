@@ -47,3 +47,12 @@ form .form-column {
 .form-label span.required {
   line-height: 0;
 }
+
+.e-content {
+  video {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,74 @@
+<head>
+    <link rel="stylesheet" href="{{ url('theme://css/bricklayer.css') }}"/>
+</head>
+
+{% block javascripts %}
+    {% do assets.addJs('theme://js/bricklayer.min.js') %}
+    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
+{% endblock %}
+
+{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true) %}
+{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+
+{% set flex = grav.get('flex') %}
+{% set directory = flex.directory('videos') %}
+{% set directory_list = directory.collection() %}
+
+<div class="module-content" data-module-id="videos">
+    <section id="body-wrapper" class="section blog-listing">
+        <section class="container grid-xl">
+
+            {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+
+                {% embed 'partials/layout.html.twig' with {blog: page} %}
+                    {% block item %}
+
+                        <div class="bricklayer">
+                            {% for entry in directory_list.filterBy({published: true}) %}
+                            <div class="card">
+                                <div class="card-image">
+                                    <video controls width="100%">
+                                        <source src="user/images/videos/{{ entry.cardVideo }}" type="video/{{ entry.cardVideo|regex_replace('/^[^.]*\./', '') }}">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="card-header">
+                                    <div class="card-subtitle text-gray">
+                                        <span class="blog-date">
+                                            <time class="dt-published" datetime="{{ entry.date|date('c') }}">
+                                            <i class="fa-regular fa-calendar"></i> {{ entry.date|date('d') }}. {{ 'GRAV.MONTHS_OF_THE_YEAR'|ta(entry.date|date('n') - 1) }} {{ entry.date|date('Y') }}
+                                        </time>
+                                        </span>
+                                    </div>
+                                    <div class="card-title">
+                                        <h5 class="p-name mt-1">
+                                            {{ entry.title }}
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    {{ entry.summary|raw }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                        {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
+                            <div id="listing-footer">
+                                {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+                            </div>
+                        {% endif %}
+
+                    {% endblock %}
+
+                {% endembed %}
+        </section>
+    </section>
+</div>
+<script>
+    //Bricklayer
+    var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
+</script>
+

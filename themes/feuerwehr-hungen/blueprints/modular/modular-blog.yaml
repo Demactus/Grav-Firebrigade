@@ -1,0 +1,84 @@
+title: Teaching
+child_type: item
+
+"@extends": default
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Unterrichtsinhalte Konfiguration
+          fields:
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: Items
+              default: '@self.children'
+              validate:
+                type: yaml
+            header.content.limit:
+              type: text
+              label: Max. Anzahl an Einträgen
+              default: 5
+              validate:
+                type: int
+                min: 0
+            header.content.order.by:
+              type: select
+              label: Sortieren nach
+              default: date
+              options:
+                folder: Ordner
+                title: Titel
+                date: Datum
+                default: Standard
+            header.content.order.dir:
+              type: select
+              label: Sortierrichtung
+              default: desc
+              options:
+                asc: Aufsteigend
+                desc: Absteigend
+            header.content.pagination:
+              type: toggle
+              label: Paginierung
+              highlight: 1
+              default: 1
+              options:
+                "0": PLUGIN_ADMIN.DISABLED
+                "1": PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            header.content.url_taxonomy_filters:
+              type: toggle
+              label: URL Taxonomy Filters
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            header.show_in_menu:
+              type: toggle
+              label: Im Menü anzeigen
+              default: 1
+              options:
+                "0": PLUGIN_ADMIN.DISABLED
+                "1": PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            header.menu:
+              type: text
+              label: Menü Titel
+            header.body_classes:
+              type: text
+              label: Body Klassen
+              default: modular
+
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages

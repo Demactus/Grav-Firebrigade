@@ -288,7 +288,7 @@ $color-accent: $color-signal;
       margin: calc($size-bezel * 0.75 + 3px) calc($size-bezel * .5);
       white-space: nowrap;
       transform: translate(0, 0);
-      transform-origin: 0 0;
+      transform-origin: 0 -2.3rem;
       background: $color-background;
       transition: transform 120ms ease-in;
       font-weight: bold;
