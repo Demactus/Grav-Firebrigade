@@ -1,0 +1,92 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+
+{# B.H., 24.05.2024 - next line is because set show_onmpage_menu via header does not work for unclear reasons #}
+{% set show_onpage_menu = false %}
+
+{% block javascripts %}
+    {% do assets.add('theme://js/singlepagenav.min.js') %}
+    {{ parent() }}
+{% endblock %}
+
+{% block bottom %}
+    {{ parent() }}
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tabLinks = document.querySelectorAll('.tab-link');
+                const modules = document.querySelectorAll('.module-content'); // Select all elements with IDs
+
+                console.log(modules)
+
+                function showModule(targetId) {
+                    modules.forEach(module => {
+                        const moduleId = module.dataset.moduleId;
+                        const parentModule = module.parentElement;
+
+                        if (moduleId === targetId) {
+                            parentModule.style.display = 'block';
+                            console.log("Showing module", module);
+                        } else {
+                            parentModule.style.display = 'none';
+                        }
+                    });
+                }
+
+                tabLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.dataset.target;
+                        console.log("Clicked link, target ID:", targetId);
+                        showModule(targetId);
+                    });
+                });
+
+                // Show the first module by default
+                if (tabLinks.length > 0) {
+                    const firstTargetId = tabLinks[0].getAttribute('data-target');
+                    showModule(firstTargetId);
+                }
+            });
+        </script>
+{% endblock %}
+
+{% block header_navigation %}
+    {% if show_onpage_menu %}
+        <ul class="navigation">
+            {% for module in page.collection() if module.header.visible is not same as(false) %}
+                {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
+                <li><a class="{{ current_module }}" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
+            {% endfor %}
+            {% for mitem in site.menu %}
+                <li>
+                    <a {% if mitem.class %}class="{{ mitem.class }}"{% endif %} href="{{ mitem.url }}">
+                        {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
+                        {{ mitem.text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {{  parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block hero %}
+    {% for module in page.collection() if module.template == 'modular/hero' %}
+        <div id="{{ module.menu|hyphenize }}"></div>
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}
+
+{% block body %}
+    {# Navbar #}
+    {% include 'modular/modular-navbar.html.twig' %}
+
+    {# Modules #}
+    {% for module in page.collection() if module.template != 'modular/hero' %}
+        <div id="{{ module.menu|hyphenize }}" style="display: none;"> {# Initially hidden #}
+            {{ module.content|raw }}
+        </div>
+    {% endfor %}
+{% endblock %}
