@@ -17,7 +17,7 @@
                 const tabLinks = document.querySelectorAll('.tab-link');
                 const modules = document.querySelectorAll('.module-content'); // Select all elements with IDs
 
-                console.log(modules)
+                //console.log(modules)
 
                 function showModule(targetId) {
                     modules.forEach(module => {
@@ -26,7 +26,7 @@
 
                         if (moduleId === targetId) {
                             parentModule.style.display = 'block';
-                            console.log("Showing module", module);
+                            //console.log("Showing module", module);
                         } else {
                             parentModule.style.display = 'none';
                         }
@@ -42,11 +42,28 @@
                     });
                 });
 
-                // Show the first module by default
-                if (tabLinks.length > 0) {
+                function showCardFromFragment() {
+                    const urlHash = window.location.hash;
+                    if (urlHash) {
+                        const cardId = urlHash.substring(1);
+                        const card = document.getElementById(cardId);
+                        if (card) {
+                            showModule('videos');
+                            card.scrollIntoView();
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                // Check for fragment first
+                const fragmentHandled = showCardFromFragment();
+
+                if (!fragmentHandled && tabLinks.length > 0) {
                     const firstTargetId = tabLinks[0].getAttribute('data-target');
                     showModule(firstTargetId);
                 }
+
             });
         </script>
 {% endblock %}

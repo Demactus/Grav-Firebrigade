@@ -2,9 +2,36 @@
     <link rel="stylesheet" href="{{ url('theme://css/bricklayer.css') }}"/>
 </head>
 
+{% set styling %}
+    .tooltip-text {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    position: absolute;
+    left: 10%;
+    transform: translateY(-100%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent interaction with the tooltip */
+    white-space: nowrap;
+    }
+
+    .tooltip:hover +.tooltip-text,.tooltip[data-show] +.tooltip-text {
+    opacity: 1;
+    }
+
+{% endset %}
+
+{% do assets.addInlineCss(styling) %}
+
 {% block javascripts %}
     {% do assets.addJs('theme://js/bricklayer.min.js') %}
     {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
+    {% do assets.add('theme://js/video-blog.js') %}
 {% endblock %}
 
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true) %}
@@ -27,7 +54,7 @@
 
                         <div class="bricklayer">
                             {% for entry in directory_list.filterBy({published: true}) %}
-                            <div class="card">
+                            <div class="card" id="video-card-{{ loop.index }}">
                                 <div class="card-image">
                                     <video controls width="100%">
                                         <source src="user/images/videos/{{ entry.cardVideo }}" type="video/{{ entry.cardVideo|regex_replace('/^[^.]*\./', '') }}">
@@ -50,6 +77,14 @@
                                 </div>
                                 <div class="card-body">
                                     {{ entry.summary|raw }}
+                                </div>
+
+                                <div class="card-footer">
+                                    <button class="btn tooltip" onclick="copyToClipboard('{{ loop.index }}')"
+                                    data-tooltip-id="{{ loop.index }}-tooltip">
+                                        <i class="fa-solid fa-share-nodes"></i>Share this video
+                                    </button>
+                                    <div id="{{ loop.index }}-tooltip" class="tooltip-text" role="tooltip">Link kopieren</div>
                                 </div>
                             </div>
                             {% endfor %}
