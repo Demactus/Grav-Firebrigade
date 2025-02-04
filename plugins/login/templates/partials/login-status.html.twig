@@ -3,7 +3,7 @@
             {% if grav.user.username == 'einsatzabteilung' %}
                 <strong></strong>
             {% else %}
-                    <strong>{{ grav.user.fullname ?: grav.user.username }}</strong>
-            {% endif %}, <a class="logout" href="{{ url(uri.addNonce((uri.path)|trim('/') ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce'))|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a>
+                    <strong>{{ grav.user.fullname ?: grav.user.username }},</strong>
+            {% endif %}<a class="logout" href="{{ url(uri.addNonce((uri.path)|trim('/') ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce'))|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a>
     {% endif %}
 </span>
