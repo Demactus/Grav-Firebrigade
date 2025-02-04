@@ -2,6 +2,9 @@
     <link rel="stylesheet" href="{{ url('theme://css/bricklayer.css') }}"/>
 </head>
 
+<script src="{{ url('theme://js/bricklayer.min.js') }}"></script>
+<script src="{{ url('theme://js/video-blog.js') }}"></script>
+
 {% set styling %}
     .tooltip-text {
     background: #333;
@@ -28,11 +31,6 @@
 
 {% do assets.addInlineCss(styling) %}
 
-{% block javascripts %}
-    {% do assets.addJs('theme://js/bricklayer.min.js') %}
-    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
-    {% do assets.add('theme://js/video-blog.js') %}
-{% endblock %}
 
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true) %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
