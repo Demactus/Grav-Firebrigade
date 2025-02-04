@@ -95,7 +95,7 @@ form:
         required: true
     add_video:
       type: file
-      destination: image://videos/
+      destination: 'image://videos/'
       multiple: false
       accept:
         - video/*
@@ -103,7 +103,7 @@ form:
     cardVideo:
       type: filepicker
       label: null
-      folder: image://videos/
+      folder: 'image://videos/'
       preview_images: true
     title:
       type: text
