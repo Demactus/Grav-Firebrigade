@@ -1,12 +1,17 @@
 version: '1.2'
-timestamp: 1722488658
-count: 3
+timestamp: 1738635316
+count: 4
 index:
   bastianhaaf:
     storage_key: bastianhaaf
     storage_timestamp: 1721488394
     key: bastianhaaf
     email: bastian@haaf.ch
+  einsatzabteilung:
+    storage_key: einsatzabteilung
+    storage_timestamp: 1738634394
+    key: einsatzabteilung
+    email: einsatzabteilung@ff-inheiden.de
   jan:
     storage_key: jan
     storage_timestamp: 1721488394
@@ -14,6 +19,6 @@ index:
     email: jan.n.martens@web.de
   test:
     storage_key: test
-    storage_timestamp: 1722488658
+    storage_timestamp: 1738633239
     key: test
     email: test@haaf.ch

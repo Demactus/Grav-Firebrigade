@@ -20,11 +20,11 @@ parent_acl: false
 protect_protected_page_media: false
 rememberme:
   enabled: true
-  timeout: 604800
+  timeout: 7776000
   name: grav-rememberme
-max_pw_resets_count: 2
-max_pw_resets_interval: 60
-max_login_count: 5
+max_pw_resets_count: 0
+max_pw_resets_interval: 10
+max_login_count: 100
 max_login_interval: 10
 ipv6_subnet_size: 64
 user_registration:
