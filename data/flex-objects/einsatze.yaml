@@ -1272,3 +1272,22 @@ efed1e4935530066778e943c4e120cc5:
   kurzbeschreibung_freigegeben: true
   add_image: {  }
   kurzbeschreibung: 'Zur Unterstützung bei einem langwierigen und zeitintensiven Einsatz wurde das LF 10 KatS aus Inheiden alarmiert. Die Kräfte aus Inheiden unterstützen die Brandbekämpfung über mehrere Stunden.'
+42f80fd0700d00114dd61b9877bf164a:
+  published: true
+  titel: Brandwache
+  date: '2025-01-18'
+  time: '22:45'
+  ort: 'Gießener Str. Lollar'
+  standorte:
+    - Inheiden
+    - Trais-Horloff
+    - Steinheim
+  kurzbeschreibung_freigegeben: true
+  kurzbeschreibung: "Am 18.01.2024 wurde das Löschgruppenfahrzeug aus Inheiden zur überörtlichen Hilfe nach Lollar alarmiert.   \nDort brannte zuvor  eine große landwirtschaftliche Maschinenhalle.  \n\nUm die örtlichen Einsatzkräfte abzulösen, stellte unsere Einheit - bestehend aus Einsatzkräfte aus Trais-Horlof, Steinheim und Inheiden - eine Brandwache."
+  add_image:
+    'image://einsatz-images/photo_2025-01-19_20-20-29.jpg':
+      name: photo_2025-01-19_20-20-29.jpg
+      type: image/jpeg
+      size: 311230
+      path: 'image://einsatz-images/photo_2025-01-19_20-20-29.jpg'
+  picked_image: photo_2025-01-19_20-20-29.jpg

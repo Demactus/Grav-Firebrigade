@@ -158,3 +158,43 @@ b6d8ebae5c011ffa5b3468efec87eb32:
       type: image/png
       size: 336829
       path: 'image://product-images/e_s_ZIP-Sweatshirt_poly_cotton-8162-2-637807810107152339.png'
+1f073dd86427176bf7d6061776b20687:
+  published: true
+  productImage: e_s_T-Shirt_cotton_stretch_long_fit-126768-1-637635036523643638.png
+  name: 'e.s. T-Shirt cotton stretch, long fit'
+  price: '10'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton_stretch_long_fit-126768-1-637635036523643638.png':
+      name: e_s_T-Shirt_cotton_stretch_long_fit-126768-1-637635036523643638.png
+      type: image/png
+      size: 140820
+      path: 'image://product-images//e_s_T-Shirt_cotton_stretch_long_fit-126768-1-637635036523643638.png'
+433abfb9c444086fa82af193597510a5:
+  published: true
+  productImage: e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png
+  name: 'e.s. T-Shirt cotton stretch, Damen, plus fit'
+  price: '10'
+  size:
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+    XS: false
+    S: false
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton_stretch_Damen_plus_fit-129438-1-637635045118792781.png':
+      name: e_s_T-Shirt_cotton_stretch_Damen_plus_fit-129438-1-637635045118792781.png
+      type: image/png
+      size: 141418
+      path: 'image://product-images//e_s_T-Shirt_cotton_stretch_Damen_plus_fit-129438-1-637635045118792781.png'

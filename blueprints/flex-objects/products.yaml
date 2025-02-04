@@ -43,7 +43,7 @@ config:
           link: toggle
         name:
           link: edit
-        beschreibung:
+        price:
           link: edit
         funktion:
           link: edit
