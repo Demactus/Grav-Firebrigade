@@ -1,4 +1,4 @@
-title: Teaching
+title: Video Cards
 child_type: item
 
 "@extends": default
@@ -10,7 +10,7 @@ form:
       fields:
         content:
           type: tab
-          title: Unterrichtsinhalte Konfiguration
+          title: Video Flex Konfiguration
           fields:
             header.content.items:
               type: textarea
