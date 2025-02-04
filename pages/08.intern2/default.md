@@ -1,8 +1,8 @@
 ---
 title: Intern2
 content:
-    items: 
-      - '@self.children'
+    items:
+        - '@self.children'
     order:
         by: folder
         dir: asc
@@ -14,5 +14,8 @@ process:
     twig: false
 twig_first: true
 display_child_page_titles: true
+login: {  }
+access:
+    site.login: true
 ---
 

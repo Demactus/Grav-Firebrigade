@@ -4,6 +4,8 @@ actions:
     actions:
       login:
         label: PLUGIN_ADMIN.ACCESS_SITE_LOGIN
+  orders:
+     label: 'Bestellungen verwalten'
 
   admin:
     label: PLUGIN_ADMIN.ACCESS_ADMIN

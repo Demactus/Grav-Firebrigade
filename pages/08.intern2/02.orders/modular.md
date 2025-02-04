@@ -6,5 +6,14 @@ sitemap:
     lastmod: '04.02.2025 00:48'
 pp_protect: '0'
 visible: true
+login:
+    visibility_requires_access: true
+access:
+    orders: true
+    admin.login: true
+permissions:
+    groups:
+        testgroup:
+            read: true
 ---
 

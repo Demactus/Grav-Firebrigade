@@ -1,0 +1,8 @@
+orders:
+  readableName: 'Verwaltung Bestellungen'
+  description: 'Kann eingehende Bestellungen verwalten'
+  icon: money
+  access:
+    site:
+      login: true
+      orders: true
