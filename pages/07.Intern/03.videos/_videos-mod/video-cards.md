@@ -1,5 +1,5 @@
 ---
-title: Videos
+title: Videos-mod
 body_classes: modular
 content:
     items:
@@ -10,11 +10,10 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
-show_sidebar: true
-show_breadcrumbs: true
-show_pagination: true
 show_in_menu: true
 menu: Videos
-blog_url: /testinternal/_videos/
+show_breadcrumbs: true
+show_pagination: true
+blog_url: /intern/videos/_videos-mod/
 ---
 
