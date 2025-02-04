@@ -57,7 +57,7 @@
                             <div class="card" id="video-card-{{ loop.index }}">
                                 <div class="card-image">
                                     <video controls width="100%">
-                                        <source src="user/images/videos/{{ entry.cardVideo }}" type="video/{{ entry.cardVideo|regex_replace('/^[^.]*\./', '') }}">
+                                        <source src="{{ url('user/images/videos/' ~ entry.cardVideo) }}" type="video/{{ entry.cardVideo|regex_replace('/^[^.]*\./', '') }}">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
