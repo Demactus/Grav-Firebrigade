@@ -208,7 +208,7 @@
 
         const csvHeader = "Product Name,Size,Quantity,Price\n";
         const csvRows = cart.map(item =>
-            `${item.name},${item.size},${item.quantity},${item.price.replace(',', '.')}`
+            `${item.name.replace(",",";")},${item.size},${item.quantity},${item.price.replace(',', '.')}`
         ).join("\n");
         const csvData = csvHeader + csvRows;
 
