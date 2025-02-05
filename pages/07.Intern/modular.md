@@ -11,15 +11,6 @@ process:
 twig_first: true
 display_child_page_titles: true
 login: {  }
+body_classes: 'title-h1h2 header-transparent'
 ---
 
-**Willkommen im internen Bereich.**
-
-Interne Links:
-
-[Shop](/intern/shop) 
-[Videos](/intern/videos)
-
-Externe Links:
-
-[Feuerwehr Inheiden Wiki](https://wiki.ffinh.de/?target=_blank)
