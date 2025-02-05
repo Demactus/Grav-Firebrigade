@@ -43,3 +43,9 @@ form:
                 .icon:
                   type: text
                   label: Icon
+                .gradient1:
+                  type: text
+                  label: Farbgradient 1
+                .gradient2:
+                  type: text
+                  label: Farbgradient 2

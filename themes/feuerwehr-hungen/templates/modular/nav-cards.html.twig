@@ -11,7 +11,7 @@
             <div class="column card-column col-4 col-md-6 col-sm-12 ">
                 <div class="card-hero">
                     <img class="hero-profile-img" src="{{ url('user/images/navCards-images/' ~ card.bg_image) }}" alt="">
-                    <div class="hero-description-bk"></div>
+                    <div class="hero-description-bk" style="background-image: linear-gradient(0deg , {{ card.gradient1 }}, {{ card.gradient2 }});"></div>
                     <div class="hero-logo">
                         <i class="{{ card.icon }} fa-2xl"></i>
                     </div>
