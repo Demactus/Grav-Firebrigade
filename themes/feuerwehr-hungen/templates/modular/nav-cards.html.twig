@@ -9,6 +9,7 @@
 
             {% for card in page.header.cards %}
             <div class="column card-column col-4 col-md-6 col-sm-12 ">
+                <a href="{{ card.link|e }}">
                 <div class="card-hero">
                     <img class="hero-profile-img" src="{{ url('user/images/navCards-images/' ~ card.bg_image) }}" alt="">
                     <div class="hero-description-bk" style="background-image: linear-gradient(0deg , {{ card.gradient1 }}, {{ card.gradient2 }});"></div>
@@ -21,6 +22,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
             {% endfor %}
     </div>

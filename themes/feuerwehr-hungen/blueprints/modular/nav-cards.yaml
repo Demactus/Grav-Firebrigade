@@ -38,8 +38,11 @@ form:
                   type: text
                   label: Titel
                 .link:
-                  type: text
+                  type: pages
                   label: Link
+                  size: long
+                  start_route: "/blog"
+                  show_all: true
                 .icon:
                   type: text
                   label: Icon
