@@ -11,7 +11,7 @@ cards:
         gradient1: '#2761c3'
         gradient2: '#063480'
     -
-        bg_image: null
+        bg_image: unterricht.png
         title: Videos
         link: /home
         icon: 'fa-solid fa-play'
