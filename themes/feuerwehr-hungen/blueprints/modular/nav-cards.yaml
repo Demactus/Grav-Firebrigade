@@ -1,0 +1,45 @@
+title: Navigation Cards
+'@extends':
+  type: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: Cards
+          fields:
+            custom_file:
+              type: file
+              label: Bild Hochladen
+              destination: 'theme://images/navCards-images'
+              multiple: true
+              limit: 10
+              filesize: 10
+              accept:
+                - image/*
+
+            header.cards:
+              name: cards
+              type: list
+              label: Karten
+              fields:
+                .bg_image:
+                  type: filepicker
+                  folder: 'theme://images/navCards-images'
+                  label: Select a file
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                    - .jpeg
+                .title:
+                  type: text
+                  label: Titel
+                .link:
+                  type: text
+                  label: Link
+                .icon:
+                  type: text
+                  label: Icon

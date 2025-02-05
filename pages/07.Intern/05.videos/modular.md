@@ -8,7 +8,5 @@ visible: true
 pp_protect: '0'
 login:
     visibility_requires_access: true
-access:
-    site.login: true
 ---
 

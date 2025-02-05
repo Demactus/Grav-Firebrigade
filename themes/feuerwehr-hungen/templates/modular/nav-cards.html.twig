@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="   {{ url('theme://css-compiled/nav-cards.min.css') }}"/>
+
+
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="modular-navcards">
+    <div class="container {{ grid_size }}">
+        <div class="columns">
+
+            {% for card in page.header.cards %}
+            <div class="column card-column col-4 col-md-6 col-sm-12 ">
+                <div class="card-hero">
+                    <img class="hero-profile-img" src="{{ url('user/images/nav-cards/' ~ card.bg_image) }}" alt="">
+                    <div class="hero-description-bk"></div>
+                    <div class="hero-logo">
+                        <i class="{{ card.icon }} fa-2xl"></i>
+                    </div>
+                    <div class="hero-description">
+                        <div class="ag-courses-item_title">
+                            {{ card.title }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+</section>
+
+
