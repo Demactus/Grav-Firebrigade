@@ -42,7 +42,8 @@ form:
                   label: Link
                   size: long
                   start_route: "/blog"
-                  show_all: true
+                  show_all: false
+                  show_modular: false
                 .icon:
                   type: text
                   label: Icon
