@@ -13,7 +13,7 @@ cards:
     -
         bg_image: null
         title: Videos
-        link: /home
+        link: /intern/videos
         icon: 'fa-solid fa-play'
         gradient1: '#3f5efb'
         gradient2: '#fc466b'
