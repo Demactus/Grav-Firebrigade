@@ -13,7 +13,7 @@ form:
             custom_file:
               type: file
               label: Bild Hochladen
-              destination: 'theme://images/navCards-images'
+              destination: 'image://navCards-images'
               multiple: true
               limit: 10
               filesize: 10
@@ -27,7 +27,7 @@ form:
               fields:
                 .bg_image:
                   type: filepicker
-                  folder: 'theme://images/navCards-images'
+                  folder: 'image://navCards-images'
                   label: Select a file
                   preview_images: true
                   accept:
