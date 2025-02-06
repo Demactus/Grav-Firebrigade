@@ -62,7 +62,7 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   published: true
   productImage: e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png
   name: 'e.s. T-Shirt cotton stretch, slim fit'
-  price: '8,00'
+  price: '8'
   size:
     XS: true
     S: true
@@ -77,7 +77,7 @@ b6d8ebae5c011ffa5b3468efec87eb32:
       name: e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png
       type: image/png
       size: 238504
-      path: 'image://product-images//e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png'
+      path: 'image://product-images/e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png'
 5909b040209d54bdb7e2bf04b5ad79c0:
   published: true
   productImage: e_s_Polo-Shirt_cotton-8259-3-638124905855516975.png

@@ -11,6 +11,6 @@ process:
 twig_first: true
 display_child_page_titles: true
 login: {  }
-body_classes: 'title-h1h2 header-transparent'
+body_classes: 'title-h1h2 header-dark'
 ---
 

@@ -1,7 +1,6 @@
 cache-clear:
   state: success
-  last-run: 1738638002
+  last-run: 1738810802
 cache-purge:
-  state: failure
-  last-run: 1738641602
-  error: 'Unknown error'
+  state: success
+  last-run: 1738814401

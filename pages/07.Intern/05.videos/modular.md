@@ -8,5 +8,6 @@ visible: true
 pp_protect: '0'
 login:
     visibility_requires_access: true
+body_classes: 'header-animated header-dark'
 ---
 
