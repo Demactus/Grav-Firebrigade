@@ -45,12 +45,32 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 35%;
-  height: 60%;
+  height: 560px;
   text-align: center;
   box-shadow: 5px 5px lightblue;
+  background: white;
 
   strong {
     padding-bottom: 0.3rem;
+  }
+
+  img {
+    max-height: 55%;
+    width: auto;
+    display: block;
+    margin-bottom: 0.4rem;
+    object-fit: cover;
+    object-position: top center;
+    flex-shrink: 0;
+  }
+
+  .product-name {
+    margin-bottom: 0.24rem;
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-weight: bold;
+    color: #063480;
   }
 }
 
@@ -128,8 +148,8 @@ button {
 
     }
 
-    &:hover { // Add a hover state to the <a> tag
-      background-color: #fbcc24; // Example hover effect
+    &:hover {
+      background-color: #fbcc24;
     }
 
     > .add {
@@ -184,22 +204,44 @@ button {
 }
 
 .cart {
+  margin-top: 3rem;
+  margin-right: 2rem;
   min-width: 40%;
-  padding-right: 1rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  background: white;
+  position: sticky;
+  right: 1rem;
+  top: 5.5rem;
+  min-height: 500px;
+  max-height: 690px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .cart-header {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 
 hr {
   color: gray;
   margin: 0.5rem 0;
+  flex-shrink: 0;
 }
 
 .cart-items {
   margin: 1rem 0;
+  overflow-y: auto;
+  max-height: 100%;
+  flex-grow: 1;
 }
 
 .cart-item {
@@ -210,8 +252,9 @@ hr {
   border: 1px solid rgb(203, 203, 203);
   padding: 0rem 1rem;
   margin: 0.3rem 0;
+  flex-shrink: 0;
 
-  h3 {
+  h5 {
     margin-top: .8rem;
   }
 
@@ -219,6 +262,12 @@ hr {
     margin: 0;
   }
 }
+
+.cart-item:last-child {
+  margin-bottom: 0;
+}
+
+
 .cart-detail{
   display: flex;
   align-items: center;
@@ -246,12 +295,19 @@ hr {
   margin: 0 0.5rem;
 }
 
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
 .buy-btn {
   width: 100%;
   padding: 0.8rem 0;
   margin: 0;
   margin-top: 1.5rem;
   border-radius: 0.2rem;
+  flex-shrink: 0;
 }
 
 .footer{
@@ -317,6 +373,12 @@ $color-accent: $color-signal;
 }
 
 
+@media screen and (min-width: 900px) {
+  .mobile-cart-footer {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1150px) {
   .product-card {
     width: 100%;
@@ -347,7 +409,68 @@ $color-accent: $color-signal;
   }
 
   .cart {
-    padding: 2rem;
+    //padding: 2rem;
+    //margin: 0.5rem;
+    position: fixed; /* Fixed position for mobile */
+    bottom: 50px;      /* At the bottom of the viewport */
+    top: auto;       /* Reset top property */
+    left: 0;
+    right: 0;
+    min-width: 100%; /* Full width on mobile */
+    min-height: auto;
+    max-height: 70vh; /* Adjust max height for mobile if needed */
+    height: auto;
+    padding: 1rem;
+    margin: 0; /* Reset margins for mobile */
+    border-radius: 0; /* No border radius on mobile bottom cart */
+    border-left: none; /* Remove left border if any */
+    border-right: none; /* Remove right border if any */
+    border-top: 1px solid gray; /* Keep top border to separate from content */
+    transition: transform 0.3s ease-out;
+    transform: translateY(115%);
+    z-index: 1000;
+    &.cart--open {
+      transform: translateY(0);
+      bottom: 69px;
+    }
+  }
+
+  .cart-items {
+    max-height: 100%;
+  }
+
+  .mobile-cart-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f8f8; /* Or any background color you prefer */
+    padding: 0.5rem;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    z-index: 999; /* Ensure footer is above other content but below open cart */
+  }
+
+  .mobile-cart-button {
+    background-color: #ffd84d;
+    color: rgb(60, 60, 60);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    display: block; /* Make button full width */
     width: 100%;
+    box-sizing: border-box; /* Include padding and border in button's width */
+    margin: 0; /* Reset default button margins */
+  }
+
+  .mobile-noOfItems {
+    font-weight: normal; /* Adjust as needed */
+  }
+
+  .product-card {
+    height: 460px;
   }
 }

@@ -22,7 +22,7 @@
         const productsHTML = products.map(
             (product) => `<div class="product-card">
             <img src="/user/images/product-images/${product.imageName}"/>
-            <h2 class="product-name">${product.name}</h2>
+            <h3 class="product-name">${product.name}</h3>
             <strong>${product.price}€</strong>
             <select class="product-size" id="size-${product.id}">
                 ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
@@ -78,7 +78,7 @@
         function updateCart() {
             const cartHTML = cart.map(
                 (item) => `<div class="cart-item">
-                <h3>${item.name} - ${item.size}</h3>
+                <h5>${item.name} - ${item.size}</h5>
                 <div class="cart-detail">
                     <div class="mid">
                         <button data-id="${item.id}" data-size="${item.size}">-</button>
@@ -167,6 +167,27 @@
         const buyButton = document.querySelector(".buy-btn");
         buyButton.addEventListener("click", function () {
             saveCartToCSV();
+        });
+
+        const mobileCartButton = document.querySelector(".mobile-cart-button");
+        const cartElement = document.querySelector(".cart");
+
+        mobileCartButton.addEventListener("click", function() {
+            cartElement.classList.toggle('cart--open');
+        });
+
+        document.addEventListener('click', function(event) {
+            const cartElement = document.querySelector(".cart");
+            const mobileCartButton = document.querySelector(".mobile-cart-button");
+
+            if (cartElement.classList.contains('cart--open')) {
+                const isClickInsideCart = cartElement.contains(event.target);
+                const isClickOnCartButton = mobileCartButton.contains(event.target);
+
+                if (!isClickInsideCart && !isClickOnCartButton) {
+                    cartElement.classList.remove('cart--open');
+                }
+            }
         });
 
     });
@@ -297,4 +318,9 @@
         </div>
     </div>
 </div>
+</div>
+<div class="mobile-cart-footer">
+    <button class="mobile-cart-button">
+        <i class="fa-solid fa-cart-shopping"></i> Warenkorb (<span class="mobile-noOfItems noOfItems">0 Produkte</span>)
+    </button>
 </div>
