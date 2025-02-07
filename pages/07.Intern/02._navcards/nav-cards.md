@@ -17,5 +17,12 @@ cards:
         icon: 'fa-solid fa-play'
         gradient1: '#3f5efb'
         gradient2: '#fc466b'
+    -
+        bg_image: wiki.png
+        title: Dokuwiki
+        link: /home
+        icon: 'fa-solid fa-book'
+        gradient1: '#2761c3'
+        gradient2: '#063480'
 ---
 
