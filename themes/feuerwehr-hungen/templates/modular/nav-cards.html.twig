@@ -9,7 +9,7 @@
 
             {% for card in page.header.cards %}
             <div class="column card-column col-4 col-md-6 col-sm-12 ">
-                {% if car.external %}
+                {% if card.external %}
                     <a href="{{ card.external|e }}">
                 {% else %}
                 <a href="{{ card.link|e }}">
