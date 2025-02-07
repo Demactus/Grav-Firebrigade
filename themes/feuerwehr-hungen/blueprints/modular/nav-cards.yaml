@@ -34,6 +34,7 @@ form:
                     - .png
                     - .jpg
                     - .jpeg
+                    - .webp
                 .title:
                   type: text
                   label: Titel
@@ -53,3 +54,9 @@ form:
                 .gradient2:
                   type: text
                   label: Farbgradient 2
+                .external:
+                  type: text
+                  label: Externer Link
+                  help: "Wenn ein externer Link verwendet werden soll, bitte hier eintragen."
+                  validate:
+                   type: url
