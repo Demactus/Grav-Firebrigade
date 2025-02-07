@@ -290,7 +290,10 @@
 {% set directory = flex.directory('products') %}
 {% set list = directory.collection() %}
 <div class="module-content" data-module-id="shop">
-<h1 class="">Shop</h1>
+    <div class="container text-container">
+                {{ content|raw }}
+    </div>
+
 <div class="body">
     <div class="columns">
         <div class="column col-md-12 col-8">
