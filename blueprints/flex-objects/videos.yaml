@@ -96,15 +96,26 @@ form:
     add_video:
       type: file
       destination: 'image://videos/'
-      multiple: false
+      multiple: true
       accept:
         - video/*
+        - .png
+        - .jpg
+        - .jpeg
       filesize: 1000
     cardVideo:
       type: filepicker
       label: null
       folder: 'image://videos/'
       preview_images: true
+    poster_image:
+      type: filepicker
+      folder: 'image://videos/'
+      preview_images: true
+      accept:
+        - .png
+        - .jpg
+        - .jpeg
     title:
       type: text
       label: Titel
