@@ -128,7 +128,10 @@
                 {totalItem: 0, cartTotal: 0}
             );
             const totalItemsHTML = document.querySelector(".noOfItems");
+            const mobileTotalItemsHTML = document.querySelector(".mobile-noOfItems");
+            console.log(mobileTotalItemsHTML);
             totalItemsHTML.innerHTML = `${totalItem} Produkte`;
+            mobileTotalItemsHTML.innerHTML = `${totalItem} Produkte`;
             const totalAmountHTML = document.querySelector(".total");
             totalAmountHTML.innerHTML = `${cartTotal.toFixed(2)}€`; // Format total with 2 decimal places
         }
@@ -145,8 +148,13 @@
 
         function decrItem(id, size) {
             for (let i = 0; i < cart.length; i++) {
-                if (cart[i].id == id && cart[i].size === size && cart[i].quantity > 1) {
-                    cart[i].quantity -= 1;
+                if (cart[i].id == id && cart[i].size === size) {
+                    if (cart[i].quantity > 1) {
+                        cart[i].quantity -= 1;
+                    } else {
+                        deleteItem(id, size);
+                    }
+                    break;
                 }
             }
             updateCart();
@@ -183,8 +191,9 @@
             if (cartElement.classList.contains('cart--open')) {
                 const isClickInsideCart = cartElement.contains(event.target);
                 const isClickOnCartButton = mobileCartButton.contains(event.target);
+                const isClickInsideCartControl = event.target.classList.contains('cart-product') || event.target.closest('.cart-product') || event.target.closest('.cart-detail');
 
-                if (!isClickInsideCart && !isClickOnCartButton) {
+                if (!isClickInsideCart && !isClickOnCartButton && !isClickInsideCartControl) {
                     cartElement.classList.remove('cart--open');
                 }
             }
@@ -321,6 +330,6 @@
 </div>
 <div class="mobile-cart-footer">
     <button class="mobile-cart-button">
-        <i class="fa-solid fa-cart-shopping"></i> Warenkorb (<span class="mobile-noOfItems noOfItems">0 Produkte</span>)
+        <i class="fa-solid fa-cart-shopping"></i> Warenkorb (<span class="mobile-noOfItems">0 Produkte</span>)
     </button>
 </div>
