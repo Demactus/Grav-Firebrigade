@@ -3,7 +3,7 @@ let productsList;
 let products = [];
 let cart = []
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.product-list');
     productsList = JSON.parse(carousel.getAttribute('data-list'));
     products = extractProducts(productsList);
@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const productsHTML = products.map(
         (product) => `<div class="product-card">
-            <img src="user/images/product-images/${product.imageName}"/>
-            <h2 class="product-name">${product.name}</h2>
+            <img src="/user/images/product-images/${product.imageName}"/>
+            <h3 class="product-name">${product.name}</h3>
             <strong>${product.price}€</strong>
             <select class="product-size" id="size-${product.id}">
                 ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
             </select>
             <div class="button product-btn">
                 <a class="addtocart" id="${product.id}">
-                    <div class="add">Add to Cart</div>
-                    <div class="added">Added!</div>
+                    <div class="add">Hinzufügen</div>
+                    <div class="added">Hinzugefügt!</div>
                 </a>
             </div>
         </div>`
@@ -30,13 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const result = document.querySelector(".result");
     result.innerHTML = productsHTML.join("");
 
-    // Attach event listeners after the product HTML is added to the DOM
     attachAddToCartListeners();
 
     function attachAddToCartListeners() {
         const productButtons = document.querySelectorAll(".addtocart");
         productButtons.forEach(button => {
-            button.addEventListener("click", function (e) {
+            button.addEventListener("click", function () {
                 // Trigger animation on Add to Cart button click
                 $(this).addClass('active');
                 setTimeout(function () {
@@ -56,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function addToCart(products, id, size) {
-        const product = products.find((product) => product.id == id); // Use == for comparison
-        const cartProduct = cart.find((product) => product.id == id && product.size === size); // Use == for comparison
+        const product = products.find((product) => product.id == id);
+        const cartProduct = cart.find((product) => product.id == id && product.size === size);
         if (cartProduct) {
             incrItem(id, size);
         } else {
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCart() {
         const cartHTML = cart.map(
             (item) => `<div class="cart-item">
-                <h3>${item.name} - ${item.size}</h3>
+                <h5>${item.name} - ${item.size}</h5>
                 <div class="cart-detail">
                     <div class="mid">
                         <button data-id="${item.id}" data-size="${item.size}">-</button>
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <button data-id="${item.id}" data-size="${item.size}">+</button>
                     </div>
                     <p>${item.price}€</p>
-                    <button data-id="${item.id}" data-size="${item.size}" class="cart-product"><i class="fa-solid fa-trash"></i></button>
+                    <button data-id="${item.id}" data-size="${item.size}" class="cart-product"><i class="fa-solid fa-trash cart-product"></i></button>
                 </div>
             </div>`
         );
@@ -86,28 +85,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const cartItems = document.querySelector(".cart-items");
         cartItems.innerHTML = cartHTML.join("");
 
-        // Attach event listeners after updating cartHTML
         attachEventListenersToCart();
     }
 
     function attachEventListenersToCart() {
-        // Get all the newly added buttons in the cart
-        const buttons = document.querySelectorAll(".cart-item button");
+        const cartContainer = document.querySelector(".cart-items");
 
-        buttons.forEach(button => {
-            button.addEventListener("click", function(e) {
-                const itemId = e.target.dataset.id;
-                const itemSize = e.target.dataset.size;
+        cartContainer.addEventListener("click", function (event) {
+            const clickedButton = event.target.closest('button');
 
-                if (e.target.textContent === "-") {
-                    decrItem(itemId, itemSize);
-                } else if (e.target.textContent === "+") {
-                    incrItem(itemId, itemSize);
-                } else if (e.target.classList.contains("cart-product")) { // Check for the "D" button using class
+            if (clickedButton) {
+                const itemId = clickedButton.dataset.id;
+                const itemSize = clickedButton.dataset.size;
+
+                if (clickedButton.classList.contains('cart-product')) {
                     deleteItem(itemId, itemSize);
+                } else if (clickedButton.textContent === "-") {
+                    decrItem(itemId, itemSize);
+                } else if (clickedButton.textContent === "+") {
+                    incrItem(itemId, itemSize);
                 }
-            });
+            }
         });
+
     }
 
 
@@ -122,7 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
             {totalItem: 0, cartTotal: 0}
         );
         const totalItemsHTML = document.querySelector(".noOfItems");
-        totalItemsHTML.innerHTML = `${totalItem} items`;
+        const mobileTotalItemsHTML = document.querySelector(".mobile-noOfItems");
+        console.log(mobileTotalItemsHTML);
+        totalItemsHTML.innerHTML = `${totalItem} Produkte`;
+        mobileTotalItemsHTML.innerHTML = `${totalItem} Produkte`;
         const totalAmountHTML = document.querySelector(".total");
         totalAmountHTML.innerHTML = `${cartTotal.toFixed(2)}€`; // Format total with 2 decimal places
     }
@@ -139,8 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function decrItem(id, size) {
         for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id == id && cart[i].size === size && cart[i].quantity > 1) {
-                cart[i].quantity -= 1;
+            if (cart[i].id == id && cart[i].size === size) {
+                if (cart[i].quantity > 1) {
+                    cart[i].quantity -= 1;
+                } else {
+                    deleteItem(id, size);
+                }
+                break;
             }
         }
         updateCart();
@@ -149,16 +157,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function deleteItem(id, size) {
         for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id == id && cart[i].size === size) { // Use == for comparison
-                cart.splice(i, 1);  // Remove the item from the cart
-                break;              // Exit the loop after deleting the item
+            if (cart[i].id == id && cart[i].size === size) {
+                cart.splice(i, 1);
+                break;
             }
         }
         updateCart();
         getTotal(cart);
     }
 
-})
+    const buyButton = document.querySelector(".buy-btn");
+    buyButton.addEventListener("click", function () {
+        saveCartToCSV();
+    });
+
+    const mobileCartButton = document.querySelector(".mobile-cart-button");
+    const cartElement = document.querySelector(".cart");
+
+    mobileCartButton.addEventListener("click", function() {
+        cartElement.classList.toggle('cart--open');
+    });
+
+    document.addEventListener('click', function(event) {
+        const cartElement = document.querySelector(".cart");
+        const mobileCartButton = document.querySelector(".mobile-cart-button");
+
+        if (cartElement.classList.contains('cart--open')) {
+            const isClickInsideCart = cartElement.contains(event.target);
+            const isClickOnCartButton = mobileCartButton.contains(event.target);
+            const isClickInsideCartControl = event.target.classList.contains('cart-product') || event.target.closest('.cart-product') || event.target.closest('.cart-detail');
+
+            if (!isClickInsideCart && !isClickOnCartButton && !isClickInsideCartControl) {
+                cartElement.classList.remove('cart--open');
+            }
+        }
+    });
+
+});
 
 function extractProducts(data) {
     const products = [];
@@ -167,7 +202,7 @@ function extractProducts(data) {
         const productData = data[key];
         const sizes = getTrueSizes(productData.size);
         let imageName = "";
-        if (productData.productImage) { // Check if add_image exists
+        if (productData.productImage) {
             imageName = productData.productImage;
         }
 
@@ -184,11 +219,61 @@ function extractProducts(data) {
 
     return products;
 }
-// Helper function to get true sizes from given sizes array
+
 function getTrueSizes(sizes) {
     return Object.keys(sizes).filter(key => sizes[key]);
 }
 
+async function saveCartToCSV() {
+    if (cart.length === 0) {
+        alert("Der Einkaufswagen ist noch leer!");
+        return;
+    }
+
+    const csvHeader = "Product Name,Size,Quantity,Price\n";
+    const csvRows = cart.map(item =>
+        `${item.name.replace(",",";")},${item.size},${item.quantity},${item.price.replace(',', '.')}`
+    ).join("\n");
+    const csvData = csvHeader + csvRows;
+
+    const nameInput = document.getElementById("csv-name");
+    const name = nameInput.value;
+
+    if (!name) {
+        nameInput.style.border = "1px solid red";
+        return;
+    } else {
+        nameInput.style.border = "";
+    }
+
+    try {
+        const response = await fetch('/user/save_cart.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `csvData=${encodeURIComponent(csvData)}&filename=${encodeURIComponent(name)}.csv`,
+        });
+
+        if (response.ok) {
+            console.log("CSV saved successfully!");
+
+            const successMessage = document.createElement("div");
+            successMessage.textContent = "Bestellung erfolgreich gespeichert!";
+            successMessage.style.color = "green";
 
 
+            const cartContainer = document.querySelector(".cart");
+            cartContainer.prepend(successMessage);
 
+            setTimeout(() => {
+                cartContainer.removeChild(successMessage);
+            }, 5000);
+
+        } else {
+            console.error('Failed to save CSV:', response.status);
+        }
+    } catch (error) {
+        console.error('Error saving CSV:', error);
+    }
+}
