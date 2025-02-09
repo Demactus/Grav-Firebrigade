@@ -418,21 +418,21 @@ $color-accent: $color-signal;
   .cart {
     //padding: 2rem;
     //margin: 0.5rem;
-    position: fixed; /* Fixed position for mobile */
-    bottom: 50px;      /* At the bottom of the viewport */
-    top: auto;       /* Reset top property */
+    position: fixed;
+    bottom: 50px;
+    top: auto;
     left: 0;
     right: 0;
-    min-width: 100%; /* Full width on mobile */
+    min-width: 100%;
     min-height: auto;
-    max-height: 70vh; /* Adjust max height for mobile if needed */
+    max-height: 70vh;
     height: auto;
     padding: 1rem;
-    margin: 0; /* Reset margins for mobile */
-    border-radius: 0; /* No border radius on mobile bottom cart */
-    border-left: none; /* Remove left border if any */
-    border-right: none; /* Remove right border if any */
-    border-top: 1px solid gray; /* Keep top border to separate from content */
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid gray;
     transition: transform 0.3s ease-out;
     transform: translateY(115%);
     z-index: 1000;
@@ -451,11 +451,14 @@ $color-accent: $color-signal;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #f8f8f8; /* Or any background color you prefer */
+    background-color: #f8f8f8;
     padding: 0.5rem;
     text-align: center;
     border-top: 1px solid #ccc;
-    z-index: 999; /* Ensure footer is above other content but below open cart */
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .mobile-cart-button {
@@ -467,14 +470,35 @@ $color-accent: $color-signal;
     cursor: pointer;
     font-weight: 600;
     font-size: 1rem;
-    display: block; /* Make button full width */
+    //display: block;
     width: 100%;
-    box-sizing: border-box; /* Include padding and border in button's width */
-    margin: 0; /* Reset default button margins */
+    box-sizing: border-box;
+    margin: 0;
+    transition: border-radius 0.3s ease-out, width 0.3s ease-out, padding 0.3s ease-out, background-color 0.3s ease-out, color 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+
+    &.cart--open-button {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: #063480;
+      color: #fff;
+    }
+
+    .button-content-placeholder {
+      pointer-events: none;
+    }
+
   }
 
   .mobile-noOfItems {
-    font-weight: normal; /* Adjust as needed */
+    font-weight: normal;
   }
 
   .product-card {

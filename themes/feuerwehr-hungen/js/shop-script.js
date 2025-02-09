@@ -173,9 +173,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const mobileCartButton = document.querySelector(".mobile-cart-button");
     const cartElement = document.querySelector(".cart");
+    const buttonContentPlaceholder = mobileCartButton.querySelector(".button-content-placeholder");
+
+    // initial button content
+    const initialButtonContent = document.createElement('span');
+    initialButtonContent.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> Warenkorb (<span class="mobile-noOfItems noOfItems">0 Produkte</span>)';
+
+    // "X" icon element
+    const closeButtonContent = document.createElement('i');
+    closeButtonContent.className = 'fa-solid fa-xmark';
+
+    buttonContentPlaceholder.appendChild(initialButtonContent);
 
     mobileCartButton.addEventListener("click", function() {
+
+        const cartWasOpenBeforeClick = cartElement.classList.contains('cart--open');
+
         cartElement.classList.toggle('cart--open');
+        mobileCartButton.classList.toggle('cart--open-button');
+
+        // JavaScript to toggle button content
+        if (!cartWasOpenBeforeClick) {
+            buttonContentPlaceholder.innerHTML = '';
+            buttonContentPlaceholder.appendChild(closeButtonContent);
+        } else {
+            buttonContentPlaceholder.innerHTML = '';
+            buttonContentPlaceholder.appendChild(initialButtonContent);
+        }
+
+
     });
 
     document.addEventListener('click', function(event) {
@@ -189,6 +215,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (!isClickInsideCart && !isClickOnCartButton && !isClickInsideCartControl) {
                 cartElement.classList.remove('cart--open');
+                mobileCartButton.classList.remove('cart--open-button');
+                buttonContentPlaceholder.innerHTML = '';
+                buttonContentPlaceholder.appendChild(initialButtonContent);
             }
         }
     });
