@@ -198,3 +198,23 @@ b6d8ebae5c011ffa5b3468efec87eb32:
       type: image/png
       size: 141418
       path: 'image://product-images//e_s_T-Shirt_cotton_stretch_Damen_plus_fit-129438-1-637635045118792781.png'
+dcc2c60318fc234fb0b4be73da3edc51:
+  published: true
+  productImage: Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png
+  name: 'Damenfleecejacke e.s.classic'
+  price: '20'
+  size:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  add_image:
+    'image://product-images/Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png':
+      name: Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png
+      type: image/png
+      size: 275446
+      path: 'image://product-images//Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png'
