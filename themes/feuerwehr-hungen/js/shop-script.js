@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const result = document.querySelector(".result");
     result.innerHTML = productsHTML.join("");
 
+    // Add listeners
+    updateCart();
+
+    attachEventListenersToCart();
+
     attachAddToCartListeners();
 
     function attachAddToCartListeners() {
@@ -85,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const cartItems = document.querySelector(".cart-items");
         cartItems.innerHTML = cartHTML.join("");
 
-        attachEventListenersToCart();
     }
 
     function attachEventListenersToCart() {
@@ -123,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         const totalItemsHTML = document.querySelector(".noOfItems");
         const mobileTotalItemsHTML = document.querySelector(".mobile-noOfItems");
-        console.log(mobileTotalItemsHTML);
         totalItemsHTML.innerHTML = `${totalItem} Produkte`;
         mobileTotalItemsHTML.innerHTML = `${totalItem} Produkte`;
         const totalAmountHTML = document.querySelector(".total");
