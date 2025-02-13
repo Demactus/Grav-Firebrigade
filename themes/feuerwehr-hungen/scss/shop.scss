@@ -380,6 +380,103 @@ $color-accent: $color-signal;
 }
 
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+  opacity: 100;
+}
+
+.modal-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 20px;
+  padding: 20px 20px 50px;
+  margin: 10% auto;
+  border: 1px solid #888;
+  width: 40%;
+  max-height: 510px;
+  position: relative;
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    .close-button {
+      width: 30px;
+      font-size: 2rem;
+      color: #c0c5cb;
+      align-self: flex-end;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      margin-top: 0;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  strong {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    margin-top: 1rem;
+  }
+
+
+}
+
+
+#orderModal .success-icon {
+  font-size: 3rem; /* Größe des Häkchens anpassen */
+  color: green;     /* Farbe des Häkchens anpassen */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#orderModal #orderDetailsList {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#orderModal #orderDetailsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#orderModal #orderDetailsList::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+#orderModal #orderDetailsList li {
+  list-style: none; /* Aufzählungspunkte entfernen, falls gewünscht */
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5em;
+}
+
+#orderModal #orderDetailsList li:last-child {
+  border-bottom: none; /* Kein Border beim letzten Listenelement */
+}
+
+
 @media screen and (min-width: 900px) {
   .mobile-cart-footer {
     display: none;
@@ -504,4 +601,9 @@ $color-accent: $color-signal;
   .product-card {
     height: 460px;
   }
+
+  .modal-content {
+    width: 80%;
+  }
 }
+

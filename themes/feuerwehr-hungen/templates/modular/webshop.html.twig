@@ -13,45 +13,69 @@
 {% set list = directory.collection() %}
 <div class="module-content" data-module-id="shop">
     <div class="container text-container">
-                {{ content|raw }}
+        {{ content|raw }}
     </div>
 
-<div class="body">
-    <div class="columns">
-        <div class="column col-md-12 col-8">
-            <div class="container shop-container">
-                <h3 class="heading">Produkte</h3>
-                <div class="product-list" data-list="{{ list|json_encode() }}">
-                    <div class="result"></div>
+    <div class="body">
+        <div class="columns">
+            <div class="column col-md-12 col-8">
+                <div class="container shop-container">
+                    <h3 class="heading">Produkte</h3>
+                    <div class="product-list" data-list="{{ list|json_encode() }}">
+                        <div class="result"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column col-md-12 col-4">
+                <div class="cart">
+                    <div class="cart-header">
+                        <h3>Einkaufswagen</h3>
+                        <p class="noOfItems">0 Produkte</p>
+                    </div>
+                    <hr noshade="true" size="1px"/>
+                    <div class="cart-items"></div>
+                    <hr noshade="true" size="1px"/>
+                    <div class="cart-footer cart-header">
+                        <h4 class="cart-h4">Total</h4>
+                        <p class="total">0€</p>
+                    </div>
+
+                    <div class="cart-input">
+                        <label class="input">
+                            <input class="input__field" id="csv-name" type="text" placeholder=" "/>
+                            <span class="input__label">Vorname und Nachname</span>
+                        </label>
+                    </div>
+
+                    <button class="buy-btn">Bestellung abgeben</button>
                 </div>
             </div>
         </div>
-        <div class="column col-md-12 col-4">
-            <div class="cart">
-                <div class="cart-header">
-                    <h3>Einkaufswagen</h3>
-                    <p class="noOfItems">0 Produkte</p>
-                </div>
-                <hr noshade="true" size="1px"/>
-                <div class="cart-items"></div>
-                <hr noshade="true" size="1px"/>
-                <div class="cart-footer cart-header">
-                    <h4 class="cart-h4">Total</h4>
-                    <p class="total">0€</p>
-                </div>
 
-                <div class="cart-input">
-                    <label class="input">
-                        <input class="input__field" id="csv-name" type="text" placeholder=" " />
-                        <span class="input__label">Vorname und Nachname</span>
-                    </label>
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close-button">✖</span>
+                    <h2>Bestellung bestätigen?</h2>
                 </div>
+                <div id="orderConfirmationContent">
+                    <p>Bestellung für:  <strong id="orderNamePlaceholder"></strong></p>
 
-                <button class="buy-btn">Bestellung abgeben</button>
+                    <h4 id="orderTotalPrice" class="order-total-price"></h4>
+                    <div class="modal-buttons">
+                        <button id="finalizeOrderBtn" class="buy-btn">Bestellung abschließen</button>
+                    </div>
+                </div>
+                <div id="orderSuccessContent" style="display:none;">
+                    <div class="success-icon">&#x2714;</div>  <h2>Bestellung Erfolgreich!</h2>
+                    <div class="modal-buttons">
+                        <button id="closeOrderModalBtn" class="button">OK</button>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
-</div>
 </div>
 <div class="mobile-cart-footer">
     <button class="mobile-cart-button">

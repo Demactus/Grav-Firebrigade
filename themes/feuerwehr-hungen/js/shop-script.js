@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cart.unshift({...product, size: size, quantity: 1});
         }
         updateCart();
-        getTotal(cart);
+        setTotal(cart);
     };
 
     function updateCart() {
@@ -125,10 +125,19 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {totalItem: 0, cartTotal: 0}
         );
+        return {totalItem, cartTotal}
+    }
+
+    function setTotal(cart) {
+        let {totalItem, cartTotal} = getTotal(cart);
+
         const totalItemsHTML = document.querySelector(".noOfItems");
         const mobileTotalItemsHTML = document.querySelector(".mobile-noOfItems");
+        if (mobileTotalItemsHTML !== null) {
+            mobileTotalItemsHTML.innerHTML = `${totalItem} Produkte`;
+
+        }
         totalItemsHTML.innerHTML = `${totalItem} Produkte`;
-        mobileTotalItemsHTML.innerHTML = `${totalItem} Produkte`;
         const totalAmountHTML = document.querySelector(".total");
         totalAmountHTML.innerHTML = `${cartTotal.toFixed(2)}€`; // Format total with 2 decimal places
     }
@@ -140,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         updateCart();
-        getTotal(cart);
+        setTotal(cart);
     }
 
     function decrItem(id, size) {
@@ -155,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         updateCart();
-        getTotal(cart);
+        setTotal(cart);
     }
 
     function deleteItem(id, size) {
@@ -166,21 +175,101 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         updateCart();
-        getTotal(cart);
+        setTotal(cart);
     }
 
-    const buyButton = document.querySelector(".buy-btn");
-    buyButton.addEventListener("click", function () {
-        saveCartToCSV();
-    });
+    // *********************************//
+    // Cart logic with modal and order
+    // *********************************//
 
+    const buyButton = document.querySelector(".buy-btn");
+    const orderModal = document.getElementById("orderModal");
+    const orderConfirmationContent = document.getElementById("orderConfirmationContent");
+    const orderSuccessContent = document.getElementById("orderSuccessContent");
+    const orderNamePlaceholder = document.getElementById("orderNamePlaceholder");
+    const finalizeOrderButton = document.getElementById("finalizeOrderBtn");
+    const closeOrderModalButton = document.getElementById("closeOrderModalBtn");
+    const closeButton = orderModal.querySelector(".close-button");
+
+    // Mobile cart constants
     const mobileCartButton = document.querySelector(".mobile-cart-button");
     const cartElement = document.querySelector(".cart");
     const buttonContentPlaceholder = mobileCartButton.querySelector(".button-content-placeholder");
-
     // initial button content
     const initialButtonContent = document.createElement('span');
     initialButtonContent.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> Warenkorb (<span class="mobile-noOfItems noOfItems">0 Produkte</span>)';
+
+
+    buyButton.addEventListener("click", function () {
+        const nameInput = document.getElementById("csv-name");
+        const orderName = nameInput.value;
+
+        if (!orderName) {
+            nameInput.style.border = "1px solid red";
+            return; // Verhindere das Öffnen des Modals, wenn Name fehlt
+        } else {
+            nameInput.style.border = "";
+        }
+
+        if (cartElement.classList.contains('cart--open')) {
+            cartElement.classList.remove('cart--open');
+            mobileCartButton.classList.remove('cart--open-button');
+            buttonContentPlaceholder.innerHTML = '';
+            buttonContentPlaceholder.appendChild(initialButtonContent);
+        }
+
+        // Show customer name for order
+        orderNamePlaceholder.textContent = orderName;
+
+
+        let {totalItem, cartTotal} = getTotal(cart);
+        const orderTotalPriceElement = document.getElementById("orderTotalPrice");
+        orderTotalPriceElement.textContent = `Gesamtpreis: ${cartTotal.toFixed(2)}€`;
+
+        orderConfirmationContent.style.display = "block";
+        orderSuccessContent.style.display = "none";
+        orderModal.style.display = "block";
+
+    });
+
+    finalizeOrderButton.addEventListener("click", function() {
+        saveCartToCSV().then(success => {
+            if (success) {
+                orderConfirmationContent.style.display = "none";
+                orderSuccessContent.style.display = "block";
+
+                cart = [];
+                updateCart();
+                setTotal(cart);
+                const nameInput = document.getElementById("csv-name");
+                nameInput.value = '';
+
+
+                setTimeout(() => {
+                    orderModal.style.display = "none";
+                }, 10000);
+
+            } else {
+                console.error("Bestellung nicht erfolgreich gespeichert (CSV Fehler)");
+                alert("Bestellung konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.");
+            }
+        });
+    });
+
+    //Modal closing logic
+    closeOrderModalButton.addEventListener("click", function() {
+        orderModal.style.display = "none";
+    });
+    closeButton.addEventListener("click", function() {
+        orderModal.style.display = "none";
+    });
+    window.addEventListener("click", function(event) {
+        if (event.target == orderModal) {
+            orderModal.style.display = "none";
+        }
+    });
+
+
 
     // "X" icon element
     const closeButtonContent = document.createElement('i');
@@ -289,21 +378,11 @@ async function saveCartToCSV() {
 
         if (response.ok) {
             console.log("CSV saved successfully!");
-
-            const successMessage = document.createElement("div");
-            successMessage.textContent = "Bestellung erfolgreich gespeichert!";
-            successMessage.style.color = "green";
-
-
-            const cartContainer = document.querySelector(".cart");
-            cartContainer.prepend(successMessage);
-
-            setTimeout(() => {
-                cartContainer.removeChild(successMessage);
-            }, 5000);
+            return true;
 
         } else {
             console.error('Failed to save CSV:', response.status);
+            return false;
         }
     } catch (error) {
         console.error('Error saving CSV:', error);
