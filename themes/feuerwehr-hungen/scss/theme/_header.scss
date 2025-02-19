@@ -18,9 +18,20 @@
     fill: $header-color-dark;
   }
 
-  .header-white {
+  .header-white &:not(.scrolled){
     color: $header-color-dark;
     background: $light-color;
+
+    a {
+      color: rgba($header-color-dark, 0.9) !important;
+    }
+    a.active {
+      color: $header-color-dark !important;
+    }
+
+    #fw-logo-txt {
+      color: $header-color-dark;
+    }
   }
 
 
@@ -39,10 +50,18 @@
     .logo svg path {
       fill: $light-color;
     }
+
+    #fw-logo-txt {
+      color: $light-color;
+    }
   }
 
   .header-dark.header-transparent &:not(.scrolled) {
     background: rgba(#000, 0.05);
+
+    #fw-logo-txt {
+      color: $light-color;
+    }
   }
 
   .header-transparent &:not(.scrolled) {
