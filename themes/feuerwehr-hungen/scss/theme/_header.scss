@@ -18,6 +18,12 @@
     fill: $header-color-dark;
   }
 
+  .header-white {
+    color: $header-color-dark;
+    background: $light-color;
+  }
+
+
   .header-dark &:not(.scrolled) {
     background: $header-color-dark;
     color: $light-color;

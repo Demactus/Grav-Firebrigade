@@ -5,26 +5,27 @@ body {
 }
 
 .container {
-  margin: 0 auto 2rem auto;
   padding: 0 10px;
 }
 
 .order-container {
   padding-bottom: 500px;
+  margin: 0 auto 2rem auto;
 }
 
-.columns {
+.orders-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.columns > .column {
+
+.orders-columns > .column {
   box-sizing: border-box;
   position: relative;
   transition: padding-bottom 0.3s ease; /* Add transition for smoothness */
 }
 
-.columns > .column::after{
+.orders-columns > .column::after{
   content: "";
   position: absolute;
   left: 0;
@@ -35,10 +36,10 @@ body {
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
-  .columns > .column.col-8 {
+  .orders-columns > .column.col-8 {
     width: calc(66% - 2rem);
   }
-  .columns > .column.col-4 {
+  .orders-columns > .column.col-4 {
     width: calc(33% - 2rem);
   }
 }
