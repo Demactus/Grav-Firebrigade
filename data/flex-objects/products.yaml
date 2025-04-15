@@ -3,7 +3,14 @@ bd4632b4756daed05ee44d66eeee277d:
   productImage: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
   name: 'e.s. T-Shirt cotton'
   price: '5'
-  size:
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png':
+      name: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
+      type: image/png
+      size: 329383
+      path: 'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png'
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -12,18 +19,20 @@ bd4632b4756daed05ee44d66eeee277d:
     XXL: true
     XXXL: true
     XXXXL: true
-  add_image:
-    'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png':
-      name: e_s_T-Shirt_cotton-8065-3-637868078148839799.png
-      type: image/png
-      size: 329383
-      path: 'image://product-images/e_s_T-Shirt_cotton-8065-3-637868078148839799.png'
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
 9647ea41c33b5ee1fd55e45ff4e83e8b:
   published: true
   productImage: e_s_T-Shirt_cotton_V-Neck_Damen-8189-2-638169033470425840.png
   name: 'e.s. T-Shirt cotton V-Neck, Damen'
   price: '8'
-  size:
+  category: adult
+  size1:
     S: true
     M: true
     L: true
@@ -43,7 +52,8 @@ bd4632b4756daed05ee44d66eeee277d:
   productImage: e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png
   name: 'e.s. T-Shirt cotton stretch, Damen'
   price: '5'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -63,7 +73,8 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   productImage: e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png
   name: 'e.s. T-Shirt cotton stretch, slim fit'
   price: '8'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -78,12 +89,20 @@ b6d8ebae5c011ffa5b3468efec87eb32:
       type: image/png
       size: 238504
       path: 'image://product-images/e_s_T-Shirt_cotton_stretch_slim_fit-126807-1-637635039844373975.png'
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
 5909b040209d54bdb7e2bf04b5ad79c0:
   published: true
   productImage: e_s_Polo-Shirt_cotton-8259-3-638124905855516975.png
   name: 'e.s. Polo-Shirt cotton'
   price: '14'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -103,7 +122,8 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   productImage: e_s_Polo-Shirt_cotton_Damen-8214-3-638453191981713521.png
   name: 'e.s. Polo-Shirt cotton, Damen'
   price: '14'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -123,7 +143,8 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   productImage: Fleecejacke_e_s_classic-8733-3-637981279333252591.png
   name: 'Fleecejacke e.s.classic'
   price: '20'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -143,7 +164,8 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   productImage: e_s_ZIP-Sweatshirt_poly_cotton-8162-2-637807810107152339.png
   name: 'e.s. ZIP-Sweatshirt poly cotton'
   price: '18'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -163,7 +185,8 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   productImage: e_s_T-Shirt_cotton_stretch_long_fit-126768-1-637635036523643638.png
   name: 'e.s. T-Shirt cotton stretch, long fit'
   price: '10'
-  size:
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -183,7 +206,8 @@ b6d8ebae5c011ffa5b3468efec87eb32:
   productImage: e_s_T-Shirt_cotton_stretch_Damen-21626-3-638169050830015972.png
   name: 'e.s. T-Shirt cotton stretch, Damen, plus fit'
   price: '10'
-  size:
+  category: adult
+  size1:
     M: true
     L: true
     XL: true
@@ -203,7 +227,14 @@ dcc2c60318fc234fb0b4be73da3edc51:
   productImage: Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png
   name: 'Damenfleecejacke e.s.classic'
   price: '20'
-  size:
+  add_image:
+    'image://product-images/Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png':
+      name: Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png
+      type: image/png
+      size: 275446
+      path: 'image://product-images/Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png'
+  category: adult
+  size1:
     XS: true
     S: true
     M: true
@@ -212,9 +243,61 @@ dcc2c60318fc234fb0b4be73da3edc51:
     XXL: true
     XXXL: true
     XXXXL: true
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
+cae3b441c3a40b5570f0dc123f3243c6:
+  published: true
+  productImage: e_s_T-Shirt_cotton_stretch_Kinder-150573-1-638041071228310573.png
+  name: 'Kinder T-Shirt cotton stretch'
+  price: '7'
+  category: kids
+  size0:
+    98/104: true
+    110/116: true
+    122/128: true
+    134/140: true
+    146/152: true
+    158/164: true
+  size1:
+    XS: false
+    S: false
+    M: false
+    L: false
+    XL: false
+    XXL: false
+    XXXL: false
+    XXXXL: false
+  add_image: {  }
+01a90a3c2c25af5c4ac06f8af0a94ff9:
+  published: true
+  productImage: e_s_Fleecejacke_CI_Kinder-200268-0-637577017440646439.png
+  name: 'Kinder Fleecejacke'
+  price: '15'
+  category: kids
+  size0:
+    98/104: true
+    110/116: true
+    122/128: true
+    134/140: true
+    146/152: true
+    158/164: true
+  size1:
+    XS: false
+    S: false
+    M: false
+    L: false
+    XL: false
+    XXL: false
+    XXXL: false
+    XXXXL: false
   add_image:
-    'image://product-images/Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png':
-      name: Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png
+    'image://product-images/e_s_Fleecejacke_CI_Kinder-200268-0-637577017440646439.png':
+      name: e_s_Fleecejacke_CI_Kinder-200268-0-637577017440646439.png
       type: image/png
-      size: 275446
-      path: 'image://product-images//Damenfleecejacke_e_s_classic-8752-3-637981289801784580.png'
+      size: 319976
+      path: 'image://product-images//e_s_Fleecejacke_CI_Kinder-200268-0-637577017440646439.png'

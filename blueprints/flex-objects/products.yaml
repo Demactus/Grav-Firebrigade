@@ -156,9 +156,21 @@ form:
       type: text
       label: Preis
 
-    size:
+
+    category:
+      type: radio
+      outerclasses: conditional condition
+      label: Kategorie
+      default: 'adult'
+      options:
+        'adult': Erwachsen
+        'kids': Kinder
+        'other': Andere
+      required: true
+
+    size1:
       type: checkboxes
-      label: Größe
+      label: Größe Erwachsene
       options:
         'XS': 'XS'
         'S': 'S'
@@ -168,4 +180,18 @@ form:
         'XXL': 'XXL'
         'XXXL': 'XXXL'
         'XXXXL': 'XXXXL'
+      outerclasses: conditional option option-adult
+      use: keys
+
+    size0:
+      type: checkboxes
+      label: Größe Kids
+      options:
+        '98/104': '98/104'
+        '110/116': '110/116'
+        '122/128': '122/128'
+        '134/140': '134/140'
+        '146/152': '146/152'
+        '158/164': '158/164'
+      outerclasses: conditional option option-kids
       use: keys

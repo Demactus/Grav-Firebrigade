@@ -1,0 +1,51 @@
+{
+    "name": "grav-plugin-conditional-fields",
+    "version": "1.0.1",
+    "homepage": "http://greenrivers.pl",
+    "author": "Greenrivers",
+    "description": "Conditional fields",
+    "main": "app/admin.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/greenrivers/grav-plugin-conditional-fields.git"
+    },
+    "license": "MIT",
+    "keywords": [
+        "js",
+        "framework",
+        "minify",
+        "modern",
+        "map"
+    ],
+    "bugs": {
+        "url": "https://github.com/greenrivers/grav-plugin-conditional-fields/issues"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.9",
+        "gulp": "^4.0.2",
+        "gulp-better-rollup": "^4.0.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-terser": "^2.1.0",
+        "jquery": "^3.6.0",
+        "rollup": "^2.70.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0"
+    },
+    "browserslist": [
+        "last 4 Chrome versions",
+        "Edge >= 12",
+        "Firefox ESR",
+        "last 4 Safari versions",
+        "last 4 Opera versions",
+        "Explorer >= 10"
+    ],
+    "scripts": {
+        "dev": "gulp watch",
+        "build": "gulp build"
+    },
+    "dependencies": {
+        "gulp-sourcemaps": "^3.0.0"
+    }
+}
