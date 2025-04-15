@@ -301,3 +301,105 @@ cae3b441c3a40b5570f0dc123f3243c6:
       type: image/png
       size: 319976
       path: 'image://product-images//e_s_Fleecejacke_CI_Kinder-200268-0-637577017440646439.png'
+398201244ecc4c3e054692839c501061:
+  published: true
+  productImage: 00027-004-051-01.jpg
+  name: 'Hemd Kurzarm, Herren'
+  price: '20'
+  category: adult
+  size1:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
+  add_image:
+    'image://product-images/00027-004-051-01.jpg':
+      name: 00027-004-051-01.jpg
+      type: image/jpeg
+      size: 11552
+      path: 'image://product-images//00027-004-051-01.jpg'
+0ebba69b14ddd70ea49a9d0405510d50:
+  published: true
+  productImage: 00027-004-051-01.jpg
+  name: 'Hemd Kurzarm, Damen'
+  price: '20'
+  category: adult
+  size1:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
+  add_image: {  }
+56efe637320d80bb5c003434f54ba9f6:
+  published: true
+  productImage: 00027-085-051-01.jpg
+  name: 'Hemd Langarm, Herren'
+  price: '25'
+  category: adult
+  size1:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
+  add_image:
+    'image://product-images/00027-085-051-01.jpg':
+      name: 00027-085-051-01.jpg
+      type: image/jpeg
+      size: 16062
+      path: 'image://product-images//00027-085-051-01.jpg'
+290c9226f15a801c5018b0b2482d2b6d:
+  published: true
+  productImage: 00027-085-051-01.jpg
+  name: 'Hemd Langarm, Damen'
+  price: '25'
+  category: adult
+  size1:
+    XS: true
+    S: true
+    M: true
+    L: true
+    XL: true
+    XXL: true
+    XXXL: true
+    XXXXL: true
+  size0:
+    98/104: false
+    110/116: false
+    122/128: false
+    134/140: false
+    146/152: false
+    158/164: false
+  add_image: {  }
