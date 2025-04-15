@@ -8,27 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
     productsList = JSON.parse(carousel.getAttribute('data-list'));
     products = extractProducts(productsList);
 
-    console.log(products);
+    let adultProducts = products.filter(product => product.category === "adult");
+    let kidsProducts = products.filter(product => product.category === "kids");
 
-    const productsHTML = products.map(
-        (product) => `<div class="product-card">
-            <img src="/user/images/product-images/${product.imageName}"/>
-            <h3 class="product-name">${product.name}</h3>
-            <strong>${product.price}€</strong>
-            <select class="product-size" id="size-${product.id}">
-                ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
-            </select>
-            <div class="button product-btn">
-                <a class="addtocart" id="${product.id}">
-                    <div class="add">Hinzufügen</div>
-                    <div class="added">Hinzugefügt!</div>
-                </a>
-            </div>
-        </div>`
-    );
+    // Build HTML for adult products
+    const adultProductsHTML = buildProductHTML(adultProducts);
+    // Build HTML for kids products
+    const kidsProductsHTML = buildProductHTML(kidsProducts);
 
+    // Start with adult products
     const result = document.querySelector(".result");
-    result.innerHTML = productsHTML.join("");
+    result.innerHTML = adultProductsHTML.join("");
 
     // Add listeners
     updateCart();
@@ -36,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
     attachEventListenersToCart();
 
     attachAddToCartListeners();
+
+    attachEventListenersToCategoryButtons();
 
     function attachAddToCartListeners() {
         const productButtons = document.querySelectorAll(".addtocart");
@@ -113,6 +105,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     }
+
+    // Add category switcher
+    function attachEventListenersToCategoryButtons() {
+
+        const adultButton = document.querySelector("#adult-btn");
+        const kidsButton = document.querySelector("#kids-btn");
+
+        adultButton.addEventListener("click", function () {
+
+            result.innerHTML = adultProductsHTML;
+
+            adultButton.classList.add("active");
+            kidsButton.classList.remove("active")
+        });
+
+        kidsButton.addEventListener("click", function () {
+
+            result.innerHTML = kidsProductsHTML;
+
+            adultButton.classList.remove("active");
+            kidsButton.classList.add("active")
+        });
+    }
+
 
 
     function getTotal(cart) {
@@ -321,7 +337,16 @@ function extractProducts(data) {
 
     for (const key in data) {
         const productData = data[key];
-        const sizes = getTrueSizes(productData.size);
+        console.log(productData.category);
+        const category = productData.category;
+        let sizes;
+        if (category == "kids") {
+            sizes = getTrueSizes(productData.size0);
+        } else if (category == "adult") {
+            sizes = getTrueSizes(productData.size1);
+        } else if (category == null) {
+            sizes = getTrueSizes(productData.size);
+        }
         let imageName = "";
         if (productData.productImage) {
             imageName = productData.productImage;
@@ -330,6 +355,7 @@ function extractProducts(data) {
         const product = {
             id: key,
             name: productData.name,
+            category: category,
             price: productData.price,
             sizes: sizes,
             imageName: imageName,
@@ -339,6 +365,26 @@ function extractProducts(data) {
     }
 
     return products;
+}
+
+function buildProductHTML(products) {
+    return products.map(product => {
+        return `
+            <div class="product-card">
+                <img src="/user/images/product-images/${product.imageName}"/>
+                <h3 class="product-name">${product.name}</h3>
+                <strong>${product.price}€</strong>
+                <select class="product-size" id="size-${product.id}">
+                    ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
+                </select>
+                <div class="button product-btn">
+                <a class="addtocart" id="${product.id}">
+                    <div class="add">Hinzufügen</div>
+                    <div class="added">Hinzugefügt!</div>
+                </a>
+            </div>
+            </div>`;
+    });
 }
 
 function getTrueSizes(sizes) {

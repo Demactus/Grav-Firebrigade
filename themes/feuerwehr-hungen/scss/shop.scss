@@ -1,17 +1,23 @@
 
+.columns {
+  width: 100%;
+}
+
+$fw-blue: #063480;
+
 //Header
 #fw-logo-txt {
-  color: #063480 !important;
+  color: $fw-blue !important;
 
   .fw-location {
-    color: #063480;
+    color: $fw-blue;
   }
 }
 
 .mobile-menu {
   #toggle {
     span {
-      background: #063480;
+      background: $fw-blue;
     }
   }
 }
@@ -41,6 +47,59 @@ h1 {
   padding-bottom: 302px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/** Category Button */
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin: 5px 5px 15px;
+}
+
+.button-18:hover,
+.button-18:focus {
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18 .active {
+  background: $fw-blue;
+  color: rgb(255, 255, 255, .7);
+}
+
 .product-card {
   border-radius: 1rem;
   border: 1px solid gray;
@@ -58,7 +117,20 @@ h1 {
 
   strong {
     padding-bottom: 0.3rem;
+    font-size: large;
   }
+
+  select {
+    height: 2rem;
+  }
+
+  .kids-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+
 
   img {
     max-height: 55%;

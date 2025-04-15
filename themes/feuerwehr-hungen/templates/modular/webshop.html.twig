@@ -20,12 +20,23 @@
         <div class="columns">
             <div class="column col-md-12 col-8">
                 <div class="container shop-container">
-                    <h3 class="heading">Produkte</h3>
+
+                    <div>
+                        <h3 class="heading">Produkte</h3>
+                        <button class="button-18 active" role="button" id="adult-btn">Erwachsene</button>
+                        <button class="button-18" role="button" id="kids-btn">Kids</button>
+                    </div>
+
                     <div class="product-list" data-list="{{ list|json_encode() }}">
                         <div class="result"></div>
                     </div>
+
+
+
                 </div>
             </div>
+
+
             <div class="column col-md-12 col-4">
                 <div class="cart">
                     <div class="cart-header">
