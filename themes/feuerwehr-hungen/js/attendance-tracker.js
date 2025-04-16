@@ -74,13 +74,15 @@ async function saveAttendanceToCSV() {
     // Convert CSV array to a string
     const csvData = csvRows.join("\n");
 
+    const filename = `${eventName}-${eventDate}`;
+
     try {
         const response = await fetch('/user/save_attendance.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: `csvData=${encodeURIComponent(csvData)}&filename=${encodeURIComponent(eventDate)}.csv`,
+            body: `csvData=${encodeURIComponent(csvData)}&filename=${encodeURIComponent(filename)}.csv`,
         });
         if (response.ok) {
             console.log("CSV saved successfully!");
