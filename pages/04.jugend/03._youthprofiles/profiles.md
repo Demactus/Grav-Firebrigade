@@ -15,7 +15,7 @@ profiles:
         picked_image: User-avatar.svg.png
         vorname: Jennifer
         name: Tag
-        function: null
+        function: Kindergruppenleiterin
         email: jenniferpaul111287@gmail.com
         tel: null
         content: null
