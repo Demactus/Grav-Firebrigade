@@ -26,6 +26,9 @@ class EventListTwigExtension extends \Twig_Extension
 	public function setDateFormat($dateformat) { 
         $this->dateformat = $dateformat; 
     }
+
+    private $parsedEvents = null;
+
     public function getName()
     {
         return 'EventListTwigExtension';
@@ -33,7 +36,8 @@ class EventListTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('eventlist', [$this, 'eventFunction'])
+            new \Twig_SimpleFunction('eventlist', [$this, 'eventFunction']),
+            new \Twig_SimpleFunction('getEntries', [$this, 'entryFunction'])
         ];
     }
 
@@ -56,12 +60,61 @@ class EventListTwigExtension extends \Twig_Extension
         return $dateTime;
     }
 
+    public function entryFunction(){
+        require __DIR__ . '/../vendor/autoload.php';
+
+        // Check if events are already parsed
+        if ($this->parsedEvents === null) {
+            $cal = new \om\IcalParser();
+
+            if (!file_exists($this->ICSfile)) {
+                return null;
+            }
+            $icsResults = $cal->parseFile($this->ICSfile);
+
+
+            $icsEvents = $cal->getEvents();
+
+            // Cache the parsed events
+            $this->parsedEvents = $icsEvents;
+        }
+
+        $eventList = []; // Initialize the string for the event list
+
+        foreach ($icsEvents->sorted() as $event) {
+            // Validate and format each event
+            $summary = $event['SUMMARY'] ?? 'No Summary';
+            $date = isset($event['DTSTART']) && $event['DTSTART'] instanceof \DateTime
+                ? $event['DTSTART']->format($this->dateformat)
+                : 'No Date';
+
+            $eventList[] = [
+                'summary' => $summary,
+                'date' => $date,
+            ];
+        }
+
+        return htmlspecialchars(json_encode($eventList));
+    }
+
     public function eventFunction() {
-		require_once __DIR__ . '/../vendor/autoload.php';
-        $cal = new \om\IcalParser();
-        if (! file_exists($this->ICSfile))	return NULL;
-		$icsResults = $cal->parseFile($this->ICSfile);
-        $icsEvents = $cal->getEvents();
+		require __DIR__ . '/../vendor/autoload.php';
+
+        // Check if events are already parsed
+        if ($this->parsedEvents === null) {
+            $cal = new \om\IcalParser();
+            if (!file_exists($this->ICSfile)) return NULL;
+            $icsResults = $cal->parseFile($this->ICSfile);
+
+
+            $icsEvents = $cal->getEvents();
+            $this->debug_to_console("Number of events: " . sizeof($icsEvents));
+
+            // Cache the parsed events
+            $this->parsedEvents = $icsEvents;
+        }
+
+        $icsEvents = $this->parsedEvents;
 		$eventList = '';
 		$i = 0;
 		// DONE: start list Today (not oldest Event)
@@ -135,6 +188,8 @@ class EventListTwigExtension extends \Twig_Extension
 			}
 			if ($i >= $this->numevents)	{ break; }	
 		}
+        $this->debug_to_console("eventlist");
+
 		return $eventList;
     }
 }
