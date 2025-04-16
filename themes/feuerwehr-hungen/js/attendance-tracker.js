@@ -51,6 +51,7 @@ async function saveAttendanceToCSV() {
     const title = document.getElementById("event-dropdown").value;
     const eventName = title.split(" (")[0];
     const eventDate = title.split(" (")[1].replace(")", "");
+    console.log(eventName);
 
     // Get all checkboxes
     const checkboxes = document.querySelectorAll(".checkbox__input");
@@ -74,7 +75,8 @@ async function saveAttendanceToCSV() {
     // Convert CSV array to a string
     const csvData = csvRows.join("\n");
 
-    const filename = `${eventName}-${eventDate}`;
+    const filename = "" + eventName + "_" + eventDate;
+    console.log(filename);
 
     try {
         const response = await fetch('/user/save_attendance.php', {
