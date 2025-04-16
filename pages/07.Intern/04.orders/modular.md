@@ -7,7 +7,7 @@ sitemap:
 pp_protect: '0'
 visible: true
 login:
-    visibility_requires_access: true
+    visibility_requires_access: false
 permissions:
     groups:
         testgroup:
@@ -15,5 +15,6 @@ permissions:
 access:
     admin.login: true
     orders: true
+body_classes: header-white
 ---
 

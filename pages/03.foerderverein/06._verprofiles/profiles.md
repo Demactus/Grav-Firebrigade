@@ -36,6 +36,7 @@ profiles:
         tel: null
         content: null
 order_mobile: card-first
+columns: '2'
+heading: '## Vereinsvorstand'
 ---
 
-## Vereinsvorstand

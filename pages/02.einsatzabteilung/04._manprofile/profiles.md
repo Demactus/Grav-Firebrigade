@@ -22,6 +22,8 @@ profiles:
         tel: null
         content: null
 content_align: left
+heading: '## Kontakt'
+columns: mehr
+order_mobile: text-first
 ---
 
-## Kontakt

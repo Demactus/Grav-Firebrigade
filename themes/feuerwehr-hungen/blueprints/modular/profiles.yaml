@@ -9,6 +9,17 @@ form:
           type: tab
           title: Profiles
           fields:
+            header.heading:
+              type: editor
+              label: Überschrift
+              autofocus: true
+              codemirror:
+                indentUnit: 4
+                autofocus: true
+                indentWithTabs: false
+                lineNumbers: true
+                styleActiveLine: true
+                lint: true
             custom_file:
               type: file
               label: Bild Hochladen
@@ -26,6 +37,12 @@ form:
               options:
                 'left': 'Links'
                 'right': 'Rechts'
+            header.columns:
+              type: radio
+              label: Spaltenordnung
+              options:
+                  'eine': 'Eine Spalte für alle'
+                  'mehr': 'Individuelle Spalten'
             header.order_mobile:
               type: select
               label: Reihenfolge (Mobil)
