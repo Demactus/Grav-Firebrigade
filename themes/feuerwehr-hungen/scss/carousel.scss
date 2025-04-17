@@ -1,6 +1,6 @@
 @import "../css-compiled/glightbox.css";
 @import "../css-compiled/flickity.css";
-@import "fw-main";
+@import "fw/fw-colors";
 
 .pair {
   background: #f8f8f8;
@@ -17,7 +17,7 @@
 }
 
 .inline-close-btn {
-  background: #FFC107;
+  background: $fw-yellow;
   width: 200px;
   display: block;
   margin: auto;

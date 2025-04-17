@@ -1,5 +1,5 @@
 @import "../css-compiled/glightbox.css";
-@import "fw-main";
+@import "./fw/fw-colors.scss";
 
 .pair {
   background: #ffffff;
@@ -81,7 +81,7 @@
 }
 
 .inline-close-btn {
-  background: #FFC107;
+  background: $fw-yellow;
   width: 200px;
   display: block;
   margin: auto;

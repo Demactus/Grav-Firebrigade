@@ -1,3 +1,5 @@
+@import "fw/fw-colors";
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -30,9 +32,9 @@ a:hover {
 
 .modular-navbar {
   margin-top: 70px;
-  background: #063480;
-  color: #E6B01D;
-  border-color: #ffff00;
+  background: $fw-blue;
+  color: $fw-yellow;
+  border-color: $fw-light-yellow;
   padding: .5rem 0;
 }
 
