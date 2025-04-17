@@ -1,12 +1,4 @@
-// FW colors
-$fw-blue: #063480;
-$fw-background: #ecf4ff;
-$fw-red: #a72920;
-$fw-yellow: #E6B01D;
-$fw-text-underline: #6D6E6F;
-$fw-orange: #e24c31;
-$fw-light-yellow: #ffff00;
-$fw-light-background: #2761c3;
+@import "./fw/fw-colors.scss";
 
 #page-wrapper {
   background: $fw-background;

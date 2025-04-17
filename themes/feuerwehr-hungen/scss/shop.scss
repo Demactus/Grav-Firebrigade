@@ -1,9 +1,10 @@
+@import "./fw/fw-colors.scss";
+
 
 .shop-columns {
   width: 100%;
 }
 
-$fw-blue: #063480;
 
 //Header
 #fw-logo-txt {
@@ -47,17 +48,6 @@ h1 {
   align-items: flex-start;
   padding-bottom: 302px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /** Category Button */
@@ -148,7 +138,7 @@ h1 {
     overflow-wrap: break-word;
     word-break: break-word;
     font-weight: bold;
-    color: #063480;
+    color: $fw-blue;
   }
 }
 
