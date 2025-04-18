@@ -81,16 +81,23 @@ class EventListTwigExtension extends \Twig_Extension
 
         $eventList = []; // Initialize the string for the event list
 
+
+
         foreach ($icsEvents->sorted() as $event) {
+            $formattedStartDate = $this->formatDateTime($event['DTSTART'], $event['TZID'] ?? null);
+            $formattedEndDate = $this->formatDateTime($event['DTEND'], $event['TZID']?? null);
+
+
             // Validate and format each event
             $summary = $event['SUMMARY'] ?? 'No Summary';
             $date = isset($event['DTSTART']) && $event['DTSTART'] instanceof \DateTime
-                ? $event['DTSTART']->format($this->dateformat)
+                ? $formattedStartDate->format('d.m.Y, H:i')
                 : 'No Date';
 
             $eventList[] = [
                 'summary' => $summary,
                 'date' => $date,
+                'endTime' => $formattedEndDate->format('H:i'),
             ];
         }
 
