@@ -144,10 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const maleButton = document.getElementById("male-btn");
         const femaleButton = document.getElementById("female-btn");
 
-        const test = "test";
-        console.log(test.toLowerCase().includes("test"));
-
-
         const femaleProductsHTML = buildProductHTML(adultProducts.filter(product => product.name.toLowerCase().includes("damen")));
         const maleProductsHTML = buildProductHTML(adultProducts.filter(product => !product.name.toLowerCase().includes("damen")));
 
@@ -374,7 +370,6 @@ function extractProducts(data) {
 
     for (const key in data) {
         const productData = data[key];
-        console.log(productData.category);
         const category = productData.category;
         let sizes;
         if (category == "kids") {
