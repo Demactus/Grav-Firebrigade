@@ -137,24 +137,7 @@ async function saveAttendanceToYAML() {
     const yamlString = jsYaml.dump(yamlData);
     console.log(yamlString);
 
-    try {
-        const response = await fetch('/user/save_attendance.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `yamlData=${encodeURIComponent(yamlString)}`,
-        });
-        if (response.ok) {
-            console.log("YAML saved successfully!");
-            return true;
-        } else {
-            console.error('Failed to save YAML:', response.status);
-            return false;
-        }
-    } catch (error) {
-        console.error('Error saving YAML:', error);
-    }
+
 }
 
 function calculateTimeDifference() {
@@ -181,3 +164,24 @@ function calculateTimeDifference() {
         ueInput.value = '';
     }
 }
+
+/*
+ try {
+        const response = await fetch('/user/save_attendance.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `yamlData=${encodeURIComponent(yamlString)}`,
+        });
+        if (response.ok) {
+            console.log("YAML saved successfully!");
+            return true;
+        } else {
+            console.error('Failed to save YAML:', response.status);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error saving YAML:', error);
+    }
+ */

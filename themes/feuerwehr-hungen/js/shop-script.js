@@ -293,7 +293,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const nameInput = document.getElementById("csv-name");
                 nameInput.value = '';
 
-
                 setTimeout(() => {
                     orderModal.style.display = "none";
                 }, 10000);
@@ -437,6 +436,8 @@ async function saveCartToCSV() {
 
     const nameInput = document.getElementById("csv-name");
     const name = nameInput.value;
+
+    console.log(name);
 
     if (!name) {
         nameInput.style.border = "1px solid red";
