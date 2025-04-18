@@ -272,7 +272,12 @@ cae3b441c3a40b5570f0dc123f3243c6:
     XXL: false
     XXXL: false
     XXXXL: false
-  add_image: {  }
+  add_image:
+    'image://product-images/e_s_T-Shirt_cotton_stretch_Kinder-150573-1-638041071228310573.png':
+      name: e_s_T-Shirt_cotton_stretch_Kinder-150573-1-638041071228310573.png
+      type: image/png
+      size: 107222
+      path: 'image://product-images//e_s_T-Shirt_cotton_stretch_Kinder-150573-1-638041071228310573.png'
 01a90a3c2c25af5c4ac06f8af0a94ff9:
   published: true
   productImage: e_s_Fleecejacke_CI_Kinder-200268-0-637577017440646439.png
@@ -305,7 +310,7 @@ cae3b441c3a40b5570f0dc123f3243c6:
   published: true
   productImage: 00027-004-051-01.jpg
   name: 'Hemd Kurzarm, Herren'
-  price: '20'
+  price: '10'
   category: adult
   size1:
     XS: true
@@ -328,12 +333,12 @@ cae3b441c3a40b5570f0dc123f3243c6:
       name: 00027-004-051-01.jpg
       type: image/jpeg
       size: 11552
-      path: 'image://product-images//00027-004-051-01.jpg'
+      path: 'image://product-images/00027-004-051-01.jpg'
 0ebba69b14ddd70ea49a9d0405510d50:
   published: true
   productImage: 00027-004-051-01.jpg
   name: 'Hemd Kurzarm, Damen'
-  price: '20'
+  price: '10'
   category: adult
   size1:
     XS: true
@@ -356,7 +361,7 @@ cae3b441c3a40b5570f0dc123f3243c6:
   published: true
   productImage: 00027-085-051-01.jpg
   name: 'Hemd Langarm, Herren'
-  price: '25'
+  price: '10'
   category: adult
   size1:
     XS: true
@@ -379,12 +384,12 @@ cae3b441c3a40b5570f0dc123f3243c6:
       name: 00027-085-051-01.jpg
       type: image/jpeg
       size: 16062
-      path: 'image://product-images//00027-085-051-01.jpg'
+      path: 'image://product-images/00027-085-051-01.jpg'
 290c9226f15a801c5018b0b2482d2b6d:
   published: true
   productImage: 00027-085-051-01.jpg
   name: 'Hemd Langarm, Damen'
-  price: '25'
+  price: '10'
   category: adult
   size1:
     XS: true
