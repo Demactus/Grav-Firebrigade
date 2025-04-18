@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     let chartData;
-    // Load attendance stats
+    // Load attendance stats and fill chart and summary card
     loadAttendanceStats().then(data => {
         if (!data) return;
         chartData = convertToChartData(Object.values(data));
+        fillSummaryCard(data);
 
         new Chart(ctx, {
             type: 'bar',
@@ -144,6 +145,41 @@ function convertToChartData(jsonData) {
         ]
     };
 }
+
+/*
+* Function to fill the summary card with the data
+* The summary card contains the following data:
+* - Amount of UE
+* - Mean attendance
+* - Amount of participants
+ */
+function fillSummaryCard(data) {
+
+    let ueSum;
+
+    data.forEach(event => {
+        const ue = event.ue;
+        let meanAttendance = 0.0;
+        let amountParticipants = 0;
+        event.attendance.forEach(participant => {
+            const name = Object.keys(participant)[0];
+            if (participant[name]) {
+                meanAttendance += parseFloat(ue);
+                amountParticipants++;
+            }
+        });
+        ueSum += parseFloat(ue);
+    })
+    const participantsEl = document.getElementById('summary-participants');
+    const meanEl = document.getElementById('summary-mean');
+    const ueEl = document.getElementById('summary-ue');
+    ueEl.innerHTML = ueSum;
+
+
+
+
+}
+
 
 const footer = (tooltipItems) => {
     let sum = 0.0;
