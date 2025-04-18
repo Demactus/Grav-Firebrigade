@@ -44,9 +44,13 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "@kurkle/color": "^0.3.4",
+    "chart.js": "^4.4.9",
     "flickity": "^3.0.0",
     "glightbox": "^3.3.0",
     "gulp-sourcemaps": "^2.6.4",
-    "swiffy-slider": "^1.6.0"
+    "js-yaml": "^4.1.0",
+    "swiffy-slider": "^1.6.0",
+    "uuid": "^11.1.0"
   }
 }
