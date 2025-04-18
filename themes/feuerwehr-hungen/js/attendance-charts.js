@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadAttendanceStats().then(data => {
         if (!data) return;
         chartData = convertToChartData(Object.values(data));
-        fillSummaryCard(data);
+        fillSummaryCard(Object.values(data));
 
         new Chart(ctx, {
             type: 'bar',
@@ -113,9 +113,9 @@ function convertToChartData(jsonData) {
         }
     });
 
-    console.log(labels);
-    console.log(data);
-    console.log(instructors);
+    //console.log(labels);
+    //console.log(data);
+    //console.log(instructors);
 
     // Build qouta data which is an array of 40.0 values with as much entry as there are participants
     const qouta = Array(labels.length).fill(40.0);
@@ -155,7 +155,7 @@ function convertToChartData(jsonData) {
  */
 function fillSummaryCard(data) {
 
-    let ueSum;
+    let ueSum = 0.0;
 
     data.forEach(event => {
         const ue = event.ue;
@@ -168,12 +168,16 @@ function fillSummaryCard(data) {
                 amountParticipants++;
             }
         });
-        ueSum += parseFloat(ue);
-    })
+
+        ueSum = parseFloat(ueSum) + parseFloat(ue);
+        console.log(ueSum);
+    });
+
+
     const participantsEl = document.getElementById('summary-participants');
     const meanEl = document.getElementById('summary-mean');
     const ueEl = document.getElementById('summary-ue');
-    ueEl.innerHTML = ueSum;
+    ueEl.innerHTML = ueSum.toFixed(1);
 
 
 
