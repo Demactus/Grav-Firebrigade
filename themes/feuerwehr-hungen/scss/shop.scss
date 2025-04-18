@@ -90,6 +90,47 @@ h1 {
   background: $fw-blue;
 }
 
+/* Popup Buttons */
+.button-container {
+  display: flex;
+
+  .popup {
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: #3884d8;
+
+    &.active {
+      background-color: #2364c6;
+    }
+
+  }
+
+  .pop-in {
+    opacity: 1;
+    transform: scale(1);
+    animation: popin .2s ease;
+  }
+
+  .pop-out {
+    transform: scale(0);
+    animation: popout .2s ease;
+  }
+}
+
+@keyframes popin {
+  from {transform:scale(0)}
+  90%  {transform:scale(1.1)}
+  to   {transform:scale(1)}
+}
+
+@keyframes popout {
+  from {transform:scale(1)}
+  10%  {transform:scale(1.1)}
+  to   {transform:scale(0)}
+}
+
+
+
 .product-card {
   border-radius: 1rem;
   border: 1px solid gray;

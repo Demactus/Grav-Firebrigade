@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     attachAddToCartListeners();
 
     attachEventListenersToCategoryButtons();
+    attachEventListenersToSexButtons();
 
     function attachAddToCartListeners() {
         const productButtons = document.querySelectorAll(".addtocart");
@@ -113,6 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const kidsButton = document.querySelector("#kids-btn");
 
         adultButton.addEventListener("click", function () {
+            const popups = document.querySelectorAll('.popup');
+            popups.forEach(popup => {
+                popup.classList.remove('pop-out');
+                popup.classList.add('pop-in');
+            });
 
             result.innerHTML = adultProductsHTML;
 
@@ -121,6 +127,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         kidsButton.addEventListener("click", function () {
+            const popups = document.querySelectorAll('.popup');
+            popups.forEach((popup) => {
+                popup.classList.remove('pop-in');
+                popup.classList.add('pop-out');
+            });
 
             result.innerHTML = kidsProductsHTML;
 
@@ -128,6 +139,32 @@ document.addEventListener('DOMContentLoaded', function () {
             kidsButton.classList.add("active")
         });
     }
+
+    function attachEventListenersToSexButtons() {
+        const maleButton = document.getElementById("male-btn");
+        const femaleButton = document.getElementById("female-btn");
+
+        const test = "test";
+        console.log(test.toLowerCase().includes("test"));
+
+
+        const femaleProductsHTML = buildProductHTML(adultProducts.filter(product => product.name.toLowerCase().includes("damen")));
+        const maleProductsHTML = buildProductHTML(adultProducts.filter(product => !product.name.toLowerCase().includes("damen")));
+
+
+        maleButton.addEventListener("click", function() {
+            result.innerHTML = maleProductsHTML;
+            maleButton.classList.add("active");
+            femaleButton.classList.remove("active")
+        });
+
+        femaleButton.addEventListener("click", function() {
+            result.innerHTML = femaleProductsHTML;
+            femaleButton.classList.add("active");
+            maleButton.classList.remove("active")
+        });
+    }
+
 
 
 
