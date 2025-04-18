@@ -119,7 +119,8 @@ async function saveAttendanceToYAML() {
     });
 
     // Get Teacher for session
-    const teacher = document.getElementById('teacher-dropdown').value;
+    const options = document.getElementById('teacher-dropdown').selectedOptions;
+    const instructorList = Array.from(options).map(({ value }) => value);
 
     const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
     // YAML-Datenstruktur erstellen
@@ -128,7 +129,7 @@ async function saveAttendanceToYAML() {
             date: eventDate,
             eventName: eventName,
             ue: ueValue,
-            teacher: teacher,
+            teacher: instructorList,
             attendance: attendance
         }
     };
@@ -136,7 +137,24 @@ async function saveAttendanceToYAML() {
     // Convert YAML to String
     const yamlString = jsYaml.dump(yamlData);
     console.log(yamlString);
-
+    try {
+        const response = await fetch('/user/save_attendance.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `yamlData=${encodeURIComponent(yamlString)}`,
+        });
+        if (response.ok) {
+            console.log("YAML saved successfully!");
+            return true;
+        } else {
+            console.error('Failed to save YAML:', response.status);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error saving YAML:', error);
+    }
 
 }
 
@@ -164,24 +182,3 @@ function calculateTimeDifference() {
         ueInput.value = '';
     }
 }
-
-/*
- try {
-        const response = await fetch('/user/save_attendance.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `yamlData=${encodeURIComponent(yamlString)}`,
-        });
-        if (response.ok) {
-            console.log("YAML saved successfully!");
-            return true;
-        } else {
-            console.error('Failed to save YAML:', response.status);
-            return false;
-        }
-    } catch (error) {
-        console.error('Error saving YAML:', error);
-    }
- */

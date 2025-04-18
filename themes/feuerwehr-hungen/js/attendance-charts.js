@@ -104,10 +104,11 @@ function convertToChartData(jsonData) {
                 data[labels.indexOf(name)] =  parseFloat(data[labels.indexOf(name)]) + parseFloat(ue);
             }
         });
-        console.log(parseFloat(teachers[labels.indexOf(eventTeacher)]));
         // Get the teacher for the event
         if (eventTeacher){
-            teachers[labels.indexOf(eventTeacher)] = parseFloat(teachers[labels.indexOf(eventTeacher)]) + parseFloat(ue);
+            eventTeacher.forEach(teacher => {
+                teachers[labels.indexOf(teacher)] = parseFloat(teachers[labels.indexOf(teacher)]) + parseFloat(ue);
+            })
         }
     });
 
