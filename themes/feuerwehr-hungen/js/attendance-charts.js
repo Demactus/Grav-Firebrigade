@@ -86,40 +86,38 @@ async function loadAttendanceStats() {
 function convertToChartData(jsonData) {
     const labels = [];
     const data = [];
-    const teachers= [];
+    const instructors= [];
 
 
     jsonData.forEach(event => {
         // Get the ue of the event
         const ue = event.ue;
-        const eventTeacher = event.teacher;
+        const eventInstructor = event.instructor;
         event.attendance.forEach(participant => {
             const name = Object.keys(participant)[0];
             if (!labels.includes(name)) {
                 labels.push(name);
                 data.push(0.0);
-                teachers.push(0.0);
+                instructors.push(0.0);
             }
             if (participant[name]) {
                 data[labels.indexOf(name)] =  parseFloat(data[labels.indexOf(name)]) + parseFloat(ue);
             }
         });
-        // Get the teacher for the event
-        if (eventTeacher){
-            eventTeacher.forEach(teacher => {
-                teachers[labels.indexOf(teacher)] = parseFloat(teachers[labels.indexOf(teacher)]) + parseFloat(ue);
+        // Get the instructor for the event
+        if (eventInstructor){
+            eventInstructor.forEach(instructor => {
+                instructors[labels.indexOf(instructor)] = parseFloat(instructors[labels.indexOf(instructor)]) + parseFloat(ue);
             })
         }
     });
 
-    // Build qouta data which is an array of 40.0 values with as much entry as there are participants
-    const qouta = Array(labels.length).fill(40.0);
-
-
     console.log(labels);
     console.log(data);
-    console.log(teachers);
+    console.log(instructors);
 
+    // Build qouta data which is an array of 40.0 values with as much entry as there are participants
+    const qouta = Array(labels.length).fill(40.0);
 
     return {
         labels: labels,
@@ -131,8 +129,8 @@ function convertToChartData(jsonData) {
             borderWidth: 1
         },
             {
-                label: 'Lehrer',
-                data: teachers,
+                label: 'Ausbilder',
+                data: instructors,
                 backgroundColor: '#E6B01D',
                 borderColor: '#E6B01D',
                 borderWidth: 1

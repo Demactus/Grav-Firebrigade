@@ -118,8 +118,8 @@ async function saveAttendanceToYAML() {
 
     });
 
-    // Get Teacher for session
-    const options = document.getElementById('teacher-dropdown').selectedOptions;
+    // Get instructor for session
+    const options = document.getElementById('instructor-dropdown').selectedOptions;
     const instructorList = Array.from(options).map(({ value }) => value);
 
     const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
@@ -129,7 +129,7 @@ async function saveAttendanceToYAML() {
             date: eventDate,
             eventName: eventName,
             ue: ueValue,
-            teacher: instructorList,
+            instructor: instructorList,
             attendance: attendance
         }
     };
