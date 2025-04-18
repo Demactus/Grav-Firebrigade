@@ -250,7 +250,7 @@ textarea.form-input {
     background: $bg-color-light;
     height: $control-icon-size;
     left: 0;
-    top: ($control-size-sm - $control-icon-size) / 2;
+    top: calc(($control-size-sm - $control-icon-size) / 2);
     width: $control-icon-size;
   }
 
@@ -332,7 +332,7 @@ textarea.form-input {
     border-radius: $unit-2 + $border-width;
     height: $unit-4 + $border-width * 2;
     left: 0;
-    top: ($control-size-sm - $unit-4) / 2 - $border-width;
+    top: calc(($control-size-sm - $unit-4) / 2) - $border-width;
     width: $unit-8;
     &::before {
       background: $bg-color-light;

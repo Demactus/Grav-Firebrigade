@@ -25,7 +25,7 @@ form {
 
       label {
         display: inherit;
-        padding: calc(($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
+        padding: calc(($control-size-sm - $line-height) / 2) $control-padding-x calc(($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
         margin: inherit;
 
         &:before {

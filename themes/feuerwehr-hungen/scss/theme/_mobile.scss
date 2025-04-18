@@ -55,7 +55,7 @@
     z-index: 100;
     transition: opacity .25s ease, top 0.5s ease;
 
-    $bar-offset: $mobile-button-height / 3;
+    $bar-offset: calc($mobile-button-height / 3);
 
     &:hover {
       opacity: .7;
