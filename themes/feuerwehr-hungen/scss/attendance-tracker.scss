@@ -23,9 +23,9 @@
 
 
   .attendance-body {
-
     counter-set: total 21;
     counter-reset: checked;
+    margin-bottom: 8px;
 
     input[type="checkbox"]:checked {
       counter-increment: checked;
@@ -44,87 +44,100 @@
 
   }
 
-
   > * + * {
     margin-top: 0.75rem;
   }
 }
 
-  .attendance-header {
-    margin-bottom: 16px;
-    text-align: center;
+// Teacher Dropdown
+#teacher-dropdown-container {
+  font-weight: bold;
+  padding-left: 0;
+  margin-top: -10px;
+  margin-bottom: 0.6rem;
+
+  label {
+    font-size: 1rem;
+
+  }
+}
+
+.attendance-header {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.attendance-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.attendance-footer {
+  text-align: center;
+  margin-top: 0;
+
+  .input-col {
+    position: relative;
+    left: 0;
   }
 
-  .attendance-body {
+  .input-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: start;
     gap: 16px;
-    margin-bottom: 16px;
+    font-weight: bold;
   }
 
-  .checkbox-column {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
+  .time-label {
+    font-size: 0.9rem;
+
   }
 
-  .attendance-footer {
+  .time {
+    font-size: 0.9rem;
+    width: 3rem;
     text-align: center;
-    margin-top: 0;
+  }
 
-    .input-col {
-      position: relative;
-      left: 0;
-    }
+  #endTime-input {
+    margin-left: 8px;
+  }
 
-    .input-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: start;
-      gap: 16px;
-      font-weight: bold;
-    }
-
-    .time-label {
-      font-size: 0.9rem;
-
-    }
-
-    .time {
-      font-size: 0.9rem;
-      width: 3rem;
-      text-align: center;
-    }
-
-    #endTime-input {
-      margin-left: 8px;
-    }
-
-    #ue-label {
-      font-size: 1.2rem;
-      margin-bottom: -8px;
-      margin-top: -0.6em;
-      padding-left: 0.4em;
-
-    }
-
-    #ue-input {
-      font-size: 1rem;
-      width: 2.5em;
-      margin-top: -5px;
-      padding: 0.5em 0;
-      border: .2em solid #2761c3;
-      border-radius: 0.9em;
-      text-align: center;
-      appearance: textfield;
-      &::-webkit-inner-spin-button {
-        opacity: 1;
-        background: #063480;
-      }
-    }
+  #ue-label {
+    font-size: 1.2rem;
+    margin-bottom: -8px;
+    margin-top: -0.6em;
+    padding-left: 0.4em;
 
   }
+
+  #ue-input {
+    font-size: 1rem;
+    width: 2.5em;
+    margin-top: -5px;
+    padding: 0.5em 0;
+    border: .2em solid #2761c3;
+    border-radius: 0.9em;
+    text-align: center;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button {
+      opacity: 1;
+      background: #063480;
+    }
+  }
+
+}
 
 
 .checkbox {
@@ -158,6 +171,7 @@
       transition: stroke-dashoffset .2s ease-out;
     }
   }
+
   .checkbox__input {
     .checkbox__icon {
       overflow: visible !important;
@@ -174,9 +188,6 @@
     font-size: 1.15rem;
   }
 }
-
-
-
 
 /* Dropdown */
 .event-dropdown {
@@ -210,10 +221,7 @@
   background: hsl(0deg 0% 0% / 0.25);
   will-change: transform;
   transform: translateY(2px);
-  transition:
-          transform
-          600ms
-          cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
 .button-82-edge {
@@ -242,10 +250,7 @@
   background: hsl(45, 98%, 47%);
   will-change: transform;
   transform: translateY(-4px);
-  transition:
-          transform
-          600ms
-          cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
 @media (min-width: 768px) {
@@ -262,10 +267,7 @@
 
 .button-82-pushable:hover .button-82-front {
   transform: translateY(-6px);
-  transition:
-          transform
-          250ms
-          cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .button-82-pushable:active .button-82-front {
@@ -275,10 +277,7 @@
 
 .button-82-pushable:hover .button-82-shadow {
   transform: translateY(4px);
-  transition:
-          transform
-          250ms
-          cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .button-82-pushable:active .button-82-shadow {
@@ -289,9 +288,12 @@
 .button-82-pushable:focus:not(:focus-visible) {
   outline: none;
 }
+
 /* End of Special Button */
 
-svg:not(:root) { overflow: visible !important; }
+svg:not(:root) {
+  overflow: visible !important;
+}
 
 
 /* Number input */
@@ -317,7 +319,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input button {
-  outline:none;
+  outline: none;
   -webkit-appearance: none;
   background-color: transparent;
   border: none;
@@ -340,6 +342,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #212121;
   transform: translate(-50%, -50%);
 }
+
 .number-input button.plus:after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
@@ -356,4 +359,13 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
 }
 
+
+/* Chart styling */
+
+.chart-container {
+  width: 100%;
+  //overflow-x: scroll;
+  overflow-x: hidden;
+  background: white;
+}
 

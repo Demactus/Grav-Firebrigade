@@ -2,13 +2,22 @@
     <link rel="stylesheet" href="{{ url('theme://css-compiled/attendance-tracker.min.css') }}"/>
 </head>
 
-<script src="{{ url('theme://js/attendance-tracker.js') }}"></script>
+<script type="module" src="{{ url('theme://js/attendance-tracker.js') }}"></script>
+<script type="importmap">
+    {
+      "imports": {
+        "@kurkle/color": "./modules/kurkle-color.js"
+      }
+    }
+</script>
+<script type="module" src="{{ url('theme://js/attendance-charts.js') }}"></script>
+
 
 
 <div class="module-content" data-module-id="attendance">
 
     <div class="columns">
-        <div class="column col-md-12 col-8">
+        <div class="column col-md-12 col-6">
             <div id="event-data-container" data-list="{{ getEntries()|raw }}"></div>
 
             <div class="attendance-container">
@@ -215,26 +224,61 @@
                             <span class="checkbox__label">Thiedemann, André</span>
                         </label>
 
-                        <div class="attendance-body__result">Options chosen:</div>
+                        <div class="attendance-body__result">Ausgewählt:</div>
                     </div>
 
                 </div>
 
+                <div id="teacher-dropdown-container">
+                        <label for="teacher-dropdown">Ausbilder:</label>
+                        <select id="teacher-dropdown" class="teacher-dropdown">
+                            <option value="Haaf, Bastian">Bastian Haaf</option>
+                            <option value="Tag, Dominik">Dominik Tag</option>
+                            <option value="Reitz, Gerald">Gerald Reitz</option>
+                            <option value="Tag, Oliver">Oliver Tag</option>
+                            <option value="extern">Extern</option>
+                        </select>
+                </div>
+
                 <div class="attendance-footer">
-                    <button class="button-82-pushable" role="button" id="submitAttendanceButton">
-                        <span class="button-82-shadow"></span>
-                        <span class="button-82-edge"></span>
-                        <span class="button-82-front text">Speichern</span>
-                    </button>
+                    <div class="columns">
+                        <div class="column col-md-5 col-4 input-col">
+                            <div class="input-container">
+                                <label for="startTime-input" class="time-label">Startzeit</label>
+                                <input id="startTime-input" class="time" type="text">
+                                <label for="endTime-input" class="time-label">Endzeit</label>
+                                <input id="endTime-input" class="time" type="text">
+                            </div>
+                        </div>
+                        <div class="column col-md-1 col-1">
+                            <div class="input-container">
+                                <label id="ue-label" for="ue-input">UE</label>
+                                <input id="ue-input" type="number">
+                            </div>
+                        </div>
+
+                        <div class="column col-md-6 col-7">
+                            <button class="button-82-pushable" role="button" id="submitAttendanceButton">
+                                <span class="button-82-shadow"></span>
+                                <span class="button-82-edge"></span>
+                                <span class="button-82-front text">Speichern</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
                 </div>
             </div>
 
+
+        <div class="column col-md-12 col-6">
+            <div class="chart-container" style="position: relative; height:50vh;">
+                <canvas id="attendance-chart"></canvas>
+            </div>
         </div>
 
-        <div class="column col-md-12 col-4">
 
         </div>
-
-    </div>
 
 </div>
