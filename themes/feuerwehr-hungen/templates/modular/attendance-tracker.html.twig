@@ -1,8 +1,20 @@
 <head>
     <link rel="stylesheet" href="{{ url('theme://css-compiled/attendance-tracker.min.css') }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% do assets.addCss('theme://css-compiled/attendance-tracker.min.css') %}
+
+    {% block javascripts %}
+        {% do assets.addJsModule('theme://js/attendance-charts.js', {'pipeline':true}) %}
+        {% do assets.addJsModule('theme://js/attendance-tracker.js') %}
+        {% do assets.addJsModule('theme://js/components/multiselect-dropdown.js') %}
+    {% endblock %}
+
+    {% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+    {% endblock %}
 </head>
 
-<script type="module" src="{{ url('theme://js/attendance-tracker.js') }}"></script>
 <script type="importmap">
     {
       "imports": {
@@ -10,9 +22,6 @@
       }
     }
 </script>
-<script type="module" src="{{ url('theme://js/attendance-charts.js') }}"></script>
-<script type="module" src="{{ url('theme://js/modules/multiselect-dropdown.js') }}" ></script>
-
 
 
 <div class="module-content" data-module-id="attendance">
@@ -231,82 +240,83 @@
                 </div>
 
                 <div id="instructor-dropdown-container">
-                        <label for="instructor-dropdown">Ausbilder:</label>
-                        <select id="instructor-dropdown" class="instructor-dropdown" multiple>
-                            <option value="Haaf, Bastian">Bastian Haaf</option>
-                            <option value="Tag, Dominik">Dominik Tag</option>
-                            <option value="Reitz, Gerald">Gerald Reitz</option>
-                            <option value="Tag, Oliver">Oliver Tag</option>
-                            <option value="extern">Extern</option>
-                        </select>
+                    <label for="instructor-dropdown">Ausbilder:</label>
+                    <select id="instructor-dropdown" class="instructor-dropdown" multiple>
+                        <option value="Haaf, Bastian">Bastian Haaf</option>
+                        <option value="Tag, Dominik">Dominik Tag</option>
+                        <option value="Reitz, Gerald">Gerald Reitz</option>
+                        <option value="Tag, Oliver">Oliver Tag</option>
+                        <option value="extern">Extern</option>
+                    </select>
                 </div>
 
                 <div class="attendance-footer">
                     <div class="columns">
-                        <div class="column col-md-5 col-4 input-col">
+                        <div class="column col-md-6 col-4 input-col">
                             <div class="input-container">
-                                <label for="startTime-input" class="time-label">Startzeit</label>
-                                <input id="startTime-input" class="time" type="text">
-                                <label for="endTime-input" class="time-label">Endzeit</label>
-                                <input id="endTime-input" class="time" type="text">
+                                <div id="startTime-container" class="timepicker-container"></div>
+                                <div id="endTime-container" class="timepicker-container"></div>
                             </div>
+
                         </div>
-                        <div class="column col-md-1 col-1">
+                        <div class="column col-md-6 col-8">
                             <div class="input-container">
                                 <label id="ue-label" for="ue-input">UE</label>
                                 <input id="ue-input" type="number">
                             </div>
+
+                            <div class="button-container">
+                                <button class="button-82-pushable" role="button" id="submitAttendanceButton">
+                                    <span class="button-82-shadow"></span>
+                                    <span class="button-82-edge"></span>
+                                    <span class="button-82-front text">Speichern</span>
+                                </button>
+                            </div>
                         </div>
 
-                        <div class="column col-md-6 col-7">
-                            <button class="button-82-pushable" role="button" id="submitAttendanceButton">
-                                <span class="button-82-shadow"></span>
-                                <span class="button-82-edge"></span>
-                                <span class="button-82-front text">Speichern</span>
-                            </button>
-                        </div>
+
                     </div>
-                </div>
-
 
                 </div>
             </div>
 
 
-        <div class="column col-md-12 col-6">
-            <div class="chart-container" style="position: relative; height:50vh;">
-                <canvas id="attendance-chart"></canvas>
-            </div>
+        </div>
+
+    <div class="column col-md-12 col-6">
+        <div class="chart-container" style="position: relative; height:50vh;">
+            <canvas id="attendance-chart"></canvas>
+        </div>
 
         <div class="columns">
             <div class="column col-md-12 col-xl-9 col-6">
                 <div id="summary-card" class="card card-1">
                     <div class="card-header summary-card-header">
-                        <h3 id="summary-participants">Mitglieder: 21</h3>
+                        <h3 id="summary-participants"></h3>
                     </div>
 
                     <div class="columns">
-                        <div class="column col-md-4 col-6">
+                        <div class="column col-md-6 col-6">
                             <p>Angebotene Unterrichtseinheiten [UE]:</p>
                         </div>
                         <div class="column summary-card-column col-md-4 col-6">
-                            <h3 id="summary-ue">2.7</h3>
+                            <h3 id="summary-ue"></h3>
                         </div>
                     </div>
                     <div class="columns">
-                        <div  class="column  col-md-4 col-6">
-                            <p>Durchschnittliche <br> Beteiligung [UE]:</p>
+                        <div class="column  col-md-6 col-6">
+                            <p>Durchschnittliche <br> Beteiligung:</p>
                         </div>
                         <div class="column summary-card-column col-md-4 col-6">
-                            <h3 id="summary-mean">2.7</h3>
+                            <h3 id="summary-mean"></h3>
                         </div>
                     </div>
                     <div class="columns">
-                        <div class="column col-md-4 col-col-6">
-                            <p>Zusatzausbildung (z.b. Planübung) [UE]:</p>
+                        <div class="column col-md-6 col-6">
+                            <p>Durchschnittliche <br> UE [per Teilnehmer]</p>
                         </div>
                         <div class="column summary-card-column col-md-4 col-6">
-                            <h3>2.7</h3>
+                            <h3 id="summary-meanUE"></h3>
                         </div>
                     </div>
                 </div>
@@ -314,10 +324,9 @@
         </div>
 
 
-        </div>
+    </div>
 
 
-
-        </div>
+</div>
 
 </div>

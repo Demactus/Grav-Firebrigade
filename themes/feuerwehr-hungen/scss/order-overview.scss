@@ -1,4 +1,5 @@
 /* General styles */
+@import "fw/fw-colors";
 
 .module-content {
   padding-top: 4rem;
@@ -48,6 +49,9 @@
   overflow-x: auto;
   width: 100%;
   min-height: calc(3rem + (3 * 2.5rem));
+  border: 1px solid #636262;
+  border-radius: 0.5rem;
+
 }
 
 
@@ -56,6 +60,26 @@
 .total-order-table {
   width: 100%;
   border-collapse: collapse;
+  background:white;
+  color: #0c0c0d;
+
+  thead tr {
+    height:60px;
+    background:$fw-yellows;
+    font-size:16px;
+  }
+
+  summary {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .inner-table {
+    margin-top: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(241, 238, 238, 0.89);
+  }
+
 }
 
 .order-table th,
