@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $csvData = $_POST["csvData"];
     $filename = $_POST["filename"];
 
-    $filename = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', $filename);
+    $filename = preg_replace('/[^\p{L}\p{N}_\-.]/u', '_', $filename);
 
     // Set umask to 0000 to give all permissions by default
     umask(0000);

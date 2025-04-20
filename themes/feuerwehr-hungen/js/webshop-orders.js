@@ -1,0 +1,270 @@
+
+let allOrdersData = []; // Store all order data globally
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    loadOrders();
+
+    const downloadButton = document.querySelector('.download-button');
+    downloadButton.addEventListener('click', () => {
+        downloadCSV(allOrdersData)
+    })
+
+    const finishButton = document.querySelector('.finish-button');
+    finishButton.addEventListener('click', () => {
+        toggleFinishOrderModal(true); // Open the modal first
+    });
+
+    const cancelButton = document.getElementById('modal-cancel');
+    cancelButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        toggleFinishOrderModal(false);
+    });
+
+    const modalOverlay = document.querySelector('#finish-order-modal .modal-overlay');
+    modalOverlay.addEventListener('click', () => {
+        toggleFinishOrderModal(false);
+    });
+
+    const modalCloseButton = document.querySelector('#finish-order-modal .btn-clear');
+    modalCloseButton.addEventListener('click', () => {
+        toggleFinishOrderModal(false);
+    });
+
+    const confirmButton = document.getElementById('modal-confirm');
+    confirmButton.addEventListener('click', () => {
+        finishOrder(allOrdersData);
+        toggleFinishOrderModal(false);
+    });
+
+});
+
+function loadOrders() {
+    fetch('/user/load_orders.php')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(orders => {
+            allOrdersData = orders;
+            populateOrderTable(orders);
+            populateTotalOrderTable(orders);
+            console.log(orders);
+        })
+        .catch(error => {
+            console.error("Error fetching orders:", error);
+        });
+}
+
+function populateOrderTable(orders) {
+    const tableBody = document.querySelector('.order-table tbody');
+    tableBody.innerHTML = ''; // Clear existing rows
+
+    orders.forEach(order => {
+        const row = tableBody.insertRow();
+        const nameCell = row.insertCell();
+        const sumCell = row.insertCell();
+
+        let sum = 0;
+
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        const nameSpan = document.createElement("span")
+        nameSpan.textContent = order.name;
+        summary.appendChild(nameSpan);
+        const innerTable = document.createElement('table');
+        innerTable.classList.add("table");
+        innerTable.classList.add("inner-table");
+        const innerTHead = innerTable.createTHead();
+        const innerTBody = innerTable.createTBody();
+        const headerRow = innerTHead.insertRow();
+        headerRow.insertCell().textContent = "Produkt Name";
+        headerRow.insertCell().textContent = "Größe";
+        headerRow.insertCell().textContent = "Anzahl";
+        headerRow.insertCell().textContent = "Preis";
+
+
+        order.orders.forEach(item => {
+            const innerRow = innerTBody.insertRow();
+            innerRow.insertCell().textContent = item["Product Name"];
+            innerRow.insertCell().textContent = item.Size;
+            innerRow.insertCell().textContent = item.Quantity;
+
+            const formattedPrice = parseFloat(item.Price).toLocaleString('de-DE', {style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2});
+            innerRow.insertCell().textContent = formattedPrice;
+
+
+            sum += parseFloat(parseFloat(formattedPrice) * parseInt(item.Quantity));
+
+        });
+
+        details.appendChild(summary);
+        details.appendChild(innerTable);
+        nameCell.appendChild(details);
+        sumCell.textContent = sum.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
+    });
+}
+
+function populateTotalOrderTable(orders) {
+    const totalOrders = {};
+
+    orders.forEach(order => {
+        order.orders.forEach(item => {
+            const productName = item["Product Name"];
+            const size = item.Size;
+            const quantity = parseInt(item.Quantity);
+
+            if (!totalOrders[productName]) {
+                totalOrders[productName] = {};
+            }
+
+            if (!totalOrders[productName][size]) {
+                totalOrders[productName][size] = 0;
+            }
+
+            totalOrders[productName][size] += quantity;
+        });
+    });
+
+    const totalOrderTableBody = document.querySelector('.total-order-table tbody');
+    totalOrderTableBody.innerHTML = '';
+
+    for (const productName in totalOrders) {
+        for (const size in totalOrders[productName]) {
+            const row = totalOrderTableBody.insertRow();
+            const nameCell = row.insertCell();
+            const sizeCell = row.insertCell();
+            const quantityCell = row.insertCell();
+
+            nameCell.textContent = productName;
+            sizeCell.textContent = size;
+            quantityCell.textContent = totalOrders[productName][size];
+        }
+    }
+}
+
+function downloadCSV(orders) {
+    if (orders.length === 0 || orders[0].orders.length === 0) {
+        alert("No orders to download!");
+        return;
+    }
+
+    let csvContent = "data:text/csv;charset=utf-8,";
+    csvContent += "SEP=,\n";
+
+    // Add header row
+    const header = "Order Name,Product Name,Size,Quantity,Price\n";
+    csvContent += header;
+
+    // Add order items
+    orders.forEach(order => {
+        order.orders.forEach(item => {
+            const row = `"${order.name}","${item["Product Name"]}","${item.Size}","${item.Quantity}","${item.Price}"\n`;
+            csvContent += row;
+        });
+    });
+
+    csvContent += "\n";
+
+    // Add total orders header
+    csvContent += "Total Product Name,Total Size,Total Quantity\n";
+    // Get total orders data from the table
+    const totalOrderTableBody = document.querySelector('.total-order-table tbody');
+    if (totalOrderTableBody) {
+        const totalRows = totalOrderTableBody.querySelectorAll('tr');
+        totalRows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length === 3) { // Ensure correct number of cells
+                const totalRow = `"${cells[0].textContent}","${cells[1].textContent}","${cells[2].textContent}"\n`;
+                csvContent += totalRow;
+            }
+        });
+    }
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "all_orders.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+function finishOrder(orders) {
+    if (orders.length === 0) {
+        alert("Keine Bestellungen zum Abschließen vorhanden!");
+        return;
+    }
+
+    let csvContent = "";
+
+    const header = "Order Name,Product Name,Size,Quantity,Price\n";
+    csvContent += header;
+
+    orders.forEach(order => {
+        order.orders.forEach(item => {
+            const row = `"${order.name}","${item["Product Name"]}","${item.Size}","${item.Quantity}","${item.Price}"\n`;
+            csvContent += row;
+        });
+    });
+
+    csvContent += "\n";
+    // Calculate total orders data
+    const totalOrders = {};
+    orders.forEach(order => {
+        order.orders.forEach(item => {
+            const productName = item["Product Name"];
+            const size = item.Size;
+            const quantity = parseInt(item.Quantity);
+
+            if (!totalOrders[productName]) {
+                totalOrders[productName] = {};
+            }
+
+            if (!totalOrders[productName][size]) {
+                totalOrders[productName][size] = 0;
+            }
+
+            totalOrders[productName][size] += quantity;
+        });
+    });
+
+    csvContent += "Total Product Name,Total Size,Total Quantity\n";
+    for (const productName in totalOrders) {
+        for (const size in totalOrders[productName]) {
+            const totalRow = `"${productName}","${size}","${totalOrders[productName][size]}"\n`;
+            csvContent += totalRow;
+        }
+    }
+
+
+    // Send the CSV content to the server
+    fetch('/user/finish_orders.php', { // Create this PHP script
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'finished_data=' + encodeURIComponent(csvContent)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(message => {
+            alert(message);
+            loadOrders();
+        })
+        .catch(error => {
+            console.error("Error finishing orders:", error);
+            alert("An error occurred while finishing orders.");
+        });
+}
+
+function toggleFinishOrderModal(show) {
+    const modal = document.getElementById('finish-order-modal');
+    modal.classList.toggle('active', show);
+}

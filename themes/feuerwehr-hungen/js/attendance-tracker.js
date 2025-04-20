@@ -1,20 +1,11 @@
-import {timePickerInput_create} from './modules/analogue-time-picker.js';
-import { jsYaml } from './modules/js-yaml.js';
+import { jsYaml } from './components/js-yaml.js';
+import Timepicker from "./components/timepicker/index.js";
 
 let eventList = new Map();
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const startTimeInput = document.getElementById('startTime-input');
-    const endTimeInput = document.getElementById('endTime-input');
-
-    if (!startTimeInput || !endTimeInput) {
-        console.error("startTime-input oder endTime-input wurde nicht gefunden.");
-        return;
-    }
-
-
-    // Load event data from ICS file
+     // Load event data from ICS file
     const eventDataContainer = document.getElementById("event-data-container");
     const eventData = JSON.parse(eventDataContainer.getAttribute("data-list"));
 
@@ -46,37 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdown.appendChild(option);
     });
 
-    // Function to update the date display
-    function updateDateDisplay() {
-        const selectedOption = dropdown.value;
 
-        // Extract the date, start time, and end time from the selected option
-        const datePart = selectedOption.split(" (")[1]?.split(")")[0] || "";
-        const startTime = datePart.split(", ")[1]?.trim() || "";
-        const endTime = selectedOption.split("[")[1]?.replace("]", "") || "";
-
-        const [startHours, startMinutes] = startTime.split(":").map(Number);
-        const [endHours, endMinutes] = endTime.split(":").map(Number);
-        let startPicker = timePickerInput_create({
-            inputElement: document.getElementById("startTime-input"),
-            mode: 24,
-            width: "300px",
-            time: { hour: startHours, minute: startMinutes}
-        });
-        // Manuelles Auslösen des input-Events
-        document.getElementById("startTime-input").addEventListener('timeChanged', calculateTimeDifference );
-
-        let endPicker = timePickerInput_create({
-            inputElement: document.getElementById("endTime-input"),
-            mode: 24,
-            width: "300px",
-            time: { hour: endHours, minute: endMinutes }
-        });
-        // Manuelles Auslösen des input-Events
-        document.getElementById("endTime-input").addEventListener('timeChanged', calculateTimeDifference );
-
-        calculateTimeDifference();
-    }
     // Initial update
     updateDateDisplay();
     // Update the date when the dropdown selection changes
@@ -97,6 +58,84 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// Function to update the date display
+function updateDateDisplay() {
+    if (document.getElementById("startTime-container").firstChild) {
+        document.getElementById("startTime-container").removeChild(document.getElementById("startTime-container").firstChild);
+    }
+    if (document.getElementById("endTime-container").firstChild) {
+        document.getElementById("endTime-container").removeChild(document.getElementById("endTime-container").firstChild);
+    }
+
+
+    const selectedOption =  document.getElementById("event-dropdown").value;
+
+    // Extract the date, start time, and end time from the selected option
+    const datePart = selectedOption.split(" (")[1]?.split(")")[0] || "";
+    const startTime = datePart.split(", ")[1]?.trim() || "";
+    const endTime = selectedOption.split("[")[1]?.replace("]", "") || "";
+
+    const [startHours, startMinutes] = startTime.split(":");
+    const [endHours, endMinutes] = endTime.split(":");
+
+    const startContainer = document.getElementById("startTime-container");
+    const startForm = document.createElement("form");
+    startForm.classList.add("mio-form");
+    startContainer.appendChild(startForm);
+    const selectedStartTime = {time: startHours + ":" + startMinutes};
+
+    const startTimepicker = new Timepicker({
+        label: {
+            text: "Startzeit",
+            for: "startTime-input",
+        },
+        input: {
+            name: "time",
+            id: "startTime-input",
+            value: selectedStartTime.time,
+            readOnly: false,
+            format: "long",
+        },
+        onSelect: (time) => {
+            selectedStartTime.time = time;
+        },
+    });
+    startForm.appendChild(startTimepicker.get());
+
+
+    const endContainer = document.getElementById("endTime-container");
+    const endForm = document.createElement("form");
+    endForm.classList.add("mio-form");
+    endContainer.appendChild(endForm);
+    const selectedEndTime = {time: endHours + ":" + endMinutes};
+
+    const endTimepicker = new Timepicker({
+        label: {
+            text: "Endzeit",
+            for: "endTime-input",
+        },
+        input: {
+            name: "time",
+            id: "endTime-input",
+            value: selectedEndTime.time,
+            readOnly: false,
+            format: "long",
+        },
+        onSelect: (time) => {
+            selectedEndTime.time = time;
+        },
+    });
+    endForm.appendChild(endTimepicker.get());
+
+
+    // Manuelles Auslösen des input-Events
+    document.getElementById("startTime-input").addEventListener('timeChanged', calculateTimeDifference );
+    // Manuelles Auslösen des input-Events
+    document.getElementById("endTime-input").addEventListener('timeChanged', calculateTimeDifference );
+
+   calculateTimeDifference();
+}
 
 
 async function saveAttendanceToYAML() {
