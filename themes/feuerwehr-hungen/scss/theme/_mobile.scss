@@ -1,5 +1,22 @@
 @import "../fw-main";
 
+// --- Variables (adjust as needed) ---
+$menu-background: $fw-blue;
+$text-color: #eee;
+$active-color: #ff6347;
+$submenu-background: darken($menu-background, 5%);
+$submenu-text-color: #ccc;
+$submenu-font-size-ratio: 0.9;
+$item-height: 50px;
+$slant-angle: -10deg;
+$transition-speed: 0.3s;
+$submenu-indent: 20px;
+
+// --- Add Box Sizing Reset (Recommended) ---
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .mobile-logo {
   svg, img {
     height: 42px;
@@ -24,7 +41,7 @@
     }
 
     &.scrolled {
-      background: #063480;
+      background: $fw-blue;
     }
   }
 }
@@ -82,16 +99,16 @@
     &.scrolled:not(.active) {
       .top {
         //transform: translateY($bar-offset) translateX(0) rotate(45deg);
-        background: #063480;
+        background: $fw-blue;
       }
       .middle {
         //opacity: 0;
-        background: #063480;
+        background: $fw-blue;
       }
 
       .bottom {
         //transform: translateY(-($bar-offset)) translateX(0) rotate(-45deg);
-        background: #063480;
+        background: $fw-blue;
       }
 
     }
@@ -138,7 +155,7 @@
 
     .bottom {
       //transform: translateY(-($bar-offset)) translateX(0) rotate(-45deg);
-      background: #063480;
+      background: $fw-blue;
     }
   }
 }
@@ -165,7 +182,6 @@
 
 
 
-
 /* Main menu positionning */
 .overlay-menu {
   position: absolute;
@@ -177,10 +193,118 @@
   background: #FFF;
   opacity: 0;
   z-index: -1;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   visibility: hidden;
   transition: all .375s;
   pointer-events: auto;
+
+  // Anchor style
+  a.tree-link,
+  li > a { // Simplified selector a bit
+    display: block;
+    padding: 15px 20px;
+    color: $text-color;
+    text-decoration: none;
+    transition: background-color $transition-speed ease, color $transition-speed ease;
+    font-size: 1.1rem;
+
+    &:hover,
+    &.active {
+      //background-color: lighten($menu-background, 5%);
+      color: $active-color;
+    }
+  }
+
+  // --- Expanded State (when parent LI has .tree-opened) ---
+  // This rule makes the submenu visible when the parent LI has the class
+  li.tree-opened > ul.submenu { // <<< Using .tree-opened
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    //Transition for opening
+    transition: max-height $transition-speed ease-in-out,
+    //opacity $transition-speed ease-in-out,
+    visibility 0s;
+  }
+
+  li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+
+    &.submenu-item{
+      a.submenu-link {
+        display: block;
+        padding: 10px 20px 10px ($submenu-indent + 20px);
+        color: $submenu-text-color;
+        text-decoration: none;
+        font-size: calc(1rem * #{$submenu-font-size-ratio});
+        //background-color: $submenu-background;
+        transition:  color $transition-speed ease;
+
+        &:hover,
+        &.active {
+          color: $active-color;
+        }
+      }
+    }
+
+    &.tree-item,
+    &.tree-empty,
+    &.tree-closed,
+    &.tree-opened { // Added tree-opened here for completeness
+      position: relative;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+  }
+
+
+
+
+
+  /* Skewing effect on menu links */
+  ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+
+    &.tree {
+      list-style: none;
+      padding: 0;
+      margin: 5rem 0 0 0;
+      height: 70%;
+    }
+
+    &.submenu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      overflow: hidden;
+
+      // --- Default Collapsed/Hidden State ---
+      // This makes the submenu hidden by default
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      //Transition for closing
+      transition: max-height $transition-speed ease-in-out,
+      opacity $transition-speed ease-in-out,
+      visibility 0s linear $transition-speed;
+    }
+  }
+
 }
 
 .overlay-menu.is-open {
@@ -195,7 +319,7 @@
   content: '';
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: -60px;
   left: 0;
   right: -15px;
   background: #063480;
@@ -206,23 +330,6 @@
 
 .overlay-menu.is-open::before {
   transform: skew(-14deg) translateX(0);
-}
-
-/* Skewing effect on menu links */
-.overlay-menu ul {
-  display: inline-flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: flex-end;
-  justify-content: center;
-  transform: translateX(-18%) skew(-16deg);
-}
-
-.overlay-menu li {
-  display: block;
-  margin: .5rem 0;
-  text-align: right;
-  transform: skew(16deg);
 }
 
 /* Apparition effect on links */
