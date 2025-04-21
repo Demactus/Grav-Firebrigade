@@ -53,7 +53,7 @@
                 }
 
                 // Attach click handler ONLY to parent links
-                $link.off('click.treemenu').on('click.treemenu', function(e) {
+                $link.off('click.treemenu touchend.treemenu').on('click.treemenu touchend.treemenu', function(e) {
                     e.preventDefault(); // Prevent link navigation for parent items
 
                     var $currentLi = $(this).parent('li');
