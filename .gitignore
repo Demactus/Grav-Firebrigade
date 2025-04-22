@@ -23,3 +23,6 @@ Thumbs.db
 
 /images/videos/.*
 /attendance/attendance.yaml
+
+# CSV
+*.csv
