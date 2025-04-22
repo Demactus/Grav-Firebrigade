@@ -6,6 +6,7 @@ accounts/*
 /data/notifications/.*
 data/flex/indexes/accounts.yaml
 data/flex/indexes/pages.json
+data/scheduler/status.yaml
 
 
 # OS Generated
