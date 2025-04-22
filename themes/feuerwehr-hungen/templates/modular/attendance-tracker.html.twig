@@ -31,9 +31,13 @@
             <div id="event-data-container" data-list="{{ getEntries()|raw }}"></div>
 
             <div class="attendance-container">
-                <div id="createEventButton" class="button">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
+                <!-- Modal -->
+                {% set vars = {
+                    buttonId: 'createEventButton',
+                    inputId: 'input-eventName'
+                } %}
+                {% include 'modular/submodules/create-modal.html.twig' with vars %}
+
 
                 <!-- Header: Dropdown -->
                 <div class="dropdown-container">

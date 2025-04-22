@@ -29,8 +29,8 @@ function removeData(chart) {
 function buildChart(chartData, sum) {
     const ctx = document.getElementById('attendance-chart');
 
-    const horizontalDottedLine = {
-        id: 'horizontalDottedLine',
+    const sumDottedLine = {
+        id: 'sumDottedLine',
         beforeDatasetsDraw(chart, args, options) {
             const {ctx, chartArea: {  top, right, bottom, left, width, height  },
                 scales: { x, y }} = chart;
@@ -42,9 +42,21 @@ function buildChart(chartData, sum) {
             ctx.strokeRect(left, y.getPixelForValue(sum), width, 0);
             ctx.restore();
         }
-
     }
-    Chart.register(horizontalDottedLine);
+    const goalLine = {
+        id: 'goalLine',
+        beforeDatasetsDraw(chart, args, options) {
+            const {ctx, chartArea: {  top, right, bottom, left, width, height  },
+                scales: { x, y }} = chart;
+            ctx.save();
+
+            //draw line
+            ctx.strokeStyle = '#6fac46';
+            ctx.strokeRect(left, y.getPixelForValue(40), width, 1);
+            ctx.restore();
+        }
+    }
+    Chart.register(sumDottedLine);
 
     return new Chart(ctx, {
         type: 'bar',
@@ -65,7 +77,9 @@ function buildChart(chartData, sum) {
             },
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    suggestedMin: 0,
+                    suggestedMax: 50,
                 },
                 x: {
                     ticks: {
@@ -82,18 +96,7 @@ function buildChart(chartData, sum) {
                 }
             },
             plugins: {
-                annotation: {
-                    annotations: {
-                        line: {
-                            type: 'line',
-                            yMin: 40,
-                            yMax: 40,
-                            borderColor: 'orange',
-                            borderWidth: 2,
-                        }
-                    }
-                },
-                horizontalDottedLine: horizontalDottedLine,
+                sumDottedLine: sumDottedLine,
                 title: {
                     display: true,
                     text: 'Feuerwehr Hungen - Ausbildungsbeteiligung'
@@ -173,6 +176,7 @@ function convertToChartData(jsonData) {
                 type: 'line',
                 data: qouta,
                 borderColor: '#6fac46',
+                backgroundColor: '#6fac46',
             }
         ]
     };

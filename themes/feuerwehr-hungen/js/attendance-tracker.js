@@ -375,10 +375,19 @@ function fillDropdown(dropdown, events) {
 }
 
 function createNewEvent(dropdown) {
+    const newEventName = document.getElementById("input-eventName").value;
+
+
+
+    const date = new Date();
+    const option = new Option(`${newEventName} (${date.toLocaleDateString("de-DE")})`, `${newEventName} (${date.toLocaleDateString()})`);
     dropdown.insertBefore(
-        new Option("Neues Event", "Neues Event"),
-        dropdown.firstChild
+       option,
+       dropdown.firstChild
     );
+    option.selected = true;
+    document.querySelector('.email').classList.remove('expand');event.stopPropagation();
+
 }
 
 async function loadAttendanceStats() {
