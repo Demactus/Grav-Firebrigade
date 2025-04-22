@@ -27,3 +27,4 @@ Thumbs.db
 # Ignore data files
 *.csv
 *.mp4
+/data/calendars/.*
