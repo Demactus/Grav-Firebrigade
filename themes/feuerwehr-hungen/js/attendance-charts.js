@@ -1,18 +1,14 @@
 import Chart from './bundle/bundledChart.js';
 
-export function buildCharts(data) {
+export function buildCharts(data, sum) {
     const chartData = convertToChartData(data);
     fillSummaryCard(data);
-    const chart =  buildChart(chartData);
+    const chart =  buildChart(chartData, sum);
 
     document.getElementById("submitAttendanceButton").addEventListener("click", function () {
         console.log("blalgbaslvbmlaqlegfal");
 
         removeData(chart);
-
-        loadAttendanceStats().then(data => {
-            addData(chart, Object.values(data));
-        });
     });
 
 }
@@ -30,8 +26,26 @@ function removeData(chart) {
     });
     chart.update();
 }
-function buildChart(chartData) {
+function buildChart(chartData, sum) {
     const ctx = document.getElementById('attendance-chart');
+
+    const horizontalDottedLine = {
+        id: 'horizontalDottedLine',
+        beforeDatasetsDraw(chart, args, options) {
+            const {ctx, chartArea: {  top, right, bottom, left, width, height  },
+                scales: { x, y }} = chart;
+            ctx.save();
+
+            //draw line
+            ctx.strokeStyle = 'orange';
+            ctx.setLineDash([10, 10]);
+            ctx.strokeRect(left, y.getPixelForValue(sum), width, 0);
+            ctx.restore();
+        }
+
+    }
+    Chart.register(horizontalDottedLine);
+
     return new Chart(ctx, {
         type: 'bar',
         data: chartData,
@@ -68,6 +82,18 @@ function buildChart(chartData) {
                 }
             },
             plugins: {
+                annotation: {
+                    annotations: {
+                        line: {
+                            type: 'line',
+                            yMin: 40,
+                            yMax: 40,
+                            borderColor: 'orange',
+                            borderWidth: 2,
+                        }
+                    }
+                },
+                horizontalDottedLine: horizontalDottedLine,
                 title: {
                     display: true,
                     text: 'Feuerwehr Hungen - Ausbildungsbeteiligung'
@@ -80,6 +106,8 @@ function buildChart(chartData) {
             }
         }
     });
+
+
 }
 
 /* Function to convert json data to chart.js format

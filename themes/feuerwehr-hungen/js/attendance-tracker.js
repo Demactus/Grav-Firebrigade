@@ -4,11 +4,16 @@ import { buildCharts } from "./attendance-charts.js";
 
 //const attendeeList = ["Brinster, Jonas", "Frutig, Patrick", "Haaf, Bastian", "Hötterges, Mattheo", "Imig, Alexander", "Kießwetter, Jörg", "Klös, Sascha", "Martens, Jan", "Pfeil, Johannes", "Reipold, Pascal", "Reitz, Gerald", "Reitz, Gerrit", "Roth, Florian", "Sandner, Manuel", "Schmidt, Robin", "Tag, Dominik", "Tag, Oliver", "Thiedemann, Alex", "Thiedemann, André", "Kargoscha, Cyrus", "Derbyshirr, Reilly"];
 let currentBest;
+let currentSum;
 document.addEventListener("DOMContentLoaded", async function () {
+
     const filteredEvents = loadICSData();
 
     const dropdown = document.getElementById("event-dropdown");
-
+    const createButton = document.getElementById("createEventButton");
+    createButton.addEventListener("click", function () {
+        createNewEvent(dropdown);
+    });
 
     // Load existing attendance data and
     let response = await loadAttendanceStats();
@@ -27,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Build charts
     let attendanceData = response ? Object.values(response) : [];
-    buildCharts(attendanceData);
+    buildCharts(attendanceData, currentSum);
 
     const saveAttendanceButton = document.getElementById("submitAttendanceButton");
 
@@ -123,6 +128,8 @@ function updateEventCard(attendanceData, attendeeStatus) {
     }
 
 }
+
+
 
 
 // Function to update the date display
@@ -305,6 +312,9 @@ function calcAttendeeStats(attendanceMap) {
         });
     }));
 
+    /** Set ue sum for later **/
+    currentSum = ueSum;
+
     // calc attendance status
     attendeeMap.forEach((ue, name) => {
         if ((ue / (ueSum / 100)) > 60) {
@@ -345,8 +355,6 @@ function fillDropdown(dropdown, events) {
 
     //const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
 
-
-
     events.forEach(event => {
         let splitDate = event.date.split(',');
         const option = document.createElement("option");
@@ -364,6 +372,13 @@ function fillDropdown(dropdown, events) {
 
 
     });
+}
+
+function createNewEvent(dropdown) {
+    dropdown.insertBefore(
+        new Option("Neues Event", "Neues Event"),
+        dropdown.firstChild
+    );
 }
 
 async function loadAttendanceStats() {

@@ -31,6 +31,10 @@
             <div id="event-data-container" data-list="{{ getEntries()|raw }}"></div>
 
             <div class="attendance-container">
+                <div id="createEventButton" class="button">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
                 <!-- Header: Dropdown -->
                 <div class="dropdown-container">
                     <label for="event-dropdown"></label>
@@ -84,10 +88,6 @@
         </div>
 
     <div class="column col-md-12 col-6">
-        <div class="chart-container" style="position: relative; height:50vh;">
-            <canvas id="attendance-chart"></canvas>
-        </div>
-
         <div class="columns">
             <div class="column col-md-12 col-xl-9 col-6">
                 <div id="summary-card" class="card card-1">
@@ -122,9 +122,15 @@
                 </div>
             </div>
         </div>
-
-
     </div>
+
+        <div class="column col-12">
+            <div class="chart-container" style="position: relative; height:70vh;">
+                <canvas id="attendance-chart"></canvas>
+            </div>
+        </div>
+
+
 
 
 </div>
