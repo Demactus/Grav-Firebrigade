@@ -1,0 +1,42 @@
+
+
+
+<div class="modal-container">
+    <div class="email" onclick="this.classList.add('expand')">
+        <div class="from">
+            <div class="from-contents">
+                <i class="fa-solid fa-plus avatar"></i>
+            </div>
+        </div>
+        <div class="to">
+            <div class="to-contents">
+                <div class="top">
+                    <i class="fa-solid fa-plus avatar"></i>
+                    <div class="name-large">Neues Event Erstellen</div>
+                    <div class="x-touch" onclick="document.querySelector('.email').classList.remove('expand');event.stopPropagation();">
+                        <div class="x">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="row">
+                        <dl class="inputbox">
+                            <dd class="inputbox-content">
+                                <input id="{{ inputId }}" type="text" required/>
+                                <label for="{{ inputId}}">Name</label>
+                                <span class="underline"></span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="row">
+                        <button id="{{ buttonId }}" class="button-18" role="button">Hinzufügen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
