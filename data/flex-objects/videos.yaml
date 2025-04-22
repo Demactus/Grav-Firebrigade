@@ -1,0 +1,36 @@
+1e5083ea5ca7a7bf5f7ac324d150c562:
+  published: true
+  title: 'Dienstbesprechung Ausbildungsplan '
+  summary: 'Hinweise zur Ausbildung in 2025.'
+  date: '2025-01-26'
+  add_video:
+    'image://videos/Ausbildung 2025-20250126_160045-Besprechungsaufzeichnung.mp4':
+      name: 'Ausbildung 2025-20250126_160045-Besprechungsaufzeichnung.mp4'
+      type: video/mp4
+      size: 126722898
+      path: 'image://videos/Ausbildung 2025-20250126_160045-Besprechungsaufzeichnung.mp4'
+    'image://videos/Poster_Ausbildung.png':
+      name: Poster_Ausbildung.png
+      type: image/png
+      size: 353341
+      path: 'image://videos/Poster_Ausbildung.png'
+  cardVideo: 'Ausbildung_2025-20250126_160045-Besprechungsaufzeichnung.mp4'
+  poster_image: Poster_Ausbildung.png
+d9313b9c83281ecae9a5c1ebec443372:
+  published: true
+  title: 'Ausbildung Brandsicherheitsdienste'
+  summary: 'Ausbildung zum Thema Brandsicherheitsdienst.'
+  add_video:
+    'image://videos/Ausbildung_ Brandsicherheitsdienst-20250202_160206-Besprechungsaufzeichnung.mp4':
+      name: 'Ausbildung_ Brandsicherheitsdienst-20250202_160206-Besprechungsaufzeichnung.mp4'
+      type: video/mp4
+      size: 259534038
+      path: 'image://videos/Ausbildung_ Brandsicherheitsdienst-20250202_160206-Besprechungsaufzeichnung.mp4'
+    'image://videos/Poster_BSD.png':
+      name: Poster_BSD.png
+      type: image/png
+      size: 424623
+      path: 'image://videos//Poster_BSD.png'
+  cardVideo: 'Ausbildung_ Brandsicherheitsdienst-20250202_160206-Besprechungsaufzeichnung.mp4'
+  date: '2025-02-02'
+  poster_image: Poster_BSD.png
