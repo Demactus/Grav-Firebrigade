@@ -1,19 +1,9 @@
-import Chart from './components/chart.js/auto/auto.js';
+import Chart from './bundle/bundledChart.js';
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    // Initialize the chart
-    let chartData;
-    let chart;
-    // Load attendance stats and fill chart and summary card
-    loadAttendanceStats().then(data => {
-        if (!data) return;
-        chartData = convertToChartData(Object.values(data));
-        fillSummaryCard(Object.values(data));
-
-        chart = buildChart(chartData);
-
-    });
+export function buildCharts(data) {
+    const chartData = convertToChartData(data);
+    fillSummaryCard(data);
+    const chart =  buildChart(chartData);
 
     document.getElementById("submitAttendanceButton").addEventListener("click", function () {
         console.log("blalgbaslvbmlaqlegfal");
@@ -25,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-});
+}
 
 function addData(chart, newData) {
     chart.data.datasets.forEach((dataset) => {
@@ -90,20 +80,6 @@ function buildChart(chartData) {
             }
         }
     });
-}
-
-
-async function loadAttendanceStats() {
-    return fetch('/user/load_attendance.php', {headers: {'Content-Type': 'application/json'}})
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error ${response.status}`);
-            }
-            return response.json();
-        })
-        .catch(error => {
-            console.error("Error fetching orders:", error);
-        });
 }
 
 /* Function to convert json data to chart.js format
@@ -184,7 +160,6 @@ function convertToChartData(jsonData) {
 function fillSummaryCard(data) {
 
     let ueSum = 0.0;
-    let eventsSum = 0;
     let eventRates = [];
     let meanRate = 0;
     let sumOfRates = 0;
