@@ -24,5 +24,6 @@ Thumbs.db
 /images/videos/.*
 /attendance/attendance.yaml
 
-# CSV
+# Ignore data files
 *.csv
+*.mp4
