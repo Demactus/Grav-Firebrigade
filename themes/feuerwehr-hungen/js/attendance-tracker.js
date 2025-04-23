@@ -301,6 +301,9 @@ function calculateTimeDifference() {
 }
 
 function calcAttendeeStats(attendanceMap) {
+    if (attendanceMap.size == 0) {
+        return;
+    }
 
     let attendeeMap = new Map();
     let attendeeStatus = new Map();

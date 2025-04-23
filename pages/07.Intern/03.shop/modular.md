@@ -6,6 +6,7 @@ sitemap:
     lastmod: '04.02.2025 00:46'
 pp_protect: '0'
 visible: true
-login: {  }
+login:
+    visibility_requires_access: false
 ---
 
