@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const initialButtonContent = document.createElement('span');
     initialButtonContent.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> Warenkorb (<span class="mobile-noOfItems noOfItems">0 Produkte</span>)';
 
-
+    let orderTotal = 0.00;
     buyButton.addEventListener("click", function () {
         const nameInput = document.getElementById("csv-name");
         const orderName = nameInput.value;
