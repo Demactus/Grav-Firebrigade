@@ -208,13 +208,17 @@ function updateDateDisplay(startHours, startMinutes, endHours, endMinutes) {
 
 
 async function saveAttendanceToYAML() {
-    const title = document.getElementById("event-dropdown").value;
-    const eventName = title.split(" (")[0];
-    const eventDate = title.split(" (")[1].replace(")", "");
-    const splitDate = eventDate.split(',');
+    const key = document.getElementById("event-dropdown").value;
+
+    const eventString = document.getElementById("event-dropdown").selectedOptions[0].textContent;
+
+    const eventName = eventString.split('(')[0].trim();
+    const date = eventString.split('(')[1].split(')')[0].trim();
+
+
     const startTime = document.getElementById("startTime-input").value;
     const endTime = document.getElementById("endTime-input").value;
-
+    const eventDate = '' + date + ', ' + startTime + '[' + endTime + ']';
 
     const ueValue = document.getElementById('ue-input').value;
 
@@ -234,7 +238,6 @@ async function saveAttendanceToYAML() {
     const options = document.getElementById('instructor-dropdown').selectedOptions;
     const instructorList = Array.from(options).map(({ value }) => value);
 
-    const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
 
 
 
