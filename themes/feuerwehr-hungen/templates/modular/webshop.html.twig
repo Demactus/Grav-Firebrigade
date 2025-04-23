@@ -4,9 +4,17 @@
 
 <head>
     <link rel="stylesheet" href="{{ url('theme://css-compiled/shop.min.css') }}"/>
+
+
+    {% block javascripts %}
+    {% do assets.addJsModule('theme://js/shop-script.js') %}
+    {% endblock %}
+
+    {% block assets deferred %}
+        {{ assets.js()|raw }}
+    {% endblock %}
 </head>
 
-<script src="{{ url('theme://js/shop-script.js') }}"></script>
 
 {% set flex = grav.get('flex') %}
 {% set directory = flex.directory('products') %}
@@ -70,8 +78,8 @@
         <div id="orderModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span class="close-button">✖</span>
-                    <h2>Bestellung bestätigen?</h2>
+                    <span id="closeOrderModalBtn" class="close-button">✖</span>
+                    <h2 id="orderHeading">Bestellung bestätigen?</h2>
                 </div>
                 <div id="orderConfirmationContent">
                     <p>Bestellung für:  <strong id="orderNamePlaceholder"></strong></p>
@@ -82,9 +90,9 @@
                     </div>
                 </div>
                 <div id="orderSuccessContent" style="display:none;">
-                    <div class="success-icon">&#x2714;</div>  <h2>Bestellung Erfolgreich!</h2>
+                    <div class="success-icon">&#x2714;</div>
                     <div class="modal-buttons">
-                        <button id="closeOrderModalBtn" class="button">OK</button>
+                        <button id="paypalBtn" class="buy-btn"><i class="fa-brands fa-paypal"></i> Bezahlen</button>
                     </div>
                 </div>
             </div>

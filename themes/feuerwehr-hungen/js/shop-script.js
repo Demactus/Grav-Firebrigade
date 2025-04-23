@@ -270,8 +270,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Show customer name for order
         orderNamePlaceholder.textContent = orderName;
 
-
         let {totalItem, cartTotal} = getTotal(cart);
+        orderTotal = cartTotal.toFixed(2);
         const orderTotalPriceElement = document.getElementById("orderTotalPrice");
         orderTotalPriceElement.textContent = `Gesamtpreis: ${cartTotal.toFixed(2)}€`;
 
@@ -279,23 +279,42 @@ document.addEventListener('DOMContentLoaded', function () {
         orderSuccessContent.style.display = "none";
         orderModal.style.display = "block";
 
+
+        //Modal closing logic
+        closeOrderModalButton.addEventListener("click", function() {
+            orderModal.style.display = "none";
+        });
+        closeButton.addEventListener("click", function() {
+            orderModal.style.display = "none";
+        });
+        window.addEventListener("click", function(event) {
+            if (event.target == orderModal) {
+                orderModal.style.display = "none";
+            }
+        });
+
     });
+
+
+
 
     finalizeOrderButton.addEventListener("click", function() {
         saveCartToCSV().then(success => {
             if (success) {
                 orderConfirmationContent.style.display = "none";
                 orderSuccessContent.style.display = "block";
+                document.getElementById("orderHeading").textContent = "Bestellung Erfolgreich!";
+
+                const paypalButton = document.getElementById('paypalBtn');
+                paypalButton.addEventListener("click", function() {
+                    window.location= 'https://paypal.me/FeuerwehrInheiden/' + orderTotal;
+                });
 
                 cart = [];
                 updateCart();
                 setTotal(cart);
                 const nameInput = document.getElementById("csv-name");
                 nameInput.value = '';
-
-                setTimeout(() => {
-                    orderModal.style.display = "none";
-                }, 10000);
 
             } else {
                 console.error("Bestellung nicht erfolgreich gespeichert (CSV Fehler)");
@@ -304,18 +323,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    //Modal closing logic
-    closeOrderModalButton.addEventListener("click", function() {
-        orderModal.style.display = "none";
-    });
-    closeButton.addEventListener("click", function() {
-        orderModal.style.display = "none";
-    });
-    window.addEventListener("click", function(event) {
-        if (event.target == orderModal) {
-            orderModal.style.display = "none";
-        }
-    });
 
 
 
@@ -436,8 +443,6 @@ async function saveCartToCSV() {
 
     const nameInput = document.getElementById("csv-name");
     const name = nameInput.value;
-
-    console.log(name);
 
     if (!name) {
         nameInput.style.border = "1px solid red";
