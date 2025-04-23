@@ -1,6 +1,6 @@
-import { jsYaml } from './components/js-yaml.js';
+import {jsYaml} from './components/js-yaml.js';
 import Timepicker from "./bundle/bundledTimepicker.js";
-import { buildCharts } from "./attendance-charts.js";
+import {buildCharts} from "./attendance-charts.js";
 
 //const attendeeList = ["Brinster, Jonas", "Frutig, Patrick", "Haaf, Bastian", "Hötterges, Mattheo", "Imig, Alexander", "Kießwetter, Jörg", "Klös, Sascha", "Martens, Jan", "Pfeil, Johannes", "Reipold, Pascal", "Reitz, Gerald", "Reitz, Gerrit", "Roth, Florian", "Sandner, Manuel", "Schmidt, Robin", "Tag, Dominik", "Tag, Oliver", "Thiedemann, Alex", "Thiedemann, André", "Kargoscha, Cyrus", "Derbyshirr, Reilly"];
 let currentBest;
@@ -13,21 +13,23 @@ document.addEventListener("DOMContentLoaded", async function () {
     const createButton = document.getElementById("createEventButton");
     createButton.addEventListener("click", function () {
         createNewEvent(dropdown);
+        dropdown.dispatchEvent(new Event("change"));
     });
 
     // Load existing attendance data and
     let response = await loadAttendanceStats();
     let attendanceMap = response ? new Map(Object.entries(response)) : new Map();
 
-    let attendeeStatus = calcAttendeeStats(attendanceMap);
     // Fill dropdown with ics events and (if existing) own created events
-    fillDropdown(dropdown, filteredEvents, attendanceMap);
+    fillDropdownWithOrphansSorted(dropdown, filteredEvents, attendanceMap);
+
+    let attendeeStatus = calcAttendeeStats(attendanceMap);
 
     // Pre-fill checkboxes and time inputs if available
-    updateEventCard(attendanceMap, attendeeStatus);
+    updateEventCard(attendanceMap, attendeeStatus, filteredEvents);
     // Update the date when the dropdown selection changes
     dropdown.addEventListener("change", function (){
-        updateEventCard(attendanceMap, attendeeStatus);
+        updateEventCard(attendanceMap, attendeeStatus, filteredEvents);
     });
 
     // Build charts
@@ -48,14 +50,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 });
 
-function updateEventCard(attendanceData, attendeeStatus) {
+function updateEventCard(attendanceData, attendeeStatus, filteredEvents) {
     const selectedOption = document.getElementById("event-dropdown").value;
-    const eventName = selectedOption.split(" (")[0];
-    const eventDate = selectedOption.split(" (")[1].replace(")", "");
 
-    const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
-    const event = attendanceData.get(key);
-
+    const event = attendanceData.get(selectedOption);
     if (event) {
         const [startHours, startMinutes] = event.startTime.split(":");
         const [endHours, endMinutes] = event.endTime.split(":");
@@ -110,21 +108,30 @@ function updateEventCard(attendanceData, attendeeStatus) {
         // Set timepickers
         updateDateDisplay(startHours, startMinutes, endHours, endMinutes);
     } else {
-        const datePart = selectedOption.split(" (")[1]?.split(")")[0] || "";
-        const startTime = datePart.split(", ")[1]?.trim() || "";
-        const endTime = selectedOption.split("[")[1]?.replace("]", "") || "";
-
-        const [startHours, startMinutes] = startTime.split(":");
-        const [endHours, endMinutes] = endTime.split(":");
-
         // Reset checkboxes if no event is found
         const checkboxes = document.querySelectorAll(".checkbox__input");
         checkboxes.forEach(checkbox => {
             checkbox.checked = false;
         });
 
-        // Reset timepickers
-        updateDateDisplay(startHours, startMinutes, endHours, endMinutes);
+        const icsEvent = filteredEvents.find(event => event.uid == selectedOption);
+        if (icsEvent) {
+
+            const [startHours, startMinutes] = icsEvent.startTime.split(":");
+            const [endHours, endMinutes] = icsEvent.endTime.split(":");
+
+            // Reset timepickers
+            updateDateDisplay(startHours, startMinutes, endHours, endMinutes);
+        } else {
+            const date = new Date();
+            const hours = date.getHours() > 10 ? date.getHours() : "0" + date.getHours();
+            const minutes = date.getMinutes() > 10 ? date.getMinutes() : "0" + date.getMinutes();
+
+
+            updateDateDisplay(hours, minutes, hours, minutes);
+        }
+
+
     }
 
 }
@@ -228,6 +235,9 @@ async function saveAttendanceToYAML() {
     const instructorList = Array.from(options).map(({ value }) => value);
 
     const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
+
+
+
     // YAML-Datenstruktur erstellen
     const yamlData = {
         [key]: {
@@ -243,7 +253,7 @@ async function saveAttendanceToYAML() {
 
     // Convert YAML to String
     const yamlString = jsYaml.dump(yamlData);
-    console.log(yamlString);
+    //console.log(yamlString);
     try {
         const response = await fetch('/user/save_attendance.php', {
             method: 'POST',
@@ -347,40 +357,76 @@ function loadICSData() {
     return filteredEvents.reverse();
 }
 
-function fillDropdown(dropdown, events) {
-    const currentDate = new Date();
-
-    //const eventName = selectedOption.split(" (")[0];
-    //const eventDate = selectedOption.split(" (")[1].replace(")", "");
-
-    //const key = eventName.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + eventDate.replace(/[^a-zA-Z0-9_-]/g, '_');
+function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
+    const unifiedDataMap = new Map();
 
     events.forEach(event => {
-        let splitDate = event.date.split(',');
-        const option = document.createElement("option");
-        option.textContent = `${event.summary} (${splitDate[0]})`;
-        option.value = `${event.summary} (${event.date})[${event.endTime}]`;
-        dropdown.appendChild(option);
+        //const sortableDate = parseEventDate(event.date);
+        const dateParts = event.date.split('.');
+        const sortableDate = dateParts[1] + "." + dateParts[0] + "." + dateParts[2];
+        if (!sortableDate) return;
+        // Extract only the date part for display text
+        const displaySummary = `${event.summary} (${event.date})`;
 
-        if (event.date === currentDate) {
-            option.selected = true;
-        }
+        // Create the definitive entry using event data
+        const eventEntry = {
+            displaySummary: displaySummary,
+            sortableDate: new Date(sortableDate),
+            value: event.uid,
+            source: 'event'
+        };
 
-        dropdown.appendChild(option);
-
-        const key = event.summary.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + event.date.replace(/[^a-zA-Z0-9_-]/g, '_') + '_' + event.endTime.replace(/[^a-zA-Z0-9_-]/g, '_');
-
-
+        // Add/overwrite entry in the map using the generated key
+        unifiedDataMap.set(event.uid, eventEntry);
     });
+
+    attendanceMap.forEach(((entry, key) => {
+        const localDate = entry.date.split(',')[0].trim();
+        const dateParts = localDate.split('.');
+        const date = dateParts[1] + "." + dateParts[0] + "." + dateParts[2];
+        const displaySummary =  entry.eventName + " (" + localDate + ")";
+
+        unifiedDataMap.set(key, {
+            displaySummary: displaySummary,
+            value: key,
+            sortableDate: new Date(date),
+            source: 'orphan'
+        });
+    }));
+
+    // 3. Convert the map values (which are now deduplicated and prioritized) to an array
+    const unifiedList = Array.from(unifiedDataMap.values());
+
+    // 4. Sort the final list by date, newest first
+    unifiedList.sort((a, b) => {
+        const dateA = a.sortableDate;
+        const dateB = b.sortableDate;
+        // Handle potential null dates from parsing errors, put them last
+        if (dateA === null && dateB === null) return 0;
+        if (dateA === null) return 1;
+        if (dateB === null) return -1;
+        return dateB.getTime() - dateA.getTime(); // Descending order (newest first)
+    });
+
+    // 5. Populate the dropdown with simplified text
+    dropdown.innerHTML = ''; // Clear existing options
+
+    unifiedList.forEach(item => {
+        const option = document.createElement("option");
+        option.textContent = item.displaySummary;
+        option.value = item.value;
+        dropdown.appendChild(option);
+    });
+
 }
 
 function createNewEvent(dropdown) {
     const newEventName = document.getElementById("input-eventName").value;
 
-
-
     const date = new Date();
-    const option = new Option(`${newEventName} (${date.toLocaleDateString("de-DE")})`, `${newEventName} (${date.toLocaleDateString()})`);
+    const value = crypto.randomUUID();
+
+    const option = new Option(`${newEventName} (${date.toLocaleDateString("de-DE")})`, value);
     dropdown.insertBefore(
        option,
        dropdown.firstChild

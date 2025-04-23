@@ -91,12 +91,14 @@ class EventListTwigExtension extends \Twig_Extension
             // Validate and format each event
             $summary = $event['SUMMARY'] ?? 'No Summary';
             $date = isset($event['DTSTART']) && $event['DTSTART'] instanceof \DateTime
-                ? $formattedStartDate->format('d.m.Y, H:i')
+                ? $formattedStartDate->format('d.m.Y')
                 : 'No Date';
 
             $eventList[] = [
+                'uid' => $event['UID'],
                 'summary' => $summary,
                 'date' => $date,
+                'startTime' => $formattedStartDate->format('H:i'),
                 'endTime' => $formattedEndDate->format('H:i'),
             ];
         }
