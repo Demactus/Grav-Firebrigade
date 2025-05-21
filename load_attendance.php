@@ -11,7 +11,17 @@ error_reporting(E_ALL);
 $attendanceDir = __DIR__ . '/attendance';
 $attendanceData = [];
 
-if (is_dir($attendanceDir)) {
+
+
+
+if (!is_dir($attendanceDir)) {
+    // create directory if it doesn't exist
+    if (!mkdir($attendanceDir, 0777, true) && !is_dir($attendanceDir)) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Could not create attendance directory.']);
+        exit;
+    }
+}
     // Load the YAML file
     $yamlFile = $attendanceDir . '/attendance.yaml';
     if (file_exists($yamlFile)) {
@@ -30,7 +40,3 @@ if (is_dir($attendanceDir)) {
     } else {
         echo $jsonOutput;
     }
-} else {
-    http_response_code(500);
-    echo json_encode(['error' => 'Could not read orders directory.']);
-}

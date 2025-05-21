@@ -414,10 +414,17 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
         return dateB.getTime() - dateA.getTime(); // Descending order (newest first)
     });
 
+    const date = new Date();
+    const month= date.setDate(date.getDate() + 30);
+    // 5. Filter out events newer than today
+    const filteredUnifiedList = unifiedList.filter(item => item.sortableDate <= month);
+
+
+
     // 5. Populate the dropdown with simplified text
     dropdown.innerHTML = ''; // Clear existing options
 
-    unifiedList.forEach(item => {
+    filteredUnifiedList.forEach(item => {
         const option = document.createElement("option");
         option.textContent = item.displaySummary;
         option.value = item.value;
@@ -451,6 +458,6 @@ async function loadAttendanceStats() {
             return response.json();
         })
         .catch(error => {
-            console.error("Error fetching orders:", error);
+            console.error("Error fetching attendance:", error);
         });
 }
