@@ -372,8 +372,12 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
     events.forEach(event => {
         //const sortableDate = parseEventDate(event.date);
         const dateParts = event.date.split('.');
-        const sortableDate = dateParts[1] + "." + dateParts[0] + "." + dateParts[2];
-        if (!sortableDate) return;
+        const isoDateString = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+        const sortableDate = new Date(isoDateString);
+        if (isNaN(sortableDate.getTime())) {
+            console.warn(`Invalid date encountered: ${event.date}`);
+         return; // Skip invalid dates
+        }
         // Extract only the date part for display text
         const displaySummary = `${event.summary} (${event.date})`;
 
@@ -392,13 +396,15 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
     attendanceMap.forEach(((entry, key) => {
         const localDate = entry.date.split(',')[0].trim();
         const dateParts = localDate.split('.');
-        const date = dateParts[1] + "." + dateParts[0] + "." + dateParts[2];
+        const isoDateString = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+        const sortableDate = new Date(isoDateString);
+
         const displaySummary =  entry.eventName + " (" + localDate + ")";
 
         unifiedDataMap.set(key, {
             displaySummary: displaySummary,
             value: key,
-            sortableDate: new Date(date),
+            sortableDate: sortableDate,
             source: 'orphan'
         });
     }));
@@ -411,9 +417,9 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
         const dateA = a.sortableDate;
         const dateB = b.sortableDate;
         // Handle potential null dates from parsing errors, put them last
-        if (dateA === null && dateB === null) return 0;
-        if (dateA === null) return 1;
-        if (dateB === null) return -1;
+        if (isNaN(dateA.getTime()) && isNaN(dateB.getTime())) return 0;
+        if (isNaN(dateA.getTime())) return 1;
+        if (isNaN(dateB.getTime())) return -1;
         return dateB.getTime() - dateA.getTime(); // Descending order (newest first)
     });
 
