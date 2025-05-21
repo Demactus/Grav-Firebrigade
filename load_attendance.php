@@ -27,9 +27,12 @@ if (!is_dir($attendanceDir)) {
     if (file_exists($yamlFile)) {
         $attendanceData = Yaml::parseFile($yamlFile);
     } else {
-        http_response_code(500);
-        echo json_encode(['error' => 'Could not read attendance file.']);
-        exit;
+        $yamlContent = Yaml::dump($attendanceData, 2, 4, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
+        if (file_put_contents($yamlFile, $yamlContent) === false) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Could not create attendance file.']);
+            exit;
+        }
     }
 
     // Convert the data to JSON
