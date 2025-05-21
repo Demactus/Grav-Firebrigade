@@ -355,8 +355,6 @@ function loadICSData() {
     const eventDataContainer = document.getElementById("event-data-container");
     const eventData = JSON.parse(eventDataContainer.getAttribute("data-list"));
 
-    console.log(eventData);
-
     const filteredEvents = Array.isArray(eventData)
         ? eventData
             .filter(event => event.summary && event.summary.startsWith("Ausbildung"))
@@ -370,6 +368,7 @@ function loadICSData() {
 
 function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
     const unifiedDataMap = new Map();
+    console.log(events);
 
     events.forEach(event => {
         //const sortableDate = parseEventDate(event.date);
