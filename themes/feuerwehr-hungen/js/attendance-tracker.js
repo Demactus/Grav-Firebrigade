@@ -373,6 +373,7 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
         //const sortableDate = parseEventDate(event.date);
         const dateParts = event.date.split('.');
         const isoDateString = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+        console.log(isoDateString);
         const sortableDate = new Date(isoDateString);
         if (isNaN(sortableDate.getTime())) {
             console.warn(`Invalid date encountered: ${event.date}`);
