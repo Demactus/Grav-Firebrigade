@@ -368,7 +368,6 @@ function loadICSData() {
 
 function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
     const unifiedDataMap = new Map();
-    console.log(events);
 
     events.forEach(event => {
         //const sortableDate = parseEventDate(event.date);
@@ -428,11 +427,14 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
     // 5. Populate the dropdown with simplified text
     dropdown.innerHTML = ''; // Clear existing options
 
+    console.log(filteredUnifiedList);
+
     filteredUnifiedList.forEach(item => {
         const option = document.createElement("option");
         option.textContent = item.displaySummary;
         option.value = item.value;
         dropdown.appendChild(option);
+        console.log(item);
     });
 
 }
