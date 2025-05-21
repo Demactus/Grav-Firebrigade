@@ -457,8 +457,15 @@ function createNewEvent(dropdown) {
 
     const date = new Date();
     const value = crypto.randomUUID();
+    const dateFormatter = new Intl.DateTimeFormat('de-DE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
 
-    const option = new Option(`${newEventName} (${date.toLocaleDateString("de-DE")})`, value);
+    const formattedDate = dateFormatter.format(date);
+
+    const option = new Option(`${newEventName} (${formattedDate})`, value);
     dropdown.insertBefore(
        option,
        dropdown.firstChild
