@@ -417,11 +417,16 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
         return dateB.getTime() - dateA.getTime(); // Descending order (newest first)
     });
 
-    const date = new Date();
-    console.log(date.setDate(date.getDate() + 30));
-    const month= date.setDate(date.getDate() + 30);
+    const futureDateLimit = new Date();
+    futureDateLimit.setDate(futureDateLimit.getDate() + 30);
+    futureDateLimit.setHours(0, 0, 0, 0); // Set to midnight
     // 5. Filter out events newer than today
-    const filteredUnifiedList = unifiedList.filter(item => item.sortableDate <= month);
+    const filteredUnifiedList = unifiedList.filter(item => {
+        if (isNaN(item.sortableDate.getTime())) {
+            return false;
+        }
+        return item.sortableDate <= futureDateLimit;
+    });
 
 
 
