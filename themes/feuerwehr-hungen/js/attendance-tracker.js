@@ -355,6 +355,8 @@ function loadICSData() {
     const eventDataContainer = document.getElementById("event-data-container");
     const eventData = JSON.parse(eventDataContainer.getAttribute("data-list"));
 
+    console.log(eventData);
+
     const filteredEvents = Array.isArray(eventData)
         ? eventData
             .filter(event => event.summary && event.summary.startsWith("Ausbildung"))
