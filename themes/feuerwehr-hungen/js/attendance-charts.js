@@ -191,6 +191,7 @@ function convertToChartData(jsonData) {
  */
 function fillSummaryCard(data) {
 
+
     let ueSum = 0.0;
     let eventRates = [];
     let meanRate = 0;

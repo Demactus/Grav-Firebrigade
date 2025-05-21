@@ -34,7 +34,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Build charts
     let attendanceData = response ? Object.values(response) : [];
-    buildCharts(attendanceData, currentSum);
+    if (!attendanceData.length == 0) {
+        buildCharts(attendanceData, currentSum);
+    }
+
 
     const saveAttendanceButton = document.getElementById("submitAttendanceButton");
 
