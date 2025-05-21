@@ -398,7 +398,6 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
         const dateParts = localDate.split('.');
         const isoDateString = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
         const sortableDate = new Date(isoDateString);
-        console.log(isoDateString);
 
         const displaySummary =  entry.eventName + " (" + localDate + ")";
 
@@ -439,8 +438,6 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
 
     // 5. Populate the dropdown with simplified text
     dropdown.innerHTML = ''; // Clear existing options
-
-    console.log(filteredUnifiedList);
 
     filteredUnifiedList.forEach(item => {
         const option = document.createElement("option");
