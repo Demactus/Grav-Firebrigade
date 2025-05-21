@@ -418,6 +418,7 @@ function fillDropdownWithOrphansSorted(dropdown, events, attendanceMap) {
     });
 
     const date = new Date();
+    console.log(date.setDate(date.getDate() + 30));
     const month= date.setDate(date.getDate() + 30);
     // 5. Filter out events newer than today
     const filteredUnifiedList = unifiedList.filter(item => item.sortableDate <= month);
